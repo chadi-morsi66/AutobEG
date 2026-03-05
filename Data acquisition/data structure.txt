@@ -1,0 +1,256 @@
+Step 0 → Discovery
+Step 1 → Vehicle identity
+Step 2 → Listing lifecycle
+Step 3 → Market snapshots
+Step 4 → Feature engineering
+Step 5 → Valuation & intelligence
+Each step answers a different question.
+
+STEP 0 — DISCOVERY (WHAT EXISTS TODAY?)
+❓ Question it answers
+“What listings are visible on the market right now?”
+
+📦 What it does
+Scrape search pages (pagination)
+
+Collect listing URLs
+
+Nothing else
+
+📊 Data output
+Not stored permanently (or stored as raw logs).
+
+text
+Copy code
+listing_url
+scraped_at
+🔁 Frequency
+Daily (or every 12–24h)
+
+🔑 Why this step exists
+Market discovery
+
+Entry point for everything else
+
+Detects new listings
+
+This step is stateless.
+
+STEP 1 — VEHICLE IDENTITY (WHAT IS THIS CAR?)
+❓ Question it answers
+“What kind of car does this listing represent?”
+
+📦 Table: vehicles (IMMUTABLE)
+text
+Copy code
+vehicle_id (PK)
+brand
+model
+year
+fuel_type
+transmission
+body_type
+condition
+created_at
+🔁 Load type
+UPSERT
+
+Insert once, never update
+
+🔁 Frequency
+Once per new listing
+
+Never re-scraped for the same listing
+
+🔑 Why this step exists
+Defines market categories
+
+Enables aggregation
+
+Prevents identity fragmentation
+
+This table is frozen forever.
+
+STEP 2 — LISTING LIFECYCLE (DOES IT STILL EXIST?)
+❓ Question it answers
+“Is this listing still active, and for how long?”
+
+📦 Table: listings (SLOWLY MUTABLE)
+text
+Copy code
+listing_id (PK)
+vehicle_id (FK)
+platform
+first_seen_at
+last_seen_at
+is_active
+seller_type
+city
+🔁 Load type
+INSERT (first time)
+
+UPDATE (last_seen, is_active)
+
+🔁 Frequency
+Daily
+
+🔑 Why this step exists
+Captures market entry & exit
+
+Enables time-to-sell
+
+Detects disappearance (market outcome)
+
+This step defines existence over time.
+
+STEP 3 — MARKET SNAPSHOTS (WHAT IS HAPPENING TO IT?)
+❓ Question it answers
+“What was observed at this moment?”
+
+📦 Table: listing_snapshots (APPEND-ONLY)
+text
+Copy code
+snapshot_id (PK)
+listing_id (FK)
+scraped_at
+price_egp
+mileage_km
+🔁 Load type
+INSERT ONLY
+
+Never update, never delete
+
+🔁 Frequency
+Daily (only for active listings)
+
+🔑 Why this step exists
+Preserves history
+
+Enables learning
+
+Prevents data loss
+
+This is your gold mine.
+
+STEP 4 — FEATURE ENGINEERING (WHAT DOES IT MEAN?)
+❓ Question it answers
+“What signals can we extract from raw behavior?”
+
+📦 Tables / Views (DERIVED)
+Examples (not exhaustive):
+
+text
+Copy code
+vehicle_market_stats
+--------------------
+vehicle_id
+median_price
+avg_days_on_market
+price_volatility
+dealer_premium
+text
+Copy code
+listing_features
+----------------
+listing_id
+price_drop_pct
+days_to_exit
+overpricing_score
+🔁 Load type
+RECOMPUTE / MATERIALIZE
+
+Can be batch or incremental
+
+🔁 Frequency
+Daily / weekly
+
+🔑 Why this step exists
+Turns data → intelligence
+
+Separates raw facts from meaning
+
+Keeps models simple
+
+This step is cheap to redo.
+
+STEP 5 — VALUATION & INTELLIGENCE (WHAT IS IT WORTH?)
+❓ Question it answers
+“What is a fair price, given the market?”
+
+📦 Outputs
+Valuation API
+
+Confidence bands
+
+Explanations
+
+Example output:
+
+json
+Copy code
+{
+  "vehicle_id": "renault_duster_2026_petrol_auto_suv_new",
+  "fair_price": 905000,
+  "confidence_low": 880000,
+  "confidence_high": 930000,
+  "liquidity": "high",
+  "expected_time_to_sell_days": 12
+}
+🔁 Frequency
+On demand
+
+Or periodic re-training
+
+🔑 Why this step exists
+This is what you sell
+
+Everything before is infrastructure
+
+🔁 HOW DATA FLOWS (IMPORTANT)
+vbnet
+Copy code
+Step 0 → URLs
+Step 1 → vehicle_id
+Step 2 → listing lifecycle
+Step 3 → time series
+Step 4 → features
+Step 5 → valuation
+Each step:
+
+consumes the previous
+
+does NOT overwrite it
+
+adds meaning
+
+🧠 WHY THIS STRUCTURE IS STRONG
+Identity is frozen
+
+Time is preserved
+
+Disappearance becomes signal
+
+You can re-train forever without re-scraping
+
+You can explain results to humans
+
+This is how real valuation engines are built.
+
+🧱 ONE-PAGE SUMMARY (FOR YOUR HEAD)
+Step	Purpose	Mutable?	Frequency
+0	Discover listings	No	Daily
+1	Define vehicle	No	Once
+2	Track existence	Yes	Daily
+3	Track changes	No	Daily
+4	Engineer signals	Derived	Batch
+5	Predict value	Output	On demand
+
+🚀 Where you are now
+You’ve gone from:
+
+“why not scrape everything?”
+to
+
+“how do I observe a market over time?”
+
+That’s the right evolution.

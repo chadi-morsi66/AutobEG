@@ -1,0 +1,2689 @@
+,brand,model,year,fuel_type,transmission,body_type,engine_capacity,count
+1626,Mercedes-Benz,E200,2026.0,Benzine,Automatic,Sedan,2000.0,18
+1697,Mercedes-Benz,GLC 300,2026.0,Benzine,Automatic,SUV,2000.0,16
+1871,Nissan,Sunny,2026.0,Benzine,Automatic,Sedan,1500.0,15
+1971,Opel,Vectra,2008.0,Benzine,Automatic,Sedan,1600.0,14
+1624,Mercedes-Benz,E200,2025.0,Benzine,Automatic,Sedan,2000.0,14
+1573,Mercedes-Benz,C200,2026.0,Benzine,Automatic,Sedan,1500.0,12
+1555,Mercedes-Benz,C180,2025.0,Benzine,Automatic,Sedan,1500.0,11
+1545,Mercedes-Benz,C180,2022.0,Benzine,Automatic,Sedan,1500.0,10
+1317,Kia,Sportage,2026.0,Benzine,Automatic,SUV,1600.0,10
+1556,Mercedes-Benz,C180,2026.0,Benzine,Automatic,Sedan,1500.0,9
+23,Audi,A5,2025.0,Benzine,Automatic,Sedan,2000.0,8
+2177,Renault,Megane,2005.0,Benzine,Automatic,Sedan,1600.0,8
+2179,Renault,Megane,2006.0,Benzine,Automatic,Sedan,1600.0,8
+2249,Seat,Leon,2020.0,Benzine,Automatic,Hatchback,1600.0,8
+1550,Mercedes-Benz,C180,2023.0,Benzine,Automatic,Sedan,1500.0,8
+2164,Renault,Logan,2017.0,Benzine,Automatic,Sedan,1600.0,8
+1565,Mercedes-Benz,C200,2022.0,Benzine,Automatic,Sedan,1500.0,8
+1029,Hyundai,Matrix,2006.0,Benzine,Manual,Hatchback,1600.0,8
+1570,Mercedes-Benz,C200,2024.0,Benzine,Automatic,Sedan,1500.0,8
+1552,Mercedes-Benz,C180,2024.0,Benzine,Automatic,Sedan,1500.0,8
+1836,Nissan,Sentra,2026.0,Benzine,Automatic,Sedan,1600.0,7
+2115,Renault,Clio,2003.0,Benzine,Manual,Sedan,1200.0,7
+2148,Renault,Logan,2010.0,Benzine,Manual,Sedan,1600.0,7
+420,Chevrolet,Lanos,2015.0,Benzine,Manual,Sedan,1500.0,7
+1413,MG,MG 5,2021.0,Benzine,Automatic,Sedan,1500.0,7
+1739,Mercedes-Benz,Viano,2026.0,Benzine,Automatic,Van / Bus,2000.0,7
+1309,Kia,Sportage,2022.0,Benzine,Automatic,SUV,1600.0,7
+1572,Mercedes-Benz,C200,2025.0,Benzine,Automatic,Sedan,1500.0,7
+459,Chevrolet,Optra,2026.0,Benzine,Automatic,Sedan,1500.0,7
+850,Geely,Emgrand 7,2015.0,Benzine,Manual,Sedan,1600.0,7
+394,Chevrolet,Cruze,2010.0,Benzine,Automatic,Sedan,1600.0,7
+1061,Hyundai,Tucson,2026.0,Benzine,Automatic,SUV,1600.0,7
+1567,Mercedes-Benz,C200,2023.0,Benzine,Automatic,Sedan,1500.0,6
+124,BMW,520,2023.0,Benzine,Automatic,Sedan,1600.0,6
+978,Hyundai,Elantra,2021.0,Benzine,Automatic,Sedan,1600.0,6
+1177,Jetour,T2,2026.0,Benzine,Automatic,SUV,1500.0,6
+442,Chevrolet,Optra,2008.0,Benzine,Automatic,Sedan,1600.0,6
+1092,Hyundai,Verna,2015.0,Benzine,Manual,Sedan,1600.0,6
+983,Hyundai,Elantra,2026.0,Benzine,Automatic,Sedan,1600.0,6
+2379,Speranza,A516,2008.0,Benzine,Manual,Sedan,1600.0,6
+2635,Volkswagen,Passat,2021.0,Benzine,Automatic,Sedan,1400.0,6
+2568,Toyota,Yaris,2008.0,Benzine,Automatic,Sedan,1300.0,6
+2161,Renault,Logan,2016.0,Benzine,Automatic,Sedan,1600.0,6
+2160,Renault,Logan,2015.0,Benzine,Manual,Sedan,1600.0,6
+323,Chery,Arrizo 5,2026.0,Benzine,Automatic,Sedan,1500.0,6
+1542,Mercedes-Benz,C180,2020.0,Benzine,Automatic,Sedan,1500.0,6
+1539,Mercedes-Benz,C180,2019.0,Benzine,Automatic,Sedan,1600.0,6
+1616,Mercedes-Benz,E200,2021.0,Benzine,Automatic,Sedan,2000.0,6
+2333,Skoda,Octavia,2021.0,Benzine,Automatic,Sedan,1400.0,6
+520,Cupra,Terramar,2026.0,Benzine,Automatic,SUV,1400.0,6
+744,Fiat,Shahin,1998.0,Benzine,Manual,Sedan,1400.0,6
+1896,Opel,Astra,2016.0,Benzine,Automatic,Sedan,1600.0,6
+975,Hyundai,Elantra,2019.0,Benzine,Automatic,Sedan,1600.0,6
+102,BMW,320,2018.0,Benzine,Automatic,Sedan,2000.0,6
+2170,Renault,Logan,2019.0,Benzine,Automatic,Sedan,1600.0,6
+1528,Mercedes-Benz,C180,2013.0,Benzine,Automatic,Sedan,1600.0,6
+446,Chevrolet,Optra,2009.0,Benzine,Automatic,Sedan,1600.0,6
+1397,Land Rover,Velar,2025.0,Benzine,Automatic,SUV,2000.0,6
+2389,Speranza,A620,2007.0,Benzine,Automatic,Sedan,2000.0,6
+1783,Mitsubishi,Lancer,2015.0,Benzine,Automatic,Sedan,1600.0,6
+1622,Mercedes-Benz,E200,2024.0,Benzine,Automatic,Sedan,2000.0,6
+841,Geely,Emgrand,2026.0,Benzine,Automatic,Sedan,1500.0,5
+1897,Opel,Astra,2017.0,Benzine,Automatic,Sedan,1600.0,5
+2470,Suzuki,Swift,2021.0,Benzine,Automatic,Hatchback,1200.0,5
+1443,MG,ZS,2026.0,Benzine,Automatic,SUV,1500.0,5
+412,Chevrolet,Lanos,2012.0,Benzine,Manual,Sedan,1500.0,5
+89,BMW,318,2019.0,Benzine,Automatic,Sedan,1500.0,5
+423,Chevrolet,Lanos,2017.0,Benzine,Manual,Sedan,1500.0,5
+107,BMW,320,2024.0,Benzine,Automatic,Sedan,1600.0,5
+2154,Renault,Logan,2013.0,Benzine,Automatic,Sedan,1600.0,5
+1895,Opel,Astra,2015.0,Benzine,Automatic,Sedan,1600.0,5
+581,Daewoo,Nubira,2001.0,Benzine,Automatic,Sedan,1600.0,5
+2151,Renault,Logan,2011.0,Benzine,Manual,Sedan,1600.0,5
+563,Daewoo,Lanos,2008.0,Benzine,Manual,Sedan,1500.0,5
+652,Fiat,128,1979.0,Benzine,Manual,Sedan,1100.0,5
+2654,Volkswagen,Tayron,2026.0,Benzine,Automatic,SUV,1400.0,5
+544,Daewoo,Lanos,2000.0,Benzine,Manual,Sedan,1500.0,5
+2664,Volkswagen,Tiguan,2024.0,Benzine,Automatic,SUV,1400.0,5
+542,Daewoo,Lanos,1999.0,Benzine,Manual,Sedan,1500.0,5
+592,Daewoo,Nubira,2005.0,Benzine,Manual,Sedan,1600.0,5
+590,Daewoo,Nubira,2005.0,Benzine,Automatic,Sedan,1600.0,5
+2371,Speranza,A113,2010.0,Benzine,Manual,Hatchback,1300.0,5
+399,Chevrolet,Cruze,2016.0,Benzine,Automatic,Sedan,1600.0,5
+977,Hyundai,Elantra,2020.0,Benzine,Automatic,Sedan,1600.0,5
+409,Chevrolet,Lanos,2011.0,Benzine,Manual,Sedan,1500.0,5
+2525,Toyota,Corolla,2022.0,Benzine,Automatic,Sedan,1600.0,4
+417,Chevrolet,Lanos,2014.0,Benzine,Manual,Sedan,1500.0,4
+757,Fiat,Siena,2000.0,Benzine,Manual,Sedan,1400.0,4
+1396,Land Rover,Velar,2024.0,Benzine,Automatic,SUV,2000.0,4
+1595,Mercedes-Benz,CLA 200,2024.0,Benzine,Automatic,Sedan,1400.0,4
+2521,Toyota,Corolla,2019.0,Benzine,Automatic,Sedan,1600.0,4
+826,GAC,EMPOW,2026.0,Benzine,Automatic,Sedan,1500.0,4
+2366,Speranza,A113,2008.0,Benzine,Manual,Hatchback,1300.0,4
+2252,Seat,Leon,2026.0,Benzine,Automatic,Hatchback,1400.0,4
+750,Fiat,Shahin,2005.0,Benzine,Manual,Sedan,1400.0,4
+2237,Seat,Ibiza,2019.0,Benzine,Automatic,Hatchback,1600.0,4
+2519,Toyota,Corolla,2015.0,Benzine,Automatic,Sedan,1600.0,4
+774,Fiat,Tipo,2021.0,Benzine,Automatic,Sedan,1600.0,4
+125,BMW,520,2024.0,Benzine,Automatic,Sedan,2000.0,4
+2055,Peugeot,508,2022.0,Benzine,Automatic,Sedan,1600.0,4
+743,Fiat,Shahin,1996.0,Benzine,Manual,Sedan,1300.0,4
+1425,MG,MG 7,2026.0,Benzine,Automatic,Sedan,1500.0,4
+2382,Speranza,A516,2009.0,Benzine,Manual,Sedan,1600.0,4
+406,Chevrolet,Lanos,2010.0,Benzine,Manual,Sedan,1500.0,4
+2245,Seat,Leon,2016.0,Benzine,Automatic,Hatchback,1600.0,4
+1607,Mercedes-Benz,E180,2016.0,Benzine,Automatic,Sedan,1600.0,4
+136,BMW,530,2019.0,Benzine,Automatic,Sedan,2000.0,4
+1767,Mitsubishi,Lancer,1999.0,Benzine,Manual,Sedan,1300.0,4
+244,BYD,F3,2025.0,Benzine,Automatic,Sedan,1500.0,4
+2037,Peugeot,408,2026.0,Benzine,Automatic,SUV,1600.0,4
+1047,Hyundai,Tucson,2019.0,Benzine,Automatic,SUV,1600.0,4
+245,BYD,F3,2025.0,Benzine,Manual,Sedan,1500.0,4
+1696,Mercedes-Benz,GLC 300,2025.0,Benzine,Automatic,Sports / Coupe,2000.0,4
+822,Ford,Mondeo,1998.0,Benzine,Manual,Sedan,1600.0,4
+2569,Toyota,Yaris,2008.0,Benzine,Manual,Sedan,1300.0,4
+782,Fiat,Uno,1993.0,Benzine,Manual,Hatchback,1000.0,4
+1615,Mercedes-Benz,E200,2020.0,Benzine,Automatic,Sedan,2000.0,4
+2142,Renault,Kadjar,2018.0,Benzine,Automatic,SUV,1200.0,4
+2162,Renault,Logan,2016.0,Benzine,Manual,Sedan,1600.0,4
+935,Hyundai,Accent,2006.0,Benzine,Manual,Sedan,1300.0,4
+2190,Renault,Megane,2020.0,Benzine,Automatic,Sedan,1600.0,4
+2286,Skoda,Felecia,1997.0,Benzine,Manual,Hatchback,1300.0,4
+925,Hyundai,Accent,2000.0,Benzine,Manual,Sedan,1300.0,4
+2628,Volkswagen,Passat,2007.0,Benzine,Automatic,Sedan,1600.0,4
+1538,Mercedes-Benz,C180,2019.0,Benzine,Automatic,Sedan,1500.0,4
+877,Haval,H6,2026.0,Benzine,Automatic,SUV,1500.0,4
+1960,Opel,Vectra,1997.0,Benzine,Manual,Sedan,1600.0,4
+2636,Volkswagen,Passat,2022.0,Benzine,Automatic,Sedan,1400.0,4
+440,Chevrolet,Optra,2007.0,Benzine,Manual,Sedan,1600.0,4
+1533,Mercedes-Benz,C180,2015.0,Benzine,Automatic,Sedan,1600.0,4
+1234,Kia,Pride,1997.0,Benzine,Manual,Hatchback,1100.0,4
+1209,Kia,Cerato,2017.0,Benzine,Automatic,Sedan,1600.0,4
+2645,Volkswagen,Polo,2001.0,Benzine,Manual,Hatchback,1400.0,4
+1470,Mazda,3,2008.0,Benzine,Automatic,Sedan,1600.0,4
+1683,Mercedes-Benz,GLC 200,2024.0,Benzine,Automatic,Sports / Coupe,2000.0,4
+78,BMW,316,2015.0,Benzine,Automatic,Sedan,1600.0,4
+1316,Kia,Sportage,2025.0,Benzine,Automatic,SUV,1600.0,4
+2313,Skoda,Kodiaq,2025.0,Benzine,Automatic,SUV,1500.0,4
+93,BMW,320,2007.0,Benzine,Automatic,Sedan,2000.0,4
+1892,Opel,Astra,2013.0,Benzine,Automatic,Sedan,1600.0,4
+2195,Renault,Megane,2023.0,Benzine,Automatic,Sedan,1600.0,4
+1730,Mercedes-Benz,S500,2021.0,Benzine,Automatic,Sedan,3000.0,4
+1009,Hyundai,I10,2013.0,Benzine,Automatic,Hatchback,1100.0,4
+2474,Suzuki,Swift,2026.0,Benzine,Automatic,Hatchback,1200.0,4
+518,Cupra,Terramar,2025.0,Benzine,Automatic,SUV,1400.0,4
+2141,Renault,Kadjar,2017.0,Benzine,Automatic,SUV,1200.0,4
+88,BMW,318,2018.0,Benzine,Automatic,Sedan,1500.0,4
+950,Hyundai,Accent,2026.0,Benzine,Automatic,Sedan,1600.0,4
+2523,Toyota,Corolla,2021.0,Benzine,Automatic,Sedan,1600.0,3
+297,Cadillac,Escalade,2025.0,Benzine,Automatic,4X4,6200.0,3
+1313,Kia,Sportage,2024.0,Benzine,Automatic,SUV,1600.0,3
+346,Chery,Tiggo 4 Pro,2026.0,Benzine,Automatic,SUV,1500.0,3
+1794,Mitsubishi,Pajero,2016.0,Benzine,Automatic,4X4,3800.0,3
+654,Fiat,128,1980.0,Benzine,Manual,Sedan,1100.0,3
+1379,Land Rover,Range Rover Sport,2021.0,Benzine,Automatic,SUV,2000.0,3
+1073,Hyundai,Verna,2008.0,Benzine,Manual,Sedan,1600.0,3
+636,Fiat,127,1982.0,Benzine,Manual,Hatchback,900.0,3
+2193,Renault,Megane,2022.0,Benzine,Automatic,Sedan,1600.0,3
+1128,Jeep,Cherokee,2009.0,Benzine,Automatic,4X4,3700.0,3
+1848,Nissan,Sunny,2011.0,Benzine,Automatic,Sedan,1600.0,3
+308,Changan,CS55,2026.0,Benzine,Automatic,SUV,1500.0,3
+1846,Nissan,Sunny,2010.0,Benzine,Automatic,Sedan,1600.0,3
+1784,Mitsubishi,Lancer,2016.0,Benzine,Automatic,Sedan,1600.0,3
+2192,Renault,Megane,2022.0,Benzine,Automatic,Sedan,1300.0,3
+315,Chery,A11,2006.0,Benzine,Manual,Sedan,1600.0,3
+2097,Proton,Saga,2026.0,Benzine,Automatic,Sedan,1300.0,3
+595,Daewoo,Nubira,2007.0,Benzine,Automatic,Sedan,1600.0,3
+341,Chery,Tiggo 3,2024.0,Benzine,Automatic,SUV,1500.0,3
+2372,Speranza,A113,2011.0,Benzine,Manual,Hatchback,1300.0,3
+2135,Renault,Fluence,2011.0,Benzine,Automatic,Sedan,1600.0,3
+2447,Suzuki,Maruti,2009.0,Benzine,Manual,Hatchback,800.0,3
+1321,Kia,Xceed,2025.0,Benzine,Automatic,SUV,1500.0,3
+699,Fiat,500X,2026.0,Benzine,Automatic,Hatchback,1400.0,3
+2130,Renault,Duster,2019.0,Benzine,Automatic,Hatchback,1600.0,3
+1632,Mercedes-Benz,E300,2010.0,Benzine,Automatic,Sedan,3000.0,3
+1689,Mercedes-Benz,GLC 300,2023.0,Benzine,Automatic,SUV,2000.0,3
+2527,Toyota,Corolla,2024.0,Benzine,Automatic,Sedan,1600.0,3
+1773,Mitsubishi,Lancer,2006.0,Benzine,Automatic,Sedan,1600.0,3
+1338,Lada,2107,2010.0,Benzine,Manual,Sedan,1600.0,3
+1774,Mitsubishi,Lancer,2007.0,Benzine,Automatic,Sedan,1600.0,3
+687,Fiat,131,1980.0,Benzine,Manual,Sedan,1300.0,3
+2464,Suzuki,Swift,1993.0,Benzine,Manual,Sedan,1300.0,3
+579,Daewoo,Nubira,2000.0,Benzine,Automatic,Sedan,1600.0,3
+1091,Hyundai,Verna,2015.0,Benzine,Automatic,Sedan,1600.0,3
+1090,Hyundai,Verna,2014.0,Natural Gas,Manual,Sedan,1600.0,3
+2394,Speranza,Envy,2017.0,Benzine,Manual,Sedan,1500.0,3
+2156,Renault,Logan,2014.0,Benzine,Automatic,Sedan,1600.0,3
+370,Chevrolet,Aveo,2011.0,Benzine,Manual,Sedan,1500.0,3
+2157,Renault,Logan,2014.0,Benzine,Manual,Sedan,1600.0,3
+279,Brilliance,FRV,2009.0,Benzine,Manual,Hatchback,1600.0,3
+372,Chevrolet,Aveo,2012.0,Benzine,Automatic,Sedan,1500.0,3
+718,Fiat,Polonez,1989.0,Benzine,Manual,Hatchback,1500.0,3
+2452,Suzuki,Maruti,2013.0,Benzine,Manual,Hatchback,800.0,3
+670,Fiat,128,1991.0,Benzine,Manual,Sedan,1300.0,3
+1167,Jeep,Wrangler,2015.0,Benzine,Automatic,4X4,3600.0,3
+1829,Nissan,Sentra,2020.0,Benzine,Automatic,Sedan,1600.0,3
+584,Daewoo,Nubira,2001.0,Benzine,Manual,Sedan,1600.0,3
+1084,Hyundai,Verna,2012.0,Benzine,Manual,Sedan,1600.0,3
+1609,Mercedes-Benz,E180,2019.0,Benzine,Automatic,Sedan,1600.0,3
+2526,Toyota,Corolla,2023.0,Benzine,Automatic,Sedan,1600.0,3
+165,BMW,X1,2019.0,Benzine,Automatic,SUV,2000.0,3
+1698,Mercedes-Benz,GLC 300,2026.0,Benzine,Automatic,Sports / Coupe,2000.0,3
+34,Audi,Q3,2021.0,Benzine,Automatic,SUV,1400.0,3
+2659,Volkswagen,Tiguan,2020.0,Benzine,Automatic,SUV,1400.0,3
+849,Geely,Emgrand 7,2015.0,Benzine,Manual,Sedan,1500.0,3
+104,BMW,320,2020.0,Benzine,Automatic,Sedan,2000.0,3
+105,BMW,320,2023.0,Benzine,Automatic,Sedan,1600.0,3
+1965,Opel,Vectra,2000.0,Benzine,Automatic,Sedan,2000.0,3
+111,BMW,330,2024.0,Benzine,Automatic,Sedan,2000.0,3
+1523,Mercedes-Benz,C180,2010.0,Benzine,Automatic,Sedan,1600.0,3
+844,Geely,Emgrand 7,2014.0,Benzine,Manual,Sedan,1500.0,3
+1230,Kia,Picanto,2015.0,Benzine,Automatic,Hatchback,1300.0,3
+1019,Hyundai,IX35,2015.0,Benzine,Automatic,Hatchback,1600.0,3
+1020,Hyundai,IX35,2015.0,Benzine,Automatic,SUV,1600.0,3
+1207,Kia,Cerato,2015.0,Benzine,Automatic,Sedan,1600.0,3
+1210,Kia,Cerato,2018.0,Benzine,Automatic,Sedan,1600.0,3
+1211,Kia,Cerato,2019.0,Benzine,Automatic,Sedan,1600.0,3
+1024,Hyundai,Matrix,2002.0,Benzine,Automatic,Hatchback,1600.0,3
+2671,Volkswagen,Tiguan,2026.0,Benzine,Automatic,SUV,1400.0,3
+1977,Peugeot,2008,2021.0,Benzine,Automatic,SUV,1200.0,3
+515,Cupra,Leon,2026.0,Benzine,Automatic,Hatchback,1400.0,3
+1173,Jetour,Dashing,2026.0,Benzine,Automatic,SUV,1500.0,3
+2582,Volkswagen,Beetle,1975.0,Benzine,Manual,Hatchback,1300.0,3
+448,Chevrolet,Optra,2010.0,Benzine,Automatic,Sedan,1600.0,3
+1532,Mercedes-Benz,C180,2014.0,Benzine,Automatic,Sedan,1600.0,3
+2641,Volkswagen,Polo,1998.0,Benzine,Manual,Hatchback,1400.0,3
+2638,Volkswagen,Pointer,2004.0,Benzine,Manual,Hatchback,1000.0,3
+439,Chevrolet,Optra,2007.0,Benzine,Automatic,Sedan,1600.0,3
+1990,Peugeot,3008,2021.0,Benzine,Automatic,SUV,1600.0,3
+1719,Mercedes-Benz,GLS,2025.0,Benzine,Automatic,SUV,4000.0,3
+1916,Opel,Corsa,2005.0,Benzine,Manual,Sedan,1600.0,3
+875,Haval,H6,2022.0,Benzine,Automatic,SUV,1500.0,3
+2285,Skoda,Felecia,1996.0,Benzine,Manual,Hatchback,1300.0,3
+993,Hyundai,Excel,1997.0,Benzine,Manual,Sedan,1500.0,3
+1238,Kia,Rio,2001.0,Benzine,Manual,Sedan,1300.0,3
+1543,Mercedes-Benz,C180,2020.0,Benzine,Automatic,Sedan,1600.0,3
+1972,Opel,Vectra,2008.0,Benzine,Automatic,Sedan,2200.0,3
+447,Chevrolet,Optra,2009.0,Benzine,Manual,Sedan,1600.0,3
+1546,Mercedes-Benz,C180,2022.0,Benzine,Automatic,Sedan,1600.0,3
+511,Cupra,Formentor,2024.0,Benzine,Automatic,SUV,2000.0,3
+1901,Opel,Astra,2020.0,Benzine,Automatic,Sedan,1400.0,3
+2040,Peugeot,5008,2020.0,Benzine,Automatic,SUV,1600.0,3
+1915,Opel,Corsa,2004.0,Benzine,Manual,Sedan,1600.0,3
+414,Chevrolet,Lanos,2013.0,Benzine,Manual,Sedan,1500.0,3
+1049,Hyundai,Tucson,2020.0,Benzine,Automatic,SUV,1600.0,3
+166,BMW,X1,2020.0,Benzine,Automatic,SUV,1500.0,3
+2321,Skoda,Octavia,2000.0,Benzine,Manual,Sedan,1600.0,3
+1865,Nissan,Sunny,2023.0,Benzine,Automatic,Sedan,1500.0,3
+169,BMW,X1,2025.0,Benzine,Automatic,SUV,1500.0,3
+2069,Porsche,Cayenne,2024.0,Benzine,Automatic,SUV,3000.0,3
+2072,Porsche,Cayenne,2026.0,Benzine,Automatic,SUV,4000.0,3
+1052,Hyundai,Tucson,2021.0,Benzine,Automatic,SUV,1600.0,3
+2065,Porsche,Cayenne,2022.0,Benzine,Automatic,Sports / Coupe,4000.0,3
+777,Fiat,Tipo,2022.0,Benzine,Automatic,Sedan,1600.0,3
+771,Fiat,Tipo,2020.0,Benzine,Automatic,Sedan,1600.0,3
+1940,Opel,Insignia,2015.0,Benzine,Automatic,Sedan,1600.0,3
+1859,Nissan,Sunny,2020.0,Benzine,Automatic,Sedan,1500.0,3
+1857,Nissan,Sunny,2018.0,Benzine,Automatic,Sedan,1500.0,3
+759,Fiat,Siena,2002.0,Benzine,Manual,Sedan,1400.0,3
+2314,Skoda,Kodiaq,2026.0,Benzine,Automatic,SUV,1400.0,3
+1942,Opel,Insignia,2017.0,Benzine,Automatic,Sedan,1600.0,3
+403,Chevrolet,Lanos,2009.0,Benzine,Manual,Sedan,1500.0,3
+2359,Soueast,S05,2026.0,Benzine,Automatic,Hatchback,1500.0,3
+1027,Hyundai,Matrix,2006.0,Benzine,Automatic,Hatchback,1600.0,3
+923,Hyundai,Accent,1999.0,Benzine,Manual,Sedan,1500.0,3
+1180,Jetour,X70,2026.0,Benzine,Automatic,SUV,1500.0,3
+1416,MG,MG 5,2026.0,Benzine,Automatic,Sedan,1500.0,3
+1414,MG,MG 5,2022.0,Benzine,Automatic,Sedan,1500.0,3
+2565,Toyota,Yaris,2007.0,Benzine,Automatic,Sedan,1300.0,3
+793,Ford,Escort,1998.0,Benzine,Manual,Sedan,1300.0,3
+2298,Skoda,Kodiaq,2020.0,Benzine,Automatic,SUV,1400.0,2
+1742,Mitsubishi,Atrage,2014.0,Benzine,Automatic,Sedan,1200.0,2
+586,Daewoo,Nubira,2002.0,Benzine,Manual,Sedan,1600.0,2
+2214,Renault,Taliant,2026.0,Benzine,Automatic,Sedan,1000.0,2
+1218,Kia,K4,2018.0,Benzine,Automatic,Sedan,1600.0,2
+1937,Opel,Grandland,2024.0,Benzine,Automatic,SUV,1600.0,2
+605,Daihatsu,Charade,2007.0,Benzine,Automatic,Hatchback,1000.0,2
+2220,Seat,Arona,2025.0,Benzine,Automatic,SUV,1600.0,2
+1737,Mercedes-Benz,Viano,2025.0,Benzine,Automatic,Van / Bus,2000.0,2
+2307,Skoda,Kodiaq,2023.0,Benzine,Automatic,SUV,1500.0,2
+1149,Jeep,Renegade,2016.0,Benzine,Automatic,4X4,1400.0,2
+1779,Mitsubishi,Lancer,2013.0,Benzine,Automatic,Sedan,1600.0,2
+1781,Mitsubishi,Lancer,2014.0,Benzine,Automatic,Sedan,1600.0,2
+2316,Skoda,Octavia,1998.0,Benzine,Manual,Sedan,1600.0,2
+599,Daewoo,Zaz,2001.0,Benzine,Manual,Sedan,1200.0,2
+2221,Seat,Arona,2026.0,Benzine,Automatic,Hatchback,1600.0,2
+603,Daihatsu,Charade,1997.0,Benzine,Automatic,Sedan,1300.0,2
+2308,Skoda,Kodiaq,2024.0,Benzine,Automatic,SUV,1400.0,2
+597,Daewoo,Nubira,2008.0,Benzine,Manual,Sedan,1600.0,2
+1212,Kia,Cerato,2022.0,Benzine,Automatic,Sedan,1600.0,2
+513,Cupra,Leon,2024.0,Benzine,Automatic,Hatchback,1400.0,2
+496,Citroen,C5 Aircross,2020.0,Benzine,Automatic,SUV,1600.0,2
+2290,Skoda,Felicia Combi,1996.0,Benzine,Manual,Estate,1300.0,2
+2238,Seat,Ibiza,2021.0,Benzine,Automatic,Hatchback,1600.0,2
+1166,Jeep,Wrangler,2013.0,Benzine,Automatic,4X4,3600.0,2
+2262,Seat,Toledo,2016.0,Benzine,Automatic,Sedan,1600.0,2
+2241,Seat,Ibiza,2026.0,Benzine,Automatic,Hatchback,1600.0,2
+538,Daewoo,Lanos,1997.0,Benzine,Manual,Sedan,1500.0,2
+1763,Mitsubishi,Lancer,1998.0,Benzine,Automatic,Sedan,1500.0,2
+1144,Jeep,Grand Cherokee,2024.0,Benzine,Automatic,4X4,3600.0,2
+559,Daewoo,Lanos,2006.0,Benzine,Manual,Sedan,1600.0,2
+558,Daewoo,Lanos,2006.0,Benzine,Manual,Sedan,1500.0,2
+1176,Jetour,T2,2026.0,Benzine,Automatic,Hatchback,1500.0,2
+2248,Seat,Leon,2019.0,Benzine,Automatic,Hatchback,1600.0,2
+554,Daewoo,Lanos,2005.0,Benzine,Manual,Sedan,1500.0,2
+2251,Seat,Leon,2024.0,Benzine,Automatic,Hatchback,1400.0,2
+2257,Seat,Toledo,1994.0,Benzine,Manual,Sedan,1600.0,2
+1764,Mitsubishi,Lancer,1998.0,Benzine,Manual,Sedan,1300.0,2
+2255,Seat,Tarraco,2024.0,Benzine,Automatic,SUV,1400.0,2
+547,Daewoo,Lanos,2000.0,Natural Gas,Manual,Sedan,1500.0,2
+530,Daewoo,Lacetti,2004.0,Benzine,Automatic,Sedan,1600.0,2
+529,Daewoo,Lacetti,2003.0,Benzine,Automatic,Sedan,1600.0,2
+569,Daewoo,Nubira,1997.0,Benzine,Automatic,Sedan,1500.0,2
+514,Cupra,Leon,2025.0,Benzine,Automatic,Hatchback,1400.0,2
+2228,Seat,Ibiza,1994.0,Benzine,Manual,Hatchback,1300.0,2
+1777,Mitsubishi,Lancer,2010.0,Benzine,Automatic,Sedan,1600.0,2
+500,Citroen,DS4,2023.0,Benzine,Automatic,Hatchback,1600.0,2
+1197,Kia,Carnival,2024.0,Hybrid,Automatic,SUV,1600.0,2
+2284,Skoda,Felecia,1995.0,Benzine,Manual,Hatchback,1300.0,2
+2281,Skoda,Favorit,1994.0,Benzine,Manual,Hatchback,1300.0,2
+1162,Jeep,Wrangler,2010.0,Benzine,Automatic,4X4,3800.0,2
+2277,Skoda,Fantasia,2011.0,Benzine,Automatic,Sedan,1600.0,2
+570,Daewoo,Nubira,1997.0,Benzine,Manual,Sedan,1600.0,2
+2276,Skoda,Fantasia,2010.0,Benzine,Automatic,Sedan,2000.0,2
+574,Daewoo,Nubira,1999.0,Benzine,Automatic,Sedan,1600.0,2
+2235,Seat,Ibiza,2014.0,Benzine,Automatic,Hatchback,1600.0,2
+2275,Skoda,Fabia,2009.0,Benzine,Automatic,Hatchback,1600.0,2
+1191,Kia,Carens,2011.0,Benzine,Automatic,Hatchback,1600.0,2
+1186,Kaiyi,X3 Pro,2026.0,Benzine,Automatic,SUV,1500.0,2
+1757,Mitsubishi,Lancer,1993.0,Benzine,Manual,Sedan,1300.0,2
+2213,Renault,Scala,2011.0,Benzine,Automatic,Sedan,1600.0,2
+1732,Mercedes-Benz,S580,2023.0,Benzine,Automatic,Sedan,4000.0,2
+2209,Renault,Sandero Stepway,2019.0,Benzine,Automatic,Hatchback,1600.0,2
+1898,Opel,Astra,2018.0,Benzine,Automatic,Sedan,1600.0,2
+2027,Peugeot,405,2007.0,Benzine,Manual,Sedan,1600.0,2
+1890,Opel,Astra,2010.0,Benzine,Automatic,Hatchback,1600.0,2
+1014,Hyundai,I30,2026.0,Benzine,Automatic,Sedan,1500.0,2
+1010,Hyundai,I10,2016.0,Benzine,Automatic,Hatchback,1100.0,2
+2019,Peugeot,405,1993.0,Benzine,Manual,Sedan,1600.0,2
+1005,Hyundai,I10,2010.0,Benzine,Manual,Hatchback,1100.0,2
+1899,Opel,Astra,2019.0,Benzine,Automatic,Sedan,1400.0,2
+990,Hyundai,Excel,1997.0,Benzine,Manual,Hatchback,1300.0,2
+1000,Hyundai,Getz,2007.0,Benzine,Automatic,Hatchback,1600.0,2
+2009,Peugeot,307 SW,2006.0,Benzine,Automatic,Hatchback,1600.0,2
+860,Geely,Emgrand X7,2019.0,Benzine,Automatic,SUV,1500.0,2
+1902,Opel,Astra,2021.0,Benzine,Automatic,Sedan,1400.0,2
+1905,Opel,Corsa,1994.0,Benzine,Manual,Hatchback,1200.0,2
+2002,Peugeot,307,2006.0,Benzine,Automatic,Hatchback,1600.0,2
+1887,Opel,Astra,2008.0,Benzine,Automatic,Hatchback,1600.0,2
+2034,Peugeot,406,2004.0,Benzine,Automatic,Sedan,2000.0,2
+828,GAC,EMZOOM,2026.0,Benzine,Automatic,SUV,1500.0,2
+1884,Opel,Astra,2007.0,Benzine,Automatic,Hatchback,1800.0,2
+2039,Peugeot,5008,2020.0,Benzine,Automatic,Hatchback,1600.0,2
+2042,Peugeot,5008,2026.0,Benzine,Automatic,SUV,1600.0,2
+1882,Opel,Astra,2005.0,Benzine,Automatic,Sedan,1600.0,2
+1877,Opel,Astra,2000.0,Benzine,Manual,Sedan,1200.0,2
+2051,Peugeot,508,2014.0,Benzine,Automatic,Sedan,1600.0,2
+805,Ford,Focus,2005.0,Benzine,Automatic,Sedan,1600.0,2
+1037,Hyundai,Santa Fe,2025.0,Hybrid,Automatic,4X4,1600.0,2
+2058,Porsche,Boxster,2024.0,Benzine,Automatic,Convertible,2000.0,2
+800,Ford,Fiesta,2000.0,Benzine,Manual,Hatchback,1300.0,2
+1869,Nissan,Sunny,2025.0,Benzine,Automatic,Sedan,1500.0,2
+1867,Nissan,Sunny,2024.0,Benzine,Automatic,Sedan,1600.0,2
+792,Ford,EcoSport,2019.0,Benzine,Automatic,SUV,1000.0,2
+791,Ford,EcoSport,2019.0,Benzine,Automatic,Hatchback,1000.0,2
+992,Hyundai,Excel,1997.0,Benzine,Manual,Sedan,1300.0,2
+988,Hyundai,Excel,1996.0,Benzine,Manual,Sedan,1500.0,2
+2208,Renault,Sandero Stepway,2018.0,Benzine,Automatic,Hatchback,1600.0,2
+1932,Opel,Grandland,2018.0,Benzine,Automatic,SUV,1600.0,2
+1923,Opel,Corsa,2022.0,Benzine,Automatic,Hatchback,1200.0,2
+1956,Opel,Vectra,1996.0,Benzine,Automatic,Sedan,2000.0,2
+922,Hyundai,Accent,1998.0,Benzine,Manual,Sedan,1500.0,2
+926,Hyundai,Accent,2000.0,Benzine,Manual,Sedan,1500.0,2
+1930,Opel,Crossland,2021.0,Benzine,Automatic,SUV,1200.0,2
+929,Hyundai,Accent,2001.0,Benzine,Manual,Sedan,1500.0,2
+1934,Opel,Grandland,2021.0,Benzine,Automatic,Hatchback,1600.0,2
+986,Hyundai,Excel,1995.0,Benzine,Manual,Sedan,1500.0,2
+951,Hyundai,Atos,1998.0,Benzine,Manual,Hatchback,1000.0,2
+1945,Opel,Insignia,2020.0,Benzine,Automatic,Sedan,1500.0,2
+1943,Opel,Insignia,2018.0,Benzine,Automatic,Sedan,1500.0,2
+940,Hyundai,Accent,2010.0,Benzine,Automatic,Sedan,1600.0,2
+941,Hyundai,Accent,2010.0,Benzine,Manual,Sedan,1600.0,2
+1941,Opel,Insignia,2016.0,Benzine,Automatic,Sedan,1600.0,2
+914,Honda,Civic,2020.0,Benzine,Automatic,Sedan,1600.0,2
+912,Honda,Civic,2017.0,Benzine,Automatic,Sedan,1600.0,2
+1963,Opel,Vectra,1999.0,Benzine,Manual,Sedan,1600.0,2
+909,Honda,Civic,2009.0,Benzine,Automatic,Sedan,1600.0,2
+908,Honda,Civic,2008.0,Benzine,Automatic,Sedan,1600.0,2
+1968,Opel,Vectra,2001.0,Benzine,Automatic,Sedan,2000.0,2
+1969,Opel,Vectra,2002.0,Benzine,Automatic,Sedan,1600.0,2
+902,Honda,Civic,1992.0,Benzine,Automatic,Sedan,1500.0,2
+970,Hyundai,Elantra,2012.0,Benzine,Automatic,Sedan,1600.0,2
+972,Hyundai,Elantra,2015.0,Benzine,Automatic,Sedan,1600.0,2
+974,Hyundai,Elantra,2017.0,Benzine,Automatic,Sedan,1600.0,2
+1981,Peugeot,206,2001.0,Benzine,Manual,Hatchback,1100.0,2
+1914,Opel,Corsa,2003.0,Benzine,Manual,Sedan,1600.0,2
+884,Honda,Accord,2009.0,Benzine,Automatic,Sedan,2400.0,2
+982,Hyundai,Elantra,2026.0,Benzine,Automatic,Sedan,1500.0,2
+1989,Peugeot,3008,2020.0,Benzine,Automatic,SUV,1600.0,2
+1991,Peugeot,3008,2022.0,Benzine,Automatic,SUV,1600.0,2
+1866,Nissan,Sunny,2023.0,Benzine,Automatic,Sedan,1600.0,2
+2070,Porsche,Cayenne,2024.0,Benzine,Automatic,Sports / Coupe,3000.0,2
+1048,Hyundai,Tucson,2020.0,Benzine,Automatic,Hatchback,1600.0,2
+1820,Nissan,Qashqai,2019.0,Benzine,Automatic,SUV,1200.0,2
+664,Fiat,128,1987.0,Benzine,Manual,Sedan,1100.0,2
+666,Fiat,128,1988.0,Benzine,Manual,Sedan,1100.0,2
+667,Fiat,128,1988.0,Benzine,Manual,Sedan,1300.0,2
+1818,Nissan,Qashqai,2018.0,Benzine,Automatic,SUV,1200.0,2
+675,Fiat,128,2000.0,Benzine,Manual,Sedan,1300.0,2
+1819,Nissan,Qashqai,2018.0,Benzine,Automatic,SUV,1600.0,2
+1823,Nissan,Qashqai,2021.0,Benzine,Automatic,SUV,1200.0,2
+1054,Hyundai,Tucson,2022.0,Benzine,Automatic,SUV,1600.0,2
+2146,Renault,Kadjar,2020.0,Benzine,Automatic,Estate,1200.0,2
+2145,Renault,Kadjar,2019.0,Benzine,Automatic,SUV,1200.0,2
+1825,Nissan,Qashqai,2026.0,Benzine,Automatic,SUV,1300.0,2
+1826,Nissan,Sentra,2016.0,Benzine,Automatic,Sedan,1600.0,2
+2140,Renault,Fluence,2016.0,Benzine,Automatic,Sedan,1600.0,2
+2139,Renault,Fluence,2015.0,Benzine,Automatic,Sedan,1600.0,2
+2165,Renault,Logan,2017.0,Benzine,Manual,Sedan,1600.0,2
+2167,Renault,Logan,2018.0,Benzine,Automatic,Sedan,1500.0,2
+660,Fiat,128,1984.0,Benzine,Manual,Sedan,1100.0,2
+1814,Nissan,Qashqai,2017.0,Benzine,Automatic,SUV,1200.0,2
+658,Fiat,128,1982.0,Benzine,Manual,Sedan,1100.0,2
+657,Fiat,128,1981.0,Benzine,Manual,Sedan,1100.0,2
+1812,Nissan,Qashqai,2013.0,Benzine,Automatic,SUV,1600.0,2
+642,Fiat,127,1986.0,Benzine,Manual,Hatchback,900.0,2
+2181,Renault,Megane,2006.0,Diesel,Automatic,Sedan,1600.0,2
+1125,Jeep,Cherokee,1998.0,Benzine,Automatic,4X4,4000.0,2
+2189,Renault,Megane,2020.0,Benzine,Automatic,Sedan,1200.0,2
+2191,Renault,Megane,2021.0,Benzine,Automatic,Sedan,1600.0,2
+625,Dodge,Ram,2012.0,Benzine,Automatic,Pickup,5700.0,2
+2197,Renault,Megane,2026.0,Benzine,Automatic,Sedan,1600.0,2
+1136,Jeep,Grand Cherokee,2016.0,Benzine,Automatic,4X4,5700.0,2
+1793,Mitsubishi,Pajero,2016.0,Benzine,Automatic,4X4,3500.0,2
+1142,Jeep,Grand Cherokee,2022.0,Benzine,Automatic,4X4,5700.0,2
+2137,Renault,Fluence,2014.0,Benzine,Automatic,Sedan,1600.0,2
+2132,Renault,Duster,2020.0,Benzine,Automatic,SUV,1600.0,2
+1833,Nissan,Sentra,2024.0,Benzine,Automatic,Sedan,1600.0,2
+1079,Hyundai,Verna,2010.0,Benzine,Manual,Sedan,1600.0,2
+2080,Porsche,Macan,2026.0,Benzine,Automatic,SUV,2000.0,2
+770,Fiat,Tipo,2020.0,Benzine,Automatic,Hatchback,1600.0,2
+769,Fiat,Tipo,2019.0,Benzine,Automatic,Sedan,1600.0,2
+768,Fiat,Tipo,2018.0,Benzine,Automatic,Sedan,1600.0,2
+1060,Hyundai,Tucson,2025.0,Benzine,Automatic,SUV,1600.0,2
+2089,Proton,Gen-2,2014.0,Benzine,Automatic,Sedan,1600.0,2
+2090,Proton,Persona,2009.0,Benzine,Automatic,Sedan,1600.0,2
+1066,Hyundai,Verna,2004.0,Benzine,Manual,Sedan,1600.0,2
+2096,Proton,Saga,2020.0,Benzine,Automatic,Sedan,1300.0,2
+1850,Nissan,Sunny,2013.0,Benzine,Automatic,Sedan,1500.0,2
+1070,Hyundai,Verna,2007.0,Benzine,Manual,Sedan,1600.0,2
+1074,Hyundai,Verna,2009.0,Benzine,Manual,Sedan,1600.0,2
+1076,Hyundai,Verna,2010.0,Benzine,Automatic,Sedan,1600.0,2
+1845,Nissan,Sunny,2009.0,Benzine,Automatic,Sedan,1600.0,2
+1843,Nissan,Sunny,2008.0,Benzine,Automatic,Sedan,1600.0,2
+1834,Nissan,Sentra,2025.0,Benzine,Automatic,Sedan,1600.0,2
+732,Fiat,Regata,1985.0,Benzine,Manual,Sedan,1500.0,2
+1842,Nissan,Sunny,2007.0,Benzine,Automatic,Sedan,1600.0,2
+2112,Renault,Clio,2001.0,Benzine,Manual,Sedan,1400.0,2
+2113,Renault,Clio,2002.0,Benzine,Manual,Sedan,1200.0,2
+1841,Nissan,Sunny,2005.0,Benzine,Automatic,Sedan,1600.0,2
+725,Fiat,Punto,2003.0,Benzine,Manual,Hatchback,1300.0,2
+724,Fiat,Punto,2000.0,Benzine,Manual,Hatchback,1300.0,2
+722,Fiat,Punto,1995.0,Benzine,Manual,Hatchback,1300.0,2
+1086,Hyundai,Verna,2013.0,Benzine,Manual,Sedan,1600.0,2
+720,Fiat,Punto,1994.0,Benzine,Manual,Hatchback,1300.0,2
+470,Chevrolet,Spark,2008.0,Benzine,Manual,Hatchback,1000.0,2
+717,Fiat,Polonez,1988.0,Benzine,Manual,Hatchback,1500.0,2
+716,Fiat,Petra,2004.0,Benzine,Manual,Sedan,1600.0,2
+1838,Nissan,Sunny,2001.0,Benzine,Manual,Sedan,1300.0,2
+471,Chevrolet,Spark,2012.0,Benzine,Manual,Hatchback,1200.0,2
+948,Hyundai,Accent,2025.0,Benzine,Automatic,Sedan,1600.0,2
+2317,Skoda,Octavia,1999.0,Benzine,Automatic,Sedan,2000.0,2
+348,Chery,Tiggo 7,2021.0,Benzine,Automatic,SUV,1500.0,2
+2399,Speranza,M12,2012.0,Benzine,Manual,Hatchback,1600.0,2
+1682,Mercedes-Benz,GLC 200,2024.0,Benzine,Automatic,SUV,2000.0,2
+1404,MG,HS,2022.0,Benzine,Automatic,SUV,1500.0,2
+1680,Mercedes-Benz,GLC 200,2023.0,Benzine,Automatic,SUV,2000.0,2
+1679,Mercedes-Benz,GLC 200,2022.0,Benzine,Automatic,SUV,2000.0,2
+1541,Mercedes-Benz,C180,2019.0,Benzine,Automatic,Sports / Coupe,1600.0,2
+338,Chery,Tiggo 3,2022.0,Benzine,Automatic,Hatchback,1600.0,2
+2623,Volkswagen,Jetta,2012.0,Benzine,Automatic,Sedan,1400.0,2
+2622,Volkswagen,Jetta,2010.0,Benzine,Automatic,Sedan,1600.0,2
+1285,Kia,Sorento,2025.0,Hybrid,Automatic,Estate,1600.0,2
+2621,Volkswagen,Jetta,2009.0,Benzine,Automatic,Sedan,1600.0,2
+2620,Volkswagen,Jetta,2008.0,Benzine,Automatic,Sedan,1600.0,2
+2409,Ssang Yong,Tivoli XLV,2020.0,Benzine,Automatic,Estate,1600.0,2
+1456,MINI,Cooper s,2023.0,Benzine,Automatic,Sports / Coupe,2000.0,2
+163,BMW,X1,2017.0,Benzine,Automatic,SUV,1500.0,2
+162,BMW,X1,2015.0,Benzine,Automatic,SUV,2000.0,2
+1671,Mercedes-Benz,GLA 200,2026.0,Benzine,Automatic,SUV,1300.0,2
+86,BMW,318,2017.0,Benzine,Automatic,Sedan,1500.0,2
+1549,Mercedes-Benz,C180,2023.0,Benzine,Automatic,Convertible,1500.0,2
+2626,Volkswagen,Passat,2000.0,Benzine,Automatic,Sedan,1600.0,2
+2398,Speranza,M11,2012.0,Benzine,Manual,Sedan,1600.0,2
+1293,Kia,Sorento Hybrid,2025.0,Hybrid,Automatic,SUV,1600.0,2
+350,Chery,Tiggo 7,2024.0,Benzine,Automatic,SUV,1500.0,2
+2549,Toyota,Land Cruiser,2025.0,Benzine,Automatic,SUV,3500.0,2
+371,Chevrolet,Aveo,2011.0,Benzine,Manual,Sedan,1600.0,2
+240,BYD,F3,2022.0,Benzine,Manual,Sedan,1500.0,2
+1267,Kia,Shuma,1999.0,Benzine,Manual,Sedan,1500.0,2
+368,Chevrolet,Aveo,2010.0,Benzine,Manual,Sedan,1500.0,2
+2384,Speranza,A516,2010.0,Benzine,Manual,Sedan,1600.0,2
+1691,Mercedes-Benz,GLC 300,2024.0,Benzine,Automatic,SUV,2000.0,2
+1270,Kia,Shuma,2000.0,Benzine,Manual,Sedan,1600.0,2
+362,Chevrolet,Aveo,2008.0,Benzine,Manual,Sedan,1500.0,2
+2390,Speranza,A620,2008.0,Benzine,Automatic,Sedan,2000.0,2
+61,BMW,218 i,2020.0,Benzine,Automatic,Sedan,1500.0,2
+2489,Suzuki,Van,2022.0,Benzine,Manual,Van / Bus,1000.0,2
+1464,Maserati,Grecale,2024.0,Benzine,Automatic,SUV,2000.0,2
+1401,MG,GT,2026.0,Benzine,Automatic,Sedan,1500.0,2
+355,Chery,Tiggo 8,2026.0,Benzine,Automatic,SUV,1500.0,2
+1537,Mercedes-Benz,C180,2019.0,Benzine,Automatic,Convertible,1600.0,2
+1684,Mercedes-Benz,GLC 200,2025.0,Benzine,Automatic,SUV,2000.0,2
+1402,MG,HS,2021.0,Benzine,Automatic,SUV,1600.0,2
+351,Chery,Tiggo 7,2026.0,Benzine,Automatic,SUV,1500.0,2
+2478,Suzuki,Van,2008.0,Benzine,Manual,Van / Bus,1000.0,2
+2561,Toyota,Urban Cruiser,2026.0,Benzine,Automatic,SUV,1500.0,2
+376,Chevrolet,Aveo,2013.0,Benzine,Manual,Sedan,1500.0,2
+309,Changan,Eado plus,2026.0,Benzine,Automatic,Sedan,1500.0,2
+1415,MG,MG 5,2025.0,Benzine,Automatic,Sedan,1500.0,2
+122,BMW,520,2021.0,Benzine,Automatic,Sedan,1600.0,2
+2433,Suzuki,Ciaz,2022.0,Benzine,Automatic,Sedan,1500.0,2
+126,BMW,520,2025.0,Benzine,Automatic,Sedan,2000.0,2
+128,BMW,523,1999.0,Benzine,Automatic,Sedan,2500.0,2
+1566,Mercedes-Benz,C200,2022.0,Benzine,Automatic,Sedan,1600.0,2
+131,BMW,523,2008.0,Benzine,Automatic,Sedan,2500.0,2
+2439,Suzuki,Grand Vitara,2008.0,Benzine,Automatic,4X4,2000.0,2
+1428,MG,RX5,2019.0,Benzine,Automatic,SUV,1500.0,2
+1427,MG,RX5,2019.0,Benzine,Automatic,Hatchback,1500.0,2
+1426,MG,One,2026.0,Benzine,Automatic,SUV,1500.0,2
+1649,Mercedes-Benz,G-Class,2021.0,Benzine,Automatic,4X4,4000.0,2
+1423,MG,MG 7,2025.0,Benzine,Automatic,Sedan,1500.0,2
+287,Brilliance,Galena,2008.0,Benzine,Automatic,Sedan,2000.0,2
+1329,Lada,2105,1995.0,Benzine,Manual,Sedan,1300.0,2
+1328,Lada,2105,1995.0,Benzine,Manual,Sedan,1200.0,2
+285,Brilliance,Galena,2007.0,Benzine,Automatic,Sedan,2000.0,2
+141,BMW,730,2021.0,Benzine,Automatic,Sedan,2000.0,2
+1420,MG,MG 6,2021.0,Benzine,Automatic,Sedan,1500.0,2
+2570,Toyota,Yaris,2009.0,Benzine,Automatic,Sedan,1300.0,2
+1637,Mercedes-Benz,E300,2021.0,Benzine,Automatic,Sedan,2000.0,2
+94,BMW,320,2009.0,Benzine,Automatic,Sedan,2000.0,2
+268,Baic,BJ30,2026.0,Hybrid,Automatic,4X4,1500.0,2
+2608,Volkswagen,Golf,2008.0,Benzine,Automatic,Hatchback,1600.0,2
+2607,Volkswagen,Golf,2001.0,Benzine,Manual,Hatchback,1400.0,2
+1553,Mercedes-Benz,C180,2024.0,Benzine,Automatic,Sedan,1600.0,2
+100,BMW,320,2016.0,Benzine,Automatic,Sedan,2000.0,2
+2420,Suzuki,Alto,2008.0,Benzine,Manual,Hatchback,800.0,2
+101,BMW,320,2017.0,Benzine,Automatic,Sedan,2000.0,2
+2422,Suzuki,Alto,2013.0,Benzine,Manual,Hatchback,800.0,2
+2423,Suzuki,Alto,2019.0,Benzine,Manual,Hatchback,800.0,2
+108,BMW,320,2026.0,Benzine,Automatic,Sedan,1600.0,2
+1442,MG,ZS,2026.0,Benzine,Automatic,Hatchback,1500.0,2
+1439,MG,ZS,2024.0,Benzine,Automatic,SUV,1500.0,2
+1339,Lada,2107,2010.0,Natural Gas,Manual,Sedan,1600.0,2
+2598,Volkswagen,Golf,1991.0,Benzine,Manual,Hatchback,1600.0,2
+1301,Kia,Sportage,2019.0,Benzine,Automatic,Hatchback,1600.0,2
+2597,Volkswagen,Golf,1990.0,Benzine,Manual,Hatchback,1600.0,2
+2471,Suzuki,Swift,2022.0,Benzine,Automatic,Hatchback,1200.0,2
+2564,Toyota,Yaris,2006.0,Benzine,Manual,Sedan,1300.0,2
+1304,Kia,Sportage,2020.0,Benzine,Automatic,SUV,1600.0,2
+1560,Mercedes-Benz,C200,2019.0,Benzine,Automatic,Sedan,1500.0,2
+375,Chevrolet,Aveo,2013.0,Benzine,Automatic,Sedan,1500.0,2
+2640,Volkswagen,Pointer,2006.0,Benzine,Manual,Hatchback,1600.0,2
+2642,Volkswagen,Polo,1999.0,Benzine,Manual,Hatchback,1000.0,2
+2507,Toyota,Corolla,1998.0,Benzine,Automatic,Sedan,1300.0,2
+17,Audi,A4,2021.0,Benzine,Automatic,Sedan,2000.0,2
+1718,Mercedes-Benz,GLS,2024.0,Benzine,Automatic,SUV,4000.0,2
+1237,Kia,Pride,1999.0,Benzine,Manual,Hatchback,1100.0,2
+434,Chevrolet,N300,2022.0,Benzine,Manual,Van / Bus,1200.0,2
+18,Audi,A4,2022.0,Benzine,Automatic,Sedan,2000.0,2
+216,BMW,Z4,2024.0,Benzine,Automatic,Convertible,2000.0,2
+1716,Mercedes-Benz,GLS,2023.0,Benzine,Automatic,SUV,4000.0,2
+1373,Land Rover,Range Rover Sport,2016.0,Benzine,Automatic,SUV,3000.0,2
+430,Chevrolet,N300,2016.0,Benzine,Manual,Van / Bus,1200.0,2
+429,Chevrolet,N200,2010.0,Benzine,Manual,Van / Bus,1200.0,2
+219,BYD,F3,2010.0,Benzine,Manual,Sedan,1600.0,2
+2540,Toyota,Fortuner,2026.0,Benzine,Automatic,4X4,4000.0,2
+2541,Toyota,Fortuner,2026.0,Benzine,Automatic,SUV,4000.0,2
+2644,Volkswagen,Polo,2000.0,Benzine,Manual,Hatchback,1400.0,2
+1713,Mercedes-Benz,GLS,2021.0,Benzine,Automatic,SUV,4000.0,2
+2349,Skoda,Superb,2021.0,Benzine,Automatic,Sedan,1400.0,2
+1244,Kia,Rio,2013.0,Benzine,Automatic,Hatchback,1400.0,2
+421,Chevrolet,Lanos,2016.0,Benzine,Manual,Sedan,1500.0,2
+1606,Mercedes-Benz,CLE 300,2024.0,Benzine,Automatic,Sports / Coupe,2000.0,2
+2340,Skoda,Octavia,2026.0,Benzine,Automatic,Sedan,1400.0,2
+16,Audi,A4,2018.0,Benzine,Automatic,Sedan,1400.0,2
+1390,Land Rover,Range Rover Vogue,2024.0,Benzine,Automatic,SUV,3000.0,2
+458,Chevrolet,Optra,2025.0,Benzine,Automatic,Sedan,1500.0,2
+194,BMW,X5,2020.0,Benzine,Automatic,SUV,3000.0,2
+1223,Kia,Picanto,2008.0,Benzine,Manual,Hatchback,1100.0,2
+1502,Mercedes-Benz,A180,2021.0,Benzine,Automatic,Sedan,1300.0,2
+1500,Mercedes-Benz,A150,2005.0,Benzine,Automatic,Hatchback,1500.0,2
+192,BMW,X5,2017.0,Benzine,Automatic,SUV,4400.0,2
+2529,Toyota,Corolla,2026.0,Benzine,Automatic,Sedan,1600.0,2
+1382,Land Rover,Range Rover Sport,2024.0,Benzine,Automatic,SUV,3000.0,2
+2326,Skoda,Octavia,2010.0,Benzine,Automatic,Sedan,1600.0,2
+2328,Skoda,Octavia,2015.0,Benzine,Automatic,Sedan,1600.0,2
+214,BMW,X7,2024.0,Benzine,Automatic,SUV,4400.0,2
+1494,Mercedes-Benz,200,1983.0,Benzine,Manual,Sedan,2000.0,2
+2330,Skoda,Octavia,2016.0,Benzine,Automatic,Sedan,1600.0,2
+2334,Skoda,Octavia,2021.0,Benzine,Automatic,Sedan,2000.0,2
+449,Chevrolet,Optra,2016.0,Benzine,Automatic,Sedan,1500.0,2
+2517,Toyota,Corolla,2013.0,Benzine,Automatic,Sedan,1600.0,2
+1389,Land Rover,Range Rover Vogue,2023.0,Benzine,Automatic,SUV,4400.0,2
+2515,Toyota,Corolla,2010.0,Benzine,Automatic,Sedan,1600.0,2
+1490,Mercedes-Benz,200,1977.0,Benzine,Manual,Sedan,2000.0,2
+2667,Volkswagen,Tiguan,2025.0,Benzine,Automatic,SUV,1400.0,2
+426,Chevrolet,Lanos,2019.0,Benzine,Manual,Sedan,1500.0,2
+41,Audi,Q3,2025.0,Benzine,Automatic,SUV,1400.0,2
+2375,Speranza,A213,2008.0,Benzine,Manual,Sedan,1300.0,2
+407,Chevrolet,Lanos,2010.0,Benzine,Manual,Sedan,1600.0,2
+1585,Mercedes-Benz,CLA 180,2018.0,Benzine,Automatic,Sedan,1600.0,2
+2361,Soueast,S06,2026.0,Benzine,Automatic,SUV,1600.0,2
+1476,Mazda,3,2019.0,Benzine,Automatic,Sedan,1600.0,2
+2548,Toyota,Land Cruiser,2025.0,Benzine,Automatic,4X4,3500.0,2
+1702,Mercedes-Benz,GLC 43,2026.0,Benzine,Automatic,Sports / Coupe,2000.0,2
+236,BYD,F3,2019.0,Benzine,Manual,Sedan,1500.0,2
+1700,Mercedes-Benz,GLC 43,2026.0,Benzine,Automatic,SUV,2000.0,2
+2649,Volkswagen,Polo,2004.0,Benzine,Manual,Hatchback,1600.0,2
+1525,Mercedes-Benz,C180,2012.0,Benzine,Automatic,Sedan,1600.0,2
+47,Audi,Q7,2025.0,Benzine,Automatic,SUV,2000.0,2
+383,Chevrolet,Aveo,2019.0,Benzine,Automatic,Sedan,1500.0,2
+2377,Speranza,A516,2007.0,Benzine,Manual,Sedan,1600.0,2
+48,Audi,Q8,2025.0,Benzine,Automatic,4X4,3000.0,2
+1618,Mercedes-Benz,E200,2022.0,Benzine,Automatic,Sedan,2000.0,2
+380,Chevrolet,Aveo,2016.0,Benzine,Automatic,Sedan,1500.0,2
+379,Chevrolet,Aveo,2015.0,Benzine,Automatic,Sedan,1500.0,2
+2647,Volkswagen,Polo,2001.0,Benzine,Manual,Sedan,1400.0,2
+1250,Kia,Rio,2016.0,Benzine,Automatic,Hatchback,1400.0,2
+1326,Lada,2105,1994.0,Benzine,Manual,Sedan,1200.0,2
+2662,Volkswagen,Tiguan,2023.0,Benzine,Automatic,SUV,1400.0,2
+410,Chevrolet,Lanos,2011.0,Benzine,Manual,Sedan,1600.0,2
+2503,Toyota,Corolla,1983.0,Benzine,Manual,Sedan,1300.0,2
+1364,Land Rover,Evoque,2026.0,Benzine,Automatic,SUV,1600.0,2
+1480,Mazda,323,1982.0,Benzine,Manual,Sedan,1500.0,2
+2356,Soueast,S 07,2026.0,Benzine,Automatic,SUV,1600.0,2
+36,Audi,Q3,2024.0,Benzine,Automatic,Hatchback,2000.0,2
+1587,Mercedes-Benz,CLA 200,2014.0,Benzine,Automatic,Sedan,1600.0,2
+1363,Land Rover,Evoque,2025.0,Benzine,Automatic,SUV,1500.0,2
+1876,Nissan,X-Trail,2025.0,Benzine,Automatic,SUV,1500.0,1
+1580,Mercedes-Benz,C300,2020.0,Benzine,Automatic,Convertible,2000.0,1
+1856,Nissan,Sunny,2017.0,Benzine,Automatic,Sedan,1600.0,1
+1584,Mercedes-Benz,CLA 180,2015.0,Benzine,Automatic,Sedan,1600.0,1
+1855,Nissan,Sunny,2017.0,Benzine,Automatic,Sedan,1500.0,1
+1878,Opel,Astra,2001.0,Benzine,Automatic,Sedan,1600.0,1
+1590,Mercedes-Benz,CLA 200,2020.0,Benzine,Automatic,Sedan,1500.0,1
+1571,Mercedes-Benz,C200,2025.0,Benzine,Automatic,Sedan,1498.0,1
+1875,Nissan,Tiida,2011.0,Benzine,Automatic,Hatchback,1600.0,1
+1868,Nissan,Sunny,2025.0,Benzine,Automatic,Sedan,1400.0,1
+1577,Mercedes-Benz,C280,2008.0,Benzine,Automatic,Sedan,3000.0,1
+1593,Mercedes-Benz,CLA 200,2024.0,Benzine,Automatic,SUV,1332.0,1
+1861,Nissan,Sunny,2021.0,Benzine,Automatic,Sedan,1000.0,1
+1578,Mercedes-Benz,C280,2011.0,Benzine,Automatic,Sedan,3000.0,1
+1592,Mercedes-Benz,CLA 200,2023.0,Benzine,Automatic,Sedan,1600.0,1
+1874,Nissan,Tiida,2010.0,Benzine,Automatic,Hatchback,1600.0,1
+1591,Mercedes-Benz,CLA 200,2022.0,Benzine,Automatic,Sedan,1300.0,1
+1589,Mercedes-Benz,CLA 200,2020.0,Benzine,Automatic,Sedan,1300.0,1
+1872,Nissan,Sunny,2026.0,Benzine,Automatic,Sedan,1600.0,1
+1862,Nissan,Sunny,2021.0,Benzine,Automatic,Sedan,1500.0,1
+1582,Mercedes-Benz,C300,2020.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1860,Nissan,Sunny,2020.0,Benzine,Automatic,Sedan,1600.0,1
+1870,Nissan,Sunny,2025.0,Natural Gas,Automatic,Sedan,1400.0,1
+1575,Mercedes-Benz,C250,2010.0,Benzine,Automatic,Sedan,1800.0,1
+1588,Mercedes-Benz,CLA 200,2019.0,Benzine,Automatic,Sedan,1600.0,1
+1858,Nissan,Sunny,2018.0,Benzine,Automatic,Sedan,1600.0,1
+1576,Mercedes-Benz,C250,2012.0,Benzine,Automatic,Sedan,2000.0,1
+1863,Nissan,Sunny,2022.0,Benzine,Automatic,Sedan,1500.0,1
+1586,Mercedes-Benz,CLA 180,2019.0,Benzine,Automatic,Sedan,1600.0,1
+1873,Nissan,Tiida,2008.0,Benzine,Automatic,Hatchback,1600.0,1
+1574,Mercedes-Benz,C200,2026.0,Hybrid,Automatic,Sedan,1500.0,1
+1581,Mercedes-Benz,C300,2020.0,Benzine,Automatic,Sedan,200.0,1
+1583,Mercedes-Benz,CLA 180,2014.0,Benzine,Automatic,Sedan,1600.0,1
+1864,Nissan,Sunny,2022.0,Benzine,Automatic,Sedan,1600.0,1
+1579,Mercedes-Benz,C300,1989.0,Benzine,Automatic,Sedan,2969.0,1
+1547,Mercedes-Benz,C180,2022.0,Diesel,Automatic,Sedan,1500.0,1
+1879,Opel,Astra,2001.0,Benzine,Manual,Sedan,1200.0,1
+1880,Opel,Astra,2001.0,Benzine,Manual,Sedan,1600.0,1
+1925,Opel,Corsa,2025.0,Benzine,Automatic,Hatchback,1200.0,1
+1924,Opel,Corsa,2022.0,Benzine,Automatic,Sedan,1200.0,1
+1518,Mercedes-Benz,B200,2013.0,Benzine,Automatic,Hatchback,1600.0,1
+1519,Mercedes-Benz,C Class,2025.0,Benzine,Automatic,Sedan,1500.0,1
+1922,Opel,Corsa,2018.0,Benzine,Automatic,Hatchback,1400.0,1
+1520,Mercedes-Benz,C180,2006.0,Benzine,Automatic,Sedan,1800.0,1
+1521,Mercedes-Benz,C180,2009.0,Benzine,Automatic,Sedan,1600.0,1
+1921,Opel,Corsa,2017.0,Benzine,Automatic,Hatchback,1400.0,1
+1522,Mercedes-Benz,C180,2009.0,Benzine,Automatic,Sedan,1800.0,1
+1920,Opel,Corsa,2014.0,Benzine,Automatic,Hatchback,1400.0,1
+1919,Opel,Corsa,2010.0,Benzine,Automatic,Hatchback,1400.0,1
+1524,Mercedes-Benz,C180,2011.0,Benzine,Automatic,Sedan,1600.0,1
+1918,Opel,Corsa,2009.0,Benzine,Automatic,Hatchback,1400.0,1
+1526,Mercedes-Benz,C180,2013.0,Benzine,Automatic,Sedan,1597.0,1
+1917,Opel,Corsa,2007.0,Benzine,Manual,Sedan,1600.0,1
+1527,Mercedes-Benz,C180,2013.0,Benzine,Automatic,Sedan,1599.0,1
+1529,Mercedes-Benz,C180,2013.0,Benzine,Automatic,Sports / Coupe,1500.0,1
+1926,Opel,Corsa,2026.0,Benzine,Automatic,Hatchback,1200.0,1
+1517,Mercedes-Benz,B180,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+1927,Opel,Crossland,2019.0,Benzine,Automatic,Hatchback,1200.0,1
+1512,Mercedes-Benz,A200,2023.0,Benzine,Automatic,Sedan,1332.0,1
+1936,Opel,Grandland,2024.0,Benzine,Automatic,Hatchback,1600.0,1
+1506,Mercedes-Benz,A200,1981.0,Benzine,Automatic,Sedan,2000.0,1
+1507,Mercedes-Benz,A200,1998.0,Benzine,Automatic,Sedan,2000.0,1
+1508,Mercedes-Benz,A200,2014.0,Benzine,Automatic,Hatchback,1600.0,1
+1509,Mercedes-Benz,A200,2020.0,Benzine,Automatic,Sedan,1300.0,1
+1510,Mercedes-Benz,A200,2021.0,Benzine,Automatic,Sedan,1300.0,1
+1511,Mercedes-Benz,A200,2022.0,Benzine,Automatic,Sedan,1300.0,1
+1935,Opel,Grandland,2021.0,Benzine,Automatic,SUV,1600.0,1
+1516,Mercedes-Benz,B180,2014.0,Benzine,Automatic,SUV,1600.0,1
+1513,Mercedes-Benz,A200,2026.0,Benzine,Automatic,Sedan,2000.0,1
+1933,Opel,Grandland,2020.0,Benzine,Automatic,4X4,1600.0,1
+1514,Mercedes-Benz,A250e,2010.0,Benzine,Automatic,Sedan,1600.0,1
+1931,Opel,Crossland,2022.0,Benzine,Automatic,SUV,1600.0,1
+1515,Mercedes-Benz,B180,2014.0,Benzine,Automatic,Hatchback,1600.0,1
+1929,Opel,Crossland,2020.0,Benzine,Automatic,SUV,1200.0,1
+1928,Opel,Crossland,2020.0,Benzine,Automatic,Estate,1200.0,1
+1530,Mercedes-Benz,C180,2013.0,Benzine,Automatic,Sports / Coupe,1600.0,1
+1531,Mercedes-Benz,C180,2013.0,Diesel,Automatic,Sedan,1600.0,1
+1913,Opel,Corsa,1999.0,Benzine,Manual,Hatchback,1400.0,1
+1562,Mercedes-Benz,C200,2020.0,Benzine,Automatic,Convertible,1499.0,1
+1893,Opel,Astra,2014.0,Benzine,Automatic,Sedan,1600.0,1
+1891,Opel,Astra,2012.0,Benzine,Automatic,Hatchback,1600.0,1
+1558,Mercedes-Benz,C200,2008.0,Benzine,Automatic,Sedan,2000.0,1
+1559,Mercedes-Benz,C200,2019.0,Benzine,Automatic,Convertible,1500.0,1
+1889,Opel,Astra,2009.0,Benzine,Automatic,Sedan,1600.0,1
+1888,Opel,Astra,2009.0,Benzine,Automatic,Hatchback,1600.0,1
+1561,Mercedes-Benz,C200,2019.0,Hybrid,Automatic,Sports / Coupe,1500.0,1
+1563,Mercedes-Benz,C200,2020.0,Benzine,Automatic,Sedan,2000.0,1
+1894,Opel,Astra,2014.0,Diesel,Automatic,Sedan,1600.0,1
+1886,Opel,Astra,2007.0,Benzine,Manual,Hatchback,1600.0,1
+1564,Mercedes-Benz,C200,2020.0,Benzine,Automatic,Sports / Coupe,1500.0,1
+1885,Opel,Astra,2007.0,Benzine,Automatic,Sedan,1600.0,1
+1883,Opel,Astra,2007.0,Benzine,Automatic,Hatchback,1600.0,1
+1568,Mercedes-Benz,C200,2023.0,Benzine,Automatic,Sedan,1600.0,1
+1569,Mercedes-Benz,C200,2023.0,Hybrid,Automatic,Sedan,1500.0,1
+1881,Opel,Astra,2001.0,Diesel,Manual,Sedan,1600.0,1
+1557,Mercedes-Benz,C200,2008.0,Benzine,Automatic,Sedan,1800.0,1
+1554,Mercedes-Benz,C180,2024.0,Benzine,Automatic,Sedan,1800.0,1
+1912,Opel,Corsa,1999.0,Benzine,Manual,Hatchback,1000.0,1
+1908,Opel,Corsa,1997.0,Benzine,Manual,Hatchback,1200.0,1
+1534,Mercedes-Benz,C180,2016.0,Benzine,Automatic,Sedan,1500.0,1
+1535,Mercedes-Benz,C180,2017.0,Benzine,Automatic,Convertible,1600.0,1
+1536,Mercedes-Benz,C180,2018.0,Diesel,Automatic,Sedan,1600.0,1
+1911,Opel,Corsa,1999.0,Benzine,Automatic,Hatchback,1400.0,1
+1910,Opel,Corsa,1998.0,Benzine,Manual,Sedan,1200.0,1
+1540,Mercedes-Benz,C180,2019.0,Benzine,Automatic,Sports / Coupe,1500.0,1
+1909,Opel,Corsa,1998.0,Benzine,Manual,Hatchback,1400.0,1
+1907,Opel,Corsa,1995.0,Diesel,Manual,Hatchback,1200.0,1
+1551,Mercedes-Benz,C180,2023.0,Benzine,Automatic,Sports / Coupe,1600.0,1
+1906,Opel,Corsa,1995.0,Benzine,Manual,Hatchback,1200.0,1
+1904,Opel,Corsa,1994.0,Benzine,Automatic,Hatchback,1400.0,1
+1903,Opel,Astra,2026.0,Benzine,Automatic,Sedan,1600.0,1
+1544,Mercedes-Benz,C180,2022.0,Benzine,Automatic,SUV,1800.0,1
+1854,Nissan,Sunny,2016.0,Benzine,Automatic,Sedan,1600.0,1
+1548,Mercedes-Benz,C180,2022.0,Diesel,Automatic,Sports / Coupe,1500.0,1
+1900,Opel,Astra,2019.0,Benzine,Automatic,Sedan,1600.0,1
+1594,Mercedes-Benz,CLA 200,2024.0,Benzine,Automatic,Sedan,1300.0,1
+1835,Nissan,Sentra,2026.0,Benzine,Automatic,Sedan,1500.0,1
+1853,Nissan,Sunny,2015.0,Benzine,Automatic,Sedan,1600.0,1
+1770,Mitsubishi,Lancer,2001.0,Benzine,Automatic,Sedan,1300.0,1
+1686,Mercedes-Benz,GLC 200,2026.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1776,Mitsubishi,Lancer,2008.0,Benzine,Manual,Sedan,1300.0,1
+1687,Mercedes-Benz,GLC 300,2020.0,Benzine,Automatic,SUV,2000.0,1
+1775,Mitsubishi,Lancer,2008.0,Benzine,Automatic,Sedan,1600.0,1
+1688,Mercedes-Benz,GLC 300,2020.0,Benzine,Automatic,Sedan,2000.0,1
+1690,Mercedes-Benz,GLC 300,2023.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1772,Mitsubishi,Lancer,2005.0,Benzine,Manual,Sedan,1300.0,1
+1771,Mitsubishi,Lancer,2005.0,Benzine,Automatic,Sedan,1600.0,1
+1692,Mercedes-Benz,GLC 300,2024.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1769,Mitsubishi,Lancer,2000.0,Benzine,Automatic,Sedan,1500.0,1
+1778,Mitsubishi,Lancer,2012.0,Benzine,Automatic,Sedan,1600.0,1
+1693,Mercedes-Benz,GLC 300,2025.0,Benzine,Automatic,Other,2000.0,1
+1768,Mitsubishi,Lancer,1999.0,Diesel,Manual,Sedan,1300.0,1
+1694,Mercedes-Benz,GLC 300,2025.0,Benzine,Automatic,SUV,2000.0,1
+1695,Mercedes-Benz,GLC 300,2025.0,Benzine,Automatic,Sedan,2000.0,1
+1766,Mitsubishi,Lancer,1999.0,Benzine,Automatic,Sedan,1800.0,1
+1699,Mercedes-Benz,GLC 43,2025.0,Benzine,Automatic,SUV,2000.0,1
+1765,Mitsubishi,Lancer,1999.0,Benzine,Automatic,Sedan,1500.0,1
+1701,Mercedes-Benz,GLC 43,2026.0,Benzine,Automatic,Sedan,2000.0,1
+1703,Mercedes-Benz,GLE,2025.0,Benzine,Automatic,SUV,3000.0,1
+1685,Mercedes-Benz,GLC 200,2025.0,Hybrid,Automatic,SUV,2000.0,1
+1780,Mitsubishi,Lancer,2013.0,Hybrid,Automatic,Sedan,1600.0,1
+1705,Mercedes-Benz,GLE 450,2022.0,Benzine,Automatic,SUV,3000.0,1
+1789,Mitsubishi,Pajero,1997.0,Benzine,Automatic,4X4,3000.0,1
+1668,Mercedes-Benz,GLA 200,2025.0,Benzine,Automatic,SUV,1300.0,1
+1795,Mitsubishi,Pajero,2017.0,Benzine,Automatic,4X4,3500.0,1
+1669,Mercedes-Benz,GLA 200,2026.0,Benzine,Automatic,Hatchback,1300.0,1
+1792,Mitsubishi,Pajero,2014.0,Benzine,Automatic,4X4,3500.0,1
+1791,Mitsubishi,Pajero,2009.0,Benzine,Automatic,4X4,3000.0,1
+1670,Mercedes-Benz,GLA 200,2026.0,Benzine,Automatic,Hatchback,1340.0,1
+1790,Mitsubishi,Pajero,2006.0,Benzine,Automatic,4X4,3800.0,1
+1672,Mercedes-Benz,GLA 200,2026.0,Benzine,Automatic,SUV,1330.0,1
+1673,Mercedes-Benz,GLC,2024.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1788,Mitsubishi,Outlander,2025.0,Benzine,Automatic,SUV,1600.0,1
+1782,Mitsubishi,Lancer,2015.0,Benzine,Automatic,Sedan,1500.0,1
+1674,Mercedes-Benz,GLC,2025.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1675,Mercedes-Benz,GLC,2026.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1787,Mitsubishi,Mirage,2025.0,Benzine,Automatic,Hatchback,1200.0,1
+1786,Mitsubishi,Mirage,1999.0,Benzine,Automatic,Sedan,1800.0,1
+1676,Mercedes-Benz,GLC 200,2020.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1785,Mitsubishi,Lancer,2017.0,Benzine,Automatic,Sedan,1600.0,1
+1677,Mercedes-Benz,GLC 200,2021.0,Benzine,Automatic,SUV,2000.0,1
+1678,Mercedes-Benz,GLC 200,2022.0,Benzine,Automatic,4X4,2000.0,1
+1681,Mercedes-Benz,GLC 200,2023.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1704,Mercedes-Benz,GLE 450,2021.0,Benzine,Automatic,SUV,3000.0,1
+1706,Mercedes-Benz,GLE 450,2023.0,Benzine,Automatic,SUV,3000.0,1
+1797,Mitsubishi,Pajero,2020.0,Benzine,Automatic,4X4,3800.0,1
+1738,Mercedes-Benz,Viano,2026.0,Benzine,Automatic,MPV,2000.0,1
+1720,Mercedes-Benz,GT 43,2021.0,Benzine,Automatic,Sedan,3000.0,1
+1745,Mitsubishi,Colt,1997.0,Benzine,Automatic,Sports / Coupe,1800.0,1
+1744,Mitsubishi,Atrage,2016.0,Benzine,Automatic,Sedan,1300.0,1
+1721,Mercedes-Benz,M-Class,2015.0,Benzine,Automatic,4X4,3000.0,1
+1743,Mitsubishi,Atrage,2015.0,Benzine,Automatic,Sedan,1200.0,1
+1722,Mercedes-Benz,Maybach S600,2016.0,Benzine,Automatic,Sedan,6000.0,1
+1741,Mitsubishi,Atrage,2014.0,Benzine,Automatic,Sedan,1100.0,1
+1740,Mercedes-Benz,Vito,2026.0,Benzine,Automatic,Van / Bus,2000.0,1
+1723,Mercedes-Benz,Other,2025.0,Electric,Automatic,Sports / Coupe,733.0,1
+1724,Mercedes-Benz,Other,2026.0,Benzine,Automatic,Van / Bus,2000.0,1
+1747,Mitsubishi,Eclipse,2020.0,Benzine,Automatic,SUV,1500.0,1
+1725,Mercedes-Benz,S300,1982.0,Benzine,Automatic,Sedan,3200.0,1
+1736,Mercedes-Benz,SLC-Class,2018.0,Benzine,Automatic,Convertible,2000.0,1
+1726,Mercedes-Benz,S320,1993.0,Benzine,Automatic,Sedan,3000.0,1
+1735,Mercedes-Benz,SL-Class,2024.0,Benzine,Automatic,Convertible,1991.0,1
+1734,Mercedes-Benz,SL Roadster,2025.0,Benzine,Automatic,Convertible,2000.0,1
+1733,Mercedes-Benz,SEL 280,1981.0,Benzine,Automatic,Sedan,3000.0,1
+1727,Mercedes-Benz,S350,2009.0,Benzine,Automatic,Sedan,3500.0,1
+1728,Mercedes-Benz,S450,2023.0,Benzine,Automatic,Sedan,3000.0,1
+1729,Mercedes-Benz,S500,2007.0,Benzine,Automatic,Sedan,5500.0,1
+1746,Mitsubishi,Colt,1999.0,Benzine,Automatic,Hatchback,1500.0,1
+1717,Mercedes-Benz,GLS,2023.0,Benzine,Automatic,SUV,5000.0,1
+1707,Mercedes-Benz,GLE 450,2024.0,Benzine,Automatic,SUV,3000.0,1
+1756,Mitsubishi,Lancer,1993.0,Benzine,Automatic,Sedan,1300.0,1
+1762,Mitsubishi,Lancer,1998.0,Benzine,Automatic,Sedan,1300.0,1
+1761,Mitsubishi,Lancer,1997.0,Benzine,Automatic,Sedan,1500.0,1
+1760,Mitsubishi,Lancer,1997.0,Benzine,Automatic,Sedan,1300.0,1
+1759,Mitsubishi,Lancer,1996.0,Benzine,Manual,Sedan,1500.0,1
+1758,Mitsubishi,Lancer,1994.0,Benzine,Manual,Sedan,1300.0,1
+1708,Mercedes-Benz,GLE 450,2025.0,Benzine,Automatic,SUV,3000.0,1
+1709,Mercedes-Benz,GLK,2015.0,Benzine,Automatic,4X4,2000.0,1
+1710,Mercedes-Benz,GLK 250,2015.0,Benzine,Automatic,4X4,1800.0,1
+1711,Mercedes-Benz,GLK 250,2015.0,Benzine,Automatic,SUV,2000.0,1
+1755,Mitsubishi,Lancer,1992.0,Benzine,Manual,Sedan,1600.0,1
+1748,Mitsubishi,Eclipse,2021.0,Benzine,Automatic,SUV,1500.0,1
+1754,Mitsubishi,Lancer,1991.0,Benzine,Manual,Sedan,1500.0,1
+1753,Mitsubishi,Galant,1989.0,Benzine,Manual,Hatchback,2000.0,1
+1712,Mercedes-Benz,GLK 300,2010.0,Benzine,Automatic,4X4,3000.0,1
+1752,Mitsubishi,Galant,1979.0,Benzine,Manual,Sedan,1500.0,1
+1714,Mercedes-Benz,GLS,2022.0,Benzine,Automatic,SUV,4000.0,1
+1715,Mercedes-Benz,GLS,2023.0,Benzine,Automatic,4X4,4000.0,1
+1751,Mitsubishi,Eclipse,2025.0,Benzine,Automatic,SUV,1500.0,1
+1750,Mitsubishi,Eclipse,2025.0,Benzine,Automatic,4X4,1500.0,1
+1749,Mitsubishi,Eclipse,2024.0,Benzine,Automatic,Hatchback,1500.0,1
+1796,Mitsubishi,Pajero,2017.0,Benzine,Automatic,4X4,3800.0,1
+1667,Mercedes-Benz,GLA 200,2024.0,Benzine,Automatic,Hatchback,1300.0,1
+1596,Mercedes-Benz,CLA 200,2024.0,Benzine,Automatic,Sedan,1500.0,1
+1830,Nissan,Sentra,2023.0,Benzine,Automatic,Sedan,1598.0,1
+1619,Mercedes-Benz,E200,2023.0,Benzine,Automatic,Convertible,2000.0,1
+1620,Mercedes-Benz,E200,2023.0,Benzine,Automatic,Sedan,2000.0,1
+1731,Mercedes-Benz,S560,2020.0,Benzine,Automatic,Sedan,4000.0,1
+1621,Mercedes-Benz,E200,2023.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1623,Mercedes-Benz,E200,2025.0,Benzine,Automatic,Sedan,1500.0,1
+1832,Nissan,Sentra,2024.0,Benzine,Automatic,Sedan,1500.0,1
+1625,Mercedes-Benz,E200,2026.0,Benzine,Automatic,Sedan,200.0,1
+1831,Nissan,Sentra,2023.0,Benzine,Automatic,Sedan,1600.0,1
+1627,Mercedes-Benz,E240,2003.0,Benzine,Automatic,Sedan,2600.0,1
+1628,Mercedes-Benz,E250,2010.0,Benzine,Automatic,Convertible,1800.0,1
+1617,Mercedes-Benz,E200,2021.0,Hybrid,Automatic,Convertible,2000.0,1
+1629,Mercedes-Benz,E250,2011.0,Benzine,Automatic,Sedan,1800.0,1
+1630,Mercedes-Benz,E280,2006.0,Benzine,Automatic,Sedan,2800.0,1
+1828,Nissan,Sentra,2019.0,Benzine,Automatic,Sedan,1600.0,1
+1827,Nissan,Sentra,2018.0,Benzine,Automatic,Sedan,1600.0,1
+1631,Mercedes-Benz,E280,2022.0,Benzine,Automatic,Sedan,2000.0,1
+1633,Mercedes-Benz,E300,2011.0,Benzine,Automatic,Sedan,3000.0,1
+1634,Mercedes-Benz,E300,2016.0,Benzine,Automatic,Sedan,2000.0,1
+1635,Mercedes-Benz,E300,2019.0,Benzine,Automatic,Sedan,2000.0,1
+1636,Mercedes-Benz,E300,2020.0,Benzine,Automatic,Sedan,2000.0,1
+1837,Nissan,Sunny,1994.0,Benzine,Manual,Sedan,1600.0,1
+1614,Mercedes-Benz,E200,2019.0,Benzine,Automatic,Sedan,2000.0,1
+1638,Mercedes-Benz,E300,2022.0,Benzine,Automatic,Sedan,2000.0,1
+1602,Mercedes-Benz,CLA 200,2026.0,Benzine,Automatic,Sports / Coupe,1300.0,1
+1852,Nissan,Sunny,2015.0,Benzine,Automatic,Sedan,1500.0,1
+1851,Nissan,Sunny,2013.0,Benzine,Automatic,Sedan,1600.0,1
+1597,Mercedes-Benz,CLA 200,2025.0,Benzine,Automatic,Sedan,1300.0,1
+1598,Mercedes-Benz,CLA 200,2025.0,Benzine,Automatic,Sedan,1400.0,1
+1599,Mercedes-Benz,CLA 200,2025.0,Benzine,Automatic,Sports / Coupe,1300.0,1
+1849,Nissan,Sunny,2011.0,Benzine,Manual,Sedan,1500.0,1
+1600,Mercedes-Benz,CLA 200,2026.0,Benzine,Automatic,Sedan,1330.0,1
+1601,Mercedes-Benz,CLA 200,2026.0,Benzine,Automatic,Sedan,1400.0,1
+1847,Nissan,Sunny,2010.0,Benzine,Manual,Sedan,1600.0,1
+1603,Mercedes-Benz,CLA 200,2026.0,Benzine,Automatic,Sports / Coupe,1500.0,1
+1839,Nissan,Sunny,2002.0,Benzine,Automatic,Sedan,1300.0,1
+1844,Nissan,Sunny,2008.0,Benzine,Manual,Sedan,1600.0,1
+1604,Mercedes-Benz,CLE 200,2026.0,Benzine,Automatic,Convertible,2000.0,1
+1605,Mercedes-Benz,CLE 200,2026.0,Electric,Automatic,Sports / Coupe,2000.0,1
+1608,Mercedes-Benz,E180,2018.0,Benzine,Automatic,Sedan,1600.0,1
+1610,Mercedes-Benz,E200,1998.0,Benzine,Automatic,Sedan,2000.0,1
+1611,Mercedes-Benz,E200,2013.0,Benzine,Automatic,Sedan,2000.0,1
+1840,Nissan,Sunny,2002.0,Benzine,Manual,Sedan,1300.0,1
+1612,Mercedes-Benz,E200,2016.0,Benzine,Automatic,Sedan,1800.0,1
+1613,Mercedes-Benz,E200,2018.0,Benzine,Automatic,Convertible,2000.0,1
+1824,Nissan,Qashqai,2022.0,Diesel,Automatic,SUV,1600.0,1
+1639,Mercedes-Benz,E300,2024.0,Hybrid,Automatic,Sedan,2000.0,1
+1798,Mitsubishi,Pajero,2022.0,Benzine,Automatic,SUV,3800.0,1
+1804,Nissan,Juke,2014.0,Benzine,Automatic,SUV,1600.0,1
+1810,Nissan,Patrol,2024.0,Benzine,Automatic,SUV,5600.0,1
+1809,Nissan,Other,1980.0,Diesel,Manual,Pickup,1600.0,1
+1808,Nissan,Maxima,2000.0,Benzine,Automatic,Sedan,2000.0,1
+1807,Nissan,Livina,2009.0,Benzine,Automatic,Hatchback,1600.0,1
+1806,Nissan,Juke,2026.0,Benzine,Automatic,Hatchback,1000.0,1
+1659,Mercedes-Benz,GLA,2018.0,Benzine,Automatic,MPV,1600.0,1
+1805,Nissan,Juke,2021.0,Benzine,Automatic,Hatchback,1000.0,1
+1660,Mercedes-Benz,GLA 200,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+1661,Mercedes-Benz,GLA 200,2019.0,Benzine,Automatic,Hatchback,1600.0,1
+1803,Nissan,Juke,2012.0,Benzine,Automatic,Hatchback,1600.0,1
+1658,Mercedes-Benz,GL-Class,2023.0,Benzine,Automatic,4X4,4000.0,1
+1662,Mercedes-Benz,GLA 200,2020.0,Benzine,Automatic,SUV,1590.0,1
+1802,Mitsubishi,Xpander,2025.0,Diesel,Automatic,SUV,1500.0,1
+1801,Mitsubishi,Xpander,2024.0,Benzine,Automatic,SUV,1600.0,1
+1800,Mitsubishi,Xpander,2023.0,Benzine,Automatic,SUV,1500.0,1
+1663,Mercedes-Benz,GLA 200,2020.0,Benzine,Automatic,SUV,1600.0,1
+1664,Mercedes-Benz,GLA 200,2021.0,Benzine,Automatic,SUV,1300.0,1
+1665,Mercedes-Benz,GLA 200,2021.0,Benzine,Automatic,SUV,1350.0,1
+1799,Mitsubishi,Xpander,2022.0,Benzine,Automatic,Estate,1500.0,1
+1666,Mercedes-Benz,GLA 200,2023.0,Benzine,Automatic,SUV,1300.0,1
+1811,Nissan,Qashqai,2013.0,Benzine,Automatic,Hatchback,1600.0,1
+1657,Mercedes-Benz,GL-Class,2023.0,Benzine,Automatic,4X4,577.0,1
+1822,Nissan,Qashqai,2020.0,Benzine,Automatic,SUV,1600.0,1
+1647,Mercedes-Benz,EQE 500,2024.0,Electric,Automatic,SUV,100.0,1
+1640,Mercedes-Benz,E320,2003.0,Benzine,Automatic,Sedan,3200.0,1
+1821,Nissan,Qashqai,2019.0,Benzine,Automatic,SUV,1300.0,1
+1641,Mercedes-Benz,E350,2014.0,Benzine,Automatic,Sedan,3500.0,1
+1642,Mercedes-Benz,E350,2018.0,Benzine,Automatic,Sedan,2000.0,1
+1643,Mercedes-Benz,E350,2018.0,Hybrid,Automatic,Sedan,2000.0,1
+1644,Mercedes-Benz,EQA 260,2025.0,Electric,Automatic,SUV,140.0,1
+1817,Nissan,Qashqai,2018.0,Benzine,Automatic,Hatchback,1200.0,1
+1645,Mercedes-Benz,EQB,2026.0,Electric,Automatic,Estate,215.0,1
+1646,Mercedes-Benz,EQE,2024.0,Electric,Automatic,Hatchback,180.0,1
+1816,Nissan,Qashqai,2018.0,Benzine,Automatic,4X4,1200.0,1
+1656,Mercedes-Benz,G63,2026.0,Benzine,Automatic,SUV,4000.0,1
+1648,Mercedes-Benz,EQS 580,2023.0,Electric,Automatic,SUV,6000.0,1
+1650,Mercedes-Benz,G63,2021.0,Benzine,Automatic,4X4,4000.0,1
+1651,Mercedes-Benz,G63,2022.0,Benzine,Automatic,Hatchback,4000.0,1
+1815,Nissan,Qashqai,2017.0,Benzine,Automatic,Sedan,1600.0,1
+1652,Mercedes-Benz,G63,2022.0,Benzine,Automatic,SUV,4000.0,1
+1653,Mercedes-Benz,G63,2023.0,Benzine,Automatic,4X4,4000.0,1
+1654,Mercedes-Benz,G63,2024.0,Benzine,Automatic,4X4,4000.0,1
+1655,Mercedes-Benz,G63,2024.0,Benzine,Automatic,SUV,4000.0,1
+1813,Nissan,Qashqai,2015.0,Benzine,Automatic,SUV,1200.0,1
+0,Alfa Romeo,156,2002.0,Benzine,Manual,Sedan,2000.0,1
+2094,Proton,Saga,2010.0,Diesel,Automatic,Sedan,1400.0,1
+1938,Opel,Grandland,2025.0,Benzine,Automatic,SUV,1600.0,1
+2450,Suzuki,Maruti,2010.0,Benzine,Manual,Hatchback,900.0,1
+2443,Suzuki,Maruti,2005.0,Benzine,Manual,Hatchback,800.0,1
+2444,Suzuki,Maruti,2007.0,Benzine,Manual,Hatchback,800.0,1
+2445,Suzuki,Maruti,2008.0,Benzine,Manual,Hatchback,800.0,1
+2446,Suzuki,Maruti,2008.0,Benzine,Manual,Small city car,800.0,1
+2448,Suzuki,Maruti,2009.0,Benzine,Manual,Small city car,800.0,1
+2449,Suzuki,Maruti,2010.0,Benzine,Manual,Hatchback,800.0,1
+2451,Suzuki,Maruti,2011.0,Benzine,Manual,Hatchback,800.0,1
+2460,Suzuki,S-Presso,2022.0,Benzine,Manual,Hatchback,1000.0,1
+2453,Suzuki,Other,2015.0,Benzine,Automatic,Pickup,122.0,1
+2454,Suzuki,Pick up,2003.0,Benzine,Manual,Pickup,1000.0,1
+2455,Suzuki,Pick up,2016.0,Benzine,Manual,Pickup,1000.0,1
+2456,Suzuki,Pick up,2016.0,Benzine,Manual,Pickup,1200.0,1
+2457,Suzuki,S-Presso,2021.0,Benzine,Manual,Hatchback,999.0,1
+2458,Suzuki,S-Presso,2021.0,Benzine,Manual,Hatchback,1000.0,1
+2442,Suzuki,Maruti,1997.0,Benzine,Manual,Hatchback,800.0,1
+2441,Suzuki,Maruti,1994.0,Benzine,Manual,Hatchback,800.0,1
+2440,Suzuki,Jimny,2008.0,Benzine,Automatic,Hatchback,1600.0,1
+2438,Suzuki,Grand Vitara,2007.0,Benzine,Manual,Hatchback,1600.0,1
+2437,Suzuki,Grand Vitara,2007.0,Benzine,Manual,4X4,1600.0,1
+2436,Suzuki,Dzire,2023.0,Benzine,Automatic,Sedan,1200.0,1
+2435,Suzuki,Dzire,2021.0,Benzine,Manual,Sedan,1200.0,1
+2434,Suzuki,Ciaz,2024.0,Benzine,Automatic,Sedan,1500.0,1
+2432,Suzuki,Ciaz,2021.0,Benzine,Automatic,Sedan,1500.0,1
+2431,Suzuki,Celerio,2024.0,Benzine,Manual,Hatchback,1000.0,1
+2430,Suzuki,Celerio,2011.0,Benzine,Manual,Hatchback,1300.0,1
+2429,Suzuki,Celerio,2011.0,Benzine,Manual,Hatchback,1000.0,1
+2428,Suzuki,Celerio,2010.0,Benzine,Manual,Hatchback,1000.0,1
+2427,Suzuki,Baleno,2026.0,Benzine,Automatic,Sedan,1500.0,1
+2426,Suzuki,Baleno,2026.0,Benzine,Automatic,Hatchback,1500.0,1
+2425,Suzuki,Baleno,1999.0,Benzine,Manual,Sedan,1300.0,1
+2424,Suzuki,Baleno,1997.0,Benzine,Manual,Sedan,1600.0,1
+2459,Suzuki,S-Presso,2021.0,Benzine,Manual,SUV,1000.0,1
+2461,Suzuki,S-Presso,2025.0,Benzine,Automatic,Small city car,1000.0,1
+2419,Suzuki,Alto,2007.0,Benzine,Manual,Hatchback,1100.0,1
+2492,Toyota,86,2024.0,Benzine,Automatic,Sports / Coupe,2400.0,1
+2485,Suzuki,Van,2015.0,Benzine,Manual,Van / Bus,1300.0,1
+2486,Suzuki,Van,2015.0,Benzine,Manual,Van / Bus,1400.0,1
+2487,Suzuki,Van,2015.0,Benzine,Manual,Van / Bus,1600.0,1
+2488,Suzuki,Van,2020.0,Benzine,Manual,Van / Bus,1000.0,1
+2490,Suzuki,Vitara,2000.0,Benzine,Automatic,4X4,2000.0,1
+2491,Tesla,Cybertruck,2025.0,Electric,Automatic,SUV,9000.0,1
+2493,Toyota,Avalon,2009.0,Benzine,Automatic,Sedan,3500.0,1
+2462,Suzuki,S-Presso,2026.0,Benzine,Automatic,SUV,1000.0,1
+2494,Toyota,Avanza,2009.0,Benzine,Automatic,Hatchback,1500.0,1
+2495,Toyota,Avanza,2009.0,Benzine,Automatic,MPV,1500.0,1
+2496,Toyota,Avanza,2009.0,Benzine,Manual,SUV,1500.0,1
+2497,Toyota,Avensis,2008.0,Benzine,Manual,Sedan,1600.0,1
+2498,Toyota,BZ3,2025.0,Electric,Automatic,SUV,210.0,1
+2499,Toyota,Belta,2022.0,Benzine,Automatic,Sedan,1600.0,1
+2484,Suzuki,Van,2015.0,Benzine,Manual,Van / Bus,1000.0,1
+2483,Suzuki,Van,2014.0,Benzine,Manual,Van / Bus,1300.0,1
+2482,Suzuki,Van,2013.0,Benzine,Manual,Van / Bus,1000.0,1
+2481,Suzuki,Van,2012.0,Benzine,Manual,Van / Bus,1000.0,1
+2480,Suzuki,Van,2009.0,Benzine,Manual,Van / Bus,1300.0,1
+2479,Suzuki,Van,2008.0,Benzine,Manual,Van / Bus,1200.0,1
+2477,Suzuki,Van,2007.0,Benzine,Manual,Van / Bus,1000.0,1
+2476,Suzuki,Van,1992.0,Benzine,Manual,Van / Bus,100.0,1
+2475,Suzuki,Swift,2026.0,Benzine,Automatic,SUV,1400.0,1
+2473,Suzuki,Swift,2024.0,Benzine,Automatic,Hatchback,1200.0,1
+2472,Suzuki,Swift,2022.0,Benzine,Automatic,Hatchback,1300.0,1
+2469,Suzuki,Swift,2015.0,Benzine,Automatic,Sedan,1200.0,1
+2468,Suzuki,Swift,1998.0,Benzine,Manual,Sedan,1300.0,1
+2467,Suzuki,Swift,1996.0,Benzine,Manual,Sedan,1300.0,1
+2466,Suzuki,Swift,1995.0,Benzine,Manual,Sedan,1300.0,1
+2465,Suzuki,Swift,1994.0,Benzine,Manual,Sedan,1300.0,1
+2463,Suzuki,SX4,2008.0,Benzine,Automatic,Sedan,1600.0,1
+2421,Suzuki,Alto,2009.0,Benzine,Manual,Hatchback,1100.0,1
+2418,Suzuki,Alto,2007.0,Benzine,Manual,Hatchback,1000.0,1
+1939,Opel,Grandland,2026.0,Benzine,Automatic,SUV,1600.0,1
+2358,Soueast,S 09,2026.0,Benzine,Automatic,SUV,1600.0,1
+2351,Skoda,Superb,2022.0,Benzine,Automatic,Sedan,1400.0,1
+2352,Skoda,Superb,2023.0,Benzine,Automatic,Sedan,1400.0,1
+2353,Skoda,Superb,2024.0,Benzine,Automatic,Sedan,1400.0,1
+2354,Skoda,Superb,2025.0,Benzine,Automatic,Sedan,1500.0,1
+2355,Skoda,Superb,2026.0,Benzine,Automatic,Sedan,2000.0,1
+2357,Soueast,S 09,2026.0,Benzine,Automatic,Estate,1600.0,1
+2360,Soueast,S05,2026.0,Benzine,Automatic,SUV,1500.0,1
+2370,Speranza,A113,2009.0,Benzine,Manual,Sedan,1300.0,1
+2362,Speranza,A11,2006.0,Benzine,Manual,Sedan,1600.0,1
+2363,Speranza,A11,2006.0,Hybrid,Manual,Sedan,1600.0,1
+2364,Speranza,A113,2008.0,Benzine,Manual,Hatchback,800.0,1
+2365,Speranza,A113,2008.0,Benzine,Manual,Hatchback,1200.0,1
+2367,Speranza,A113,2008.0,Benzine,Manual,Hatchback,1600.0,1
+2368,Speranza,A113,2009.0,Benzine,Manual,Hatchback,1300.0,1
+2350,Skoda,Superb,2021.0,Benzine,Automatic,Sedan,2000.0,1
+2348,Skoda,Superb,2019.0,Benzine,Automatic,Sedan,1400.0,1
+2347,Skoda,Superb,2018.0,Benzine,Automatic,Sedan,1400.0,1
+2346,Skoda,Superb,2014.0,Benzine,Automatic,Sedan,1400.0,1
+2345,Skoda,Superb,2010.0,Benzine,Manual,Sedan,1400.0,1
+2344,Skoda,Roomster,2009.0,Benzine,Manual,SUV,1600.0,1
+2343,Skoda,Rapid,2016.0,Benzine,Automatic,Sedan,1600.0,1
+2342,Skoda,Rapid,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+2341,Skoda,Other,1999.0,Benzine,Automatic,Sedan,1600.0,1
+2339,Skoda,Octavia,2024.0,Benzine,Automatic,Sedan,2000.0,1
+2338,Skoda,Octavia,2024.0,Benzine,Automatic,Sedan,1400.0,1
+2337,Skoda,Octavia,2022.0,Benzine,Automatic,Sedan,2000.0,1
+2336,Skoda,Octavia,2022.0,Benzine,Automatic,Sedan,1600.0,1
+2335,Skoda,Octavia,2022.0,Benzine,Automatic,Sedan,1400.0,1
+2332,Skoda,Octavia,2020.0,Benzine,Automatic,Sedan,1600.0,1
+2331,Skoda,Octavia,2018.0,Benzine,Automatic,Sedan,1600.0,1
+2329,Skoda,Octavia,2016.0,Benzine,Automatic,Sedan,1599.0,1
+2369,Speranza,A113,2009.0,Benzine,Manual,Hatchback,1600.0,1
+2373,Speranza,A113,2013.0,Benzine,Manual,Hatchback,1300.0,1
+2417,Suzuki,Alto,2007.0,Benzine,Manual,Hatchback,800.0,1
+2408,Ssang Yong,Tivoli XLV,2019.0,Benzine,Automatic,Estate,1600.0,1
+2402,Speranza,Tiggo,2010.0,Benzine,Manual,SUV,1600.0,1
+2403,Speranza,Tiggo,2012.0,Benzine,Manual,Hatchback,1600.0,1
+2404,Speranza,Tiggo,2019.0,Benzine,Automatic,SUV,1600.0,1
+2405,Speranza,Tiggo,2021.0,Benzine,Automatic,Hatchback,1600.0,1
+2406,Ssang Yong,Tivoli,2019.0,Benzine,Automatic,Hatchback,1600.0,1
+2407,Ssang Yong,Tivoli,2022.0,Benzine,Automatic,Hatchback,1500.0,1
+2410,Ssang Yong,Tivoli XLV,2024.0,Benzine,Automatic,SUV,1600.0,1
+2374,Speranza,A113,2015.0,Benzine,Manual,Hatchback,1300.0,1
+2411,Ssang Yong,Torres,2025.0,Benzine,Automatic,SUV,1500.0,1
+2412,Subaru,Impreza,2005.0,Benzine,Automatic,Sedan,1600.0,1
+2413,Subaru,Impreza,2009.0,Benzine,Automatic,Sedan,1500.0,1
+2414,Subaru,XV,2014.0,Benzine,Automatic,SUV,1600.0,1
+2415,Subaru,XV,2016.0,Benzine,Automatic,SUV,1600.0,1
+2416,Subaru,XV,2018.0,Benzine,Automatic,SUV,1600.0,1
+2401,Speranza,Tiggo,2010.0,Benzine,Automatic,4X4,2000.0,1
+2400,Speranza,M12,2014.0,Benzine,Manual,Hatchback,1600.0,1
+2397,Speranza,M11,2010.0,Natural Gas,Manual,Sedan,1600.0,1
+2396,Speranza,M11,2010.0,Benzine,Manual,Sedan,1600.0,1
+2395,Speranza,Envy,2018.0,Benzine,Manual,Sedan,1600.0,1
+2393,Speranza,A620,2012.0,Diesel,Automatic,Sedan,2000.0,1
+2392,Speranza,A620,2010.0,Natural Gas,Automatic,Sedan,2000.0,1
+2391,Speranza,A620,2009.0,Natural Gas,Automatic,Sedan,2000.0,1
+2388,Speranza,A620,2007.0,Benzine,Automatic,Sedan,1600.0,1
+2387,Speranza,A516,2012.0,Benzine,Manual,Sedan,1600.0,1
+2386,Speranza,A516,2011.0,Benzine,Manual,Sedan,1600.0,1
+2385,Speranza,A516,2010.0,Natural Gas,Manual,Sedan,1800.0,1
+2383,Speranza,A516,2009.0,Natural Gas,Manual,Sedan,1600.0,1
+2381,Speranza,A516,2009.0,Benzine,Automatic,Sedan,1600.0,1
+2380,Speranza,A516,2008.0,Natural Gas,Manual,Sedan,1600.0,1
+2378,Speranza,A516,2008.0,Benzine,Automatic,Sedan,1600.0,1
+2376,Speranza,A213,2010.0,Benzine,Manual,Sedan,2000.0,1
+2500,Toyota,Camry,1998.0,Benzine,Automatic,Sedan,2200.0,1
+2501,Toyota,Camry,2000.0,Benzine,Automatic,Hatchback,2000.0,1
+2502,Toyota,Corolla,1980.0,Benzine,Manual,Sedan,1600.0,1
+2627,Volkswagen,Passat,2006.0,Benzine,Automatic,Sedan,2000.0,1
+2616,Volkswagen,ID6,2022.0,Electric,Automatic,SUV,200.0,1
+2617,Volkswagen,ID6,2023.0,Electric,Automatic,SUV,225.0,1
+2618,Volkswagen,ID6,2023.0,Electric,Automatic,SUV,2000.0,1
+2619,Volkswagen,Jetta,2007.0,Benzine,Automatic,Sedan,2000.0,1
+2624,Volkswagen,Jetta,2017.0,Benzine,Automatic,Sedan,1600.0,1
+2625,Volkswagen,Passat,1999.0,Natural Gas,Manual,Sedan,1800.0,1
+2629,Volkswagen,Passat,2007.0,Benzine,Automatic,Sedan,2000.0,1
+2643,Volkswagen,Polo,1999.0,Benzine,Manual,Hatchback,1600.0,1
+2630,Volkswagen,Passat,2009.0,Benzine,Automatic,Sedan,1400.0,1
+2631,Volkswagen,Passat,2011.0,Benzine,Automatic,Sedan,1400.0,1
+2632,Volkswagen,Passat,2012.0,Benzine,Automatic,Sedan,1400.0,1
+2633,Volkswagen,Passat,2017.0,Benzine,Automatic,Sedan,1400.0,1
+2634,Volkswagen,Passat,2019.0,Benzine,Automatic,Sedan,1400.0,1
+2637,Volkswagen,Passat,2023.0,Benzine,Automatic,Sedan,1400.0,1
+2615,Volkswagen,ID4,2023.0,Electric,Automatic,SUV,150.0,1
+2614,Volkswagen,Golf R,2017.0,Benzine,Automatic,Hatchback,1400.0,1
+2613,Volkswagen,Golf,2024.0,Benzine,Automatic,Hatchback,1600.0,1
+2612,Volkswagen,Golf,2019.0,Benzine,Automatic,Hatchback,1200.0,1
+2611,Volkswagen,Golf,2017.0,Benzine,Automatic,Hatchback,1200.0,1
+2610,Volkswagen,Golf,2015.0,Benzine,Automatic,Hatchback,1400.0,1
+2609,Volkswagen,Golf,2010.0,Benzine,Automatic,Hatchback,1400.0,1
+2606,Volkswagen,Golf,2000.0,Benzine,Automatic,Hatchback,2000.0,1
+2605,Volkswagen,Golf,1999.0,Benzine,Automatic,Hatchback,1400.0,1
+2604,Volkswagen,Golf,1998.0,Benzine,Manual,Hatchback,2000.0,1
+2603,Volkswagen,Golf,1997.0,Benzine,Manual,Hatchback,1600.0,1
+2602,Volkswagen,Golf,1994.0,Benzine,Manual,Hatchback,1600.0,1
+2601,Volkswagen,Golf,1992.0,Diesel,Manual,Hatchback,1800.0,1
+2600,Volkswagen,Golf,1992.0,Benzine,Manual,Hatchback,1600.0,1
+2599,Volkswagen,Golf,1992.0,Benzine,Automatic,Hatchback,1800.0,1
+2596,Volkswagen,Golf,1989.0,Benzine,Automatic,Hatchback,2000.0,1
+2595,Volkswagen,Golf,1987.0,Hybrid,Manual,Sedan,1600.0,1
+2639,Volkswagen,Pointer,2005.0,Benzine,Manual,Hatchback,1600.0,1
+2646,Volkswagen,Polo,2001.0,Benzine,Manual,Hatchback,1600.0,1
+2504,Toyota,Corolla,1984.0,Benzine,Manual,Sedan,1400.0,1
+2679,Volvo,s60,2018.0,Benzine,Automatic,Sedan,1600.0,1
+2673,Volvo,940,1992.0,Benzine,Automatic,Sedan,2000.0,1
+2674,Volvo,940,1993.0,Benzine,Automatic,Hatchback,2000.0,1
+2675,Volvo,XC40,2022.0,Benzine,Automatic,SUV,2000.0,1
+2676,Volvo,XC40,2024.0,Benzine,Automatic,MPV,1500.0,1
+2677,Volvo,XC40 Recharge,2026.0,Electric,Automatic,Sedan,2000.0,1
+2678,Volvo,XC60,2020.0,Benzine,Automatic,SUV,2000.0,1
+2680,Xiaomi,SU7,2025.0,Electric,Automatic,Sedan,101.0,1
+2648,Volkswagen,Polo,2004.0,Benzine,Automatic,Hatchback,1400.0,1
+2681,Xiaomi,YU7,2025.0,Electric,Automatic,SUV,100.0,1
+2682,Xiaomi,YU7,2025.0,Electric,Automatic,SUV,760.0,1
+2683,Xiaomi,YU7,2025.0,Electric,Automatic,SUV,1000.0,1
+2684,Zeekr,7X,2025.0,Electric,Automatic,SUV,310.0,1
+2685,Zotye,Explosion,2008.0,Benzine,Manual,SUV,1300.0,1
+2686,Zotye,Explosion,2008.0,Benzine,Manual,SUV,1600.0,1
+2672,Volvo,940,1991.0,Benzine,Automatic,Sedan,2000.0,1
+2670,Volkswagen,Tiguan,2026.0,Benzine,Automatic,Hatchback,1400.0,1
+2669,Volkswagen,Tiguan,2026.0,Benzine,Automatic,Estate,1400.0,1
+2668,Volkswagen,Tiguan,2025.0,Benzine,Automatic,SUV,1600.0,1
+2666,Volkswagen,Tiguan,2025.0,Benzine,Automatic,Hatchback,1500.0,1
+2665,Volkswagen,Tiguan,2025.0,Benzine,Automatic,Hatchback,1400.0,1
+2663,Volkswagen,Tiguan,2024.0,Benzine,Automatic,Hatchback,1400.0,1
+2661,Volkswagen,Tiguan,2021.0,Benzine,Automatic,SUV,1400.0,1
+2660,Volkswagen,Tiguan,2021.0,Benzine,Automatic,Estate,1400.0,1
+2658,Volkswagen,Tiguan,2018.0,Benzine,Automatic,SUV,1400.0,1
+2657,Volkswagen,Tiguan,2018.0,Benzine,Automatic,MPV,1400.0,1
+2656,Volkswagen,Tiguan,2018.0,Benzine,Automatic,Hatchback,1600.0,1
+2655,Volkswagen,Tiguan,2017.0,Benzine,Automatic,SUV,1400.0,1
+2653,Volkswagen,Tayron,2026.0,Benzine,Automatic,4X4,1400.0,1
+2652,Volkswagen,T-Roc,2026.0,Benzine,Automatic,SUV,1400.0,1
+2651,Volkswagen,Polo,2009.0,Benzine,Manual,Sedan,1400.0,1
+2650,Volkswagen,Polo,2005.0,Benzine,Manual,Hatchback,1400.0,1
+2594,Volkswagen,Golf,1986.0,Benzine,Manual,Hatchback,1800.0,1
+2593,Volkswagen,Golf,1986.0,Benzine,Manual,Hatchback,1600.0,1
+2592,Volkswagen,Eos,2008.0,Benzine,Manual,Convertible,1600.0,1
+2538,Toyota,Fortuner,2022.0,Benzine,Automatic,4X4,4000.0,1
+2532,Toyota,Cressida,1982.0,Benzine,Manual,Sedan,2000.0,1
+2533,Toyota,Cressida,1984.0,Benzine,Manual,Sedan,2000.0,1
+2534,Toyota,Echo,2003.0,Benzine,Manual,Hatchback,1300.0,1
+2535,Toyota,Fortuner,2016.0,Benzine,Automatic,SUV,4000.0,1
+2536,Toyota,Fortuner,2017.0,Benzine,Automatic,4X4,2700.0,1
+2537,Toyota,Fortuner,2019.0,Benzine,Automatic,4X4,4000.0,1
+2539,Toyota,Fortuner,2023.0,Benzine,Automatic,4X4,4000.0,1
+2591,Volkswagen,E Golf,1985.0,Benzine,Manual,Hatchback,1300.0,1
+2542,Toyota,Hilux,2011.0,Diesel,Manual,Pickup,2700.0,1
+2543,Toyota,Hilux,2025.0,Benzine,Automatic,Pickup,2400.0,1
+2544,Toyota,Land Cruiser,2015.0,Benzine,Automatic,Estate,5700.0,1
+2545,Toyota,Land Cruiser,2020.0,Benzine,Automatic,Pickup,4000.0,1
+2546,Toyota,Land Cruiser,2022.0,Benzine,Automatic,SUV,4000.0,1
+2547,Toyota,Land Cruiser,2024.0,Benzine,Automatic,4X4,4000.0,1
+2531,Toyota,Corona,1985.0,Benzine,Manual,Sedan,1600.0,1
+2530,Toyota,Corona,1979.0,Benzine,Manual,Sedan,2000.0,1
+2528,Toyota,Corolla,2025.0,Benzine,Automatic,Sedan,1600.0,1
+2524,Toyota,Corolla,2022.0,Benzine,Automatic,Sedan,1500.0,1
+2522,Toyota,Corolla,2020.0,Benzine,Automatic,Sedan,1600.0,1
+2520,Toyota,Corolla,2017.0,Benzine,Automatic,Sedan,1600.0,1
+2518,Toyota,Corolla,2014.0,Benzine,Automatic,Sedan,1600.0,1
+2516,Toyota,Corolla,2011.0,Benzine,Automatic,Sedan,1600.0,1
+2514,Toyota,Corolla,2009.0,Benzine,Automatic,Sedan,1600.0,1
+2513,Toyota,Corolla,2008.0,Benzine,Automatic,Sedan,1600.0,1
+2512,Toyota,Corolla,2007.0,Benzine,Automatic,Sedan,1600.0,1
+2511,Toyota,Corolla,2006.0,Benzine,Automatic,Sedan,1600.0,1
+2510,Toyota,Corolla,2006.0,Benzine,Automatic,Hatchback,1300.0,1
+2509,Toyota,Corolla,2004.0,Benzine,Automatic,Sedan,1300.0,1
+2508,Toyota,Corolla,1999.0,Benzine,Manual,Sedan,1300.0,1
+2506,Toyota,Corolla,1997.0,Benzine,Automatic,Sedan,1300.0,1
+2505,Toyota,Corolla,1993.0,Benzine,Automatic,Sedan,1600.0,1
+2550,Toyota,Land Cruiser,2026.0,Benzine,Automatic,4X4,3500.0,1
+2551,Toyota,Land Cruiser 70,2025.0,Benzine,Automatic,4X4,4000.0,1
+2552,Toyota,Other,2025.0,Electric,Automatic,SUV,520.0,1
+2575,Volkswagen,Beetle,1971.0,Benzine,Manual,Hatchback,1300.0,1
+2590,Volkswagen,CrossFox,2007.0,Benzine,Manual,Hatchback,1600.0,1
+2589,Volkswagen,Caddy,2019.0,Benzine,Automatic,MPV,1400.0,1
+2588,Volkswagen,Caddy,2009.0,Benzine,Manual,MPV,2000.0,1
+2587,Volkswagen,Caddy,2002.0,Natural Gas,Manual,Van / Bus,1600.0,1
+2586,Volkswagen,Bora,2002.0,Benzine,Manual,Sports / Coupe,1800.0,1
+2585,Volkswagen,Bora,2000.0,Benzine,Automatic,Sedan,1600.0,1
+2584,Volkswagen,Beetle,2005.0,Benzine,Automatic,Convertible,2000.0,1
+2583,Volkswagen,Beetle,1975.0,Benzine,Manual,Hatchback,1600.0,1
+2581,Volkswagen,Beetle,1974.0,Benzine,Manual,Sports / Coupe,1300.0,1
+2580,Volkswagen,Beetle,1974.0,Benzine,Manual,Hatchback,1500.0,1
+2579,Volkswagen,Beetle,1973.0,Benzine,Manual,Sedan,1600.0,1
+2578,Volkswagen,Beetle,1972.0,Benzine,Manual,Small city car,1300.0,1
+2577,Volkswagen,Beetle,1972.0,Benzine,Manual,Sedan,1300.0,1
+2576,Volkswagen,Beetle,1971.0,Benzine,Manual,Small city car,1300.0,1
+2574,Volkswagen,Beetle,1970.0,Benzine,Manual,Sedan,1300.0,1
+2553,Toyota,Prado,2013.0,Benzine,Automatic,4X4,4000.0,1
+2573,Toyota,Yaris,2015.0,Benzine,Automatic,Sedan,1500.0,1
+2572,Toyota,Yaris,2014.0,Benzine,Automatic,Sedan,1300.0,1
+2571,Toyota,Yaris,2014.0,Benzine,Automatic,Hatchback,1500.0,1
+2567,Toyota,Yaris,2008.0,Benzine,Automatic,Sedan,1200.0,1
+2566,Toyota,Yaris,2007.0,Benzine,Manual,Sedan,1300.0,1
+2563,Toyota,Yaris,2002.0,Benzine,Automatic,Hatchback,1500.0,1
+2562,Toyota,Veloz,2023.0,Benzine,Automatic,MPV,1500.0,1
+2560,Toyota,Urban Cruiser,2025.0,Benzine,Automatic,SUV,1500.0,1
+2559,Toyota,Rush,2022.0,Benzine,Automatic,SUV,1500.0,1
+2558,Toyota,Rush,2022.0,Benzine,Automatic,Estate,1500.0,1
+2557,Toyota,Prius,2010.0,Hybrid,Automatic,Sedan,1800.0,1
+2556,Toyota,Prado,2024.0,Benzine,Automatic,SUV,4000.0,1
+2555,Toyota,Prado,2024.0,Benzine,Automatic,4X4,2400.0,1
+2554,Toyota,Prado,2023.0,Benzine,Automatic,4X4,4000.0,1
+2327,Skoda,Octavia,2011.0,Benzine,Automatic,Sedan,1600.0,1
+2325,Skoda,Octavia,2007.0,Benzine,Manual,Sedan,1600.0,1
+2324,Skoda,Octavia,2007.0,Benzine,Automatic,Sedan,1600.0,1
+2062,Porsche,Cayenne,2020.0,Benzine,Automatic,Sports / Coupe,3000.0,1
+2054,Peugeot,508,2021.0,Benzine,Automatic,Sedan,1600.0,1
+2056,Porsche,911,2021.0,Benzine,Automatic,Sports / Coupe,3000.0,1
+2057,Porsche,Boxster,2018.0,Benzine,Automatic,Convertible,2000.0,1
+2059,Porsche,Boxster,2025.0,Benzine,Automatic,Convertible,2000.0,1
+2060,Porsche,Carrera,2020.0,Benzine,Automatic,Sports / Coupe,3000.0,1
+2061,Porsche,Cayenne,2020.0,Benzine,Automatic,SUV,3000.0,1
+2063,Porsche,Cayenne,2021.0,Benzine,Automatic,SUV,3000.0,1
+2075,Porsche,Cayman,2025.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+2064,Porsche,Cayenne,2022.0,Benzine,Automatic,Sports / Coupe,3000.0,1
+2066,Porsche,Cayenne,2023.0,Benzine,Automatic,SUV,3000.0,1
+2067,Porsche,Cayenne,2024.0,Benzine,Automatic,4X4,4000.0,1
+2068,Porsche,Cayenne,2024.0,Benzine,Automatic,SUV,2900.0,1
+2071,Porsche,Cayenne,2025.0,Benzine,Automatic,4X4,4000.0,1
+2073,Porsche,Cayenne,2026.0,Hybrid,Automatic,SUV,3000.0,1
+2053,Peugeot,508,2016.0,Benzine,Automatic,Sedan,1600.0,1
+2052,Peugeot,508,2015.0,Benzine,Automatic,Sedan,1600.0,1
+2050,Peugeot,504 SW,1979.0,Benzine,Manual,Hatchback,2000.0,1
+2049,Peugeot,504 SW,1974.0,Benzine,Manual,Sedan,2000.0,1
+2048,Peugeot,504,1979.0,Benzine,Manual,Sedan,2000.0,1
+2047,Peugeot,504,1979.0,Benzine,Manual,Sedan,200.0,1
+2046,Peugeot,504,1978.0,Benzine,Manual,MPV,1950.0,1
+2045,Peugeot,504,1977.0,Benzine,Manual,Sedan,2000.0,1
+2044,Peugeot,504,1973.0,Benzine,Manual,Estate,2000.0,1
+2043,Peugeot,504,1900.0,Benzine,Manual,Sedan,1600.0,1
+2041,Peugeot,5008,2022.0,Benzine,Automatic,Hatchback,1600.0,1
+2038,Peugeot,5008,2011.0,Benzine,Automatic,SUV,1600.0,1
+2036,Peugeot,407,2008.0,Benzine,Automatic,Sedan,3000.0,1
+2035,Peugeot,407,2008.0,Benzine,Automatic,Sedan,2200.0,1
+2033,Peugeot,406,2003.0,Benzine,Automatic,Sedan,2000.0,1
+2032,Peugeot,406,2002.0,Benzine,Automatic,Sedan,2000.0,1
+2031,Peugeot,406,1998.0,Benzine,Manual,Sedan,1800.0,1
+2074,Porsche,Cayman,2024.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+2076,Porsche,Macan,2021.0,Benzine,Automatic,SUV,2000.0,1
+2118,Renault,Clio,2005.0,Benzine,Manual,Sedan,1600.0,1
+2106,Renault,21,2021.0,Benzine,Automatic,Sedan,1600.0,1
+2100,Proton,Wira,2006.0,Benzine,Manual,Sedan,1500.0,1
+2101,ROX,01,2025.0,Electric,Automatic,SUV,4000.0,1
+2102,ROX,01,2026.0,Benzine,Automatic,Estate,1500.0,1
+2103,Renault,14,2014.0,Benzine,Manual,Hatchback,1600.0,1
+2104,Renault,19,1991.0,Benzine,Manual,Hatchback,1400.0,1
+2105,Renault,21,2021.0,Benzine,Automatic,Hatchback,1600.0,1
+2107,Renault,9,1990.0,Benzine,Manual,Sedan,1300.0,1
+2077,Porsche,Macan,2023.0,Benzine,Automatic,SUV,2000.0,1
+2108,Renault,9,1999.0,Benzine,Manual,Sedan,1300.0,1
+2109,Renault,Austral,2025.0,Benzine,Automatic,SUV,1300.0,1
+2110,Renault,Captur,2019.0,Benzine,Automatic,SUV,1200.0,1
+2111,Renault,Clio,1995.0,Benzine,Manual,Hatchback,1400.0,1
+2114,Renault,Clio,2002.0,Diesel,Manual,Sedan,1200.0,1
+2116,Renault,Clio,2003.0,Natural Gas,Manual,Sedan,1200.0,1
+2099,Proton,Wira,2004.0,Diesel,Manual,Sedan,1300.0,1
+2098,Proton,Wira,2000.0,Benzine,Manual,Sedan,1300.0,1
+2095,Proton,Saga,2011.0,Benzine,Automatic,Sedan,1300.0,1
+1504,Mercedes-Benz,A180,2021.0,Diesel,Automatic,Sedan,1300.0,1
+2093,Proton,Saga,2010.0,Benzine,Automatic,Sedan,1600.0,1
+2092,Proton,Preve,2019.0,Benzine,Automatic,Sedan,1600.0,1
+2091,Proton,Persona,2015.0,Benzine,Automatic,Sedan,1600.0,1
+2088,Proton,Gen-2,2013.0,Benzine,Automatic,Sedan,1600.0,1
+2087,Proton,Gen-2,2012.0,Benzine,Automatic,Sedan,1600.0,1
+2086,Proton,Gen-2,2009.0,Benzine,Automatic,Hatchback,1600.0,1
+2085,Proton,Gen-2,2008.0,Benzine,Manual,Sedan,1600.0,1
+2084,Proton,Gen-2,2007.0,Benzine,Automatic,Sports / Coupe,1600.0,1
+2083,Proton,Gen-2,2007.0,Benzine,Automatic,Hatchback,1600.0,1
+2082,Porsche,Taycan,2024.0,Electric,Automatic,MPV,240.0,1
+2081,Porsche,Taycan,2022.0,Electric,Automatic,Other,300.0,1
+2079,Porsche,Macan,2024.0,Benzine,Automatic,4X4,2000.0,1
+2078,Porsche,Macan,2023.0,Benzine,Automatic,SUV,3000.0,1
+2030,Peugeot,406,1998.0,Benzine,Manual,Sedan,1600.0,1
+2029,Peugeot,405,2010.0,Benzine,Manual,Sedan,1600.0,1
+2028,Peugeot,405,2009.0,Benzine,Manual,Sedan,1600.0,1
+1976,Peugeot,2008,2020.0,Benzine,Automatic,SUV,1600.0,1
+1966,Opel,Vectra,2000.0,Benzine,Manual,Sedan,1600.0,1
+1967,Opel,Vectra,2001.0,Benzine,Automatic,Sedan,1600.0,1
+1970,Opel,Vectra,2007.0,Benzine,Manual,Sedan,1600.0,1
+1973,Other make,Other,2024.0,Benzine,Automatic,Other,1500.0,1
+1974,Peugeot,2008,2015.0,Benzine,Automatic,SUV,1600.0,1
+1975,Peugeot,2008,2018.0,Benzine,Automatic,SUV,1600.0,1
+1978,Peugeot,2008,2022.0,Benzine,Automatic,Hatchback,1200.0,1
+2026,Peugeot,405,2003.0,Benzine,Manual,Sedan,1600.0,1
+1979,Peugeot,2008,2024.0,Benzine,Automatic,SUV,1400.0,1
+1980,Peugeot,206,2000.0,Benzine,Manual,Hatchback,1400.0,1
+1982,Peugeot,206,2002.0,Benzine,Manual,Hatchback,1100.0,1
+1983,Peugeot,208,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+1984,Peugeot,208,2017.0,Benzine,Automatic,Hatchback,1600.0,1
+1985,Peugeot,3008,2013.0,Benzine,Automatic,Hatchback,1600.0,1
+1964,Opel,Vectra,2000.0,Benzine,Automatic,Sedan,1600.0,1
+1962,Opel,Vectra,1999.0,Benzine,Automatic,Sedan,2000.0,1
+1961,Opel,Vectra,1998.0,Benzine,Automatic,Sedan,2000.0,1
+1959,Opel,Vectra,1997.0,Benzine,Automatic,Sedan,2000.0,1
+1958,Opel,Vectra,1996.0,Natural Gas,Manual,Sedan,1600.0,1
+1957,Opel,Vectra,1996.0,Natural Gas,Automatic,Sedan,2000.0,1
+1955,Opel,Vectra,1995.0,Natural Gas,Manual,Sedan,1600.0,1
+1954,Opel,Vectra,1995.0,Benzine,Manual,Sedan,2000.0,1
+1953,Opel,Vectra,1995.0,Benzine,Manual,Sedan,1600.0,1
+1952,Opel,Vectra,1995.0,Benzine,Automatic,Sedan,2000.0,1
+1951,Opel,Vectra,1994.0,Benzine,Automatic,Sedan,2000.0,1
+1950,Opel,Tigra,1997.0,Benzine,Manual,Sports / Coupe,1400.0,1
+1949,Opel,Omega,1998.0,Benzine,Manual,Hatchback,2000.0,1
+1948,Opel,Mokka,2026.0,Benzine,Automatic,Hatchback,1200.0,1
+1947,Opel,Meriva,2016.0,Benzine,Automatic,Hatchback,1400.0,1
+1946,Opel,Meriva,2015.0,Benzine,Automatic,Hatchback,1400.0,1
+1944,Opel,Insignia,2019.0,Benzine,Automatic,Sedan,1500.0,1
+1986,Peugeot,3008,2017.0,Benzine,Automatic,SUV,1600.0,1
+1987,Peugeot,3008,2019.0,Benzine,Automatic,Hatchback,1600.0,1
+1988,Peugeot,3008,2019.0,Benzine,Automatic,SUV,1600.0,1
+2010,Peugeot,307 SW,2007.0,Benzine,Automatic,Hatchback,1600.0,1
+2025,Peugeot,405,1999.0,Benzine,Manual,Sedan,1600.0,1
+2024,Peugeot,405,1995.0,Diesel,Automatic,Sedan,1600.0,1
+2023,Peugeot,405,1995.0,Benzine,Manual,Sedan,1600.0,1
+2022,Peugeot,405,1994.0,Benzine,Manual,Sedan,1800.0,1
+2021,Peugeot,405,1994.0,Benzine,Manual,Sedan,1600.0,1
+2020,Peugeot,405,1993.0,Natural Gas,Manual,Sedan,1580.0,1
+2018,Peugeot,405,1991.0,Benzine,Manual,Sedan,1600.0,1
+2017,Peugeot,405,1989.0,Natural Gas,Manual,Sedan,1500.0,1
+2016,Peugeot,405,1989.0,Benzine,Manual,Sedan,1600.0,1
+2015,Peugeot,405,1988.0,Benzine,Automatic,Sedan,1800.0,1
+2014,Peugeot,308 SW,2011.0,Benzine,Automatic,Hatchback,1600.0,1
+2013,Peugeot,308 SW,2010.0,Benzine,Automatic,Hatchback,1600.0,1
+2012,Peugeot,308,2009.0,Benzine,Automatic,Hatchback,1600.0,1
+2011,Peugeot,307 SW,2007.0,Benzine,Automatic,Sedan,1600.0,1
+2008,Peugeot,307 SW,2005.0,Benzine,Automatic,Estate,1600.0,1
+1992,Peugeot,3008,2022.0,Diesel,Automatic,SUV,1600.0,1
+2007,Peugeot,307,2008.0,Diesel,Automatic,Hatchback,1600.0,1
+2006,Peugeot,307,2007.0,Natural Gas,Manual,Convertible,1600.0,1
+2005,Peugeot,307,2007.0,Benzine,Manual,Hatchback,1600.0,1
+2004,Peugeot,307,2007.0,Benzine,Automatic,Hatchback,1600.0,1
+2003,Peugeot,307,2007.0,Benzine,Automatic,Hatchback,1599.0,1
+2001,Peugeot,307,2005.0,Benzine,Manual,Hatchback,1600.0,1
+2000,Peugeot,304,1974.0,Benzine,Manual,Sedan,1400.0,1
+1999,Peugeot,301,2021.0,Benzine,Automatic,Sedan,1600.0,1
+1998,Peugeot,301,2018.0,Benzine,Automatic,Sedan,1600.0,1
+1997,Peugeot,301,2016.0,Benzine,Automatic,Sedan,1500.0,1
+1996,Peugeot,301,2015.0,Benzine,Automatic,Sedan,1600.0,1
+1995,Peugeot,3008,2025.0,Benzine,Automatic,SUV,1600.0,1
+1994,Peugeot,3008,2024.0,Benzine,Automatic,Estate,1600.0,1
+1993,Peugeot,3008,2023.0,Benzine,Automatic,SUV,1600.0,1
+2117,Renault,Clio,2005.0,Benzine,Manual,Sedan,1400.0,1
+2119,Renault,Clio,2006.0,Benzine,Manual,Sedan,1400.0,1
+2323,Skoda,Octavia,2005.0,Benzine,Automatic,Sedan,1600.0,1
+2264,Seat,Toledo,2019.0,Benzine,Automatic,Sedan,1600.0,1
+2256,Seat,Tarraco,2024.0,Benzine,Automatic,SUV,1600.0,1
+2258,Seat,Toledo,1996.0,Benzine,Manual,Sedan,1600.0,1
+2259,Seat,Toledo,2005.0,Benzine,Manual,Sedan,1600.0,1
+2260,Seat,Toledo,2014.0,Benzine,Automatic,Sedan,1600.0,1
+2261,Seat,Toledo,2015.0,Benzine,Automatic,Sedan,1600.0,1
+2263,Seat,Toledo,2018.0,Benzine,Automatic,Sedan,1600.0,1
+2265,Senova,A1,2015.0,Benzine,Automatic,Hatchback,1500.0,1
+2273,Skoda,Fabia,2003.0,Benzine,Manual,Hatchback,1600.0,1
+2266,Senova,A1,2015.0,Benzine,Automatic,Sedan,1500.0,1
+2267,Senova,X25,2017.0,Benzine,Automatic,SUV,1600.0,1
+2268,Senova,X25,2018.0,Benzine,Automatic,Hatchback,1499.0,1
+2269,Shineray,X30,2026.0,Benzine,Manual,Van / Bus,1500.0,1
+2270,Skoda,Fabia,2001.0,Benzine,Automatic,Hatchback,1400.0,1
+2271,Skoda,Fabia,2002.0,Benzine,Manual,Hatchback,1000.0,1
+2254,Seat,Tarraco,2023.0,Benzine,Automatic,SUV,1500.0,1
+2253,Seat,Leon,2026.0,Benzine,Automatic,Hatchback,1600.0,1
+2250,Seat,Leon,2022.0,Benzine,Automatic,Hatchback,1400.0,1
+2247,Seat,Leon,2019.0,Benzine,Automatic,Hatchback,1400.0,1
+2246,Seat,Leon,2017.0,Benzine,Automatic,Hatchback,1600.0,1
+2244,Seat,Leon,2011.0,Benzine,Automatic,Hatchback,2000.0,1
+2243,Seat,Leon,2002.0,Benzine,Automatic,Hatchback,1600.0,1
+2242,Seat,Ibiza,2026.0,Benzine,Automatic,Sedan,1600.0,1
+2240,Seat,Ibiza,2025.0,Benzine,Automatic,Hatchback,1000.0,1
+2239,Seat,Ibiza,2024.0,Benzine,Automatic,Hatchback,1600.0,1
+2236,Seat,Ibiza,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+2234,Seat,Ibiza,2013.0,Benzine,Automatic,Hatchback,1390.0,1
+2233,Seat,Ibiza,2002.0,Benzine,Manual,Hatchback,1400.0,1
+2232,Seat,Ibiza,2000.0,Benzine,Manual,Hatchback,1800.0,1
+2231,Seat,Ibiza,2000.0,Benzine,Manual,Hatchback,1400.0,1
+2230,Seat,Ibiza,1998.0,Benzine,Automatic,Hatchback,1800.0,1
+2229,Seat,Ibiza,1994.0,Benzine,Manual,Hatchback,2000.0,1
+2272,Skoda,Fabia,2002.0,Benzine,Manual,Hatchback,1400.0,1
+2274,Skoda,Fabia,2004.0,Benzine,Manual,Hatchback,1400.0,1
+2120,Renault,Clio,2007.0,Benzine,Manual,Sedan,1200.0,1
+2310,Skoda,Kodiaq,2025.0,Benzine,Automatic,Estate,1500.0,1
+2302,Skoda,Kodiaq,2022.0,Benzine,Automatic,Estate,1400.0,1
+2303,Skoda,Kodiaq,2023.0,Benzine,Automatic,4X4,1400.0,1
+2304,Skoda,Kodiaq,2023.0,Benzine,Automatic,4X4,2000.0,1
+2305,Skoda,Kodiaq,2023.0,Benzine,Automatic,Hatchback,2000.0,1
+2306,Skoda,Kodiaq,2023.0,Benzine,Automatic,SUV,1400.0,1
+2309,Skoda,Kodiaq,2025.0,Benzine,Automatic,Estate,1400.0,1
+2311,Skoda,Kodiaq,2025.0,Benzine,Automatic,Hatchback,1500.0,1
+2278,Skoda,Fantasia,2011.0,Benzine,Automatic,Sedan,2000.0,1
+2312,Skoda,Kodiaq,2025.0,Benzine,Automatic,SUV,1400.0,1
+2315,Skoda,Octavia,1997.0,Benzine,Manual,Sedan,2000.0,1
+2318,Skoda,Octavia,1999.0,Benzine,Manual,Sedan,2000.0,1
+2319,Skoda,Octavia,2000.0,Benzine,Automatic,Hatchback,1600.0,1
+2320,Skoda,Octavia,2000.0,Benzine,Automatic,Sedan,1600.0,1
+2322,Skoda,Octavia,2003.0,Benzine,Manual,Sedan,1600.0,1
+2301,Skoda,Kodiaq,2021.0,Benzine,Automatic,SUV,1400.0,1
+2300,Skoda,Kodiaq,2021.0,Benzine,Automatic,Estate,2000.0,1
+2299,Skoda,Kodiaq,2020.0,Benzine,Automatic,SUV,1600.0,1
+2297,Skoda,Kodiaq,2020.0,Benzine,Automatic,SUV,1200.0,1
+2296,Skoda,Kodiaq,2019.0,Benzine,Automatic,SUV,1400.0,1
+2295,Skoda,Karoq,2026.0,Benzine,Automatic,SUV,1400.0,1
+2294,Skoda,Karoq,2021.0,Benzine,Automatic,SUV,1400.0,1
+2293,Skoda,Karoq,2021.0,Benzine,Automatic,Estate,1400.0,1
+2292,Skoda,Forman,1995.0,Benzine,Manual,Hatchback,1300.0,1
+2291,Skoda,Felicia Combi,1997.0,Benzine,Manual,Hatchback,1300.0,1
+2289,Skoda,Felecia,1998.0,Natural Gas,Manual,Hatchback,1300.0,1
+2288,Skoda,Felecia,1998.0,Benzine,Manual,Hatchback,1300.0,1
+2287,Skoda,Felecia,1997.0,Benzine,Manual,Sedan,1300.0,1
+2283,Skoda,Favorit,1996.0,Benzine,Manual,Sedan,1300.0,1
+2282,Skoda,Favorit,1994.0,Benzine,Manual,Hatchback,1600.0,1
+2280,Skoda,Favorit,1994.0,Benzine,Manual,Hatchback,100.0,1
+2279,Skoda,Fantasia,2012.0,Benzine,Automatic,Sedan,1600.0,1
+2227,Seat,Ibiza,1993.0,Benzine,Manual,Other,1300.0,1
+2226,Seat,Ibiza,1993.0,Benzine,Manual,Hatchback,1200.0,1
+2225,Seat,Cordoba,2007.0,Benzine,Automatic,Sedan,1400.0,1
+2159,Renault,Logan,2015.0,Benzine,Manual,Sedan,1500.0,1
+2149,Renault,Logan,2011.0,Benzine,Manual,Sedan,1300.0,1
+2150,Renault,Logan,2011.0,Benzine,Manual,Sedan,1500.0,1
+2152,Renault,Logan,2012.0,Benzine,Manual,Sedan,100.0,1
+2153,Renault,Logan,2012.0,Benzine,Manual,Sedan,1600.0,1
+2155,Renault,Logan,2013.0,Benzine,Manual,Sedan,1600.0,1
+2158,Renault,Logan,2015.0,Benzine,Manual,Sedan,1400.0,1
+2163,Renault,Logan,2016.0,Diesel,Manual,Sedan,1600.0,1
+2224,Seat,Cordoba,2006.0,Benzine,Manual,Sedan,1400.0,1
+2166,Renault,Logan,2017.0,Diesel,Automatic,Sedan,1600.0,1
+2168,Renault,Logan,2018.0,Benzine,Automatic,Sedan,1600.0,1
+2169,Renault,Logan,2018.0,Benzine,Manual,Sedan,1600.0,1
+2171,Renault,Logan,2020.0,Benzine,Automatic,Estate,1600.0,1
+2172,Renault,Logan,2022.0,Benzine,Automatic,Sedan,1600.0,1
+2173,Renault,Logan MCV,2013.0,Benzine,Automatic,MPV,1700.0,1
+2147,Renault,Logan,2009.0,Benzine,Manual,Sedan,1500.0,1
+2144,Renault,Kadjar,2019.0,Benzine,Automatic,Estate,1200.0,1
+2143,Renault,Kadjar,2018.0,Benzine,Automatic,SUV,1400.0,1
+2138,Renault,Fluence,2015.0,Benzine,Automatic,Sedan,1500.0,1
+2136,Renault,Fluence,2012.0,Benzine,Automatic,Sedan,1600.0,1
+2134,Renault,Duster,2026.0,Benzine,Automatic,SUV,1300.0,1
+2133,Renault,Duster,2021.0,Benzine,Automatic,SUV,1600.0,1
+2131,Renault,Duster,2019.0,Benzine,Automatic,SUV,1600.0,1
+2129,Renault,Duster,2019.0,Benzine,Automatic,4X4,1600.0,1
+2128,Renault,Duster,2018.0,Benzine,Automatic,SUV,1600.0,1
+2127,Renault,Duster,2018.0,Benzine,Automatic,Hatchback,1600.0,1
+2126,Renault,Duster,2018.0,Benzine,Automatic,Estate,1600.0,1
+2125,Renault,Duster,2017.0,Benzine,Manual,4X4,1600.0,1
+2124,Renault,Duster,2014.0,Benzine,Manual,SUV,1600.0,1
+2123,Renault,Dacia,1998.0,Benzine,Manual,Sedan,1300.0,1
+2122,Renault,Clio,2008.0,Benzine,Manual,Sedan,1400.0,1
+2121,Renault,Clio,2007.0,Benzine,Manual,Sedan,1500.0,1
+2174,Renault,Megane,2001.0,Benzine,Automatic,Sedan,1600.0,1
+2175,Renault,Megane,2004.0,Benzine,Automatic,Hatchback,1600.0,1
+2176,Renault,Megane,2004.0,Benzine,Automatic,Sedan,1600.0,1
+2203,Renault,Sandero,2021.0,Benzine,Automatic,Hatchback,1600.0,1
+2223,Seat,Cordoba,1996.0,Benzine,Manual,Sedan,1400.0,1
+2222,Seat,Ateca,2021.0,Benzine,Automatic,Estate,1400.0,1
+2219,Seat,Arona,2022.0,Benzine,Automatic,Sedan,1000.0,1
+2218,Seat,Altea,2008.0,Benzine,Manual,Hatchback,1600.0,1
+2217,Sandstorm,S24,2026.0,Benzine,Manual,Pickup,2400.0,1
+2216,Saipa,Pride,2009.0,Benzine,Manual,Sedan,1300.0,1
+2215,Rolls Royce,Cullinan,2022.0,Benzine,Automatic,SUV,6750.0,1
+2212,Renault,Sandero Stepway,2023.0,Benzine,Automatic,Hatchback,1600.0,1
+2211,Renault,Sandero Stepway,2022.0,Benzine,Automatic,Hatchback,1600.0,1
+2210,Renault,Sandero Stepway,2021.0,Benzine,Automatic,Hatchback,1600.0,1
+2207,Renault,Sandero Stepway,2017.0,Benzine,Automatic,Hatchback,1600.0,1
+2206,Renault,Sandero Stepway,2015.0,Benzine,Manual,SUV,1600.0,1
+2205,Renault,Sandero Stepway,2015.0,Benzine,Manual,Hatchback,1600.0,1
+2204,Renault,Sandero Stepway,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+2202,Renault,Sandero,2018.0,Benzine,Automatic,Hatchback,1600.0,1
+2178,Renault,Megane,2006.0,Benzine,Automatic,Sedan,1500.0,1
+2201,Renault,Sandero,2013.0,Benzine,Manual,Hatchback,1600.0,1
+2200,Renault,Sandero,2012.0,Benzine,Automatic,Hatchback,1600.0,1
+2199,Renault,Rainbow,1997.0,Benzine,Manual,Sedan,1300.0,1
+2198,Renault,Optima,1997.0,Benzine,Manual,Sedan,1300.0,1
+2196,Renault,Megane,2025.0,Benzine,Automatic,Sedan,1300.0,1
+2194,Renault,Megane,2023.0,Benzine,Automatic,Sedan,1300.0,1
+2188,Renault,Megane,2019.0,Benzine,Automatic,Sedan,1600.0,1
+2187,Renault,Megane,2017.0,Benzine,Automatic,Hatchback,1600.0,1
+2186,Renault,Megane,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+2185,Renault,Megane,2011.0,Benzine,Automatic,Hatchback,1600.0,1
+2184,Renault,Megane,2008.0,Benzine,Automatic,Sedan,1600.0,1
+2183,Renault,Megane,2008.0,Benzine,Automatic,Hatchback,1600.0,1
+2182,Renault,Megane,2007.0,Benzine,Automatic,Sports / Coupe,1600.0,1
+2180,Renault,Megane,2006.0,Benzine,Manual,Sedan,1600.0,1
+1505,Mercedes-Benz,A200,1975.0,Benzine,Manual,Sedan,2000.0,1
+1344,Lada,2110,2005.0,Benzine,Manual,Sedan,1600.0,1
+1503,Mercedes-Benz,A180,2021.0,Benzine,Automatic,Sedan,1500.0,1
+508,Cupra,Formentor,2022.0,Hybrid,Automatic,SUV,1400.0,1
+490,Citroen,C4 Grand Picasso,2018.0,Benzine,Automatic,Estate,1600.0,1
+491,Citroen,C4 Picasso,2012.0,Benzine,Automatic,SUV,1600.0,1
+492,Citroen,C4X,2023.0,Benzine,Automatic,Sedan,1200.0,1
+493,Citroen,C4X,2024.0,Benzine,Automatic,Sedan,1200.0,1
+494,Citroen,C4X,2025.0,Benzine,Automatic,Sports / Coupe,1200.0,1
+495,Citroen,C5,2021.0,Benzine,Automatic,SUV,1600.0,1
+497,Citroen,C5 Aircross,2021.0,Benzine,Automatic,Estate,1600.0,1
+498,Citroen,C5 Aircross,2026.0,Benzine,Automatic,SUV,1600.0,1
+499,Citroen,C8,2003.0,Benzine,Automatic,Hatchback,2000.0,1
+501,Citroen,DS4,2025.0,Benzine,Automatic,SUV,1600.0,1
+502,Citroen,DS5,2013.0,Benzine,Automatic,Hatchback,1600.0,1
+503,Citroen,Grand C4 Spacetourer,2019.0,Benzine,Automatic,MPV,1600.0,1
+504,Citroen,Jumper,2003.0,Diesel,Manual,Van / Bus,2800.0,1
+505,Citroen,Xsara Picasso,2003.0,Benzine,Manual,MPV,2000.0,1
+506,Citroen,ZX,1998.0,Benzine,Manual,Hatchback,1400.0,1
+489,Citroen,C4 Grand Picasso,2010.0,Diesel,Manual,Estate,1600.0,1
+488,Citroen,C4,2023.0,Benzine,Automatic,SUV,1600.0,1
+487,Citroen,C4,2015.0,Benzine,Automatic,SUV,1600.0,1
+478,Chrysler,Town and Country,2009.0,Benzine,Automatic,Van / Bus,3800.0,1
+472,Chevrolet,Spark,2012.0,Benzine,Manual,Hatchback,1300.0,1
+473,Chrysler,C300,2012.0,Benzine,Automatic,Sedan,5700.0,1
+474,Chrysler,M300,1999.0,Benzine,Automatic,Sedan,3500.0,1
+475,Chrysler,M300,2002.0,Benzine,Automatic,Sedan,3500.0,1
+476,Chrysler,Neon,1998.0,Benzine,Automatic,Sedan,2000.0,1
+477,Chrysler,Town and Country,2005.0,Benzine,Automatic,Van / Bus,3800.0,1
+479,Citroen,C-Elysée,2022.0,Benzine,Automatic,Sedan,1500.0,1
+486,Citroen,C4,2006.0,Benzine,Automatic,Hatchback,1600.0,1
+480,Citroen,C3,2003.0,Benzine,Automatic,Hatchback,1400.0,1
+481,Citroen,C3 Aircross,2021.0,Benzine,Automatic,Hatchback,1200.0,1
+482,Citroen,C3 Aircross,2021.0,Benzine,Automatic,SUV,1200.0,1
+483,Citroen,C3 Aircross,2021.0,Diesel,Automatic,SUV,1200.0,1
+484,Citroen,C4,2005.0,Benzine,Automatic,Hatchback,1600.0,1
+485,Citroen,C4,2005.0,Benzine,Automatic,Sedan,1600.0,1
+507,Cupra,Formentor,2022.0,Benzine,Automatic,SUV,2000.0,1
+509,Cupra,Formentor,2023.0,Benzine,Automatic,Hatchback,2000.0,1
+468,Chevrolet,Pickup/Dababa,2020.0,Diesel,Manual,Pickup,3000.0,1
+510,Cupra,Formentor,2024.0,Benzine,Automatic,4X4,2000.0,1
+537,Daewoo,Lanos,1997.0,Benzine,Automatic,Sedan,1600.0,1
+539,Daewoo,Lanos,1998.0,Benzine,Manual,Sedan,1600.0,1
+540,Daewoo,Lanos,1999.0,Benzine,Automatic,Sedan,1600.0,1
+541,Daewoo,Lanos,1999.0,Benzine,Manual,Sedan,1300.0,1
+543,Daewoo,Lanos,1999.0,Natural Gas,Manual,Sedan,1500.0,1
+545,Daewoo,Lanos,2000.0,Benzine,Manual,Sedan,1599.0,1
+546,Daewoo,Lanos,2000.0,Benzine,Manual,Sedan,1600.0,1
+548,Daewoo,Lanos,2000.0,Natural Gas,Manual,Sedan,1600.0,1
+549,Daewoo,Lanos,2001.0,Benzine,Manual,Sedan,1500.0,1
+550,Daewoo,Lanos,2002.0,Benzine,Manual,Sedan,1300.0,1
+551,Daewoo,Lanos,2003.0,Benzine,Manual,Sedan,1500.0,1
+552,Daewoo,Lanos,2003.0,Benzine,Manual,Sedan,1600.0,1
+553,Daewoo,Lanos,2004.0,Natural Gas,Manual,Sedan,1300.0,1
+555,Daewoo,Lanos,2005.0,Benzine,Manual,Sedan,1600.0,1
+556,Daewoo,Lanos,2005.0,Hybrid,Manual,Sedan,1500.0,1
+536,Daewoo,Lanos,1996.0,Benzine,Manual,Sedan,100.0,1
+535,Daewoo,Lanos,1996.0,Benzine,Automatic,Sedan,1500.0,1
+534,Daewoo,Lacetti,2010.0,Benzine,Automatic,Sedan,1600.0,1
+523,Daewoo,Espero,1995.0,Benzine,Automatic,Sedan,1500.0,1
+512,Cupra,Leon,2022.0,Benzine,Automatic,Hatchback,2000.0,1
+516,Cupra,Leon,2026.0,Benzine,Automatic,Hatchback,1600.0,1
+517,Cupra,Leon,2026.0,Benzine,Automatic,SUV,1400.0,1
+519,Cupra,Terramar,2026.0,Benzine,Automatic,Hatchback,1500.0,1
+521,Daewoo,Cielo,1996.0,Benzine,Manual,Sedan,1500.0,1
+522,Daewoo,Espero,1994.0,Benzine,Manual,Sedan,1600.0,1
+524,Daewoo,Espero,1995.0,Hybrid,Manual,Sedan,1500.0,1
+533,Daewoo,Lacetti,2009.0,Benzine,Automatic,Sedan,1800.0,1
+525,Daewoo,Juliet,2000.0,Benzine,Manual,Hatchback,1500.0,1
+526,Daewoo,Juliet,2004.0,Benzine,Automatic,Hatchback,1600.0,1
+527,Daewoo,Juliet,2006.0,Benzine,Manual,Hatchback,1500.0,1
+528,Daewoo,Lacetti,2003.0,Benzine,Automatic,Sedan,1500.0,1
+531,Daewoo,Lacetti,2005.0,Benzine,Automatic,Sedan,1600.0,1
+532,Daewoo,Lacetti,2006.0,Benzine,Automatic,Sedan,1600.0,1
+469,Chevrolet,Sonic,2013.0,Benzine,Automatic,Sedan,1600.0,1
+467,Chevrolet,Pickup/Dababa,2020.0,Diesel,Manual,Pickup,2500.0,1
+560,Daewoo,Lanos,2006.0,Benzine,Manual,Sedan,2000.0,1
+411,Chevrolet,Lanos,2011.0,Benzine,Manual,Sedan,2200.0,1
+388,Chevrolet,Captiva,2013.0,Benzine,Automatic,Estate,3200.0,1
+389,Chevrolet,Captiva,2021.0,Benzine,Automatic,SUV,1500.0,1
+390,Chevrolet,Captiva,2021.0,Benzine,Automatic,SUV,1600.0,1
+391,Chevrolet,Captiva,2025.0,Benzine,Automatic,SUV,1500.0,1
+392,Chevrolet,Corvette,2023.0,Benzine,Automatic,Sports / Coupe,6200.0,1
+393,Chevrolet,Cruze,2009.0,Benzine,Automatic,Sedan,1600.0,1
+395,Chevrolet,Cruze,2010.0,Benzine,Automatic,Sedan,1800.0,1
+396,Chevrolet,Cruze,2010.0,Benzine,Manual,Sedan,1500.0,1
+397,Chevrolet,Cruze,2011.0,Benzine,Automatic,Sedan,1600.0,1
+398,Chevrolet,Cruze,2011.0,Benzine,Automatic,Sedan,1800.0,1
+400,Chevrolet,Lanos,2000.0,Benzine,Manual,Sedan,1500.0,1
+401,Chevrolet,Lanos,2009.0,Benzine,Manual,Other,1500.0,1
+402,Chevrolet,Lanos,2009.0,Benzine,Manual,Sedan,1400.0,1
+404,Chevrolet,Lanos,2010.0,Benzine,Manual,Estate,1500.0,1
+405,Chevrolet,Lanos,2010.0,Benzine,Manual,Sedan,1400.0,1
+387,Chevrolet,Caprice,1983.0,Benzine,Automatic,Sedan,5000.0,1
+386,Chevrolet,Camaro,2022.0,Benzine,Automatic,Convertible,2000.0,1
+385,Chevrolet,Aveo,2020.0,Benzine,Automatic,Sedan,1500.0,1
+367,Chevrolet,Aveo,2010.0,Benzine,Automatic,Sedan,1600.0,1
+360,Chevrolet,Aveo,2007.0,Benzine,Manual,Sedan,1600.0,1
+361,Chevrolet,Aveo,2008.0,Benzine,Automatic,Sedan,1600.0,1
+363,Chevrolet,Aveo,2009.0,Benzine,Automatic,Sedan,1500.0,1
+364,Chevrolet,Aveo,2009.0,Benzine,Manual,Sedan,1400.0,1
+365,Chevrolet,Aveo,2009.0,Benzine,Manual,Sedan,1600.0,1
+366,Chevrolet,Aveo,2010.0,Benzine,Automatic,Sedan,1500.0,1
+369,Chevrolet,Aveo,2010.0,Benzine,Manual,Sedan,1600.0,1
+384,Chevrolet,Aveo,2019.0,Benzine,Automatic,Sedan,1600.0,1
+373,Chevrolet,Aveo,2012.0,Benzine,Manual,Sedan,1500.0,1
+374,Chevrolet,Aveo,2013.0,Benzine,Automatic,Sedan,1400.0,1
+377,Chevrolet,Aveo,2014.0,Benzine,Automatic,Sedan,1600.0,1
+378,Chevrolet,Aveo,2015.0,Benzine,Automatic,4X4,1400.0,1
+381,Chevrolet,Aveo,2018.0,Benzine,Automatic,Sedan,1500.0,1
+382,Chevrolet,Aveo,2018.0,Benzine,Automatic,Sedan,1600.0,1
+408,Chevrolet,Lanos,2011.0,Benzine,Automatic,Sedan,500.0,1
+413,Chevrolet,Lanos,2013.0,Benzine,Manual,Sedan,1400.0,1
+466,Chevrolet,Pickup/Dababa,2020.0,Diesel,Manual,Pickup,2400.0,1
+415,Chevrolet,Lanos,2013.0,Natural Gas,Manual,Sedan,1500.0,1
+445,Chevrolet,Optra,2009.0,Benzine,Automatic,Sedan,1599.0,1
+450,Chevrolet,Optra,2017.0,Benzine,Automatic,Sedan,1500.0,1
+451,Chevrolet,Optra,2018.0,Benzine,Automatic,Sedan,1500.0,1
+452,Chevrolet,Optra,2019.0,Benzine,Automatic,Sedan,1500.0,1
+453,Chevrolet,Optra,2020.0,Benzine,Automatic,Sedan,1500.0,1
+454,Chevrolet,Optra,2020.0,Benzine,Automatic,Sedan,1600.0,1
+455,Chevrolet,Optra,2021.0,Benzine,Automatic,Sedan,1500.0,1
+456,Chevrolet,Optra,2022.0,Benzine,Automatic,Sedan,1500.0,1
+457,Chevrolet,Optra,2022.0,Benzine,Automatic,Sedan,1600.0,1
+460,Chevrolet,Other,2009.0,Diesel,Manual,Pickup,7000.0,1
+461,Chevrolet,Other,2026.0,Diesel,Manual,Pickup,4300.0,1
+462,Chevrolet,Pickup/Dababa,1981.0,Diesel,Manual,Pickup,1000.0,1
+463,Chevrolet,Pickup/Dababa,1986.0,Diesel,Manual,Pickup,2500.0,1
+464,Chevrolet,Pickup/Dababa,1999.0,Diesel,Manual,Pickup,2500.0,1
+465,Chevrolet,Pickup/Dababa,2015.0,Diesel,Manual,Pickup,2500.0,1
+444,Chevrolet,Optra,2009.0,Benzine,Automatic,Sedan,1500.0,1
+443,Chevrolet,Optra,2008.0,Natural Gas,Manual,Sedan,1600.0,1
+441,Chevrolet,Optra,2007.0,Natural Gas,Manual,Sedan,1600.0,1
+427,Chevrolet,Lanos,2019.0,Natural Gas,Manual,Sedan,1500.0,1
+416,Chevrolet,Lanos,2014.0,Benzine,Manual,Sedan,1499.0,1
+418,Chevrolet,Lanos,2014.0,Hybrid,Manual,Sedan,1500.0,1
+419,Chevrolet,Lanos,2015.0,Benzine,Manual,Sedan,1400.0,1
+422,Chevrolet,Lanos,2016.0,Natural Gas,Manual,Sedan,1600.0,1
+424,Chevrolet,Lanos,2017.0,Benzine,Manual,Sedan,1600.0,1
+425,Chevrolet,Lanos,2018.0,Benzine,Manual,Sedan,1500.0,1
+428,Chevrolet,Malibu,1976.0,Benzine,Automatic,Sedan,3500.0,1
+438,Chevrolet,Optra,2007.0,Benzine,Automatic,Sedan,1500.0,1
+431,Chevrolet,N300,2017.0,Benzine,Manual,Van / Bus,1300.0,1
+432,Chevrolet,N300,2017.0,Natural Gas,Manual,Van / Bus,1200.0,1
+433,Chevrolet,N300,2018.0,Benzine,Manual,Van / Bus,1300.0,1
+435,Chevrolet,Optra,2005.0,Benzine,Automatic,Sedan,1600.0,1
+436,Chevrolet,Optra,2006.0,Benzine,Automatic,Sedan,1600.0,1
+437,Chevrolet,Optra,2006.0,Benzine,Manual,Sedan,1500.0,1
+557,Daewoo,Lanos,2006.0,Benzine,Automatic,Sedan,1500.0,1
+561,Daewoo,Lanos,2007.0,Benzine,Manual,Sedan,1500.0,1
+358,Chevrolet,Aveo,2007.0,Benzine,Automatic,Sedan,1400.0,1
+701,Fiat,Brava,2001.0,Benzine,Manual,Hatchback,1300.0,1
+683,Fiat,131,1978.0,Benzine,Manual,Sedan,1600.0,1
+684,Fiat,131,1979.0,Benzine,Manual,Sedan,1600.0,1
+685,Fiat,131,1979.0,Natural Gas,Automatic,Small city car,2000.0,1
+686,Fiat,131,1979.0,Natural Gas,Manual,Sedan,1300.0,1
+688,Fiat,131,1980.0,Benzine,Manual,Sedan,1600.0,1
+689,Fiat,131,1981.0,Benzine,Manual,MPV,1600.0,1
+690,Fiat,131,1981.0,Benzine,Manual,Sedan,1300.0,1
+691,Fiat,131,1982.0,Benzine,Manual,Sedan,1600.0,1
+692,Fiat,131,1983.0,Benzine,Manual,Sedan,1600.0,1
+693,Fiat,132,1974.0,Benzine,Manual,Estate,1600.0,1
+694,Fiat,132,1975.0,Benzine,Manual,Sedan,1600.0,1
+695,Fiat,132,1976.0,Benzine,Manual,Sedan,1600.0,1
+696,Fiat,500,2021.0,Benzine,Automatic,Sports / Coupe,1400.0,1
+697,Fiat,500C,2020.0,Benzine,Automatic,Hatchback,1400.0,1
+698,Fiat,500X,2024.0,Benzine,Automatic,Hatchback,1400.0,1
+682,Fiat,131,1978.0,Benzine,Manual,Sedan,1300.0,1
+681,Fiat,131,1977.0,Benzine,Manual,Sedan,1400.0,1
+680,Fiat,131,1976.0,Benzine,Manual,Sedan,1300.0,1
+669,Fiat,128,1990.0,Benzine,Manual,Small city car,1300.0,1
+659,Fiat,128,1983.0,Benzine,Manual,Sedan,1300.0,1
+661,Fiat,128,1985.0,Benzine,Manual,Sedan,1115.0,1
+662,Fiat,128,1986.0,Benzine,Manual,Sedan,1100.0,1
+663,Fiat,128,1986.0,Benzine,Manual,Sedan,1300.0,1
+665,Fiat,128,1987.0,Benzine,Manual,Sedan,1300.0,1
+668,Fiat,128,1989.0,Benzine,Manual,Sedan,1300.0,1
+671,Fiat,128,1992.0,Benzine,Manual,Sedan,1300.0,1
+679,Fiat,1300,2015.0,Benzine,Manual,Estate,1300.0,1
+672,Fiat,128,1997.0,Benzine,Manual,Sedan,1300.0,1
+673,Fiat,128,1998.0,Benzine,Manual,Sedan,1300.0,1
+674,Fiat,128,2000.0,Benzine,Manual,Sedan,1100.0,1
+676,Fiat,128,2002.0,Natural Gas,Manual,Sedan,1300.0,1
+677,Fiat,128 Nova,1988.0,Benzine,Manual,Other,1100.0,1
+678,Fiat,128 Nova,1990.0,Benzine,Manual,Sedan,1300.0,1
+700,Fiat,500X,2026.0,Benzine,Automatic,SUV,1400.0,1
+702,Fiat,Doblo,2021.0,Benzine,Automatic,Pickup,1600.0,1
+655,Fiat,128,1980.0,Benzine,Manual,Sedan,1300.0,1
+703,Fiat,Dogan,1991.0,Benzine,Manual,Sedan,1600.0,1
+729,Fiat,Punto,2016.0,Benzine,Automatic,Hatchback,1500.0,1
+730,Fiat,Punto,2017.0,Benzine,Automatic,Hatchback,1200.0,1
+731,Fiat,Regata,1978.0,Benzine,Manual,Sedan,1500.0,1
+733,Fiat,Regata,1986.0,Benzine,Manual,Sedan,1500.0,1
+734,Fiat,Regata,1989.0,Benzine,Manual,Sedan,1500.0,1
+735,Fiat,Ritmo,1981.0,Benzine,Manual,Hatchback,1300.0,1
+736,Fiat,Ritmo,1981.0,Hybrid,Manual,Hatchback,1500.0,1
+737,Fiat,Ritmo,1983.0,Benzine,Manual,Hatchback,1200.0,1
+738,Fiat,Ritmo,1983.0,Benzine,Manual,Hatchback,1300.0,1
+739,Fiat,Ritmo,1983.0,Benzine,Manual,Hatchback,1600.0,1
+740,Fiat,Ritmo,1988.0,Benzine,Manual,Hatchback,1400.0,1
+741,Fiat,Shahin,1995.0,Benzine,Manual,Sedan,1400.0,1
+742,Fiat,Shahin,1995.0,Benzine,Manual,Sedan,1600.0,1
+745,Fiat,Shahin,1999.0,Benzine,Manual,Sedan,1400.0,1
+746,Fiat,Shahin,1999.0,Benzine,Manual,Sedan,1600.0,1
+728,Fiat,Punto,2009.0,Benzine,Manual,Hatchback,1400.0,1
+727,Fiat,Punto,2008.0,Benzine,Manual,Hatchback,1300.0,1
+726,Fiat,Punto,2003.0,Benzine,Manual,Hatchback,1400.0,1
+710,Fiat,Marea,2002.0,Benzine,Manual,Sedan,1300.0,1
+704,Fiat,Dogan,1994.0,Benzine,Manual,Sedan,1600.0,1
+705,Fiat,Florida,2006.0,Benzine,Manual,Hatchback,1400.0,1
+706,Fiat,Grand Punto,2013.0,Benzine,Automatic,Hatchback,1400.0,1
+707,Fiat,Grand Punto,2015.0,Benzine,Automatic,Hatchback,1400.0,1
+708,Fiat,Grand Punto,2018.0,Benzine,Automatic,Hatchback,1400.0,1
+709,Fiat,Linea,2009.0,Benzine,Manual,Sedan,1400.0,1
+711,Fiat,Other,1988.0,Diesel,Manual,Van / Bus,1800.0,1
+723,Fiat,Punto,1995.0,Benzine,Manual,Hatchback,1400.0,1
+712,Fiat,Other,1993.0,Benzine,Manual,4X4,1600.0,1
+713,Fiat,Palio,2006.0,Benzine,Manual,Small city car,1000.0,1
+714,Fiat,Panda,2017.0,Benzine,Manual,Hatchback,1242.0,1
+715,Fiat,Petra,2003.0,Benzine,Manual,Sedan,1600.0,1
+719,Fiat,Punto,1994.0,Benzine,Manual,Hatchback,1250.0,1
+721,Fiat,Punto,1995.0,Benzine,Manual,Hatchback,1242.0,1
+656,Fiat,128,1980.0,Diesel,Manual,Sedan,1300.0,1
+653,Fiat,128,1979.0,Benzine,Manual,Sedan,1300.0,1
+562,Daewoo,Lanos,2007.0,Benzine,Manual,Sedan,1600.0,1
+612,Daihatsu,Terios,1999.0,Benzine,Manual,Hatchback,1300.0,1
+589,Daewoo,Nubira,2004.0,Benzine,Manual,Sedan,1600.0,1
+591,Daewoo,Nubira,2005.0,Benzine,Manual,Sedan,1500.0,1
+593,Daewoo,Nubira,2006.0,Benzine,Manual,Sedan,1600.0,1
+594,Daewoo,Nubira,2006.0,Diesel,Manual,Sedan,1600.0,1
+596,Daewoo,Nubira,2007.0,Benzine,Manual,Sedan,1600.0,1
+598,Daewoo,Racer,1994.0,Benzine,Manual,Sedan,1600.0,1
+600,Daihatsu,Charade,1990.0,Benzine,Manual,Hatchback,1000.0,1
+601,Daihatsu,Charade,1991.0,Benzine,Automatic,Sedan,1300.0,1
+602,Daihatsu,Charade,1992.0,Benzine,Automatic,Sedan,1300.0,1
+604,Daihatsu,Charade,2003.0,Benzine,Automatic,Hatchback,1000.0,1
+606,Daihatsu,Feroza,1990.0,Benzine,Manual,4X4,1600.0,1
+607,Daihatsu,Kancil,1999.0,Benzine,Manual,Hatchback,800.0,1
+608,Daihatsu,Materia,2008.0,Benzine,Automatic,Hatchback,1600.0,1
+609,Daihatsu,Pickup,1982.0,Diesel,Manual,Van / Bus,3500.0,1
+610,Daihatsu,Sirion,2012.0,Benzine,Automatic,Hatchback,1300.0,1
+588,Daewoo,Nubira,2003.0,Natural Gas,Manual,Sedan,1600.0,1
+587,Daewoo,Nubira,2002.0,Hybrid,Automatic,Sedan,1600.0,1
+585,Daewoo,Nubira,2002.0,Benzine,Automatic,Sedan,1600.0,1
+572,Daewoo,Nubira,1998.0,Benzine,Manual,Other,1500.0,1
+564,Daewoo,Lanos,2009.0,Benzine,Manual,Sedan,1300.0,1
+565,Daewoo,Leganza,2000.0,Benzine,Automatic,Sedan,2000.0,1
+566,Daewoo,Matiz,1999.0,Benzine,Manual,Hatchback,800.0,1
+567,Daewoo,Matiz,2001.0,Benzine,Manual,Hatchback,800.0,1
+568,Daewoo,Nubira,1997.0,Benzine,Automatic,Hatchback,1600.0,1
+571,Daewoo,Nubira,1997.0,Benzine,Manual,Sedan,2000.0,1
+573,Daewoo,Nubira,1998.0,Benzine,Manual,Sedan,1600.0,1
+583,Daewoo,Nubira,2001.0,Benzine,Manual,Sedan,1598.0,1
+575,Daewoo,Nubira,1999.0,Benzine,Manual,Sedan,1498.0,1
+576,Daewoo,Nubira,1999.0,Benzine,Manual,Sedan,1500.0,1
+577,Daewoo,Nubira,1999.0,Natural Gas,Manual,Sedan,1600.0,1
+578,Daewoo,Nubira,2000.0,Benzine,Automatic,Sedan,1500.0,1
+580,Daewoo,Nubira,2001.0,Benzine,Automatic,Sedan,1500.0,1
+582,Daewoo,Nubira,2001.0,Benzine,Manual,Sedan,1500.0,1
+611,Daihatsu,Terios,1999.0,Benzine,Automatic,Hatchback,1300.0,1
+613,Daihatsu,Terios,2000.0,Benzine,Manual,Hatchback,1300.0,1
+651,Fiat,128,1978.0,Benzine,Manual,Sedan,1300.0,1
+614,Daihatsu,Terios,2007.0,Benzine,Automatic,Estate,1500.0,1
+634,Fiat,127,1976.0,Benzine,Manual,Sports / Coupe,950.0,1
+635,Fiat,127,1978.0,Benzine,Manual,Small city car,1300.0,1
+637,Fiat,127,1982.0,Diesel,Manual,Sedan,900.0,1
+638,Fiat,127,1983.0,Benzine,Manual,Hatchback,950.0,1
+639,Fiat,127,1984.0,Benzine,Manual,Hatchback,903.0,1
+640,Fiat,127,1984.0,Benzine,Manual,Small city car,900.0,1
+641,Fiat,127,1985.0,Benzine,Manual,Hatchback,900.0,1
+643,Fiat,127,1987.0,Benzine,Manual,Hatchback,900.0,1
+644,Fiat,127,1987.0,Benzine,Manual,Hatchback,1300.0,1
+645,Fiat,128,1971.0,Benzine,Manual,Sedan,1100.0,1
+646,Fiat,128,1976.0,Benzine,Manual,Sedan,1100.0,1
+647,Fiat,128,1976.0,Benzine,Manual,Sedan,1116.0,1
+648,Fiat,128,1977.0,Benzine,Manual,Sedan,1100.0,1
+649,Fiat,128,1978.0,Benzine,Manual,Other,1100.0,1
+650,Fiat,128,1978.0,Benzine,Manual,Sedan,1200.0,1
+633,Fiat,127,1974.0,Benzine,Manual,Hatchback,1300.0,1
+632,Fiat,125,1979.0,Benzine,Manual,Sedan,1500.0,1
+631,Fiat,124,1972.0,Benzine,Manual,Sedan,1600.0,1
+621,Dodge,Challenger,2022.0,Benzine,Automatic,Sports / Coupe,3700.0,1
+615,Daihatsu,Terios,2007.0,Benzine,Automatic,Hatchback,1500.0,1
+616,Daihatsu,Terios,2008.0,Benzine,Automatic,4X4,1500.0,1
+617,Daihatsu,Terios,2009.0,Benzine,Automatic,Hatchback,1600.0,1
+618,Daihatsu,Terios,2009.0,Benzine,Automatic,SUV,1500.0,1
+619,Deepal,G318,2025.0,Hybrid,Automatic,SUV,1500.0,1
+620,Dodge,Challenger,2021.0,Benzine,Automatic,Sports / Coupe,3600.0,1
+622,Dodge,Durango,2002.0,Benzine,Automatic,4X4,5900.0,1
+630,Fiat,124,1970.0,Benzine,Manual,Sedan,1400.0,1
+623,Dodge,Durango,2024.0,Benzine,Automatic,SUV,6166.0,1
+624,Dodge,Ram,2011.0,Benzine,Automatic,Pickup,5700.0,1
+626,Ds,Ds4,2023.0,Benzine,Automatic,SUV,1600.0,1
+627,Faw,N5,2008.0,Natural Gas,Manual,Sedan,1000.0,1
+628,Faw,Other,2004.0,Benzine,Manual,Hatchback,1000.0,1
+629,Faw,Van,2006.0,Natural Gas,Automatic,Other,555.0,1
+359,Chevrolet,Aveo,2007.0,Benzine,Manual,Sedan,1500.0,1
+357,Chevrolet,Aveo,2006.0,Benzine,Manual,Sedan,1600.0,1
+748,Fiat,Shahin,2001.0,Benzine,Manual,Sedan,1400.0,1
+142,BMW,740,1995.0,Benzine,Automatic,Sedan,3500.0,1
+118,BMW,520,2016.0,Benzine,Automatic,Sedan,1998.0,1
+119,BMW,520,2016.0,Benzine,Automatic,Sedan,2000.0,1
+120,BMW,520,2019.0,Benzine,Automatic,Sedan,1600.0,1
+121,BMW,520,2019.0,Benzine,Automatic,Sedan,2000.0,1
+123,BMW,520,2023.0,Benzine,Automatic,Sedan,1597.0,1
+127,BMW,523,1998.0,Benzine,Automatic,Sedan,2500.0,1
+129,BMW,523,2000.0,Benzine,Automatic,Sedan,2200.0,1
+130,BMW,523,2000.0,Benzine,Automatic,Sedan,2500.0,1
+132,BMW,523,2011.0,Benzine,Automatic,Sedan,2000.0,1
+133,BMW,525,1998.0,Benzine,Automatic,Sedan,2800.0,1
+134,BMW,528,2011.0,Benzine,Automatic,Sedan,3000.0,1
+135,BMW,530,2018.0,Benzine,Automatic,Sedan,2000.0,1
+137,BMW,535,2016.0,Benzine,Automatic,Sedan,3300.0,1
+138,BMW,540,2020.0,Benzine,Automatic,Sedan,3000.0,1
+139,BMW,730,2018.0,Benzine,Automatic,Sedan,2000.0,1
+117,BMW,520,1990.0,Benzine,Automatic,Sedan,2500.0,1
+116,BMW,430,2024.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+115,BMW,420,2023.0,Benzine,Automatic,Convertible,2000.0,1
+98,BMW,320,2014.0,Benzine,Automatic,Sedan,2000.0,1
+90,BMW,318,2019.0,Benzine,Automatic,Sedan,1600.0,1
+91,BMW,318,2026.0,Benzine,Automatic,Sedan,2000.0,1
+92,BMW,320,2006.0,Benzine,Automatic,Sedan,2400.0,1
+95,BMW,320,2010.0,Benzine,Automatic,Sedan,2000.0,1
+96,BMW,320,2013.0,Benzine,Automatic,Sedan,1995.0,1
+97,BMW,320,2013.0,Benzine,Automatic,Sedan,2000.0,1
+99,BMW,320,2015.0,Benzine,Automatic,Sedan,2000.0,1
+114,BMW,418,2016.0,Benzine,Automatic,Sedan,1600.0,1
+103,BMW,320,2019.0,Benzine,Automatic,Sedan,2000.0,1
+106,BMW,320,2023.0,Benzine,Automatic,Sedan,2000.0,1
+109,BMW,330,2008.0,Benzine,Automatic,Convertible,3000.0,1
+110,BMW,330,2017.0,Benzine,Automatic,Sedan,2000.0,1
+112,BMW,340,2016.0,Benzine,Automatic,Sedan,3000.0,1
+113,BMW,340,2017.0,Benzine,Automatic,Sedan,3000.0,1
+140,BMW,730,2019.0,Benzine,Automatic,Sedan,2000.0,1
+143,BMW,740,2017.0,Hybrid,Automatic,Sedan,2000.0,1
+85,BMW,318,2016.0,Benzine,Automatic,Sedan,1800.0,1
+144,BMW,740,2018.0,Benzine,Automatic,Sedan,3000.0,1
+167,BMW,X1,2023.0,Benzine,Automatic,SUV,1500.0,1
+168,BMW,X1,2024.0,Benzine,Automatic,SUV,1500.0,1
+170,BMW,X1,2026.0,Benzine,Automatic,SUV,1500.0,1
+171,BMW,X2,2024.0,Benzine,Automatic,SUV,1500.0,1
+172,BMW,X2,2025.0,Benzine,Automatic,SUV,1500.0,1
+173,BMW,X3,2006.0,Benzine,Automatic,4X4,3000.0,1
+174,BMW,X3,2006.0,Benzine,Automatic,SUV,3000.0,1
+175,BMW,X3,2008.0,Benzine,Automatic,SUV,3000.0,1
+176,BMW,X3,2013.0,Benzine,Automatic,SUV,2000.0,1
+177,BMW,X3,2013.0,Benzine,Automatic,SUV,3000.0,1
+178,BMW,X3,2014.0,Benzine,Automatic,SUV,2000.0,1
+179,BMW,X3,2015.0,Benzine,Automatic,4X4,2000.0,1
+180,BMW,X3,2017.0,Benzine,Automatic,4X4,3000.0,1
+181,BMW,X3,2017.0,Benzine,Automatic,SUV,3000.0,1
+182,BMW,X3,2019.0,Benzine,Automatic,SUV,2000.0,1
+164,BMW,X1,2018.0,Benzine,Automatic,SUV,2000.0,1
+161,BMW,X1,2013.0,Benzine,Automatic,SUV,2000.0,1
+160,BMW,Other,1993.0,Benzine,Automatic,Sedan,1600.0,1
+151,BMW,IX3,2014.0,Benzine,Automatic,4X4,3000.0,1
+145,BMW,750,2022.0,Benzine,Automatic,Sedan,4400.0,1
+146,BMW,760i,2025.0,Benzine,Automatic,Sedan,4400.0,1
+147,BMW,850,2020.0,Benzine,Automatic,Convertible,4400.0,1
+148,BMW,I5,2026.0,Electric,Automatic,Sedan,713.0,1
+149,BMW,I7,2024.0,Electric,Automatic,Sedan,4000.0,1
+150,BMW,IX1,2020.0,Benzine,Automatic,SUV,1500.0,1
+152,BMW,IX3,2014.0,Benzine,Automatic,SUV,3000.0,1
+159,BMW,M850,2020.0,Benzine,Automatic,Convertible,4400.0,1
+153,BMW,IX3,2019.0,Benzine,Automatic,4X4,2000.0,1
+154,BMW,M2,2024.0,Benzine,Automatic,Sedan,3000.0,1
+155,BMW,M3,2023.0,Benzine,Automatic,Sedan,3000.0,1
+156,BMW,M4,2023.0,Benzine,Automatic,Convertible,3000.0,1
+157,BMW,M4,2024.0,Benzine,Automatic,Sports / Coupe,3000.0,1
+158,BMW,M5,2026.0,Benzine,Automatic,Sedan,4400.0,1
+87,BMW,318,2017.0,Benzine,Automatic,Sedan,1600.0,1
+84,BMW,318,2016.0,Benzine,Automatic,Sedan,1500.0,1
+184,BMW,X3,2024.0,Benzine,Automatic,4X4,2000.0,1
+43,Audi,Q7,2021.0,Benzine,Automatic,SUV,2000.0,1
+24,Audi,A6,2020.0,Benzine,Automatic,Sedan,2000.0,1
+25,Audi,A6,2022.0,Benzine,Automatic,Sedan,2000.0,1
+26,Audi,A7,2023.0,Benzine,Automatic,Sedan,2000.0,1
+27,Audi,Q2,2019.0,Benzine,Automatic,Hatchback,999.0,1
+28,Audi,Q2,2020.0,Benzine,Automatic,SUV,1000.0,1
+29,Audi,Q2,2021.0,Benzine,Automatic,Hatchback,1400.0,1
+30,Audi,Q2,2024.0,Benzine,Automatic,SUV,1400.0,1
+31,Audi,Q2,2026.0,Benzine,Automatic,SUV,1400.0,1
+32,Audi,Q3,2015.0,Benzine,Automatic,SUV,1400.0,1
+33,Audi,Q3,2017.0,Benzine,Automatic,SUV,1400.0,1
+35,Audi,Q3,2024.0,Benzine,Automatic,Hatchback,1500.0,1
+37,Audi,Q3,2024.0,Benzine,Automatic,SUV,1400.0,1
+38,Audi,Q3,2024.0,Benzine,Automatic,SUV,1500.0,1
+39,Audi,Q3,2025.0,Benzine,Automatic,Estate,1400.0,1
+40,Audi,Q3,2025.0,Benzine,Automatic,Hatchback,1500.0,1
+22,Audi,A5,2021.0,Benzine,Automatic,Sedan,2000.0,1
+21,Audi,A5,2013.0,Benzine,Automatic,Sedan,1800.0,1
+20,Audi,A4,2024.0,Benzine,Automatic,Sedan,2000.0,1
+8,Audi,A3,2016.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+2,Alfa Romeo,Tonale,2024.0,Benzine,Automatic,SUV,2000.0,1
+3,Alfa Romeo,Tonale,2025.0,Benzine,Automatic,SUV,2000.0,1
+4,Aston Martin,DB,2025.0,Benzine,Automatic,SUV,3982.0,1
+5,Audi,A3,2012.0,Benzine,Automatic,Sedan,1400.0,1
+6,Audi,A3,2013.0,Benzine,Automatic,Hatchback,1400.0,1
+7,Audi,A3,2016.0,Benzine,Automatic,Sports / Coupe,1400.0,1
+9,Audi,A3,2017.0,Benzine,Automatic,Hatchback,1400.0,1
+19,Audi,A4,2023.0,Benzine,Automatic,Sedan,2000.0,1
+10,Audi,A3,2017.0,Benzine,Automatic,Sedan,1500.0,1
+11,Audi,A3,2019.0,Benzine,Automatic,Sedan,1000.0,1
+12,Audi,A3,2020.0,Benzine,Automatic,Sedan,1000.0,1
+13,Audi,A3,2024.0,Benzine,Automatic,Sedan,1400.0,1
+14,Audi,A3,2025.0,Benzine,Automatic,SUV,1400.0,1
+15,Audi,A4,2017.0,Benzine,Automatic,Sedan,1400.0,1
+42,Audi,Q3,2026.0,Benzine,Automatic,Hatchback,1400.0,1
+44,Audi,Q7,2022.0,Benzine,Automatic,SUV,2000.0,1
+83,BMW,318,2005.0,Benzine,Automatic,Sedan,2500.0,1
+45,Audi,Q7,2024.0,Benzine,Automatic,SUV,2000.0,1
+67,BMW,316,1994.0,Benzine,Manual,Sedan,1600.0,1
+68,BMW,316,1995.0,Benzine,Automatic,Sedan,2800.0,1
+69,BMW,316,1995.0,Benzine,Automatic,Sedan,3200.0,1
+70,BMW,316,1995.0,Benzine,Manual,Sedan,1600.0,1
+71,BMW,316,1995.0,Benzine,Manual,Sports / Coupe,1600.0,1
+72,BMW,316,1997.0,Benzine,Automatic,Sedan,1900.0,1
+73,BMW,316,1997.0,Benzine,Manual,Sedan,1600.0,1
+74,BMW,316,1998.0,Benzine,Automatic,Sedan,1600.0,1
+75,BMW,316,2011.0,Benzine,Automatic,Sedan,1600.0,1
+76,BMW,316,2011.0,Benzine,Automatic,Sedan,2000.0,1
+77,BMW,316,2013.0,Benzine,Automatic,Sedan,1600.0,1
+79,BMW,318,1981.0,Benzine,Manual,Sports / Coupe,1800.0,1
+80,BMW,318,2000.0,Benzine,Automatic,Sedan,1900.0,1
+81,BMW,318,2002.0,Benzine,Automatic,Sedan,2000.0,1
+82,BMW,318,2004.0,Benzine,Automatic,Sedan,2000.0,1
+66,BMW,316,1994.0,Benzine,Automatic,Other,1600.0,1
+65,BMW,316,1992.0,Benzine,Manual,Sedan,1800.0,1
+64,BMW,316,1991.0,Benzine,Automatic,Sedan,1600.0,1
+54,BMW,116,2009.0,Benzine,Automatic,Hatchback,1600.0,1
+46,Audi,Q7,2025.0,Benzine,Automatic,4X4,2000.0,1
+49,Audi,Q8,2025.0,Benzine,Automatic,Hatchback,3000.0,1
+50,Audi,Q8,2025.0,Benzine,Automatic,SUV,3000.0,1
+51,Audi,Q8,2025.0,Benzine,Automatic,Sports / Coupe,3000.0,1
+52,Avatr,07,2025.0,Electric,Automatic,SUV,252.0,1
+53,BMW,116,1996.0,Benzine,Manual,Hatchback,1600.0,1
+55,BMW,116,2015.0,Benzine,Automatic,Sedan,1600.0,1
+63,BMW,316,1985.0,Benzine,Manual,Sedan,1600.0,1
+56,BMW,118,2014.0,Benzine,Automatic,Hatchback,1600.0,1
+57,BMW,118,2021.0,Benzine,Automatic,Hatchback,1500.0,1
+58,BMW,118,2021.0,Benzine,Automatic,Sedan,1600.0,1
+59,BMW,218,2017.0,Benzine,Automatic,Convertible,1500.0,1
+60,BMW,218,2024.0,Benzine,Automatic,Sedan,1499.0,1
+62,BMW,218 i,2021.0,Benzine,Automatic,Sedan,1500.0,1
+183,BMW,X3,2019.0,Benzine,Automatic,SUV,3000.0,1
+185,BMW,X3 M,2011.0,Benzine,Automatic,4X4,3000.0,1
+356,Chery,Tiggo 8 Pro,2026.0,Benzine,Automatic,SUV,1600.0,1
+311,Changan,V7,2017.0,Benzine,Automatic,Sedan,1600.0,1
+292,Brilliance,H530,2022.0,Benzine,Automatic,Sedan,1600.0,1
+293,Brilliance,Splendor,2009.0,Natural Gas,Manual,Sedan,1600.0,1
+294,Brilliance,V6,2019.0,Benzine,Automatic,SUV,1500.0,1
+295,Buick,Park Avenue,1981.0,Benzine,Automatic,Sedan,5700.0,1
+296,Cadillac,Escalade,2019.0,Benzine,Automatic,4X4,6200.0,1
+298,Cadillac,Escalade,2025.0,Benzine,Automatic,SUV,6200.0,1
+299,Changan,Alsvin,2022.0,Benzine,Automatic,Sedan,1500.0,1
+300,Changan,Benni mini,2012.0,Benzine,Manual,Van / Bus,1050.0,1
+301,Changan,Benni mini,2013.0,Benzine,Automatic,Hatchback,1000.0,1
+302,Changan,Benni mini,2013.0,Benzine,Automatic,Hatchback,1200.0,1
+303,Changan,Benni mini,2015.0,Benzine,Automatic,Hatchback,1000.0,1
+304,Changan,Benni mini,2015.0,Benzine,Manual,Hatchback,1600.0,1
+305,Changan,Benni mini,2017.0,Benzine,Automatic,Hatchback,1000.0,1
+306,Changan,CS35,2017.0,Benzine,Automatic,Hatchback,1600.0,1
+307,Changan,CS55,2025.0,Benzine,Automatic,SUV,1500.0,1
+291,Brilliance,Galena,2010.0,Natural Gas,Automatic,Sedan,2000.0,1
+290,Brilliance,Galena,2010.0,Benzine,Automatic,Sedan,2000.0,1
+289,Brilliance,Galena,2009.0,Benzine,Automatic,Sedan,2000.0,1
+277,Bestune,T77 Pro,2023.0,Benzine,Automatic,SUV,1500.0,1
+271,Baic,Other,2022.0,Benzine,Automatic,Hatchback,1500.0,1
+272,Baic,U5 Plus,2026.0,Benzine,Automatic,Sedan,1500.0,1
+273,Baic,X55,2026.0,Benzine,Automatic,SUV,1500.0,1
+274,Baic,X7,2026.0,Benzine,Automatic,SUV,1500.0,1
+275,Bentley,Continental GT,2016.0,Benzine,Automatic,Sports / Coupe,6000.0,1
+276,Bentley,Continental GT,2017.0,Benzine,Automatic,Sports / Coupe,4000.0,1
+278,Brilliance,FRV,2009.0,Benzine,Automatic,Sedan,1600.0,1
+288,Brilliance,Galena,2008.0,Natural Gas,Automatic,Sedan,2000.0,1
+280,Brilliance,FRV,2011.0,Benzine,Manual,Sedan,1500.0,1
+281,Brilliance,FRV,2013.0,Benzine,Automatic,Hatchback,1500.0,1
+282,Brilliance,FRV Cross,2015.0,Benzine,Automatic,Hatchback,1500.0,1
+283,Brilliance,FSV,2011.0,Benzine,Manual,Sedan,1500.0,1
+284,Brilliance,FSV,2013.0,Benzine,Automatic,Sedan,1500.0,1
+286,Brilliance,Galena,2008.0,Benzine,Automatic,Sedan,1800.0,1
+310,Changan,UNI-V,2026.0,Benzine,Automatic,Sedan,1500.0,1
+312,Changhe,Ideal,2010.0,Benzine,Manual,Hatchback,1000.0,1
+269,Baic,BJ30,2026.0,Hybrid,Automatic,Estate,1500.0,1
+313,Changhe,Super Panda,2009.0,Benzine,Manual,Pickup,1600.0,1
+334,Chery,Tiggo 3,2018.0,Benzine,Automatic,Hatchback,1600.0,1
+335,Chery,Tiggo 3,2018.0,Benzine,Automatic,SUV,1600.0,1
+336,Chery,Tiggo 3,2020.0,Benzine,Automatic,Hatchback,1600.0,1
+337,Chery,Tiggo 3,2021.0,Benzine,Automatic,SUV,1600.0,1
+339,Chery,Tiggo 3,2023.0,Benzine,Automatic,4X4,1600.0,1
+340,Chery,Tiggo 3,2023.0,Benzine,Automatic,Hatchback,1600.0,1
+342,Chery,Tiggo 4,2025.0,Benzine,Automatic,SUV,1500.0,1
+343,Chery,Tiggo 4,2026.0,Benzine,Automatic,SUV,1500.0,1
+344,Chery,Tiggo 4 Pro,2025.0,Benzine,Automatic,SUV,1500.0,1
+345,Chery,Tiggo 4 Pro,2026.0,Benzine,Automatic,Hatchback,1500.0,1
+347,Chery,Tiggo 4 Pro,2026.0,Diesel,Automatic,SUV,1500.0,1
+349,Chery,Tiggo 7,2022.0,Benzine,Automatic,SUV,1500.0,1
+352,Chery,Tiggo 7 Pro,2022.0,Benzine,Automatic,Hatchback,1500.0,1
+353,Chery,Tiggo 7 pro max,2026.0,Benzine,Automatic,SUV,1600.0,1
+354,Chery,Tiggo 8,2022.0,Benzine,Automatic,SUV,1500.0,1
+333,Chery,Tiggo,2019.0,Benzine,Automatic,Hatchback,1600.0,1
+332,Chery,QQ,2007.0,Benzine,Manual,Hatchback,1100.0,1
+331,Chery,Envy,2018.0,Natural Gas,Manual,Sedan,2000.0,1
+321,Chery,Arrizo 5,2024.0,Benzine,Automatic,Sedan,1500.0,1
+314,Changhe,Super Panda,2013.0,Benzine,Manual,Estate,900.0,1
+316,Chery,A11,2012.0,Benzine,Manual,Hatchback,1300.0,1
+317,Chery,A15,2010.0,Natural Gas,Manual,Sedan,2000.0,1
+318,Chery,A5,2007.0,Benzine,Manual,Sedan,1600.0,1
+319,Chery,A5,2008.0,Benzine,Manual,Sedan,1600.0,1
+320,Chery,Arrizo 5,2022.0,Hybrid,Manual,Sedan,1500.0,1
+322,Chery,Arrizo 5,2025.0,Benzine,Automatic,Sedan,1500.0,1
+330,Chery,Envy,2018.0,Hybrid,Manual,Sedan,1500.0,1
+324,Chery,Arrizo 5 pro,2026.0,Benzine,Automatic,Sedan,1500.0,1
+325,Chery,Arrizo 8,2026.0,Benzine,Automatic,Sedan,1600.0,1
+326,Chery,Envy,2014.0,Natural Gas,Automatic,Sedan,1600.0,1
+327,Chery,Envy,2017.0,Benzine,Manual,Sedan,1500.0,1
+328,Chery,Envy,2017.0,Hybrid,Automatic,Sedan,1600.0,1
+329,Chery,Envy,2018.0,Benzine,Manual,Sedan,1600.0,1
+270,Baic,Other,2017.0,Benzine,Automatic,Hatchback,1500.0,1
+267,BYD,Tang L,2026.0,Electric,Automatic,SUV,670.0,1
+186,BMW,X3 M,2019.0,Benzine,Automatic,SUV,3000.0,1
+226,BYD,F3,2014.0,Benzine,Manual,Sedan,1600.0,1
+207,BMW,X6,2025.0,Benzine,Automatic,SUV,4000.0,1
+208,BMW,X6 M,2016.0,Benzine,Automatic,SUV,4400.0,1
+209,BMW,X6 M,2019.0,Benzine,Automatic,4X4,4400.0,1
+210,BMW,X6 M,2023.0,Benzine,Automatic,SUV,4400.0,1
+211,BMW,X6 M,2023.0,Benzine,Automatic,Sports / Coupe,4400.0,1
+212,BMW,X6 M,2024.0,Benzine,Automatic,SUV,4400.0,1
+213,BMW,X7,2020.0,Benzine,Automatic,SUV,4400.0,1
+215,BMW,Z4,2022.0,Benzine,Automatic,Convertible,2000.0,1
+217,BYD,F0,2014.0,Benzine,Manual,Hatchback,1000.0,1
+218,BYD,F3,2008.0,Benzine,Manual,Sedan,1600.0,1
+220,BYD,F3,2010.0,Natural Gas,Manual,Sedan,1600.0,1
+221,BYD,F3,2011.0,Benzine,Manual,Sedan,1600.0,1
+222,BYD,F3,2011.0,Natural Gas,Manual,Sedan,1600.0,1
+223,BYD,F3,2012.0,Natural Gas,Automatic,Sedan,1600.0,1
+224,BYD,F3,2013.0,Benzine,Manual,Sedan,1600.0,1
+206,BMW,X6,2025.0,Benzine,Automatic,4X4,4000.0,1
+205,BMW,X6,2024.0,Benzine,Automatic,Sports / Coupe,4400.0,1
+204,BMW,X6,2021.0,Benzine,Automatic,SUV,4400.0,1
+195,BMW,X5,2020.0,Benzine,Automatic,SUV,4400.0,1
+187,BMW,X4,2017.0,Benzine,Automatic,4X4,3000.0,1
+188,BMW,X4M,2017.0,Benzine,Automatic,SUV,3000.0,1
+189,BMW,X5,2010.0,Benzine,Automatic,4X4,4800.0,1
+190,BMW,X5,2015.0,Benzine,Automatic,SUV,4400.0,1
+191,BMW,X5,2016.0,Benzine,Automatic,4X4,4400.0,1
+193,BMW,X5,2020.0,Benzine,Automatic,4X4,3000.0,1
+196,BMW,X5,2023.0,Benzine,Automatic,SUV,3000.0,1
+203,BMW,X6,2017.0,Benzine,Automatic,4X4,4400.0,1
+197,BMW,X5,2024.0,Benzine,Automatic,4X4,4400.0,1
+198,BMW,X5,2024.0,Benzine,Automatic,SUV,4400.0,1
+199,BMW,X5,2025.0,Benzine,Automatic,SUV,3000.0,1
+200,BMW,X5 M,2017.0,Benzine,Automatic,SUV,4400.0,1
+201,BMW,X5 M,2018.0,Benzine,Automatic,SUV,4400.0,1
+202,BMW,X5 M,2025.0,Benzine,Automatic,SUV,4400.0,1
+225,BYD,F3,2013.0,Natural Gas,Manual,Sedan,1600.0,1
+227,BYD,F3,2015.0,Benzine,Automatic,Sedan,1500.0,1
+266,BYD,Tang L,2025.0,Electric,Automatic,SUV,500.0,1
+228,BYD,F3,2015.0,Benzine,Manual,Sedan,1300.0,1
+251,BYD,Leopard 5,2025.0,Electric,Automatic,SUV,1500.0,1
+252,BYD,Leopard 5,2025.0,Hybrid,Automatic,4X4,1500.0,1
+253,BYD,Leopard 5,2025.0,Hybrid,Automatic,SUV,680.0,1
+254,BYD,Leopard 7,2025.0,Hybrid,Automatic,SUV,1500.0,1
+255,BYD,Leopard 8,2026.0,Hybrid,Automatic,SUV,2000.0,1
+256,BYD,Other,2025.0,Hybrid,Automatic,SUV,2000.0,1
+257,BYD,Seagull,2025.0,Electric,Automatic,Hatchback,210.0,1
+258,BYD,Seagull,2025.0,Electric,Automatic,Hatchback,1300.0,1
+259,BYD,Sealion 6,2025.0,Electric,Automatic,SUV,210.0,1
+260,BYD,Sealion 6,2025.0,Electric,Automatic,SUV,2000.0,1
+261,BYD,Shark 6,2026.0,Hybrid,Automatic,Pickup,1500.0,1
+262,BYD,Song L,2024.0,Electric,Automatic,SUV,4400.0,1
+263,BYD,Song L,2025.0,Electric,Automatic,SUV,662.0,1
+264,BYD,Song Plus,2025.0,Electric,Automatic,SUV,150.0,1
+265,BYD,Tang,2024.0,Electric,Automatic,SUV,180.0,1
+250,BYD,L3,2022.0,Benzine,Automatic,Sedan,1600.0,1
+249,BYD,L3,2017.0,Benzine,Manual,Sedan,1600.0,1
+248,BYD,L3,2015.0,Benzine,Manual,Sedan,1500.0,1
+235,BYD,F3,2018.0,Natural Gas,Manual,Sedan,1500.0,1
+229,BYD,F3,2015.0,Natural Gas,Manual,Sedan,1500.0,1
+230,BYD,F3,2016.0,Benzine,Manual,Sedan,1500.0,1
+231,BYD,F3,2016.0,Benzine,Manual,Sedan,1600.0,1
+232,BYD,F3,2016.0,Natural Gas,Manual,Sedan,1600.0,1
+233,BYD,F3,2018.0,Benzine,Manual,Sedan,1497.0,1
+234,BYD,F3,2018.0,Benzine,Manual,Sedan,1500.0,1
+237,BYD,F3,2019.0,Natural Gas,Manual,Sedan,1497.0,1
+247,BYD,L3,2015.0,Benzine,Automatic,Sedan,1500.0,1
+238,BYD,F3,2020.0,Benzine,Manual,Sedan,1500.0,1
+239,BYD,F3,2021.0,Benzine,Manual,Sedan,1500.0,1
+241,BYD,F3,2022.0,Benzine,Manual,Sedan,1600.0,1
+242,BYD,F3,2023.0,Benzine,Manual,Sedan,1500.0,1
+243,BYD,F3,2023.0,Benzine,Manual,Sedan,1600.0,1
+246,BYD,F3,2025.0,Benzine,Manual,Sedan,1600.0,1
+747,Fiat,Shahin,2000.0,Benzine,Manual,Sedan,1400.0,1
+749,Fiat,Shahin,2004.0,Benzine,Manual,Sedan,1400.0,1
+1501,Mercedes-Benz,A150,2007.0,Benzine,Automatic,Hatchback,1600.0,1
+1269,Kia,Shuma,2000.0,Benzine,Automatic,Sedan,1500.0,1
+1252,Kia,Rio,2017.0,Diesel,Automatic,Hatchback,1400.0,1
+1253,Kia,Seltos,2023.0,Benzine,Automatic,SUV,1600.0,1
+1254,Kia,Seltos,2025.0,Benzine,Automatic,4X4,1500.0,1
+1255,Kia,Sephia,1994.0,Benzine,Manual,Sedan,1600.0,1
+1256,Kia,Sephia,1995.0,Benzine,Manual,Small city car,850.0,1
+1257,Kia,Sephia,1999.0,Benzine,Automatic,Sedan,1600.0,1
+1258,Kia,Sephia,1999.0,Benzine,Manual,Sedan,1500.0,1
+1259,Kia,Sephia,2000.0,Benzine,Automatic,Sedan,1400.0,1
+1260,Kia,Sephia,2000.0,Benzine,Manual,Sedan,1500.0,1
+1261,Kia,Sephia,2000.0,Benzine,Manual,Sedan,1600.0,1
+1262,Kia,Sephia,2001.0,Benzine,Automatic,Sedan,1500.0,1
+1263,Kia,Sephia,2001.0,Benzine,Automatic,Sedan,1600.0,1
+1264,Kia,Sephia,2002.0,Benzine,Manual,Sedan,1500.0,1
+1265,Kia,Shuma,1998.0,Benzine,Manual,Sedan,1600.0,1
+1266,Kia,Shuma,1999.0,Benzine,Automatic,Sedan,1600.0,1
+1251,Kia,Rio,2016.0,Benzine,Automatic,Sedan,1600.0,1
+1249,Kia,Rio,2015.0,Benzine,Automatic,Hatchback,1400.0,1
+1248,Kia,Rio,2014.0,Benzine,Automatic,Sedan,1600.0,1
+1236,Kia,Pride,1999.0,Benzine,Manual,Estate,1331.0,1
+1228,Kia,Picanto,2012.0,Benzine,Automatic,Hatchback,1250.0,1
+1229,Kia,Picanto,2014.0,Benzine,Automatic,Hatchback,1300.0,1
+1231,Kia,Picanto,2016.0,Benzine,Automatic,Hatchback,1300.0,1
+1232,Kia,Picanto,2018.0,Benzine,Automatic,Hatchback,1300.0,1
+1233,Kia,Pride,1996.0,Benzine,Manual,Hatchback,1100.0,1
+1235,Kia,Pride,1998.0,Benzine,Manual,Sedan,1300.0,1
+1239,Kia,Rio,2003.0,Benzine,Manual,Hatchback,1300.0,1
+1247,Kia,Rio,2014.0,Benzine,Automatic,Hatchback,1400.0,1
+1240,Kia,Rio,2004.0,Benzine,Manual,Sedan,1500.0,1
+1241,Kia,Rio,2006.0,Benzine,Manual,Sedan,1500.0,1
+1242,Kia,Rio,2009.0,Benzine,Manual,Sedan,1500.0,1
+1243,Kia,Rio,2010.0,Diesel,Automatic,Sedan,1600.0,1
+1245,Kia,Rio,2013.0,Benzine,Automatic,Sedan,1300.0,1
+1246,Kia,Rio,2013.0,Benzine,Automatic,Sedan,1400.0,1
+1268,Kia,Shuma,1999.0,Benzine,Manual,Small city car,1400.0,1
+1271,Kia,Shuma,2001.0,Benzine,Automatic,Sedan,1500.0,1
+1226,Kia,Picanto,2010.0,Benzine,Automatic,Hatchback,1200.0,1
+1272,Kia,Shuma,2001.0,Benzine,Manual,Sedan,1600.0,1
+1292,Kia,Sorento Hybrid,2025.0,Benzine,Automatic,SUV,1600.0,1
+1294,Kia,Soul,2009.0,Benzine,Automatic,Hatchback,1600.0,1
+1295,Kia,Spectra,2005.0,Benzine,Manual,Sedan,1600.0,1
+1296,Kia,Sportage,2014.0,Benzine,Automatic,SUV,1600.0,1
+1297,Kia,Sportage,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+1298,Kia,Sportage,2015.0,Benzine,Automatic,SUV,1600.0,1
+1299,Kia,Sportage,2018.0,Benzine,Automatic,Hatchback,1600.0,1
+1300,Kia,Sportage,2018.0,Benzine,Automatic,SUV,1600.0,1
+1302,Kia,Sportage,2019.0,Benzine,Automatic,SUV,1600.0,1
+1303,Kia,Sportage,2020.0,Benzine,Automatic,Hatchback,1600.0,1
+1305,Kia,Sportage,2021.0,Benzine,Automatic,Estate,1600.0,1
+1306,Kia,Sportage,2021.0,Benzine,Automatic,Hatchback,1600.0,1
+1307,Kia,Sportage,2021.0,Benzine,Automatic,SUV,1600.0,1
+1308,Kia,Sportage,2022.0,Benzine,Automatic,Hatchback,1600.0,1
+1310,Kia,Sportage,2023.0,Benzine,Automatic,SUV,1600.0,1
+1291,Kia,Sorento Hybrid,2024.0,Hybrid,Automatic,Sedan,1600.0,1
+1290,Kia,Sorento Hybrid,2024.0,Hybrid,Automatic,SUV,1600.0,1
+1289,Kia,Sorento Hybrid,2024.0,Hybrid,Automatic,MPV,1600.0,1
+1279,Kia,Sorento,2023.0,Benzine,Automatic,SUV,1600.0,1
+1273,Kia,Shuma,2002.0,Benzine,Manual,Sedan,1600.0,1
+1274,Kia,Shuma,2004.0,Benzine,Automatic,Sedan,1600.0,1
+1275,Kia,Sorento,2009.0,Benzine,Automatic,4X4,3300.0,1
+1276,Kia,Sorento,2019.0,Benzine,Automatic,Hatchback,3500.0,1
+1277,Kia,Sorento,2020.0,Benzine,Automatic,4X4,3500.0,1
+1278,Kia,Sorento,2020.0,Benzine,Automatic,SUV,3500.0,1
+1280,Kia,Sorento,2023.0,Hybrid,Automatic,SUV,1600.0,1
+1288,Kia,Sorento Hybrid,2024.0,Benzine,Automatic,SUV,1600.0,1
+1281,Kia,Sorento,2024.0,Benzine,Automatic,SUV,1600.0,1
+1282,Kia,Sorento,2024.0,Hybrid,Automatic,Estate,1600.0,1
+1283,Kia,Sorento,2024.0,Hybrid,Automatic,SUV,1600.0,1
+1284,Kia,Sorento,2025.0,Benzine,Automatic,SUV,1600.0,1
+1286,Kia,Sorento Hybrid,2023.0,Hybrid,Automatic,SUV,1600.0,1
+1287,Kia,Sorento Hybrid,2023.0,Hybrid,Automatic,SUV,2000.0,1
+1227,Kia,Picanto,2010.0,Benzine,Manual,Hatchback,1100.0,1
+1225,Kia,Picanto,2010.0,Benzine,Automatic,Hatchback,1100.0,1
+1312,Kia,Sportage,2024.0,Benzine,Automatic,SUV,1500.0,1
+1175,Jetour,T2,2025.0,Benzine,Automatic,SUV,1500.0,1
+1155,Jeep,Renegade,2020.0,Benzine,Automatic,Hatchback,1400.0,1
+1156,Jeep,Renegade,2021.0,Benzine,Automatic,SUV,1400.0,1
+1157,Jeep,Renegade,2021.0,Benzine,Automatic,SUV,1600.0,1
+1158,Jeep,Renegade,2022.0,Benzine,Automatic,4X4,1400.0,1
+1159,Jeep,Wrangler,1984.0,Benzine,Manual,4X4,2000.0,1
+1160,Jeep,Wrangler,1999.0,Benzine,Automatic,4X4,4200.0,1
+1161,Jeep,Wrangler,2010.0,Benzine,Automatic,4X4,3700.0,1
+1163,Jeep,Wrangler,2011.0,Benzine,Automatic,4X4,3800.0,1
+1164,Jeep,Wrangler,2012.0,Benzine,Automatic,4X4,3600.0,1
+1165,Jeep,Wrangler,2012.0,Benzine,Automatic,Estate,3600.0,1
+1168,Jeep,Wrangler,2016.0,Benzine,Automatic,4X4,3500.0,1
+1169,Jeep,Wrangler,2016.0,Benzine,Automatic,SUV,3600.0,1
+1170,Jetour,Dashing,2024.0,Benzine,Automatic,SUV,1600.0,1
+1171,Jetour,Dashing,2025.0,Benzine,Automatic,SUV,1500.0,1
+1172,Jetour,Dashing,2025.0,Diesel,Automatic,SUV,1600.0,1
+1154,Jeep,Renegade,2019.0,Benzine,Automatic,Hatchback,1500.0,1
+1153,Jeep,Renegade,2018.0,Benzine,Automatic,SUV,1400.0,1
+1152,Jeep,Renegade,2017.0,Benzine,Automatic,SUV,1400.0,1
+1140,Jeep,Grand Cherokee,2019.0,Benzine,Automatic,4X4,5700.0,1
+1133,Jeep,Grand Cherokee,2014.0,Benzine,Automatic,4X4,5700.0,1
+1134,Jeep,Grand Cherokee,2015.0,Benzine,Automatic,4X4,5700.0,1
+1135,Jeep,Grand Cherokee,2016.0,Benzine,Automatic,4X4,3600.0,1
+1137,Jeep,Grand Cherokee,2017.0,Benzine,Automatic,4X4,5700.0,1
+1138,Jeep,Grand Cherokee,2017.0,Diesel,Automatic,4X4,3700.0,1
+1139,Jeep,Grand Cherokee,2018.0,Benzine,Automatic,4X4,5700.0,1
+1141,Jeep,Grand Cherokee,2021.0,Benzine,Automatic,4X4,5700.0,1
+1151,Jeep,Renegade,2017.0,Benzine,Automatic,Hatchback,1400.0,1
+1143,Jeep,Grand Cherokee,2023.0,Benzine,Automatic,Estate,3600.0,1
+1145,Jeep,Grand Cherokee,2025.0,Benzine,Automatic,4X4,3600.0,1
+1146,Jeep,Komodo,2009.0,Benzine,Automatic,4X4,2400.0,1
+1147,Jeep,Liberty,2002.0,Benzine,Automatic,4X4,3700.0,1
+1148,Jeep,Liberty,2007.0,Benzine,Automatic,4X4,3700.0,1
+1150,Jeep,Renegade,2016.0,Benzine,Automatic,SUV,1400.0,1
+1174,Jetour,T1,2026.0,Benzine,Automatic,SUV,1500.0,1
+1178,Jetour,X70,2021.0,Benzine,Automatic,Estate,1500.0,1
+1224,Kia,Picanto,2009.0,Benzine,Manual,Hatchback,1100.0,1
+1179,Jetour,X70,2024.0,Benzine,Automatic,SUV,1500.0,1
+1202,Kia,Cerato,2008.0,Benzine,Automatic,Sedan,1600.0,1
+1203,Kia,Cerato,2009.0,Benzine,Automatic,Sedan,1600.0,1
+1204,Kia,Cerato,2010.0,Benzine,Automatic,Sedan,1600.0,1
+1205,Kia,Cerato,2011.0,Benzine,Automatic,Sedan,1600.0,1
+1206,Kia,Cerato,2014.0,Benzine,Automatic,Sedan,1600.0,1
+1208,Kia,Cerato,2016.0,Benzine,Automatic,Sedan,1600.0,1
+1213,Kia,Cerato,2024.0,Benzine,Automatic,Sedan,1600.0,1
+1214,Kia,Cerato Coupe,2011.0,Benzine,Automatic,Sports / Coupe,1600.0,1
+1215,Kia,Cerato Coupe,2012.0,Benzine,Automatic,Sedan,1600.0,1
+1216,Kia,K3,2019.0,Benzine,Automatic,Sedan,1600.0,1
+1217,Kia,K3,2023.0,Benzine,Automatic,Sedan,1600.0,1
+1219,Kia,K4,2026.0,Benzine,Automatic,Sedan,1600.0,1
+1220,Kia,Picanto,2006.0,Benzine,Automatic,Hatchback,1400.0,1
+1221,Kia,Picanto,2006.0,Benzine,Manual,Hatchback,1100.0,1
+1222,Kia,Picanto,2008.0,Benzine,Automatic,Hatchback,1100.0,1
+1201,Kia,Cerato,2007.0,Benzine,Automatic,Sedan,1600.0,1
+1200,Kia,Cerato,2005.0,Benzine,Manual,Sedan,1600.0,1
+1199,Kia,Carnival,2026.0,Hybrid,Automatic,MPV,1600.0,1
+1188,Karry,Q22,2014.0,Benzine,Manual,Van / Bus,900.0,1
+1181,Jetour,X70 Plus,2021.0,Benzine,Automatic,SUV,1500.0,1
+1182,Jetour,X90,2026.0,Benzine,Automatic,SUV,1600.0,1
+1183,KGM,Actyon,2026.0,Benzine,Automatic,SUV,1500.0,1
+1184,KGM,Torres,2024.0,Benzine,Automatic,SUV,1500.0,1
+1185,Kaiyi,X3,2026.0,Benzine,Automatic,SUV,1500.0,1
+1187,Kaiyi,X7,2026.0,Benzine,Automatic,SUV,1500.0,1
+1189,Kia,Carens,2009.0,Benzine,Manual,SUV,1600.0,1
+1198,Kia,Carnival,2025.0,Hybrid,Automatic,MPV,1600.0,1
+1190,Kia,Carens,2010.0,Benzine,Automatic,Estate,1600.0,1
+1192,Kia,Carens,2014.0,Benzine,Automatic,Hatchback,1600.0,1
+1193,Kia,Carens,2024.0,Benzine,Automatic,MPV,1500.0,1
+1194,Kia,Carnival,2004.0,Benzine,Automatic,Hatchback,3500.0,1
+1195,Kia,Carnival,2020.0,Benzine,Automatic,MPV,3300.0,1
+1196,Kia,Carnival,2024.0,Benzine,Automatic,SUV,1500.0,1
+1311,Kia,Sportage,2024.0,Benzine,Automatic,Other,1600.0,1
+1314,Kia,Sportage,2025.0,Benzine,Automatic,Hatchback,1600.0,1
+1131,Jeep,Grand Cherokee,2008.0,Benzine,Automatic,4X4,5700.0,1
+1458,MINI,Countryman S,2013.0,Benzine,Automatic,Hatchback,1600.0,1
+1438,MG,ZS,2024.0,Benzine,Automatic,Estate,1500.0,1
+1440,MG,ZS,2025.0,Benzine,Automatic,Hatchback,1500.0,1
+1441,MG,ZS,2025.0,Benzine,Automatic,SUV,1500.0,1
+1444,MINI,Cabrio,2016.0,Benzine,Automatic,Convertible,1500.0,1
+1445,MINI,Cabrio,2022.0,Benzine,Automatic,Convertible,1500.0,1
+1446,MINI,Convertible,2011.0,Benzine,Automatic,Convertible,1600.0,1
+1447,MINI,Cooper,2010.0,Benzine,Automatic,Hatchback,1600.0,1
+1448,MINI,Cooper,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+1449,MINI,Cooper,2016.0,Benzine,Automatic,Hatchback,1500.0,1
+1450,MINI,Cooper,2019.0,Benzine,Automatic,Convertible,1500.0,1
+1451,MINI,Cooper,2019.0,Benzine,Automatic,Hatchback,1500.0,1
+1452,MINI,Cooper,2020.0,Benzine,Automatic,Hatchback,2000.0,1
+1453,MINI,Cooper,2023.0,Benzine,Automatic,Sports / Coupe,1300.0,1
+1454,MINI,Cooper,2024.0,Benzine,Automatic,Hatchback,1500.0,1
+1455,MINI,Cooper,2024.0,Benzine,Automatic,Sports / Coupe,1500.0,1
+1437,MG,ZS,2023.0,Benzine,Automatic,SUV,1600.0,1
+1436,MG,ZS,2022.0,Benzine,Automatic,SUV,1600.0,1
+1435,MG,ZS,2021.0,Benzine,Automatic,SUV,1600.0,1
+1421,MG,MG 6,2022.0,Benzine,Automatic,Sedan,1500.0,1
+1410,MG,MG 1,2026.0,Benzine,Automatic,Hatchback,1500.0,1
+1411,MG,MG 1,2026.0,Benzine,Automatic,SUV,1500.0,1
+1412,MG,MG 5,2020.0,Benzine,Automatic,Sedan,1400.0,1
+1417,MG,MG 6,2019.0,Benzine,Automatic,Sedan,1500.0,1
+1418,MG,MG 6,2019.0,Benzine,Automatic,Sedan,1600.0,1
+1419,MG,MG 6,2020.0,Benzine,Automatic,Sedan,1500.0,1
+1422,MG,MG 6,2024.0,Benzine,Automatic,Sedan,1600.0,1
+1434,MG,S350,2011.0,Benzine,Automatic,Sedan,1500.0,1
+1424,MG,MG 7,2025.0,Diesel,Automatic,Sports / Coupe,1500.0,1
+1429,MG,RX5,2020.0,Benzine,Automatic,SUV,1500.0,1
+1430,MG,RX5,2022.0,Benzine,Automatic,SUV,1500.0,1
+1431,MG,RX5,2023.0,Benzine,Automatic,4X4,1500.0,1
+1432,MG,RX5,2024.0,Benzine,Automatic,SUV,1500.0,1
+1433,MG,RX5,2024.0,Benzine,Automatic,SUV,1600.0,1
+1457,MINI,Countryman,2022.0,Benzine,Automatic,Hatchback,1500.0,1
+1459,MINI,Countryman S,2016.0,Benzine,Automatic,Hatchback,1600.0,1
+1408,MG,HS,2026.0,Hybrid,Automatic,SUV,1500.0,1
+1460,MINI,John Cooper Works,2011.0,Benzine,Automatic,Sports / Coupe,1600.0,1
+1483,Mazda,929,1978.0,Benzine,Manual,Sedan,1400.0,1
+1484,Mazda,929,1982.0,Benzine,Manual,Sedan,2000.0,1
+1485,Mercedes-Benz,190,1963.0,Benzine,Manual,Sedan,1900.0,1
+1486,Mercedes-Benz,190,1989.0,Benzine,Automatic,Sedan,2300.0,1
+1487,Mercedes-Benz,200,1968.0,Diesel,Manual,Sedan,2000.0,1
+1488,Mercedes-Benz,200,1974.0,Diesel,Manual,Sedan,1500.0,1
+1489,Mercedes-Benz,200,1977.0,Benzine,Automatic,Sedan,2000.0,1
+1491,Mercedes-Benz,200,1978.0,Benzine,Manual,Sedan,2000.0,1
+1492,Mercedes-Benz,200,1979.0,Benzine,Manual,Sedan,2000.0,1
+1493,Mercedes-Benz,200,1980.0,Benzine,Automatic,Sedan,2000.0,1
+1495,Mercedes-Benz,200,1994.0,Benzine,Automatic,Sedan,2000.0,1
+1496,Mercedes-Benz,230,1980.0,Benzine,Automatic,Sedan,2000.0,1
+1497,Mercedes-Benz,230,1992.0,Benzine,Automatic,Sedan,2300.0,1
+1498,Mercedes-Benz,A 35 AMG,2023.0,Benzine,Automatic,Hatchback,2000.0,1
+1499,Mercedes-Benz,A 35 AMG,2024.0,Benzine,Automatic,Sedan,2000.0,1
+1482,Mazda,929,1976.0,Benzine,Manual,Sedan,1800.0,1
+1481,Mazda,323,1998.0,Natural Gas,Automatic,Sedan,1500.0,1
+1479,Mazda,323,1982.0,Benzine,Manual,Sedan,1300.0,1
+1468,Mazda,121,1998.0,Benzine,Manual,Sedan,1300.0,1
+1461,MINI,John Cooper Works,2023.0,Benzine,Automatic,Convertible,1500.0,1
+1462,MINI,John Cooper Works,2025.0,Benzine,Automatic,Sports / Coupe,1500.0,1
+1463,Maserati,Ghibli,2014.0,Benzine,Automatic,Sedan,3000.0,1
+1465,Maserati,Grecale Modena,2024.0,Benzine,Automatic,SUV,2000.0,1
+1466,Maserati,Quattroporte,2015.0,Benzine,Automatic,Sedan,3000.0,1
+1467,Mazda,121,1997.0,Benzine,Manual,Sedan,1300.0,1
+1469,Mazda,3,2007.0,Benzine,Automatic,Sedan,1600.0,1
+1478,Mazda,323,1982.0,Benzine,Automatic,Hatchback,1300.0,1
+1471,Mazda,3,2009.0,Benzine,Automatic,Sedan,1600.0,1
+1472,Mazda,3,2010.0,Benzine,Automatic,Sedan,1600.0,1
+1473,Mazda,3,2011.0,Benzine,Automatic,Sedan,1600.0,1
+1474,Mazda,3,2016.0,Benzine,Automatic,Sedan,1600.0,1
+1475,Mazda,3,2019.0,Benzine,Automatic,Hatchback,1500.0,1
+1477,Mazda,323,1981.0,Benzine,Manual,Sedan,1300.0,1
+1409,MG,MG 1,2025.0,Benzine,Automatic,SUV,1500.0,1
+1407,MG,HS,2026.0,Benzine,Automatic,SUV,1500.0,1
+1315,Kia,Sportage,2025.0,Benzine,Automatic,SUV,1500.0,1
+1358,Lamborghini,Urus,2022.0,Benzine,Automatic,SUV,4000.0,1
+1342,Lada,2107,2012.0,Benzine,Manual,Small city car,1600.0,1
+1343,Lada,2107,2013.0,Benzine,Manual,Sedan,1600.0,1
+1,Alfa Romeo,Stelvio,2020.0,Benzine,Automatic,SUV,2000.0,1
+1345,Lada,2110,2007.0,Benzine,Manual,Sedan,1600.0,1
+1346,Lada,Alico,1992.0,Benzine,Manual,Hatchback,1600.0,1
+1347,Lada,Granta,2016.0,Benzine,Manual,Sedan,1600.0,1
+1348,Lada,Granta,2019.0,Benzine,Manual,Sedan,1600.0,1
+1349,Lada,Granta,2020.0,Benzine,Manual,Sedan,1600.0,1
+1350,Lada,Granta,2021.0,Benzine,Automatic,Sedan,1600.0,1
+1351,Lada,Niva,1983.0,Benzine,Manual,Hatchback,1500.0,1
+1352,Lada,Niva,1984.0,Benzine,Manual,4X4,100.0,1
+1353,Lada,Niva,1984.0,Benzine,Manual,Hatchback,1600.0,1
+1354,Lada,Oka,2000.0,Benzine,Manual,Hatchback,750.0,1
+1355,Lada,Other,1984.0,Benzine,Manual,Sedan,1800.0,1
+1356,Lada,Other,2008.0,Natural Gas,Manual,Sedan,1600.0,1
+1341,Lada,2107,2012.0,Benzine,Manual,Sedan,1600.0,1
+1340,Lada,2107,2011.0,Natural Gas,Manual,Sedan,1600.0,1
+1337,Lada,2107,2009.0,Benzine,Manual,Sedan,1600.0,1
+1325,Lada,2105,1994.0,Benzine,Manual,Other,1300.0,1
+1318,Kia,Sportage Hybrid,2024.0,Benzine,Automatic,SUV,1600.0,1
+1319,Kia,Xceed,2023.0,Benzine,Automatic,Hatchback,1500.0,1
+1320,Kia,Xceed,2024.0,Benzine,Automatic,Hatchback,1500.0,1
+1322,Lada,1500,1982.0,Benzine,Manual,Sedan,1500.0,1
+1323,Lada,1500,1993.0,Benzine,Manual,Hatchback,1500.0,1
+1324,Lada,2104,1988.0,Benzine,Manual,MPV,1200.0,1
+1327,Lada,2105,1994.0,Benzine,Manual,Sedan,1500.0,1
+1336,Lada,2107,2008.0,Benzine,Manual,Sedan,1600.0,1
+1330,Lada,2106,1982.0,Benzine,Manual,Sedan,1300.0,1
+1331,Lada,2107,1990.0,Benzine,Manual,Sedan,1500.0,1
+1332,Lada,2107,1994.0,Benzine,Manual,Other,1500.0,1
+1333,Lada,2107,1998.0,Benzine,Manual,Sedan,1500.0,1
+1334,Lada,2107,2003.0,Natural Gas,Manual,Sedan,1600.0,1
+1335,Lada,2107,2006.0,Benzine,Manual,Sedan,1690.0,1
+1357,Lada,Samara,1997.0,Benzine,Manual,Hatchback,1300.0,1
+1359,Lamborghini,Urus,2025.0,Benzine,Automatic,SUV,3996.0,1
+1406,MG,HS,2025.0,Benzine,Automatic,Estate,1500.0,1
+1360,Lancia,Dedra,1993.0,Benzine,Manual,Sedan,1600.0,1
+1384,Land Rover,Range Rover Sport SVR,2020.0,Benzine,Automatic,4X4,5000.0,1
+1385,Land Rover,Range Rover Vogue,2019.0,Benzine,Automatic,4X4,5000.0,1
+1386,Land Rover,Range Rover Vogue,2019.0,Benzine,Automatic,SUV,3000.0,1
+1387,Land Rover,Range Rover Vogue,2020.0,Benzine,Automatic,SUV,5000.0,1
+1388,Land Rover,Range Rover Vogue,2023.0,Benzine,Automatic,SUV,3000.0,1
+1391,Land Rover,Range Rover Vogue,2025.0,Benzine,Automatic,SUV,3000.0,1
+1392,Land Rover,Velar,2020.0,Benzine,Automatic,SUV,2000.0,1
+1393,Land Rover,Velar,2022.0,Benzine,Automatic,4X4,2000.0,1
+1394,Land Rover,Velar,2023.0,Benzine,Automatic,SUV,2000.0,1
+1395,Land Rover,Velar,2024.0,Benzine,Automatic,SUV,200.0,1
+1398,Lexus,LX,2017.0,Benzine,Automatic,SUV,5700.0,1
+1399,Lincoln,MKX,2008.0,Benzine,Automatic,SUV,4000.0,1
+1400,Lotus,Emira,2024.0,Benzine,Automatic,Sports / Coupe,3500.0,1
+1403,MG,HS,2022.0,Benzine,Automatic,Hatchback,160.0,1
+1405,MG,HS,2023.0,Benzine,Automatic,SUV,1500.0,1
+1383,Land Rover,Range Rover Sport,2025.0,Benzine,Automatic,SUV,4400.0,1
+1381,Land Rover,Range Rover Sport,2022.0,Hybrid,Automatic,SUV,2000.0,1
+1380,Land Rover,Range Rover Sport,2022.0,Benzine,Automatic,SUV,5000.0,1
+1369,Land Rover,Range Rover SVR,2026.0,Benzine,Automatic,4X4,4400.0,1
+1361,Land Rover,Evoque,2022.0,Benzine,Automatic,SUV,1997.0,1
+1362,Land Rover,Evoque,2024.0,Benzine,Automatic,SUV,1500.0,1
+1365,Land Rover,Range Rover,2013.0,Benzine,Automatic,SUV,2000.0,1
+1366,Land Rover,Range Rover Evoque,2020.0,Benzine,Automatic,SUV,2000.0,1
+1367,Land Rover,Range Rover Evoque,2023.0,Benzine,Automatic,SUV,2000.0,1
+1368,Land Rover,Range Rover Evoque,2024.0,Benzine,Automatic,SUV,2000.0,1
+1370,Land Rover,Range Rover Sport,2008.0,Benzine,Automatic,4X4,4200.0,1
+1378,Land Rover,Range Rover Sport,2020.0,Benzine,Automatic,SUV,5000.0,1
+1371,Land Rover,Range Rover Sport,2014.0,Benzine,Automatic,SUV,3000.0,1
+1372,Land Rover,Range Rover Sport,2016.0,Benzine,Automatic,4X4,3000.0,1
+1374,Land Rover,Range Rover Sport,2019.0,Benzine,Automatic,SUV,2000.0,1
+1375,Land Rover,Range Rover Sport,2019.0,Benzine,Automatic,SUV,3000.0,1
+1376,Land Rover,Range Rover Sport,2020.0,Benzine,Automatic,SUV,2000.0,1
+1377,Land Rover,Range Rover Sport,2020.0,Benzine,Automatic,SUV,3000.0,1
+1132,Jeep,Grand Cherokee,2010.0,Benzine,Automatic,Hatchback,3700.0,1
+1130,Jeep,Cherokee,2013.0,Benzine,Automatic,4X4,3700.0,1
+751,Fiat,Shahin,2005.0,Benzine,Manual,Sedan,1600.0,1
+885,Honda,Accord,2020.0,Benzine,Automatic,Sedan,1600.0,1
+866,Geely,Pandido,2014.0,Benzine,Automatic,Estate,100.0,1
+867,Geely,Pandido,2014.0,Benzine,Automatic,Hatchback,1500.0,1
+868,Geely,Pandido,2014.0,Benzine,Manual,Hatchback,1300.0,1
+869,Geely,Pandido,2014.0,Benzine,Manual,Hatchback,1400.0,1
+870,Great Wall,C30,2014.0,Benzine,Automatic,Sedan,1500.0,1
+871,Great Wall,C30,2014.0,Natural Gas,Automatic,Sedan,1497.0,1
+872,Great Wall,Peri,2008.0,Benzine,Manual,Hatchback,1400.0,1
+873,Great Wall,Peri,2009.0,Benzine,Manual,Hatchback,1400.0,1
+874,Haima,S5,2018.0,Benzine,Automatic,SUV,1500.0,1
+876,Haval,H6,2024.0,Benzine,Automatic,SUV,1500.0,1
+878,Haval,H6,2026.0,Benzine,Automatic,SUV,1600.0,1
+879,Haval,H7,2026.0,Benzine,Automatic,SUV,1500.0,1
+880,Haval,Jolion,2025.0,Benzine,Automatic,SUV,1500.0,1
+881,Honda,Accord,1980.0,Benzine,Automatic,Sedan,1600.0,1
+882,Honda,Accord,1991.0,Benzine,Automatic,Sedan,2000.0,1
+865,Geely,Pandido,2012.0,Benzine,Automatic,Hatchback,1300.0,1
+864,Geely,Okavango,2022.0,Hybrid,Automatic,SUV,1500.0,1
+863,Geely,MK,2008.0,Benzine,Automatic,Sedan,1500.0,1
+853,Geely,Emgrand 7,2017.0,Benzine,Manual,Sedan,1500.0,1
+845,Geely,Emgrand 7,2014.0,Benzine,Manual,Sedan,1599.0,1
+846,Geely,Emgrand 7,2014.0,Benzine,Manual,Sedan,1600.0,1
+847,Geely,Emgrand 7,2014.0,Natural Gas,Manual,Sedan,1500.0,1
+848,Geely,Emgrand 7,2015.0,Benzine,Automatic,Sedan,1600.0,1
+851,Geely,Emgrand 7,2015.0,Natural Gas,Manual,Sedan,1500.0,1
+852,Geely,Emgrand 7,2015.0,Natural Gas,Manual,Sedan,1600.0,1
+854,Geely,Emgrand 7,2017.0,Benzine,Manual,Sedan,1600.0,1
+862,Geely,GX3 Pro,2025.0,Benzine,Automatic,SUV,1500.0,1
+855,Geely,Emgrand 7,2017.0,Natural Gas,Manual,Sedan,1500.0,1
+856,Geely,Emgrand 7,2018.0,Benzine,Manual,Sedan,1500.0,1
+857,Geely,Emgrand X7,2018.0,Benzine,Automatic,SUV,1500.0,1
+858,Geely,Emgrand X7,2019.0,Benzine,Automatic,SUV,1299.0,1
+859,Geely,Emgrand X7,2019.0,Benzine,Automatic,SUV,1300.0,1
+861,Geely,Emgrand X7,2020.0,Benzine,Automatic,Estate,1500.0,1
+883,Honda,Accord,1994.0,Benzine,Automatic,Sedan,2000.0,1
+886,Honda,CR-V,2020.0,Benzine,Automatic,SUV,1500.0,1
+842,Geely,Emgrand 7,2013.0,Benzine,Manual,4X4,1400.0,1
+887,Honda,CR-V,2022.0,Benzine,Automatic,Hatchback,1500.0,1
+907,Honda,Civic,2008.0,Benzine,Automatic,Other,1600.0,1
+910,Honda,Civic,2009.0,Benzine,Automatic,Sedan,1800.0,1
+911,Honda,Civic,2010.0,Benzine,Automatic,Sedan,1600.0,1
+913,Honda,Civic,2019.0,Benzine,Automatic,Sedan,1600.0,1
+915,Honda,Civic,2021.0,Benzine,Automatic,Sedan,1499.0,1
+916,Honda,HR-V,2004.0,Benzine,Automatic,4X4,1600.0,1
+917,Hummer,H1,1997.0,Diesel,Automatic,SUV,5700.0,1
+918,Hummer,H1,2024.0,Electric,Automatic,4X4,100.0,1
+919,Hyundai,Accent,1996.0,Benzine,Automatic,Sedan,1600.0,1
+920,Hyundai,Accent,1997.0,Benzine,Manual,Sedan,1500.0,1
+921,Hyundai,Accent,1998.0,Benzine,Manual,Sedan,1300.0,1
+924,Hyundai,Accent,2000.0,Benzine,Automatic,Sedan,1300.0,1
+927,Hyundai,Accent,2000.0,Natural Gas,Manual,Sedan,1300.0,1
+928,Hyundai,Accent,2001.0,Benzine,Manual,Sedan,1300.0,1
+930,Hyundai,Accent,2003.0,Benzine,Manual,Sedan,1300.0,1
+906,Honda,Civic,1998.0,Benzine,Manual,Sedan,1400.0,1
+905,Honda,Civic,1996.0,Benzine,Automatic,Sedan,1600.0,1
+904,Honda,Civic,1995.0,Benzine,Automatic,Sedan,1600.0,1
+894,Honda,City,2013.0,Benzine,Automatic,Sedan,1300.0,1
+888,Honda,CR-V,2024.0,Benzine,Automatic,SUV,1500.0,1
+889,Honda,CR-V,2025.0,Benzine,Automatic,4X4,1500.0,1
+890,Honda,CR-V,2025.0,Benzine,Automatic,SUV,1500.0,1
+891,Honda,CR-V,2026.0,Benzine,Automatic,SUV,1500.0,1
+892,Honda,City,2004.0,Benzine,Automatic,Sedan,1600.0,1
+893,Honda,City,2005.0,Benzine,Automatic,Sedan,1300.0,1
+895,Honda,City,2013.0,Benzine,Automatic,Sedan,1600.0,1
+903,Honda,Civic,1993.0,Benzine,Automatic,Sedan,1600.0,1
+896,Honda,City,2016.0,Benzine,Automatic,Sedan,1500.0,1
+897,Honda,Civic,1900.0,Benzine,Automatic,Sedan,1500.0,1
+898,Honda,Civic,1979.0,Benzine,Automatic,Hatchback,1500.0,1
+899,Honda,Civic,1989.0,Benzine,Manual,Sedan,1500.0,1
+900,Honda,Civic,1989.0,Diesel,Manual,Sedan,1600.0,1
+901,Honda,Civic,1990.0,Benzine,Manual,Sedan,1600.0,1
+843,Geely,Emgrand 7,2014.0,Benzine,Manual,Sedan,1499.0,1
+840,Geely,Emgrand,2019.0,Benzine,Automatic,Sedan,1500.0,1
+932,Hyundai,Accent,2005.0,Benzine,Manual,Sedan,1300.0,1
+798,Ford,Fiesta,1998.0,Benzine,Manual,Hatchback,1300.0,1
+778,Fiat,Uno,1984.0,Diesel,Manual,Hatchback,900.0,1
+779,Fiat,Uno,1986.0,Benzine,Manual,Hatchback,1100.0,1
+780,Fiat,Uno,1986.0,Benzine,Manual,Hatchback,1400.0,1
+781,Fiat,Uno,1988.0,Benzine,Manual,Hatchback,1000.0,1
+783,Fiat,Uno,1993.0,Benzine,Manual,Hatchback,1300.0,1
+784,Fiat,Uno,1994.0,Benzine,Manual,Hatchback,1000.0,1
+785,Fiat,Uno,1995.0,Benzine,Manual,Hatchback,1000.0,1
+786,Fiat,Uno,1997.0,Benzine,Manual,Hatchback,1000.0,1
+787,Fiat,Uno,1998.0,Benzine,Manual,Hatchback,1000.0,1
+788,Fiat,Uno,2007.0,Benzine,Manual,Hatchback,1300.0,1
+789,Ford,B-Max,2015.0,Benzine,Automatic,SUV,1600.0,1
+790,Ford,Bronco Raptor,2024.0,Benzine,Automatic,4X4,3000.0,1
+794,Ford,Escort,1999.0,Benzine,Manual,Sedan,1300.0,1
+795,Ford,Explorer,1997.0,Benzine,Automatic,4X4,3600.0,1
+796,Ford,Explorer,2017.0,Benzine,Automatic,SUV,2000.0,1
+776,Fiat,Tipo,2021.0,Diesel,Manual,Sedan,1400.0,1
+775,Fiat,Tipo,2021.0,Benzine,Manual,Sedan,1400.0,1
+773,Fiat,Tipo,2020.0,Hybrid,Automatic,Hatchback,1600.0,1
+760,Fiat,Siena,2002.0,Benzine,Manual,Sedan,1600.0,1
+752,Fiat,Shahin,2005.0,Natural Gas,Manual,Sedan,1400.0,1
+753,Fiat,Shahin,2006.0,Benzine,Manual,Sedan,1400.0,1
+754,Fiat,Shahin,2007.0,Benzine,Manual,Sedan,1400.0,1
+755,Fiat,Shahin,2008.0,Benzine,Manual,Sedan,1400.0,1
+756,Fiat,Shahin,2009.0,Benzine,Manual,Sedan,1400.0,1
+758,Fiat,Siena,2001.0,Benzine,Manual,Sedan,1400.0,1
+761,Fiat,Siena,2002.0,Diesel,Manual,Sedan,1400.0,1
+772,Fiat,Tipo,2020.0,Benzine,Manual,Sedan,1400.0,1
+762,Fiat,Siena,2003.0,Benzine,Manual,Sedan,1400.0,1
+763,Fiat,Siena,2004.0,Benzine,Manual,Sedan,1400.0,1
+764,Fiat,Tempra,1990.0,Benzine,Manual,Sedan,1400.0,1
+765,Fiat,Tempra,1990.0,Benzine,Manual,Sedan,1600.0,1
+766,Fiat,Tempra,1991.0,Benzine,Manual,Hatchback,1600.0,1
+767,Fiat,Tempra,1991.0,Benzine,Manual,Sedan,1600.0,1
+797,Ford,Fiesta,1997.0,Benzine,Manual,Hatchback,1300.0,1
+799,Ford,Fiesta,2000.0,Benzine,Manual,Hatchback,1250.0,1
+839,Geely,Coolray,2022.0,Benzine,Automatic,SUV,1600.0,1
+801,Ford,Fiesta,2006.0,Benzine,Automatic,Small city car,1300.0,1
+821,Ford,Fusion,2021.0,Benzine,Automatic,Sedan,2000.0,1
+823,Ford,Mustang,2024.0,Benzine,Automatic,Sports / Coupe,2300.0,1
+824,Forthing,T5 EVO,2026.0,Electric,Automatic,SUV,1500.0,1
+825,GAC,EMKOO,2025.0,Benzine,Automatic,SUV,1500.0,1
+827,GAC,EMZOOM,2026.0,Benzine,Automatic,Hatchback,1500.0,1
+829,GAC,GS4,2026.0,Benzine,Automatic,SUV,1500.0,1
+830,GMC,Sierra,2021.0,Benzine,Automatic,Pickup,5300.0,1
+831,GMC,Terrain,2023.0,Benzine,Automatic,SUV,1500.0,1
+832,GMC,Terrain,2025.0,Benzine,Automatic,SUV,1500.0,1
+833,GMC,Terrain,2026.0,Benzine,Automatic,SUV,1600.0,1
+834,GMC,Yukon,2024.0,Benzine,Automatic,MPV,6200.0,1
+835,Geely,Ck,2008.0,Benzine,Manual,Sedan,1600.0,1
+836,Geely,Ck2,2009.0,Benzine,Manual,Sedan,1500.0,1
+837,Geely,Ck2,2010.0,Benzine,Automatic,Sedan,1600.0,1
+838,Geely,Coolray,2022.0,Benzine,Automatic,Hatchback,1500.0,1
+820,Ford,Focus,2022.0,Benzine,Automatic,Sedan,1500.0,1
+819,Ford,Focus,2021.0,Benzine,Automatic,Hatchback,1600.0,1
+818,Ford,Focus,2018.0,Benzine,Automatic,Sedan,998.0,1
+809,Ford,Focus,2010.0,Benzine,Automatic,Estate,1600.0,1
+802,Ford,Focus,2002.0,Benzine,Manual,Sedan,1800.0,1
+803,Ford,Focus,2003.0,Benzine,Manual,Sedan,1600.0,1
+804,Ford,Focus,2003.0,Benzine,Manual,Sedan,1800.0,1
+806,Ford,Focus,2007.0,Benzine,Automatic,Sedan,1600.0,1
+807,Ford,Focus,2008.0,Benzine,Automatic,Sedan,1400.0,1
+808,Ford,Focus,2009.0,Benzine,Automatic,Sedan,1600.0,1
+810,Ford,Focus,2012.0,Benzine,Automatic,Hatchback,1600.0,1
+817,Ford,Focus,2018.0,Benzine,Automatic,Hatchback,1000.0,1
+811,Ford,Focus,2013.0,Benzine,Automatic,Sedan,1600.0,1
+812,Ford,Focus,2014.0,Benzine,Automatic,Sedan,1400.0,1
+813,Ford,Focus,2014.0,Benzine,Automatic,Sedan,1600.0,1
+814,Ford,Focus,2015.0,Benzine,Automatic,Sedan,1500.0,1
+815,Ford,Focus,2016.0,Benzine,Automatic,Sedan,1000.0,1
+816,Ford,Focus,2017.0,Benzine,Automatic,Sedan,1600.0,1
+931,Hyundai,Accent,2005.0,Benzine,Automatic,Sedan,1600.0,1
+933,Hyundai,Accent,2005.0,Benzine,Manual,Sedan,1500.0,1
+1129,Jeep,Cherokee,2012.0,Benzine,Automatic,4X4,3700.0,1
+1088,Hyundai,Verna,2014.0,Benzine,Automatic,Sedan,1600.0,1
+1064,Hyundai,Veloster,2015.0,Benzine,Automatic,Hatchback,1500.0,1
+1065,Hyundai,Verna,2004.0,Benzine,Automatic,Sedan,100.0,1
+1067,Hyundai,Verna,2004.0,Natural Gas,Manual,Sedan,1600.0,1
+1068,Hyundai,Verna,2007.0,Benzine,Automatic,Sedan,1600.0,1
+1069,Hyundai,Verna,2007.0,Benzine,Manual,Other,1600.0,1
+1071,Hyundai,Verna,2007.0,Diesel,Manual,Sedan,1600.0,1
+1072,Hyundai,Verna,2008.0,Benzine,Automatic,Sedan,1600.0,1
+1075,Hyundai,Verna,2009.0,Natural Gas,Manual,Sedan,1600.0,1
+1077,Hyundai,Verna,2010.0,Benzine,Manual,Sedan,1500.0,1
+1078,Hyundai,Verna,2010.0,Benzine,Manual,Sedan,1599.0,1
+1080,Hyundai,Verna,2010.0,Diesel,Manual,Sedan,1600.0,1
+1081,Hyundai,Verna,2011.0,Benzine,Automatic,Sedan,1600.0,1
+1082,Hyundai,Verna,2011.0,Benzine,Manual,Sedan,1300.0,1
+1083,Hyundai,Verna,2011.0,Benzine,Manual,Sedan,1600.0,1
+1085,Hyundai,Verna,2013.0,Benzine,Automatic,Sedan,1600.0,1
+1063,Hyundai,Veloster,2013.0,Benzine,Automatic,Hatchback,1600.0,1
+1062,Hyundai,Veloster,2012.0,Benzine,Automatic,Hatchback,1600.0,1
+1059,Hyundai,Tucson,2025.0,Benzine,Automatic,Estate,1600.0,1
+1045,Hyundai,Tucson,2018.0,Benzine,Automatic,SUV,1600.0,1
+1039,Hyundai,Santamo,2001.0,Benzine,Automatic,Estate,1600.0,1
+1040,Hyundai,Solaris,2016.0,Benzine,Automatic,Sedan,1600.0,1
+1041,Hyundai,Solaris,2017.0,Benzine,Automatic,Sedan,1600.0,1
+1042,Hyundai,Sonata,1994.0,Benzine,Manual,Sedan,1800.0,1
+1043,Hyundai,Sonata,2020.0,Benzine,Automatic,Sedan,1600.0,1
+1044,Hyundai,Tucson,2017.0,Benzine,Automatic,SUV,1600.0,1
+1046,Hyundai,Tucson,2019.0,Benzine,Automatic,Hatchback,1600.0,1
+1058,Hyundai,Tucson,2024.0,Benzine,Automatic,SUV,1600.0,1
+1050,Hyundai,Tucson,2021.0,Benzine,Automatic,Estate,1600.0,1
+1051,Hyundai,Tucson,2021.0,Benzine,Automatic,Hatchback,1600.0,1
+1053,Hyundai,Tucson,2022.0,Benzine,Automatic,Hatchback,1600.0,1
+1055,Hyundai,Tucson,2022.0,Hybrid,Automatic,SUV,1600.0,1
+1056,Hyundai,Tucson,2023.0,Benzine,Automatic,Hatchback,1600.0,1
+1057,Hyundai,Tucson,2024.0,Benzine,Automatic,Hatchback,1600.0,1
+1087,Hyundai,Verna,2013.0,Natural Gas,Manual,Sedan,1600.0,1
+1089,Hyundai,Verna,2014.0,Benzine,Manual,Sedan,1600.0,1
+1036,Hyundai,Santa Fe,2024.0,Hybrid,Automatic,SUV,1600.0,1
+1093,Hyundai,Verna,2015.0,Natural Gas,Manual,Sedan,1600.0,1
+1112,Jaguar,E-Pace,2019.0,Benzine,Automatic,SUV,2000.0,1
+1113,Jaguar,E-Pace,2020.0,Benzine,Automatic,SUV,2000.0,1
+1114,Jaguar,F-Pace,2021.0,Benzine,Automatic,SUV,2000.0,1
+1115,Jaguar,F-Pace,2022.0,Benzine,Automatic,SUV,2000.0,1
+1116,Jaguar,F-Pace,2024.0,Benzine,Automatic,SUV,2000.0,1
+1117,Jaguar,F-Pace,2025.0,Benzine,Automatic,SUV,2000.0,1
+1118,Jaguar,F-type,2018.0,Benzine,Automatic,Sports / Coupe,3000.0,1
+1119,Jaguar,F-type,2020.0,Benzine,Automatic,Convertible,2000.0,1
+1120,Jaguar,F-type,2023.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+1121,Jaguar,XE,2020.0,Benzine,Automatic,Sedan,2000.0,1
+1122,Jeep,Cherokee,1995.0,Benzine,Automatic,4X4,6000.0,1
+1123,Jeep,Cherokee,1995.0,Benzine,Manual,4X4,2400.0,1
+1124,Jeep,Cherokee,1996.0,Benzine,Automatic,SUV,4000.0,1
+1126,Jeep,Cherokee,1998.0,Benzine,Automatic,4X4,4100.0,1
+1127,Jeep,Cherokee,1999.0,Benzine,Automatic,4X4,4100.0,1
+1111,Jac,S4,2021.0,Benzine,Automatic,Hatchback,1500.0,1
+1110,Jac,S4,2020.0,Benzine,Automatic,SUV,1500.0,1
+1109,Jac,Other,2010.0,Benzine,Manual,Sedan,1300.0,1
+1100,Hyundai,Verna,2019.0,Benzine,Automatic,Sedan,1600.0,1
+1094,Hyundai,Verna,2016.0,Benzine,Manual,Sedan,1600.0,1
+1095,Hyundai,Verna,2016.0,Natural Gas,Manual,Sedan,1600.0,1
+1096,Hyundai,Verna,2017.0,Benzine,Automatic,Sedan,1600.0,1
+1097,Hyundai,Verna,2017.0,Benzine,Manual,Sedan,1600.0,1
+1098,Hyundai,Verna,2017.0,Hybrid,Manual,Sedan,1600.0,1
+1099,Hyundai,Verna,2018.0,Benzine,Manual,Sedan,1500.0,1
+1101,Hyundai,Viva,2002.0,Benzine,Manual,Sedan,1500.0,1
+1108,Jac,Other,2008.0,Diesel,Manual,Pickup,2000.0,1
+1102,Hyundai,Viva,2008.0,Benzine,Manual,Sedan,1500.0,1
+1103,Infiniti,FX,2006.0,Benzine,Automatic,SUV,3500.0,1
+1104,Isuzu,D-Max,2010.0,Diesel,Manual,Pickup,1200.0,1
+1105,Isuzu,D-Max,2026.0,Diesel,Manual,Pickup,2500.0,1
+1106,Jac,A13,2013.0,Benzine,Manual,Hatchback,1300.0,1
+1107,Jac,J7,2021.0,Benzine,Automatic,Sedan,1500.0,1
+1038,Hyundai,Santa Fe,2025.0,Hybrid,Automatic,SUV,1600.0,1
+1035,Hyundai,Matrix,2011.0,Benzine,Automatic,Hatchback,1600.0,1
+934,Hyundai,Accent,2006.0,Benzine,Automatic,Sedan,1400.0,1
+981,Hyundai,Elantra,2025.0,Benzine,Automatic,Sedan,1500.0,1
+959,Hyundai,Coupe,2000.0,Benzine,Automatic,Sports / Coupe,2000.0,1
+960,Hyundai,Coupe,2005.0,Benzine,Manual,Sports / Coupe,1600.0,1
+961,Hyundai,Coupe,2013.0,Benzine,Automatic,Sedan,1600.0,1
+962,Hyundai,Creta,2020.0,Benzine,Automatic,SUV,1600.0,1
+963,Hyundai,Creta,2023.0,Benzine,Automatic,4X4,1500.0,1
+964,Hyundai,Elantra,2001.0,Benzine,Automatic,Sedan,1500.0,1
+965,Hyundai,Elantra,2007.0,Benzine,Automatic,Sedan,1600.0,1
+966,Hyundai,Elantra,2008.0,Benzine,Automatic,Sedan,1600.0,1
+967,Hyundai,Elantra,2009.0,Benzine,Automatic,Sedan,1600.0,1
+968,Hyundai,Elantra,2009.0,Benzine,Manual,Sedan,1600.0,1
+969,Hyundai,Elantra,2011.0,Benzine,Automatic,Sedan,1600.0,1
+971,Hyundai,Elantra,2013.0,Benzine,Automatic,Sedan,1600.0,1
+973,Hyundai,Elantra,2016.0,Benzine,Automatic,Sedan,1600.0,1
+976,Hyundai,Elantra,2019.0,Electric,Automatic,Sedan,1600.0,1
+979,Hyundai,Elantra,2022.0,Benzine,Automatic,Sedan,1600.0,1
+958,Hyundai,Azera,2023.0,Hybrid,Automatic,Sedan,1600.0,1
+957,Hyundai,Avante,2023.0,Benzine,Automatic,Sedan,1600.0,1
+956,Hyundai,Avante,2011.0,Benzine,Automatic,Sedan,1600.0,1
+944,Hyundai,Accent,2016.0,Benzine,Automatic,Hatchback,1600.0,1
+936,Hyundai,Accent,2006.0,Benzine,Manual,Sedan,1600.0,1
+937,Hyundai,Accent,2006.0,Natural Gas,Manual,Sedan,1300.0,1
+938,Hyundai,Accent,2009.0,Benzine,Automatic,Sedan,1600.0,1
+939,Hyundai,Accent,2009.0,Benzine,Manual,Sedan,1500.0,1
+942,Hyundai,Accent,2011.0,Benzine,Automatic,Sedan,1600.0,1
+943,Hyundai,Accent,2011.0,Benzine,Manual,Sedan,1600.0,1
+945,Hyundai,Accent,2017.0,Benzine,Automatic,Sedan,1600.0,1
+955,Hyundai,Avante,2010.0,Benzine,Automatic,Sedan,1600.0,1
+946,Hyundai,Accent,2019.0,Benzine,Automatic,Sedan,1600.0,1
+947,Hyundai,Accent,2024.0,Diesel,Automatic,Sedan,1600.0,1
+949,Hyundai,Accent,2026.0,Benzine,Automatic,Sedan,1500.0,1
+952,Hyundai,Atos,2009.0,Benzine,Manual,Hatchback,1100.0,1
+953,Hyundai,Atos,2010.0,Benzine,Manual,Hatchback,1000.0,1
+954,Hyundai,Atos,2010.0,Benzine,Manual,Hatchback,1100.0,1
+980,Hyundai,Elantra,2024.0,Benzine,Automatic,Sedan,1600.0,1
+984,Hyundai,Elantra Coupe,2013.0,Benzine,Automatic,Sedan,1600.0,1
+1034,Hyundai,Matrix,2009.0,Benzine,Automatic,Hatchback,1600.0,1
+985,Hyundai,Excel,1994.0,Benzine,Manual,Sedan,1500.0,1
+1013,Hyundai,I30,2015.0,Benzine,Automatic,Hatchback,1600.0,1
+1015,Hyundai,IX35,2013.0,Benzine,Automatic,Hatchback,1600.0,1
+1016,Hyundai,IX35,2013.0,Benzine,Automatic,SUV,1600.0,1
+1017,Hyundai,IX35,2014.0,Benzine,Automatic,Hatchback,1600.0,1
+1018,Hyundai,IX35,2015.0,Benzine,Automatic,Estate,1600.0,1
+1021,Hyundai,IX35,2016.0,Benzine,Automatic,Hatchback,600.0,1
+1022,Hyundai,Matrix,2001.0,Benzine,Automatic,Hatchback,1600.0,1
+1023,Hyundai,Matrix,2001.0,Diesel,Automatic,Hatchback,1600.0,1
+1025,Hyundai,Matrix,2005.0,Benzine,Automatic,Hatchback,1600.0,1
+1026,Hyundai,Matrix,2005.0,Benzine,Manual,Hatchback,1600.0,1
+1028,Hyundai,Matrix,2006.0,Benzine,Automatic,Sedan,1600.0,1
+1030,Hyundai,Matrix,2006.0,Natural Gas,Automatic,SUV,1600.0,1
+1031,Hyundai,Matrix,2007.0,Benzine,Automatic,Hatchback,1600.0,1
+1032,Hyundai,Matrix,2008.0,Benzine,Automatic,Hatchback,1600.0,1
+1033,Hyundai,Matrix,2008.0,Benzine,Automatic,Sedan,1600.0,1
+1012,Hyundai,I20,2022.0,Benzine,Automatic,Hatchback,1200.0,1
+1011,Hyundai,I10,2016.0,Benzine,Automatic,Sedan,1250.0,1
+1008,Hyundai,I10,2012.0,Benzine,Automatic,Hatchback,1100.0,1
+997,Hyundai,Excel,1998.0,Benzine,Manual,Sedan,1500.0,1
+987,Hyundai,Excel,1996.0,Benzine,Manual,Hatchback,1300.0,1
+989,Hyundai,Excel,1997.0,Benzine,Automatic,Sedan,1500.0,1
+991,Hyundai,Excel,1997.0,Benzine,Manual,Other,1500.0,1
+994,Hyundai,Excel,1997.0,Natural Gas,Manual,Sedan,1500.0,1
+995,Hyundai,Excel,1998.0,Benzine,Automatic,Sedan,1500.0,1
+996,Hyundai,Excel,1998.0,Benzine,Manual,Sedan,1300.0,1
+998,Hyundai,Excel,1999.0,Benzine,Manual,Sedan,1500.0,1
+1007,Hyundai,I10,2010.0,Diesel,Manual,Hatchback,1000.0,1
+999,Hyundai,Getz,2006.0,Benzine,Automatic,Hatchback,1600.0,1
+1001,Hyundai,Getz,2007.0,Diesel,Automatic,Hatchback,1600.0,1
+1002,Hyundai,Getz,2009.0,Benzine,Automatic,Hatchback,1600.0,1
+1003,Hyundai,Getz,2010.0,Benzine,Automatic,Hatchback,1600.0,1
+1004,Hyundai,H1,2007.0,Diesel,Manual,Van / Bus,2400.0,1
+1006,Hyundai,I10,2010.0,Benzine,Manual,Hatchback,1300.0,1
+2687,Zotye,Explosion,2009.0,Natural Gas,Manual,Hatchback,1600.0,1
