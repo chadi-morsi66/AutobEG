@@ -1,0 +1,36 @@
+1. Backend API & Logging (The "Nerve System")
+The chatbot and price tool can't just be "scripts." They must be APIs (likely using FastAPI or Flask).
+
+What he needs to know: How to record every single question a user asks and every answer the AI gives into a database (like PostgreSQL or MongoDB).
+
+Why it matters: If a user in Riyadh gets a "crazy" price for a car, you need to be able to go back and see exactly what the AI was "thinking" at that moment.
+
+2. Monitoring & Observability (The "Dashboard")
+He needs to use tools that "watch" the AI while you sleep.
+
+The Tools: He might use Grafana, Prometheus, or even simpler tools like Weights & Biases or LangSmith (specifically for chatbots).
+
+What he needs to know: How to track "Latency" (is the bot taking 10 seconds to answer? That's too slow) and "Token Usage" (how much money are we spending per hour?).
+
+3. The "Human-in-the-Loop" (The Feedback Button)
+This is the most important "Startup" feature.
+
+The Tooling: He needs to work with your Software Engineer to put a "Thumbs Up / Thumbs Down" or a "Flag as Incorrect" button next to every AI response.
+
+What he needs to know: How to "pipe" those flags back into his training data. If 10 people flag a price for a Mercedes as "too high," the system should alert him so he can fix the logic.
+
+4. Evaluation Frameworks (The "Accuracy Test")
+Since he mentioned "80% accuracy," he needs a way to prove it is getting better, not worse.
+
+What he needs to know: How to run "Batch Tests." Before he pushes a new update to the website, he should run 500 "fake" car queries through the system and compare the results to the old version.
+
+Why it matters: In AI, fixing one bug often creates two new ones. He needs a way to catch those before your users do.
+
+The "Integration" Meeting: What he must discuss with the Software Engineer
+To make this dashboard work, he and the Software Engineer must agree on a "Data Schema." They need to decide:
+
+Where does the AI code live? (On a separate "Microservice" or part of the main site?)
+
+How does the "Feedback" from the user get to the AI Engineer?
+
+Who pays for the GPU/API servers?
