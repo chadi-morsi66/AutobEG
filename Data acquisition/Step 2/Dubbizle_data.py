@@ -19,18 +19,32 @@ BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 200   
 
+# --- CONFIGURATION ---
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
+
+BASE_URL = "https://www.dubizzle.com.eg"
+SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
+MAX_PAGES = 200   
+
 def get_chrome_options():
     """Sets up Chrome to run invisibly on a server without a screen."""
     options = Options()
-    options.add_argument('--headless') # Run without UI
-    options.add_argument('--no-sandbox') # Bypass OS security model (required for Linux servers)
-    options.add_argument('--disable-dev-shm-usage') # Overcome limited resource problems
+    options.binary_location = '/usr/bin/chromium-browser' # Explicitly point to Linux Chrome
+    options.add_argument('--headless') 
+    options.add_argument('--no-sandbox') 
+    options.add_argument('--disable-dev-shm-usage') 
     return options
+
+# Create a Service object pointing to the Linux ChromeDriver
+chrome_service = Service('/usr/bin/chromedriver')
 
 # --- 1. INITIAL DRIVER TEST ---
 print("Testing Chrome WebDriver...")
 try:
-    test_driver = webdriver.Chrome(options=get_chrome_options())
+    test_driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
     test_driver.get("https://www.google.com")
     print(f"Driver Success! Connected to: {test_driver.title}")
     test_driver.quit()
@@ -38,7 +52,7 @@ except Exception as e:
     print(f"CRITICAL ERROR: WebDriver failed to initialize.")
     print(f"Error Details: {e}")
     print("Stopping script.")
-    sys.exit(1) # This stops the script completely
+    sys.exit(1)
 
 # --- 2. LOAD EXISTING DATA ---
 active_list = []
