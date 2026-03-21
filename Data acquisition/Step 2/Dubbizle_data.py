@@ -22,10 +22,18 @@ MAX_PAGES = 200
 def get_chrome_options():
     """Sets up Chrome to run invisibly on a server without a screen."""
     options = Options()
-    options.binary_location = '/usr/bin/chromium-browser' # Explicitly point to Linux Chrome
+    options.binary_location = '/usr/bin/chromium-browser' 
     options.add_argument('--headless') 
     options.add_argument('--no-sandbox') 
     options.add_argument('--disable-dev-shm-usage') 
+    
+    # --- THE ANTI-BOT MASKS ---
+    # 1. Fake a normal Windows User-Agent so it doesn't say "HeadlessChrome"
+    options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36')
+    
+    # 2. Hide the internal flag that tells websites "I am being controlled by Selenium"
+    options.add_argument('--disable-blink-features=AutomationControlled')
+    
     return options
 
 # Create a Service object pointing to the Linux ChromeDriver
