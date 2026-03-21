@@ -122,7 +122,10 @@ for page in range(1, MAX_PAGES + 1):
             except:
                 pass
     except Exception as e:
-        print(f"Timeout or error on page {page}. Moving on.")
+        print(f"Timeout on page {page}. Moving on.")
+        print(f"The page title is actually: {driver.title}") # This will likely say 'Just a moment...'
+        driver.save_screenshot(f"error_page_{page}.png")     # Takes a picture of the block!
+        break # Stops the loop so it doesn't do this 200 times
 
 print("New URLs collected:", len(listing_urls))
 listing_urls = list(set(active_list) | set(listing_urls))
