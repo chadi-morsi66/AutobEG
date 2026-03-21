@@ -98,7 +98,7 @@ def extract_specs_dict(driver):
     return specs
 
 # --- 4. SCRAPE LISTING URLS ---
-driver = webdriver.Chrome(options=get_chrome_options())
+driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
 listing_urls = set()
 
 for page in range(1, MAX_PAGES + 1):
