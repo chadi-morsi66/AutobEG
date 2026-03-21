@@ -4,7 +4,8 @@ import os
 import sys
 import re
 from datetime import datetime, timezone, timedelta
-
+import time
+import random
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -98,7 +99,7 @@ def extract_specs_dict(driver):
 # --- 4. SCRAPE LISTING URLS ---
 driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
 listing_urls = set()
-
+start_search = time.time()
 for page in range(1, MAX_PAGES + 1):
     page_url = f"{SEARCH_URL}?page={page}"
     print(f"Scraping page {page}: {page_url}")
@@ -124,12 +125,19 @@ for page in range(1, MAX_PAGES + 1):
         print(f"The page title is actually: {driver.title}") # This will likely say 'Just a moment...'
         driver.save_screenshot(f"error_page_{page}.png")     # Takes a picture of the block!
         break # Stops the loop so it doesn't do this 200 times
+    wait_time = random.uniform(3, 7)
+    time.sleep(wait_time)
+end_search = time.time()
+search_duration = end_search - start_search
+print(f"--- Search Phase 1 Finished in {search_duration/60:.2f} minutes ---")
 
 print("New URLs collected:", len(listing_urls))
 listing_urls = list(set(active_list) | set(listing_urls))
 print("Total URLs:", len(listing_urls))
 
 # --- 5. SCRAPE INDIVIDUAL CAR DATA ---
+print(f"Starting deep scrape of {len(listing_urls)} listings...")
+start_deep = time.time()
 step2_data = []
 for i, url in enumerate(listing_urls, start=1):
     print(f"Scraping listing {i}/{len(listing_urls)}")
@@ -203,7 +211,10 @@ for i, url in enumerate(listing_urls, start=1):
         print("Failed:", e)
 
 driver.quit()
-
+end_deep = time.time()
+deep_duration = end_deep - start_deep
+print(f"\n--- Deep Scrape Finished in {deep_duration/60:.2f} minutes ---")
+print(f"--- Total scraping runtime: {(end_deep - start_search)/60:.2f} minutes ---")
 # --- 6. DATA PROCESSING AND SAVING ---
 if not step2_data:
     print("No data was scraped. Exiting.")
