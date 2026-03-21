@@ -17,17 +17,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
 BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
-MAX_PAGES = 200   
-
-# --- CONFIGURATION ---
-import os
-
-script_dir = os.path.dirname(os.path.abspath(__file__))
-CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
-
-BASE_URL = "https://www.dubizzle.com.eg"
-SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
-MAX_PAGES = 200   
+MAX_PAGES = 200      
 
 def get_chrome_options():
     """Sets up Chrome to run invisibly on a server without a screen."""
