@@ -13,10 +13,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # --- CONFIGURATION ---
-CSV_FILE_PATH = 'step2_listings.csv'  # Keeps it in the same folder as the script
-BASE_URL = "https://www.dubizzle.com.eg"
+script_dir = os.path.dirname(os.path.abspath(__file__))
+CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
+BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
-MAX_PAGES = 200   # small for testing
+MAX_PAGES = 200   
 
 def get_chrome_options():
     """Sets up Chrome to run invisibly on a server without a screen."""
