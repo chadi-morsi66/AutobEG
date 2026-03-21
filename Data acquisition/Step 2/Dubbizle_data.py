@@ -125,7 +125,7 @@ for page in range(1, MAX_PAGES + 1):
         print(f"The page title is actually: {driver.title}") # This will likely say 'Just a moment...'
         driver.save_screenshot(f"error_page_{page}.png")     # Takes a picture of the block!
         break # Stops the loop so it doesn't do this 200 times
-    wait_time = random.uniform(3, 7)
+    wait_time = random.uniform(10, 20)
     time.sleep(wait_time)
 end_search = time.time()
 search_duration = end_search - start_search
