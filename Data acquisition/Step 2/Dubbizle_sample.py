@@ -16,9 +16,10 @@ from selenium.webdriver.support import expected_conditions as EC
 # --- CONFIGURATION ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
 CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
+output_table = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings_sample.csv"))
 BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
-MAX_PAGES = 200      
+MAX_PAGES = 2      
 
 def get_chrome_options():
     """Sets up Chrome to run invisibly on a server without a screen."""
@@ -131,8 +132,6 @@ end_search = time.time()
 search_duration = end_search - start_search
 print(f"--- Search Phase 1 Finished in {search_duration/60:.2f} minutes ---")
 
-print("New URLs collected:", len(listing_urls))
-listing_urls = list(set(active_list) | set(listing_urls))
 print("Total URLs:", len(listing_urls))
 
 # --- 5. SCRAPE INDIVIDUAL CAR DATA ---
@@ -222,10 +221,6 @@ if not step2_data:
 
 df_step2 = pd.DataFrame(step2_data)
 
-##Saving example to debug
-print("Null counts per column:")
-print(df_step2.isnull().sum())
-df_step2.to_csv('example_data.csv', index=False)
 
 df_step2["year"] = df_step2["year"].astype('Int64')
 
@@ -240,8 +235,8 @@ df_step2["scraped_at"] = df_step2["scraped_at"].dt.strftime("%Y-%m-%d %H:%M:%S")
 df_step2.loc[df_step2["mileage"].isna() & df_step2["seller_type"].isna(), "active"] = False
 
 # Save to CSV
-file_exists = os.path.isfile(CSV_FILE_PATH)
-df_step2.to_csv(CSV_FILE_PATH, mode='a', header=not file_exists, index=False)
+file_exists = os.path.isfile(output_table)
+df_step2.to_csv(output_table)
 
 print(f"Total listings scraped and processed: {len(df_step2)}")
-print(f"Data appended to {CSV_FILE_PATH}")
+print(f"Data appended to {output_table}")
