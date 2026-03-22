@@ -27,7 +27,7 @@ def get_chrome_options():
     options.add_argument('--headless') 
     options.add_argument('--no-sandbox') 
     options.add_argument('--disable-dev-shm-usage') 
-    
+    options.add_argument('--disable-gpu')
     # --- THE ANTI-BOT MASKS ---
     # 1. Fake a normal Windows User-Agent so it doesn't say "HeadlessChrome"
     options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36')
@@ -101,6 +101,14 @@ driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
 listing_urls = set()
 start_search = time.time()
 for page in range(1, MAX_PAGES + 1):
+    # --- ADD THIS RAM CLEARING BLOCK ---
+    if page % 15 == 0:
+        print(f"Clearing RAM: Restarting browser at page {page}...")
+        driver.quit() # Kills the heavy browser
+        driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options()) # Starts a fresh one
+        time.sleep(2)
+    # -----------------------------------
+
     page_url = f"{SEARCH_URL}?page={page}"
     print(f"Scraping page {page}: {page_url}")
     driver.get(page_url)
@@ -139,7 +147,20 @@ print("Total URLs:", len(listing_urls))
 print(f"Starting deep scrape of {len(listing_urls)} listings...")
 start_deep = time.time()
 step2_data = []
+
+# (You should probably open a fresh browser here just in case Phase 4 left it bloated)
+driver.quit()
+driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
+
 for i, url in enumerate(listing_urls, start=1):
+    # --- ADD THIS RAM CLEARING BLOCK ---
+    if i % 100 == 0:
+        print(f"Clearing RAM: Restarting browser at listing {i}...")
+        driver.quit()
+        driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
+        time.sleep(2)
+    # -----------------------------------
+
     print(f"Scraping listing {i}/{len(listing_urls)}")
     try:
         driver.get(url)
@@ -230,7 +251,10 @@ df_step2.to_csv('example_data.csv', index=False)
 df_step2["year"] = df_step2["year"].astype('Int64')
 
 cols = ["brand", "model", "year", "fuel_type", "transmission", "body_type", "engine_capacity"]
-df_step2["vehicle_id"] = df_step2[cols].fillna('').astype(str).agg("_".join, axis=1)
+df_step2["vehicle_id"] = df_step2[cols].apply(
+    lambda row: "_".join([str(val) if pd.notna(val) else "" for val in row]), 
+    axis=1
+)
 df_step2 = df_step2.set_index("vehicle_id")
 df_step2 = df_step2.drop(columns=cols, errors='ignore')
 
