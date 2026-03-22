@@ -225,7 +225,10 @@ df_step2 = pd.DataFrame(step2_data)
 df_step2["year"] = df_step2["year"].astype('Int64')
 
 cols = ["brand", "model", "year", "fuel_type", "transmission", "body_type", "engine_capacity"]
-df_step2["vehicle_id"] = df_step2[cols].fillna('').astype(str).agg("_".join, axis=1)
+df_step2["vehicle_id"] = df_step2[cols].apply(
+    lambda row: "_".join([str(val) if pd.notna(val) else "" for val in row]), 
+    axis=1
+)
 df_step2 = df_step2.set_index("vehicle_id")
 df_step2 = df_step2.drop(columns=cols, errors='ignore')
 
