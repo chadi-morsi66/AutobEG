@@ -28,6 +28,10 @@ def get_chrome_options():
     options.add_argument('--no-sandbox') 
     options.add_argument('--disable-dev-shm-usage') 
     options.add_argument('--disable-gpu')
+    options.add_argument('--disable-blink-features=AutomationControlled')
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
+    options.add_argument('--remote-debugging-port=9222')
     # --- THE ANTI-BOT MASKS ---
     # 1. Fake a normal Windows User-Agent so it doesn't say "HeadlessChrome"
     options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36')
@@ -133,7 +137,7 @@ for page in range(1, MAX_PAGES + 1):
         print(f"The page title is actually: {driver.title}") # This will likely say 'Just a moment...'
         driver.save_screenshot(f"error_page_{page}.png")     # Takes a picture of the block!
         break # Stops the loop so it doesn't do this 200 times
-    wait_time = random.uniform(10, 20)
+    wait_time = random.uniform(15, 25)
     time.sleep(wait_time)
 end_search = time.time()
 search_duration = end_search - start_search
