@@ -118,7 +118,7 @@ for page in range(1, MAX_PAGES + 1):
     driver.get(page_url)
     
     try:
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 40).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
         )
         listings = driver.find_elements(By.CSS_SELECTOR, "article")
