@@ -31,7 +31,7 @@ def get_chrome_options():
     options.add_argument('--disable-blink-features=AutomationControlled')
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
-    options.add_argument('--remote-debugging-port=9222')
+    options.add_argument('--remote-debugging-port=0')
     # --- THE ANTI-BOT MASKS ---
     # 1. Fake a normal Windows User-Agent so it doesn't say "HeadlessChrome"
     options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36')
@@ -104,41 +104,49 @@ def extract_specs_dict(driver):
 driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
 listing_urls = set()
 start_search = time.time()
-for page in range(1, MAX_PAGES + 1):
-    # --- ADD THIS RAM CLEARING BLOCK ---
-    if page % 15 == 0:
-        print(f"Clearing RAM: Restarting browser at page {page}...")
-        driver.quit() # Kills the heavy browser
-        driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options()) # Starts a fresh one
-        time.sleep(2)
-    # -----------------------------------
 
-    page_url = f"{SEARCH_URL}?page={page}"
-    print(f"Scraping page {page}: {page_url}")
-    driver.get(page_url)
-    
-    try:
-        WebDriverWait(driver, 40).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
-        )
-        listings = driver.find_elements(By.CSS_SELECTOR, "article")
-        for listing in listings:
-            try:
-                link_el = listing.find_element(By.XPATH, ".//a[contains(@href,'/ad/')]")
-                href = link_el.get_attribute("href")
-                if href.startswith("http"):
-                    listing_urls.add(href)
-                else:
-                    listing_urls.add(BASE_URL + href)
-            except:
-                pass
-    except Exception as e:
-        print(f"Timeout on page {page}. Moving on.")
-        print(f"The page title is actually: {driver.title}") # This will likely say 'Just a moment...'
-        driver.save_screenshot(f"error_page_{page}.png")     # Takes a picture of the block!
-        break # Stops the loop so it doesn't do this 200 times
-    wait_time = random.uniform(10, 15)
-    time.sleep(wait_time)
+try: # <--- YOU MUST ADD THIS MASTER TRY BLOCK
+    for page in range(1, MAX_PAGES + 1):
+        if page % 15 == 0:
+            print(f"Clearing RAM: Restarting browser at page {page}...")
+            driver.quit() 
+            driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options()) 
+            time.sleep(2)
+        
+        page_url = f"{SEARCH_URL}?page={page}"
+        print(f"Scraping page {page}: {page_url}")
+        
+        # Now this line is protected by the Master Try Block!
+        driver.get(page_url) 
+        
+        try:
+            WebDriverWait(driver, 40).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
+            )
+            listings = driver.find_elements(By.CSS_SELECTOR, "article")
+            for listing in listings:
+                try:
+                    link_el = listing.find_element(By.XPATH, ".//a[contains(@href,'/ad/')]")
+                    href = link_el.get_attribute("href")
+                    if href.startswith("http"):
+                        listing_urls.add(href)
+                    else:
+                        listing_urls.add(BASE_URL + href)
+                except:
+                    pass
+        except Exception as e:
+            print(f"Timeout on page {page}. Moving on.")
+            print(f"The page title is actually: {driver.title}") 
+            driver.save_screenshot(f"error_page_{page}.png")    
+            break 
+            
+        wait_time = random.uniform(10, 15)
+        time.sleep(wait_time)
+
+except Exception as fatal_e: # <--- CATCH FATAL BROWSER CRASHES HERE
+    print(f"Phase 4 crashed completely: {fatal_e}")
+    print("Moving on to Phase 5 anyway to scrape existing URLs!")
+
 end_search = time.time()
 search_duration = end_search - start_search
 print(f"--- Search Phase 1 Finished in {search_duration/60:.2f} minutes ---")
