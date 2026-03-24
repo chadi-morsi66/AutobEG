@@ -281,3 +281,4 @@ df_step2.to_csv(CSV_FILE_PATH, mode='a', header=not file_exists, index=False)
 
 print(f"Total listings scraped and processed: {len(df_step2)}")
 print(f"Data appended to {CSV_FILE_PATH}")
+print(df_step2.head(10))

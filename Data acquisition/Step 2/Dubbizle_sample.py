@@ -243,3 +243,4 @@ df_step2.to_csv(output_table)
 
 print(f"Total listings scraped and processed: {len(df_step2)}")
 print(f"Data appended to {output_table}")
+print(df_step2.head(10))
