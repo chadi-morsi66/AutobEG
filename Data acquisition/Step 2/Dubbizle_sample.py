@@ -220,7 +220,8 @@ if not step2_data:
     sys.exit(0)
 
 df_step2 = pd.DataFrame(step2_data)
-
+print(df_step2.isnull().sum())
+print(df_step2.head(10))
 
 df_step2["year"] = df_step2["year"].astype('Int64')
 
@@ -243,4 +244,3 @@ df_step2.to_csv(output_table)
 
 print(f"Total listings scraped and processed: {len(df_step2)}")
 print(f"Data appended to {output_table}")
-print(df_step2.head(10))
