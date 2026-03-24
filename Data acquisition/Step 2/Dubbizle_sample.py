@@ -28,6 +28,7 @@ def get_chrome_options():
     options.add_argument('--headless') 
     options.add_argument('--no-sandbox') 
     options.add_argument('--disable-dev-shm-usage') 
+    options.add_argument('--window-size=1920,1080')
     
     # --- THE ANTI-BOT MASKS ---
     # 1. Fake a normal Windows User-Agent so it doesn't say "HeadlessChrome"
@@ -172,9 +173,13 @@ for i, url in enumerate(listing_urls, start=1):
         price, mileage, city, seller_type, listing_age = None, None, None, None, None
 
         try:
-            price_text = driver.find_element(By.XPATH, "//span[contains(text(),'EGP')]").text
-            price = int(re.sub(r"[^\d]", "", price_text))
-        except: pass
+            # Wait up to 20 seconds specifically for the Price or the Specs to load
+            WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'EGP')]"))
+            )
+        except Exception as e:
+            print(f"Listing {i} failed to load data in time (Possible bot block).")
+            driver.save_screenshot(f"car_error_{i}.png")
 
         try:
             mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
