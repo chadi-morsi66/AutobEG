@@ -22,20 +22,28 @@ SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 2      
 
 def get_chrome_options():
-    """Sets up Chrome to run invisibly on a server without a screen."""
     options = Options()
     options.binary_location = '/usr/bin/chromium-browser' 
     options.add_argument('--headless') 
     options.add_argument('--no-sandbox') 
     options.add_argument('--disable-dev-shm-usage') 
+    options.add_argument('--disable-gpu')
+    
+    # --- 1. FORCE DESKTOP MODE (Crucial for XPaths) ---
     options.add_argument('--window-size=1920,1080')
     
-    # --- THE ANTI-BOT MASKS ---
-    # 1. Fake a normal Windows User-Agent so it doesn't say "HeadlessChrome"
-    options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36')
+    # --- 2. FORCE ENGLISH HEADERS (Backs up your /en/ URL) ---
+    options.add_argument('--accept-lang=en-US,en')
     
-    # 2. Hide the internal flag that tells websites "I am being controlled by Selenium"
+    # --- 3. STABILIZE THE CONNECTION ---
+    options.add_argument('--remote-debugging-port=0') 
+    options.add_argument('--disable-crash-reporter')
+
+    # --- 4. ANTI-BOT MASKS ---
+    options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36')
     options.add_argument('--disable-blink-features=AutomationControlled')
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
     
     return options
 
