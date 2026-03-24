@@ -221,7 +221,7 @@ if not step2_data:
 
 df_step2 = pd.DataFrame(step2_data)
 print(df_step2.isnull().sum())
-print(df_step2.head(10))
+print(df_step2)
 
 df_step2["year"] = df_step2["year"].astype('Int64')
 
