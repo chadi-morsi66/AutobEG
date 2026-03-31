@@ -13,7 +13,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import undetected_chromedriver as uc
+from pyvirtualdisplay import Display
+import undetected_chromedriver as uc
+# --- START THE INVISIBLE MONITOR ---
+print("Starting virtual display...")
+display = Display(visible=0, size=(1920, 1080))
+display.start()
 
+# --- 1. INITIAL DRIVER TEST ---
+print("Testing Chrome WebDriver...")
+# ... the rest of your code ...
 # --- CONFIGURATION ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
 CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
@@ -23,23 +32,14 @@ SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 2      
 
 def get_chrome_options():
-    # 1. Use the new 'uc' options instead of standard Selenium options
     options = uc.ChromeOptions()
-    options.binary_location = '/usr/bin/chromium-browser' 
+    # DELETE THIS LINE: options.add_argument('--headless=new') 
     
-    # 2. Server Essentials (Notice we use '--headless=new' now)
-    options.add_argument('--headless=new') 
     options.add_argument('--no-sandbox') 
     options.add_argument('--disable-dev-shm-usage') 
-    options.add_argument('--disable-gpu')
-    
-    # 3. Force Desktop & English (To fix the Nulls)
-    options.add_argument('--window-size=1920,1080')
     options.add_argument('--accept-lang=en-US,en')
-    
-    # We completely deleted the User-Agent and Automation flags! 
-    # undetected_chromedriver handles all of that automatically in the background.
-    
+    # Notice we don't even need the window-size argument here anymore, 
+    # because the virtual monitor handles it!
     return options
 
 # DELETE the old `chrome_service = Service(...)` line entirely. 
@@ -176,13 +176,20 @@ for i, url in enumerate(listing_urls, start=1):
         price, mileage, city, seller_type, listing_age = None, None, None, None, None
 
         try:
-            # Wait up to 20 seconds specifically for the Price or the Specs to load
+            # Wait up to 20 seconds specifically for the Price to load
             WebDriverWait(driver, 20).until(
                 EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'EGP')]"))
             )
         except Exception as e:
             print(f"Listing {i} failed to load data in time (Possible bot block).")
             driver.save_screenshot(f"car_error_{i}.png")
+            continue 
+
+        try:
+            price_text = driver.find_element(By.XPATH, "//span[contains(text(),'EGP')]").text
+            price = int(re.sub(r"[^\d]", "", price_text))
+        except: pass
+        # --------------------------------------------
 
         try:
             mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
