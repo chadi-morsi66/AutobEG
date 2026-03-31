@@ -223,6 +223,9 @@ for i, url in enumerate(listing_urls, start=1):
 
     except Exception as e:
         print("Failed:", e)
+    human_delay = random.uniform(5, 12) # Pauses for a random time between 5 and 12 seconds
+    print(f"Sleeping for {human_delay:.1f} seconds to avoid rate limits...")
+    time.sleep(human_delay)
 
 driver.quit()
 end_deep = time.time()
