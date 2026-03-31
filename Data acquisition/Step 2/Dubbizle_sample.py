@@ -12,6 +12,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import undetected_chromedriver as uc
 
 # --- CONFIGURATION ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -22,38 +23,32 @@ SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 2      
 
 def get_chrome_options():
-    options = Options()
+    # 1. Use the new 'uc' options instead of standard Selenium options
+    options = uc.ChromeOptions()
     options.binary_location = '/usr/bin/chromium-browser' 
-    options.add_argument('--headless') 
+    
+    # 2. Server Essentials (Notice we use '--headless=new' now)
+    options.add_argument('--headless=new') 
     options.add_argument('--no-sandbox') 
     options.add_argument('--disable-dev-shm-usage') 
     options.add_argument('--disable-gpu')
     
-    # --- 1. FORCE DESKTOP MODE (Crucial for XPaths) ---
+    # 3. Force Desktop & English (To fix the Nulls)
     options.add_argument('--window-size=1920,1080')
-    
-    # --- 2. FORCE ENGLISH HEADERS (Backs up your /en/ URL) ---
     options.add_argument('--accept-lang=en-US,en')
     
-    # --- 3. STABILIZE THE CONNECTION ---
-    options.add_argument('--remote-debugging-port=0') 
-    options.add_argument('--disable-crash-reporter')
-
-    # --- 4. ANTI-BOT MASKS ---
-    options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36')
-    options.add_argument('--disable-blink-features=AutomationControlled')
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option('useAutomationExtension', False)
+    # We completely deleted the User-Agent and Automation flags! 
+    # undetected_chromedriver handles all of that automatically in the background.
     
     return options
 
-# Create a Service object pointing to the Linux ChromeDriver
-chrome_service = Service('/usr/bin/chromedriver')
+# DELETE the old `chrome_service = Service(...)` line entirely. 
+# undetected_chromedriver handles the executable path directly.
 
 # --- 1. INITIAL DRIVER TEST ---
 print("Testing Chrome WebDriver...")
 try:
-    test_driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
+    test_driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
     test_driver.get("https://www.google.com")
     print(f"Driver Success! Connected to: {test_driver.title}")
     test_driver.quit()
@@ -107,7 +102,7 @@ def extract_specs_dict(driver):
     return specs
 
 # --- 4. SCRAPE LISTING URLS ---
-driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
+driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
 listing_urls = set()
 start_search = time.time()
 for page in range(1, MAX_PAGES + 1):
