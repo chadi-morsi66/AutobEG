@@ -223,9 +223,15 @@ for i, url in enumerate(listing_urls, start=1):
 
     except Exception as e:
         print("Failed:", e)
-    human_delay = random.uniform(5, 12) # Pauses for a random time between 5 and 12 seconds
-    print(f"Sleeping for {human_delay:.1f} seconds to avoid rate limits...")
-    time.sleep(human_delay)
+    wait = random.uniform(8, 18)
+    print(f"Humanizing: Waiting {wait:.1f}s before next car...")
+    time.sleep(wait)
+
+    # 2. Take a 'Coffee Break' every 15 cars
+    if i % 15 == 0:
+        long_wait = random.uniform(60, 120)
+        print(f"Taking a coffee break... Sleeping for {long_wait/60:.1f} minutes...")
+        time.sleep(long_wait)
 
 driver.quit()
 end_deep = time.time()
