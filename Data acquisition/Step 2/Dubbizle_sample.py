@@ -96,15 +96,13 @@ def extract_specs_dict(driver):
         try:
             spans = row.find_elements(By.TAG_NAME, "span")
             if len(spans) >= 2:
-                # 1. Clean the Key: remove extra spaces and make it lowercase
+                # NOTICE THE RIGHT HERE!
                 key = spans.text.strip().lower()
-                # 2. Clean the Value
+                
                 value = spans[-1].text.strip()
                 
                 if key and value:
                     specs[key] = value
-                    # Optional: Print it to the log so you can see what it's finding
-                    # print(f"Found Spec -> {key}: {value}")
         except:
             continue
     return specs
@@ -173,9 +171,19 @@ for i, url in enumerate(listing_urls, start=1):
             continue
 
         active = True
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        time.sleep(3)
-
+        
+        # 1. WAIT FOR THE PAGE TO TRULY LOAD FIRST
+        try:
+            # Wait up to 20 seconds specifically for the Price to load
+            WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'EGP')]"))
+            )
+        except Exception as e:
+            print(f"Listing {i} failed to load data in time (Possible bot block).")
+            driver.save_screenshot(f"car_error_{i}.png")
+            continue 
+            
+        # 2. NOW EXTRACT THE SPECS (Because we know the page is ready!)
         specs = extract_specs_dict(driver)
         brand = specs.get("brand")
         model = specs.get("model")
@@ -187,16 +195,7 @@ for i, url in enumerate(listing_urls, start=1):
 
         price, mileage, city, seller_type, listing_age = None, None, None, None, None
 
-        try:
-            # Wait up to 20 seconds specifically for the Price to load
-            WebDriverWait(driver, 20).until(
-                EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'EGP')]"))
-            )
-        except Exception as e:
-            print(f"Listing {i} failed to load data in time (Possible bot block).")
-            driver.save_screenshot(f"car_error_{i}.png")
-            continue 
-
+        # 3. NOW GRAB THE REST OF THE DATA
         try:
             price_text = driver.find_element(By.XPATH, "//span[contains(text(),'EGP')]").text
             price = int(re.sub(r"[^\d]", "", price_text))
@@ -204,7 +203,7 @@ for i, url in enumerate(listing_urls, start=1):
         # --------------------------------------------
 
         try:
-            mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'Kilometers')]").text
+            mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
             mileage = int(re.sub(r"[^\d]", "", mileage_text))
         except: pass
 
@@ -241,7 +240,7 @@ for i, url in enumerate(listing_urls, start=1):
 
     # 2. Take a 'Coffee Break' every 15 cars
     if i % 15 == 0:
-        long_wait = random.uniform(60, 120)
+        long_wait = random.uniform(10, 20)
         print(f"Taking a coffee break... Sleeping for {long_wait/60:.1f} minutes...")
         time.sleep(long_wait)
 
