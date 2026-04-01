@@ -221,6 +221,7 @@ for i, url in enumerate(listing_urls, start=1):
         body = specs.get("body type")
         engine = specs.get("engine capacity (cc)")
         payment_options = specs.get("payment options")
+        condition = specs.get("condition")
 
         price, mileage, city, seller_type, listing_age = None, None, None, None, None
 
@@ -267,7 +268,7 @@ for i, url in enumerate(listing_urls, start=1):
             "listing_id": listing_id, "listing_url": url, "brand": brand, "model": model,
             "year": year, "fuel_type": fuel, "transmission": transmission, "body_type": body,
             "engine_capacity": engine, "price": price, "mileage": mileage, "city": city,
-            "listing_date": listing_date, "seller_type": seller_type, "payment_options": payment_options, 
+            "listing_date": listing_date, "condition": condition, "seller_type": seller_type, "payment_options": payment_options, 
             "scraped_at": scraped_at, "active": active
         })
         print("Success")
