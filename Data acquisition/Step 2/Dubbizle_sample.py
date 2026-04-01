@@ -90,23 +90,28 @@ def compute_listing_date(scraped_at, text):
 def extract_specs_dict(driver):
     specs = {}
     
-    # NEW XPATH: Finds any <div> that has at least two direct <span> children
-    rows = driver.find_elements(By.XPATH, "//div[count(./span) >= 2]")
+    # Broader XPath: Find any div that contains spans
+    rows = driver.find_elements(By.XPATH, "//div[span]")
     
     for row in rows:
         try:
-            # Grab those side-by-side spans
             spans = row.find_elements(By.TAG_NAME, "span")
             
-            # span is the Key (e.g., "Brand"), span[-1] is the Value (e.g., "Land Rover")
-            key = spans.text.strip().lower()
-            value = spans[-1].text.strip()
-            
-            if key and value:
-                specs[key] = value
-                # print(f"Found Spec -> {key}: {value}") # Uncomment this if you want to watch it work!
-        except:
-            continue
+            # If the div has exactly 2 spans, it's highly likely to be a Spec row!
+            if len(spans) == 2:
+                # TRICK: Use 'textContent' instead of 'text' to grab off-screen data!
+                raw_key = spans.get_attribute("textContent")
+                raw_value = spans[-1].get_attribute("textContent")
+                
+                if raw_key and raw_value:
+                    key = raw_key.strip().lower()
+                    value = raw_value.strip()
+                    
+                    # Ensure the key isn't a massive paragraph
+                    if len(key) < 30 and key != "":
+                        specs[key] = value
+        except Exception as e:
+            pass
             
     return specs
 
@@ -148,7 +153,6 @@ print(f"--- Search Phase 1 Finished in {search_duration/60:.2f} minutes ---")
 print("Total URLs:", len(listing_urls))
 
 # --- 5. SCRAPE INDIVIDUAL CAR DATA ---
-# --- 5. SCRAPE INDIVIDUAL CAR DATA ---
 print(f"Starting deep scrape of {len(listing_urls)} listings...")
 start_deep = time.time()
 step2_data = []
@@ -177,7 +181,6 @@ for i, url in enumerate(listing_urls, start=1):
         active = True
         
         # 1. WAIT FOR THE PAGE TO TRULY LOAD FIRST
-        # 1. WAIT FOR THE PAGE TO TRULY LOAD FIRST
         try:
             # Wait up to 20 seconds specifically for the Price to load
             WebDriverWait(driver, 20).until(
@@ -192,7 +195,7 @@ for i, url in enumerate(listing_urls, start=1):
         driver.execute_script("window.scrollBy(0, 700);") # Scrolls down 700 pixels
         time.sleep(2) # Give Dubizzle 2 seconds to generate the Spec HTML
         # ---------------------------------------------------------------
-        
+
         # 2. NOW EXTRACT THE SPECS 
         specs = extract_specs_dict(driver)
         
@@ -221,7 +224,8 @@ for i, url in enumerate(listing_urls, start=1):
             # Find all chunks of numbers, ignoring commas
             numbers = re.findall(r"\d+", mileage_text.replace(",", ""))
             if numbers:
-                mileage = int(numbers) # <--- ADDED RIGHT HERE
+                # YOU MUST ADD HERE!
+                mileage = int(numbers) 
         except: pass
 
         try:
