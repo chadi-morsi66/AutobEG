@@ -21,8 +21,6 @@ display = Display(visible=0, size=(1920, 1080))
 display.start()
 
 # --- 1. INITIAL DRIVER TEST ---
-print("Testing Chrome WebDriver...")
-# ... the rest of your code ...
 # --- CONFIGURATION ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
 CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
@@ -100,7 +98,7 @@ def extract_specs_dict(driver):
             value = spans[-1].get_attribute("textContent").strip()
             if key and value:
                 specs[key] = value
-                print(f"   -> Found Spec: {key} = {value}")
+                # print(f"   -> Found Spec: {key} = {value}")
     except Exception as e:
         print(f"DEBUG: Details box not found. Error: {e}")
     return specs
@@ -201,7 +199,7 @@ for i, url in enumerate(listing_urls, start=1):
         
         # print(f"RAW DICTIONARY FOUND: {specs}")
         brand = specs.get("brand")
-        print(f"EXTRACTED BRAND: {brand}")
+        # print(f"EXTRACTED BRAND: {brand}")
 
         model = specs.get("model")
         year = specs.get("year")
