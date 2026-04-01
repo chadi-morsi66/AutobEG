@@ -148,6 +148,7 @@ print(f"--- Search Phase 1 Finished in {search_duration/60:.2f} minutes ---")
 print("Total URLs:", len(listing_urls))
 
 # --- 5. SCRAPE INDIVIDUAL CAR DATA ---
+# --- 5. SCRAPE INDIVIDUAL CAR DATA ---
 print(f"Starting deep scrape of {len(listing_urls)} listings...")
 start_deep = time.time()
 step2_data = []
@@ -186,9 +187,15 @@ for i, url in enumerate(listing_urls, start=1):
             driver.save_screenshot(f"car_error_{i}.png")
             continue 
             
-        # 2. NOW EXTRACT THE SPECS (Because we know the page is ready!)
+        # 2. NOW EXTRACT THE SPECS 
         specs = extract_specs_dict(driver)
+        
+        # --- PRINT STATEMENTS MUST GO HERE! ---
+        print(f"RAW DICTIONARY FOUND: {specs}")
         brand = specs.get("brand")
+        print(f"EXTRACTED BRAND: {brand}")
+        # --------------------------------------
+
         model = specs.get("model")
         year = specs.get("year")
         fuel = specs.get("fuel type")
@@ -203,14 +210,13 @@ for i, url in enumerate(listing_urls, start=1):
             price_text = driver.find_element(By.XPATH, "//span[contains(text(),'EGP')]").text
             price = int(re.sub(r"[^\d]", "", price_text))
         except: pass
-        # --------------------------------------------
 
         try:
             mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
             # Find all chunks of numbers, ignoring commas
             numbers = re.findall(r"\d+", mileage_text.replace(",", ""))
             if numbers:
-                mileage = int(numbers) # Grabs the '10000' and ignores the rest
+                mileage = int(numbers) # <--- ADDED RIGHT HERE
         except: pass
 
         try:
@@ -240,6 +246,7 @@ for i, url in enumerate(listing_urls, start=1):
 
     except Exception as e:
         print("Failed:", e)
+        
     wait = random.uniform(8, 15)
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
