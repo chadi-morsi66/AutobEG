@@ -15,6 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import undetected_chromedriver as uc
 from pyvirtualdisplay import Display
 import undetected_chromedriver as uc
+
 # --- START THE INVISIBLE MONITOR ---
 print("Starting virtual display...")
 display = Display(visible=0, size=(1920, 1080))
@@ -190,14 +191,14 @@ for i, url in enumerate(listing_urls, start=1):
             continue 
 
         # --- 🚨 SCROLL TO WAKE UP THE HTML 🚨 ---
-        driver.execute_script("window.scrollBy(0, 1000);") # Scrolls down 1000 pixels
-        time.sleep(2) # Wait 2 seconds for the "Details" box to pop into existence
+        driver.execute_script("window.scrollBy(0, 2000);") # Scrolls down 2000 pixels
+        time.sleep(3) # Wait 2 seconds for the "Details" box to pop into existence
         # ---------------------------------------------------------------
         
         # 2. NOW EXTRACT THE SPECS 
         specs = extract_specs_dict(driver)
         
-        # print(f"RAW DICTIONARY FOUND: {specs}")
+        print(f"RAW DICTIONARY FOUND: {specs}")
         brand = specs.get("brand")
         # print(f"EXTRACTED BRAND: {brand}")
 
@@ -219,12 +220,19 @@ for i, url in enumerate(listing_urls, start=1):
 
         try:
             mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
-            # Find all chunks of numbers, ignoring commas
             numbers = re.findall(r"\d+", mileage_text.replace(",", ""))
             if numbers:
-                # YOU MUST ADD HERE!
-                mileage = int(numbers) 
-        except: pass
+                mileage = int(numbers[0])
+        except:
+            pass
+
+        # Fallback: check if it's in the specs dict
+        if mileage is None:
+            km_val = specs.get("mileage") or specs.get("kilometers") or specs.get("km")
+            if km_val:
+                numbers = re.findall(r"\d+", km_val.replace(",", ""))
+                if numbers:
+                    mileage = int(numbers[0])
 
         try:
             city = driver.find_element(By.XPATH, "//*[@aria-label='Location']").text
