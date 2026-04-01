@@ -88,6 +88,23 @@ def compute_listing_date(scraped_at, text):
 
 def extract_specs_dict(driver):
     specs = {}
+    
+    # 1. Grab "Highlighted Details" (Year, Fuel Type, Transmission, Kilometers, etc.)
+    try:
+        highlighted_box = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Highlighted Details']"))
+        )
+        items = highlighted_box.find_elements(By.XPATH, ".//div[span[2]]")
+        for item in items:
+            spans = item.find_elements(By.TAG_NAME, "span")
+            key = spans[0].get_attribute("textContent").strip().lower()
+            value = spans[-1].get_attribute("textContent").strip()
+            if key and value:
+                specs[key] = value
+    except Exception as e:
+        print(f"DEBUG: Highlighted Details not found. Error: {e}")
+
+    # 2. Grab "Details" (Brand, Model, Body Type, Engine Capacity, etc.)
     try:
         details_box = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Details']"))
@@ -97,11 +114,11 @@ def extract_specs_dict(driver):
             spans = row.find_elements(By.TAG_NAME, "span")
             key = spans[0].get_attribute("textContent").strip().lower()
             value = spans[-1].get_attribute("textContent").strip()
-            if key and value:
+            if key and value and key not in specs:
                 specs[key] = value
-                # print(f"   -> Found Spec: {key} = {value}")
     except Exception as e:
         print(f"DEBUG: Details box not found. Error: {e}")
+    
     return specs
             
 
@@ -198,10 +215,7 @@ for i, url in enumerate(listing_urls, start=1):
         # 2. NOW EXTRACT THE SPECS 
         specs = extract_specs_dict(driver)
         
-        print(f"RAW DICTIONARY FOUND: {specs}")
         brand = specs.get("brand")
-        # print(f"EXTRACTED BRAND: {brand}")
-
         model = specs.get("model")
         year = specs.get("year")
         fuel = specs.get("fuel type")
@@ -212,27 +226,27 @@ for i, url in enumerate(listing_urls, start=1):
 
         price, mileage, city, seller_type, listing_age = None, None, None, None, None
 
+        # Mileage from Highlighted Details
+        km_val = specs.get("kilometers")
+        if km_val:
+            numbers = re.findall(r"\d+", km_val.replace(",", ""))
+            if numbers:
+                mileage = int(numbers[0])
+
         # 3. NOW GRAB THE REST OF THE DATA
         try:
             price_text = driver.find_element(By.XPATH, "//span[contains(text(),'EGP')]").text
             price = int(re.sub(r"[^\d]", "", price_text))
         except: pass
 
-        try:
-            mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
-            numbers = re.findall(r"\d+", mileage_text.replace(",", ""))
-            if numbers:
-                mileage = int(numbers[0])
-        except:
-            pass
-
-        # Fallback: check if it's in the specs dict
+        # Fallback: if mileage wasn't in specs, try XPath
         if mileage is None:
-            km_val = specs.get("mileage") or specs.get("kilometers") or specs.get("km")
-            if km_val:
-                numbers = re.findall(r"\d+", km_val.replace(",", ""))
+            try:
+                mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
+                numbers = re.findall(r"\d+", mileage_text.replace(",", ""))
                 if numbers:
                     mileage = int(numbers[0])
+            except: pass
 
         try:
             city = driver.find_element(By.XPATH, "//*[@aria-label='Location']").text
