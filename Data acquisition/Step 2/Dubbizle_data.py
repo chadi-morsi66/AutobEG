@@ -123,12 +123,13 @@ def extract_specs_dict(driver):
 driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
 listing_urls = set()
 start_search = time.time()
+
 for page in range(1, MAX_PAGES + 1):
     page_url = f"{SEARCH_URL}?page={page}"
     print(f"Scraping page {page}: {page_url}")
-    driver.get(page_url)
     
     try:
+        driver.get(page_url)
         WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
         )
@@ -143,13 +144,33 @@ for page in range(1, MAX_PAGES + 1):
                     listing_urls.add(BASE_URL + href)
             except:
                 pass
+                
     except Exception as e:
-        print(f"Timeout on page {page}. Moving on.")
-        print(f"The page title is actually: {driver.title}") # This will likely say 'Just a moment...'
-        driver.save_screenshot(f"error_page_{page}.png")     # Takes a picture of the block!
-        break # Stops the loop so it doesn't do this 200 times
+        print(f"Timeout on page {page} (Possible bot block). Restarting browser...")
+        driver.save_screenshot(f"error_page_{page}.png")     
+        
+        # --- 🚨 EMERGENCY BROWSER REBOOT FOR PHASE 1 🚨 ---
+        try:
+            driver.quit()
+        except: pass
+        time.sleep(5)
+        driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+        
+        # We changed 'break' to 'continue' so it keeps going to page 19!
+        continue 
+        
     wait_time = random.uniform(7, 11)
     time.sleep(wait_time)
+
+    # --- 🚨 PREVENTATIVE BROWSER FLUSH EVERY 15 PAGES 🚨 ---
+    if page % 15 == 0:
+        print("Phase 1 Anti-Bot Flush: Restarting browser to avoid block...")
+        try:
+            driver.quit()
+        except: pass
+        time.sleep(10) # Quick 10-second rest
+        driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+
 end_search = time.time()
 search_duration = end_search - start_search
 print(f"--- Search Phase 1 Finished in {search_duration/60:.2f} minutes ---")
