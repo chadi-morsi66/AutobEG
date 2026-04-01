@@ -16,6 +16,11 @@ import undetected_chromedriver as uc
 from pyvirtualdisplay import Display
 import undetected_chromedriver as uc
 
+# --- START THE INVISIBLE MONITOR ---
+print("Starting virtual display...")
+display = Display(visible=0, size=(1920, 1080))
+display.start()
+
 # --- CONFIGURATION ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
 CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
@@ -40,7 +45,7 @@ chrome_service = Service('/usr/bin/chromedriver')
 # --- 1. INITIAL DRIVER TEST ---
 print("Testing Chrome WebDriver...")
 try:
-    test_driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
+    test_driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
     test_driver.get("https://www.google.com")
     print(f"Driver Success! Connected to: {test_driver.title}")
     test_driver.quit()
