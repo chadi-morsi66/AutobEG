@@ -29,7 +29,7 @@ CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_li
 output_table = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings_sample.csv"))
 BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
-MAX_PAGES = 2      
+MAX_PAGES = 1      
 
 def get_chrome_options():
     options = uc.ChromeOptions()
@@ -89,14 +89,19 @@ def compute_listing_date(scraped_at, text):
 
 def extract_specs_dict(driver):
     specs = {}
-    rows = driver.find_elements(By.XPATH, "//div[.//span]")
+    # Dubizzle usually wraps specs in a specific container or specific div/span pairs
+    # This targets rows where there are at least two spans (Key and Value)
+    rows = driver.find_elements(By.XPATH, "//div[div/span and div/span]") 
+    
     for row in rows:
         try:
-            spans = row.find_elements(By.XPATH, ".//span")
-            if len(spans) < 2: continue
-            key = spans.text.strip().lower()
-            value = spans[-1].text.strip()
-            if key and value: specs[key] = value
+            spans = row.find_elements(By.TAG_NAME, "span")
+            if len(spans) >= 2:
+                # Use index for the first span (Key) and [-1] for the last (Value)
+                key = spans.text.strip().lower()
+                value = spans[-1].text.strip()
+                if key and value:
+                    specs[key] = value
         except:
             continue
     return specs
@@ -147,6 +152,10 @@ for i, url in enumerate(listing_urls, start=1):
     try:
         driver.get(url)
         time.sleep(2)
+        if i == 1:
+            print("Saving debug_page.html for the first listing...")
+            with open("debug_page.html", "w", encoding="utf-8") as f:
+                f.write(driver.page_source)
         current_url = driver.current_url
 
         # Detect inactive listing
@@ -162,7 +171,7 @@ for i, url in enumerate(listing_urls, start=1):
 
         active = True
         WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        time.sleep(2)
+        time.sleep(3)
 
         specs = extract_specs_dict(driver)
         brand = specs.get("brand")
@@ -223,7 +232,7 @@ for i, url in enumerate(listing_urls, start=1):
 
     except Exception as e:
         print("Failed:", e)
-    wait = random.uniform(8, 18)
+    wait = random.uniform(4, 12)
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
 
