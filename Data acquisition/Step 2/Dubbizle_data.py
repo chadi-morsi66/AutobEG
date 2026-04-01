@@ -12,6 +12,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import undetected_chromedriver as uc
+from pyvirtualdisplay import Display
+import undetected_chromedriver as uc
 
 # --- CONFIGURATION ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -21,24 +24,14 @@ SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 200      
 
 def get_chrome_options():
-    """Sets up Chrome to run invisibly on a server without a screen."""
-    options = Options()
-    options.binary_location = '/usr/bin/chromium-browser' 
-    options.add_argument('--headless') 
+    options = uc.ChromeOptions()
+    # DELETE THIS LINE: options.add_argument('--headless=new') 
+    
     options.add_argument('--no-sandbox') 
     options.add_argument('--disable-dev-shm-usage') 
-    options.add_argument('--disable-gpu')
-    options.add_argument('--disable-blink-features=AutomationControlled')
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option('useAutomationExtension', False)
-    options.add_argument('--remote-debugging-port=0')
-    # --- THE ANTI-BOT MASKS ---
-    # 1. Fake a normal Windows User-Agent so it doesn't say "HeadlessChrome"
-    options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36')
-    
-    # 2. Hide the internal flag that tells websites "I am being controlled by Selenium"
-    options.add_argument('--disable-blink-features=AutomationControlled')
-    
+    options.add_argument('--accept-lang=en-US,en')
+    # Notice we don't even need the window-size argument here anymore, 
+    # because the virtual monitor handles it!
     return options
 
 # Create a Service object pointing to the Linux ChromeDriver
@@ -88,70 +81,74 @@ def compute_listing_date(scraped_at, text):
 
 def extract_specs_dict(driver):
     specs = {}
-    rows = driver.find_elements(By.XPATH, "//div[.//span]")
-    for row in rows:
-        try:
-            spans = row.find_elements(By.XPATH, ".//span")
-            if len(spans) < 2: continue
-            key = spans.text.strip().lower()
-            value = spans[-1].text.strip()
-            if key and value: specs[key] = value
-        except:
-            continue
+    
+    # 1. Grab "Highlighted Details" (Year, Fuel Type, Transmission, Kilometers, etc.)
+    try:
+        highlighted_box = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Highlighted Details']"))
+        )
+        items = highlighted_box.find_elements(By.XPATH, ".//div[span[2]]")
+        for item in items:
+            spans = item.find_elements(By.TAG_NAME, "span")
+            key = spans[0].get_attribute("textContent").strip().lower()
+            value = spans[-1].get_attribute("textContent").strip()
+            if key and value:
+                specs[key] = value
+    except Exception as e:
+        print(f"DEBUG: Highlighted Details not found. Error: {e}")
+
+    # 2. Grab "Details" (Brand, Model, Body Type, Engine Capacity, etc.)
+    try:
+        details_box = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Details']"))
+        )
+        rows = details_box.find_elements(By.XPATH, ".//div[span[2] and not(span[3])]")
+        for row in rows:
+            spans = row.find_elements(By.TAG_NAME, "span")
+            key = spans[0].get_attribute("textContent").strip().lower()
+            value = spans[-1].get_attribute("textContent").strip()
+            if key and value and key not in specs:
+                specs[key] = value
+    except Exception as e:
+        print(f"DEBUG: Details box not found. Error: {e}")
+    
     return specs
 
 # --- 4. SCRAPE LISTING URLS ---
-driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
+driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
 listing_urls = set()
 start_search = time.time()
-
-try: # <--- YOU MUST ADD THIS MASTER TRY BLOCK
-    for page in range(1, MAX_PAGES + 1):
-        if page % 15 == 0:
-            print(f"Clearing RAM: Restarting browser at page {page}...")
-            driver.quit() 
-            driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options()) 
-            time.sleep(2)
-        
-        page_url = f"{SEARCH_URL}?page={page}"
-        print(f"Scraping page {page}: {page_url}")
-        
-        # Now this line is protected by the Master Try Block!
-        driver.get(page_url) 
-        
-        try:
-            WebDriverWait(driver, 40).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
-            )
-            listings = driver.find_elements(By.CSS_SELECTOR, "article")
-            for listing in listings:
-                try:
-                    link_el = listing.find_element(By.XPATH, ".//a[contains(@href,'/ad/')]")
-                    href = link_el.get_attribute("href")
-                    if href.startswith("http"):
-                        listing_urls.add(href)
-                    else:
-                        listing_urls.add(BASE_URL + href)
-                except:
-                    pass
-        except Exception as e:
-            print(f"Timeout on page {page}. Moving on.")
-            print(f"The page title is actually: {driver.title}") 
-            driver.save_screenshot(f"error_page_{page}.png")    
-            break 
-            
-        wait_time = random.uniform(10, 15)
-        time.sleep(wait_time)
-
-except Exception as fatal_e: # <--- CATCH FATAL BROWSER CRASHES HERE
-    print(f"Phase 4 crashed completely: {fatal_e}")
-    print("Moving on to Phase 5 anyway to scrape existing URLs!")
-
+for page in range(1, MAX_PAGES + 1):
+    page_url = f"{SEARCH_URL}?page={page}"
+    print(f"Scraping page {page}: {page_url}")
+    driver.get(page_url)
+    
+    try:
+        WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
+        )
+        listings = driver.find_elements(By.CSS_SELECTOR, "article")
+        for listing in listings:
+            try:
+                link_el = listing.find_element(By.XPATH, ".//a[contains(@href,'/ad/')]")
+                href = link_el.get_attribute("href")
+                if href.startswith("http"):
+                    listing_urls.add(href)
+                else:
+                    listing_urls.add(BASE_URL + href)
+            except:
+                pass
+    except Exception as e:
+        print(f"Timeout on page {page}. Moving on.")
+        print(f"The page title is actually: {driver.title}") # This will likely say 'Just a moment...'
+        driver.save_screenshot(f"error_page_{page}.png")     # Takes a picture of the block!
+        break # Stops the loop so it doesn't do this 200 times
+    wait_time = random.uniform(10, 20)
+    time.sleep(wait_time)
 end_search = time.time()
 search_duration = end_search - start_search
 print(f"--- Search Phase 1 Finished in {search_duration/60:.2f} minutes ---")
 
-print("New URLs collected:", len(listing_urls))
 listing_urls = list(set(active_list) | set(listing_urls))
 print("Total URLs:", len(listing_urls))
 
@@ -159,24 +156,15 @@ print("Total URLs:", len(listing_urls))
 print(f"Starting deep scrape of {len(listing_urls)} listings...")
 start_deep = time.time()
 step2_data = []
-
-# (You should probably open a fresh browser here just in case Phase 4 left it bloated)
-driver.quit()
-driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
-
 for i, url in enumerate(listing_urls, start=1):
-    # --- ADD THIS RAM CLEARING BLOCK ---
-    if i % 100 == 0:
-        print(f"Clearing RAM: Restarting browser at listing {i}...")
-        driver.quit()
-        driver = webdriver.Chrome(service=chrome_service, options=get_chrome_options())
-        time.sleep(2)
-    # -----------------------------------
-
     print(f"Scraping listing {i}/{len(listing_urls)}")
     try:
         driver.get(url)
         time.sleep(2)
+        if i == 1:
+            print("Saving debug_page.html for the first listing...")
+            with open("debug_page.html", "w", encoding="utf-8") as f:
+                f.write(driver.page_source)
         current_url = driver.current_url
 
         # Detect inactive listing
@@ -185,16 +173,41 @@ for i, url in enumerate(listing_urls, start=1):
             step2_data.append({
                 "listing_id": listing_id, "listing_url": url, "price": None,
                 "mileage": None, "city": None, "listing_date": None,
-                "seller_type": None, "scraped_at": datetime.now(timezone.utc), "active": False
+                "seller_type": None, "payment_options":None, "scraped_at": datetime.now(timezone.utc), "active": False
             })
             print("Listing inactive")
             continue
 
         active = True
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        time.sleep(2)
+        
+        # 1. WAIT FOR THE PAGE TO TRULY LOAD FIRST
+        try:
+            # Wait up to 20 seconds specifically for the Price to load
+            WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'EGP')]"))
+            )
+        except Exception as e:
+            print(f"Listing {i} failed to load (Possible bot block). Restarting browser...")
+            driver.save_screenshot(f"car_error_{i}.png")
+            
+            # --- EMERGENCY BROWSER REBOOT ---
+            try:
+                driver.quit()
+            except: pass
+            time.sleep(5)
+            driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+            # --------------------------------
+            
+            continue 
 
+        # --- 🚨 SCROLL TO WAKE UP THE HTML 🚨 ---
+        driver.execute_script("window.scrollBy(0, 2000);") # Scrolls down 2000 pixels
+        time.sleep(3) # Wait 2 seconds for the "Details" box to pop into existence
+        # ---------------------------------------------------------------
+        
+        # 2. NOW EXTRACT THE SPECS 
         specs = extract_specs_dict(driver)
+        
         brand = specs.get("brand")
         model = specs.get("model")
         year = specs.get("year")
@@ -202,18 +215,31 @@ for i, url in enumerate(listing_urls, start=1):
         transmission = specs.get("transmission type")
         body = specs.get("body type")
         engine = specs.get("engine capacity (cc)")
+        payment_options = specs.get("payment options")
 
         price, mileage, city, seller_type, listing_age = None, None, None, None, None
 
+        # Mileage from Highlighted Details
+        km_val = specs.get("kilometers")
+        if km_val:
+            numbers = re.findall(r"\d+", km_val.replace(",", ""))
+            if numbers:
+                mileage = int(numbers[0])
+
+        # 3. NOW GRAB THE REST OF THE DATA
         try:
             price_text = driver.find_element(By.XPATH, "//span[contains(text(),'EGP')]").text
             price = int(re.sub(r"[^\d]", "", price_text))
         except: pass
 
-        try:
-            mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
-            mileage = int(re.sub(r"[^\d]", "", mileage_text))
-        except: pass
+        # Fallback: if mileage wasn't in specs, try XPath
+        if mileage is None:
+            try:
+                mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
+                numbers = re.findall(r"\d+", mileage_text.replace(",", ""))
+                if numbers:
+                    mileage = int(numbers[0])
+            except: pass
 
         try:
             city = driver.find_element(By.XPATH, "//*[@aria-label='Location']").text
@@ -236,12 +262,33 @@ for i, url in enumerate(listing_urls, start=1):
             "listing_id": listing_id, "listing_url": url, "brand": brand, "model": model,
             "year": year, "fuel_type": fuel, "transmission": transmission, "body_type": body,
             "engine_capacity": engine, "price": price, "mileage": mileage, "city": city,
-            "listing_date": listing_date, "seller_type": seller_type, "scraped_at": scraped_at, "active": active
+            "listing_date": listing_date, "seller_type": seller_type, "payment_options": payment_options, 
+            "scraped_at": scraped_at, "active": active
         })
         print("Success")
 
     except Exception as e:
         print("Failed:", e)
+        
+    wait = random.uniform(8, 15)
+    print(f"Humanizing: Waiting {wait:.1f}s before next car...")
+    time.sleep(wait)
+
+# 2. Take a 'Coffee Break' and FLUSH THE BROWSER every 15 cars
+    if i % 15 == 0:
+        long_wait = random.uniform(30, 60)
+        print(f"Anti-Bot Flush: Closing browser and resting for {long_wait:.1f} seconds...")
+        
+        # 1. Kill the current "flagged" browser
+        try:
+            driver.quit()
+        except: pass
+        
+        time.sleep(long_wait)
+        
+        # 2. Open a brand new, clean browser for the next batch!
+        print("Starting a fresh browser session...")
+        driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
 
 driver.quit()
 end_deep = time.time()
