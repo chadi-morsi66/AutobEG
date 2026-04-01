@@ -177,6 +177,7 @@ for i, url in enumerate(listing_urls, start=1):
         active = True
         
         # 1. WAIT FOR THE PAGE TO TRULY LOAD FIRST
+        # 1. WAIT FOR THE PAGE TO TRULY LOAD FIRST
         try:
             # Wait up to 20 seconds specifically for the Price to load
             WebDriverWait(driver, 20).until(
@@ -186,11 +187,15 @@ for i, url in enumerate(listing_urls, start=1):
             print(f"Listing {i} failed to load data in time (Possible bot block).")
             driver.save_screenshot(f"car_error_{i}.png")
             continue 
-            
+
+        # --- 🚨 THE FIX FOR THE NULLS: SCROLL TO WAKE UP THE HTML 🚨 ---
+        driver.execute_script("window.scrollBy(0, 700);") # Scrolls down 700 pixels
+        time.sleep(2) # Give Dubizzle 2 seconds to generate the Spec HTML
+        # ---------------------------------------------------------------
+        
         # 2. NOW EXTRACT THE SPECS 
         specs = extract_specs_dict(driver)
         
-        # --- PRINT STATEMENTS MUST GO HERE! ---
         print(f"RAW DICTIONARY FOUND: {specs}")
         brand = specs.get("brand")
         print(f"EXTRACTED BRAND: {brand}")
