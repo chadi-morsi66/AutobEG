@@ -164,7 +164,7 @@ for i, url in enumerate(listing_urls, start=1):
             step2_data.append({
                 "listing_id": listing_id, "listing_url": url, "price": None,
                 "mileage": None, "city": None, "listing_date": None,
-                "seller_type": None, "scraped_at": datetime.now(timezone.utc), "active": False
+                "seller_type": None, "payment_options":None, "scraped_at": datetime.now(timezone.utc), "active": False
             })
             print("Listing inactive")
             continue
@@ -178,7 +178,17 @@ for i, url in enumerate(listing_urls, start=1):
                 EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'EGP')]"))
             )
         except Exception as e:
-            print(f"Listing {i} failed to load data in time (Possible bot block).")
+            print(f"Listing {i} failed to load (Possible bot block). Restarting browser...")
+            driver.save_screenshot(f"car_error_{i}.png")
+            
+            # --- EMERGENCY BROWSER REBOOT ---
+            try:
+                driver.quit()
+            except: pass
+            time.sleep(5)
+            driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+            # --------------------------------
+            
             continue 
 
         # --- 🚨 SCROLL TO WAKE UP THE HTML 🚨 ---
@@ -189,7 +199,7 @@ for i, url in enumerate(listing_urls, start=1):
         # 2. NOW EXTRACT THE SPECS 
         specs = extract_specs_dict(driver)
         
-        print(f"RAW DICTIONARY FOUND: {specs}")
+        # print(f"RAW DICTIONARY FOUND: {specs}")
         brand = specs.get("brand")
         print(f"EXTRACTED BRAND: {brand}")
 
@@ -199,6 +209,7 @@ for i, url in enumerate(listing_urls, start=1):
         transmission = specs.get("transmission type")
         body = specs.get("body type")
         engine = specs.get("engine capacity (cc)")
+        payment_options = specs.get("payment options")
 
         price, mileage, city, seller_type, listing_age = None, None, None, None, None
 
@@ -238,7 +249,8 @@ for i, url in enumerate(listing_urls, start=1):
             "listing_id": listing_id, "listing_url": url, "brand": brand, "model": model,
             "year": year, "fuel_type": fuel, "transmission": transmission, "body_type": body,
             "engine_capacity": engine, "price": price, "mileage": mileage, "city": city,
-            "listing_date": listing_date, "seller_type": seller_type, "scraped_at": scraped_at, "active": active
+            "listing_date": listing_date, "seller_type": seller_type, "payment_options": payment_options, 
+            "scraped_at": scraped_at, "active": active
         })
         print("Success")
 
@@ -249,11 +261,21 @@ for i, url in enumerate(listing_urls, start=1):
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
 
-    # 2. Take a 'Coffee Break' every 15 cars
+# 2. Take a 'Coffee Break' and FLUSH THE BROWSER every 15 cars
     if i % 15 == 0:
-        long_wait = random.uniform(30, 40)
-        print(f"Taking a coffee break... Sleeping for {long_wait/60:.1f} minutes...")
+        long_wait = random.uniform(30, 60)
+        print(f"Anti-Bot Flush: Closing browser and resting for {long_wait:.1f} seconds...")
+        
+        # 1. Kill the current "flagged" browser
+        try:
+            driver.quit()
+        except: pass
+        
         time.sleep(long_wait)
+        
+        # 2. Open a brand new, clean browser for the next batch!
+        print("Starting a fresh browser session...")
+        driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
 
 driver.quit()
 end_deep = time.time()
