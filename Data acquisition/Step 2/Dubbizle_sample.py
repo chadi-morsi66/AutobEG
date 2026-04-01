@@ -89,19 +89,22 @@ def compute_listing_date(scraped_at, text):
 
 def extract_specs_dict(driver):
     specs = {}
-    # Dubizzle usually wraps specs in a specific container or specific div/span pairs
-    # This targets rows where there are at least two spans (Key and Value)
-    rows = driver.find_elements(By.XPATH, "//div[div/span and div/span]") 
+    # Target the rows that contain the car details
+    rows = driver.find_elements(By.XPATH, "//div[div/span and div/span]")
     
     for row in rows:
         try:
             spans = row.find_elements(By.TAG_NAME, "span")
             if len(spans) >= 2:
-                # Use index for the first span (Key) and [-1] for the last (Value)
+                # 1. Clean the Key: remove extra spaces and make it lowercase
                 key = spans.text.strip().lower()
+                # 2. Clean the Value
                 value = spans[-1].text.strip()
+                
                 if key and value:
                     specs[key] = value
+                    # Optional: Print it to the log so you can see what it's finding
+                    # print(f"Found Spec -> {key}: {value}")
         except:
             continue
     return specs
@@ -201,7 +204,7 @@ for i, url in enumerate(listing_urls, start=1):
         # --------------------------------------------
 
         try:
-            mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
+            mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'Kilometers')]").text
             mileage = int(re.sub(r"[^\d]", "", mileage_text))
         except: pass
 
