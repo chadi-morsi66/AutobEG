@@ -240,13 +240,13 @@ for i, url in enumerate(listing_urls, start=1):
 
     except Exception as e:
         print("Failed:", e)
-    wait = random.uniform(4, 12)
+    wait = random.uniform(8, 15)
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
 
     # 2. Take a 'Coffee Break' every 15 cars
     if i % 15 == 0:
-        long_wait = random.uniform(15, 30)
+        long_wait = random.uniform(30, 40)
         print(f"Taking a coffee break... Sleeping for {long_wait/60:.1f} minutes...")
         time.sleep(long_wait)
 
