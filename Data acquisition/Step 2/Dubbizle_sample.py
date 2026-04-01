@@ -90,30 +90,31 @@ def compute_listing_date(scraped_at, text):
 def extract_specs_dict(driver):
     specs = {}
     
-    # Broader XPath: Find any div that contains spans
-    rows = driver.find_elements(By.XPATH, "//div[span]")
-    
-    for row in rows:
-        try:
+    try:
+        # Wait up to 5 seconds for the "Details" box from your screenshot to physically appear
+        details_box = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Details']"))
+        )
+        
+        # Find every small container inside it that holds exactly 2 spans
+        rows = details_box.find_elements(By.XPATH, ".//div[count(./span) == 2]")
+        
+        for row in rows:
             spans = row.find_elements(By.TAG_NAME, "span")
             
-            # If the div has exactly 2 spans, it's highly likely to be a Spec row!
-            if len(spans) == 2:
-                # TRICK: Use 'textContent' instead of 'text' to grab off-screen data!
-                raw_key = spans.get_attribute("textContent")
-                raw_value = spans[-1].get_attribute("textContent")
-                
-                if raw_key and raw_value:
-                    key = raw_key.strip().lower()
-                    value = raw_value.strip()
-                    
-                    # Ensure the key isn't a massive paragraph
-                    if len(key) < 30 and key != "":
-                        specs[key] = value
-        except Exception as e:
-            pass
+            # Use textContent to bypass the "invisible text" rule
+            key = spans.get_attribute("textContent").strip().lower()
+            value = spans[-1].get_attribute("textContent").strip()
             
+            if key and value:
+                specs[key] = value
+                print(f"   -> Found Spec: {key} = {value}") # Watch it print in real-time!
+                
+    except Exception as e:
+        print(f"DEBUG: Details box not found. Error: {e}")
+        
     return specs
+            
 
 # --- 4. SCRAPE LISTING URLS ---
 driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
@@ -188,21 +189,19 @@ for i, url in enumerate(listing_urls, start=1):
             )
         except Exception as e:
             print(f"Listing {i} failed to load data in time (Possible bot block).")
-            driver.save_screenshot(f"car_error_{i}.png")
             continue 
 
-        # --- 🚨 THE FIX FOR THE NULLS: SCROLL TO WAKE UP THE HTML 🚨 ---
-        driver.execute_script("window.scrollBy(0, 700);") # Scrolls down 700 pixels
-        time.sleep(2) # Give Dubizzle 2 seconds to generate the Spec HTML
+        # --- 🚨 SCROLL TO WAKE UP THE HTML 🚨 ---
+        driver.execute_script("window.scrollBy(0, 1000);") # Scrolls down 1000 pixels
+        time.sleep(2) # Wait 2 seconds for the "Details" box to pop into existence
         # ---------------------------------------------------------------
-
+        
         # 2. NOW EXTRACT THE SPECS 
         specs = extract_specs_dict(driver)
         
         print(f"RAW DICTIONARY FOUND: {specs}")
         brand = specs.get("brand")
         print(f"EXTRACTED BRAND: {brand}")
-        # --------------------------------------
 
         model = specs.get("model")
         year = specs.get("year")
