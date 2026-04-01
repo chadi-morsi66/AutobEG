@@ -89,22 +89,25 @@ def compute_listing_date(scraped_at, text):
 
 def extract_specs_dict(driver):
     specs = {}
-    # Target the rows that contain the car details
-    rows = driver.find_elements(By.XPATH, "//div[div/span and div/span]")
+    
+    # NEW XPATH: Finds any <div> that has at least two direct <span> children
+    rows = driver.find_elements(By.XPATH, "//div[count(./span) >= 2]")
     
     for row in rows:
         try:
+            # Grab those side-by-side spans
             spans = row.find_elements(By.TAG_NAME, "span")
-            if len(spans) >= 2:
-                # NOTICE THE RIGHT HERE!
-                key = spans.text.strip().lower()
-                
-                value = spans[-1].text.strip()
-                
-                if key and value:
-                    specs[key] = value
+            
+            # span is the Key (e.g., "Brand"), span[-1] is the Value (e.g., "Land Rover")
+            key = spans.text.strip().lower()
+            value = spans[-1].text.strip()
+            
+            if key and value:
+                specs[key] = value
+                # print(f"Found Spec -> {key}: {value}") # Uncomment this if you want to watch it work!
         except:
             continue
+            
     return specs
 
 # --- 4. SCRAPE LISTING URLS ---
@@ -204,7 +207,10 @@ for i, url in enumerate(listing_urls, start=1):
 
         try:
             mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
-            mileage = int(re.sub(r"[^\d]", "", mileage_text))
+            # Find all chunks of numbers, ignoring commas
+            numbers = re.findall(r"\d+", mileage_text.replace(",", ""))
+            if numbers:
+                mileage = int(numbers) # Grabs the '10000' and ignores the rest
         except: pass
 
         try:
@@ -240,7 +246,7 @@ for i, url in enumerate(listing_urls, start=1):
 
     # 2. Take a 'Coffee Break' every 15 cars
     if i % 15 == 0:
-        long_wait = random.uniform(10, 20)
+        long_wait = random.uniform(15, 30)
         print(f"Taking a coffee break... Sleeping for {long_wait/60:.1f} minutes...")
         time.sleep(long_wait)
 
