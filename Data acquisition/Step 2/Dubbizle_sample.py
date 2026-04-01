@@ -89,30 +89,20 @@ def compute_listing_date(scraped_at, text):
 
 def extract_specs_dict(driver):
     specs = {}
-    
     try:
-        # Wait up to 5 seconds for the "Details" box from your screenshot to physically appear
         details_box = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Details']"))
         )
-        
-        # Find every small container inside it that holds exactly 2 spans
-        rows = details_box.find_elements(By.XPATH, ".//div[count(./span) == 2]")
-        
+        rows = details_box.find_elements(By.XPATH, ".//div[span[2] and not(span[3])]")
         for row in rows:
             spans = row.find_elements(By.TAG_NAME, "span")
-            
-            # Use textContent to bypass the "invisible text" rule
-            key = spans.get_attribute("textContent").strip().lower()
+            key = spans[0].get_attribute("textContent").strip().lower()
             value = spans[-1].get_attribute("textContent").strip()
-            
             if key and value:
                 specs[key] = value
-                print(f"   -> Found Spec: {key} = {value}") # Watch it print in real-time!
-                
+                print(f"   -> Found Spec: {key} = {value}")
     except Exception as e:
         print(f"DEBUG: Details box not found. Error: {e}")
-        
     return specs
             
 
