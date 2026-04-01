@@ -153,17 +153,17 @@ for page in range(1, MAX_PAGES + 1):
         try:
             driver.quit()
         except: pass
-        time.sleep(5)
+        time.sleep(4)
         driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
         
         # We changed 'break' to 'continue' so it keeps going to page 19!
         continue 
         
-    wait_time = random.uniform(7, 11)
+    wait_time = random.uniform(4, 8)
     time.sleep(wait_time)
 
     # --- 🚨 PREVENTATIVE BROWSER FLUSH EVERY 15 PAGES 🚨 ---
-    if page % 15 == 0:
+    if page % 5 == 0:
         print("Phase 1 Anti-Bot Flush: Restarting browser to avoid block...")
         try:
             driver.quit()
