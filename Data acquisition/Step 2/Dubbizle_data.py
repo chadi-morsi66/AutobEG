@@ -307,7 +307,24 @@ for i, url in enumerate(listing_urls, start=1):
         print("Success")
 
     except Exception as e:
-        print("Failed:", e)
+        error_msg = str(e)
+        print(f"Failed: {error_msg}")
+        
+        # --- 🚨 DETECT A DEAD BROWSER CRASH 🚨 ---
+        if "HTTPConnectionPool" in error_msg or "not reachable" in error_msg or "refused" in error_msg:
+            print("🚨 Browser crashed unexpectedly! Forcing emergency reboot...")
+            try:
+                driver.quit()
+            except: pass
+            
+            # Wipe the server RAM instantly
+            os.system("pkill -f chrome")
+            os.system("pkill -f chromedriver")
+            time.sleep(10)
+            
+            print("Rebooting browser...")
+            driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+        # ----------------------------------------
         
     wait = random.uniform(8, 15)
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
@@ -318,16 +335,26 @@ for i, url in enumerate(listing_urls, start=1):
         long_wait = random.uniform(30, 60)
         print(f"Anti-Bot Flush: Closing browser and resting for {long_wait:.1f} seconds...")
         
-        # 1. Kill the current "flagged" browser
         try:
             driver.quit()
         except: pass
         
+        # --- 🚨 THE AUTO-ASSASSIN 🚨 ---
+        # Tells the Linux server to wipe all Chrome memory automatically!
+        os.system("pkill -f chrome")
+        os.system("pkill -f chromedriver")
+        # -------------------------------
+        
         time.sleep(long_wait)
         
-        # 2. Open a brand new, clean browser for the next batch!
         print("Starting a fresh browser session...")
-        driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+        try:
+            driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+        except Exception as e:
+            print(f"Critical RAM Error: {e}. Wiping memory again and waiting 60s...")
+            os.system("pkill -f chrome")
+            time.sleep(60)
+            driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
 
 driver.quit()
 end_deep = time.time()
