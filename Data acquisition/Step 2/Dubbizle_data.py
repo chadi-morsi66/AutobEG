@@ -60,7 +60,8 @@ active_list = []
 if os.path.exists(CSV_FILE_PATH):
     try:
         df = pd.read_csv(CSV_FILE_PATH)
-        active_list = list(df.listing_url)
+        # THE FIX: .dropna() removes the invisible blank rows!
+        active_list = df['listing_url'].dropna().tolist()
         print(f"Loaded {len(active_list)} existing URLs from CSV.")
     except Exception as e:
         print(f"Warning: Could not read CSV. Starting fresh. Error: {e}")
@@ -130,6 +131,16 @@ for page in range(1, MAX_PAGES + 1):
     
     try:
         driver.get(page_url)
+    except Exception as e:
+        print(f"Session dead on page {page}. Restarting browser...")
+        try:
+            driver.quit()
+        except: pass
+        time.sleep(5)
+        driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+        continue
+
+    try:
         WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
         )
@@ -163,12 +174,12 @@ for page in range(1, MAX_PAGES + 1):
     time.sleep(wait_time)
 
     # --- 🚨 PREVENTATIVE BROWSER FLUSH EVERY 15 PAGES 🚨 ---
-    if page % 5 == 0:
+    if page % 10 == 0:
         print("Phase 1 Anti-Bot Flush: Restarting browser to avoid block...")
         try:
             driver.quit()
         except: pass
-        time.sleep(10) # Quick 10-second rest
+        time.sleep(8) # Quick 10-second rest
         driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
 
 end_search = time.time()
