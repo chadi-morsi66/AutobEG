@@ -170,7 +170,7 @@ for page in range(1, MAX_PAGES + 1):
         # We changed 'break' to 'continue' so it keeps going to page 19!
         continue 
         
-    wait_time = random.uniform(4, 8)
+    wait_time = random.uniform(5, 12)
     time.sleep(wait_time)
 
     # --- 🚨 PREVENTATIVE BROWSER FLUSH EVERY 15 PAGES 🚨 ---
@@ -179,7 +179,8 @@ for page in range(1, MAX_PAGES + 1):
         try:
             driver.quit()
         except: pass
-        time.sleep(8) # Quick 10-second rest
+        wait_time2 = random.uniform(10, 20)
+        time.sleep(wait_time2) # Quick 10-second rest
         driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
 
 end_search = time.time()
