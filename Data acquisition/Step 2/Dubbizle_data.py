@@ -144,6 +144,8 @@ def cleanup_chrome():
     """Force kill all chrome/chromedriver processes and free memory."""
     os.system("pkill -9 -f chrome")
     os.system("pkill -9 -f chromedriver")
+    os.system("rm -rf /tmp/.com.google.Chrome.*")
+    os.system("rm -rf /tmp/.org.chromium.Chromium.*")
     time.sleep(3)
 
 def start_browser():
