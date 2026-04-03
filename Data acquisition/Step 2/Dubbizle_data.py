@@ -27,10 +27,15 @@ TODAY = datetime.now().strftime("%Y-%m-%d")
 CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
 URLS_FILE = os.path.abspath(os.path.join(script_dir, "..", "Data", "all_listing_urls.json"))
 PROGRESS_FILE = os.path.abspath(os.path.join(script_dir, "..", "Data", "scrape_progress.json"))
+# Phase 1 uses a separate partial URLs file to accumulate URLs across restarts
+PARTIAL_URLS_FILE = os.path.abspath(os.path.join(script_dir, "..", "Data", "partial_listing_urls.json"))
+PHASE1_PAGE_FILE = os.path.abspath(os.path.join(script_dir, "..", "Data", "phase1_page.json"))
+
 BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 200
-BATCH_SIZE = 150
+PHASE1_BATCH_PAGES = 50   # Restart script every 50 search pages in Phase 1
+BATCH_SIZE = 100           # Phase 2: scrape 100 listings per batch
 
 # --- CHECK IF THIS IS A NEW DAY ---
 def is_file_from_today(filepath):
@@ -41,17 +46,11 @@ def is_file_from_today(filepath):
     return file_date == TODAY
 
 # If progress/url files exist but are from a previous day, delete them to start fresh
-if os.path.exists(PROGRESS_FILE) and not is_file_from_today(PROGRESS_FILE):
-    print(f"Found stale progress file from a previous day. Starting fresh for {TODAY}.")
-    os.remove(PROGRESS_FILE)
-    if os.path.exists(URLS_FILE):
-        os.remove(URLS_FILE)
-
-if os.path.exists(URLS_FILE) and not is_file_from_today(URLS_FILE):
-    print(f"Found stale URL file from a previous day. Starting fresh for {TODAY}.")
-    os.remove(URLS_FILE)
-    if os.path.exists(PROGRESS_FILE):
-        os.remove(PROGRESS_FILE)
+stale_files = [PROGRESS_FILE, URLS_FILE, PARTIAL_URLS_FILE, PHASE1_PAGE_FILE]
+for f in stale_files:
+    if os.path.exists(f) and not is_file_from_today(f):
+        print(f"Found stale file from a previous day: {f}. Removing.")
+        os.remove(f)
 
 def get_chrome_options():
     options = uc.ChromeOptions()
@@ -114,13 +113,11 @@ def extract_specs_dict(driver):
     return specs
 
 def save_progress(batch_start):
-    """Save current batch position so the script knows where to resume."""
     with open(PROGRESS_FILE, "w") as f:
         json.dump({"batch_start": batch_start}, f)
     print(f"Progress saved: next batch starts at index {batch_start}")
 
 def load_progress():
-    """Load the last saved batch position."""
     if os.path.exists(PROGRESS_FILE):
         with open(PROGRESS_FILE, "r") as f:
             data = json.load(f)
@@ -128,39 +125,77 @@ def load_progress():
     return 0
 
 def save_urls(urls):
-    """Save the master URL list to disk."""
     with open(URLS_FILE, "w") as f:
         json.dump(urls, f)
     print(f"Saved {len(urls)} URLs to {URLS_FILE}")
 
 def load_urls():
-    """Load the master URL list from disk."""
     if os.path.exists(URLS_FILE):
         with open(URLS_FILE, "r") as f:
             return json.load(f)
     return None
 
+def save_partial_urls(urls_set):
+    """Save partially collected URLs during Phase 1 (accumulates across restarts)."""
+    existing = set()
+    if os.path.exists(PARTIAL_URLS_FILE):
+        with open(PARTIAL_URLS_FILE, "r") as f:
+            existing = set(json.load(f))
+    combined = list(existing | urls_set)
+    with open(PARTIAL_URLS_FILE, "w") as f:
+        json.dump(combined, f)
+    print(f"Saved {len(combined)} partial URLs ({len(urls_set)} new this batch)")
+
+def load_partial_urls():
+    if os.path.exists(PARTIAL_URLS_FILE):
+        with open(PARTIAL_URLS_FILE, "r") as f:
+            return set(json.load(f))
+    return set()
+
+def save_phase1_page(page):
+    with open(PHASE1_PAGE_FILE, "w") as f:
+        json.dump({"next_page": page}, f)
+
+def load_phase1_page():
+    if os.path.exists(PHASE1_PAGE_FILE):
+        with open(PHASE1_PAGE_FILE, "r") as f:
+            return json.load(f).get("next_page", 1)
+    return 1
+
 def cleanup_chrome():
     """Force kill all chrome/chromedriver processes and free memory."""
     os.system("pkill -9 -f chrome")
     os.system("pkill -9 -f chromedriver")
+    
+    # Nuke all corrupted Chrome lock files and leftover temp directories
     os.system("rm -rf /tmp/.com.google.Chrome.*")
     os.system("rm -rf /tmp/.org.chromium.Chromium.*")
-    os.system("sync; echo 3 > /proc/sys/vm/drop_caches")  # Force OS to free cached RAM
-    time.sleep(5)  # Give OS more time to reclaim (was 3)
+    os.system("rm -rf /tmp/scoped_dir*")
+    os.system("rm -rf /tmp/chrome_crashpad*")
+    time.sleep(5)
 
 def start_browser():
     """Start a fresh browser with retry logic."""
     for attempt in range(3):
         try:
+            cleanup_chrome()  # Always clean BEFORE trying to start
             driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
             return driver
         except Exception as e:
             print(f"Browser start attempt {attempt+1}/3 failed: {e}")
             cleanup_chrome()
-            time.sleep(30 * (attempt + 1))
+            time.sleep(60 * (attempt + 1))  # 60s, 120s, 180s
     print("FATAL: Could not start browser after 3 attempts.")
     sys.exit(1)
+
+def restart_script():
+    """Fully restart this script to free all memory."""
+    cleanup_chrome()
+    time.sleep(30)
+    python_executable = sys.executable
+    script_path = os.path.abspath(__file__)
+    print(f"Restarting: {python_executable} {script_path}")
+    os.execv(python_executable, [python_executable, script_path])
 
 def save_batch_data(step2_data):
     """Process and append a batch of scraped data to the CSV, deduplicating by listing_id."""
@@ -173,9 +208,7 @@ def save_batch_data(step2_data):
     print("Null counts per column:")
     print(df_step2.isnull().sum())
 
-    # Add a scrape_date column so you can filter/track by day
     df_step2["scrape_date"] = TODAY
-
     df_step2["year"] = df_step2["year"].astype('Int64')
 
     cols = ["brand", "model", "year", "fuel_type", "transmission", "body_type", "engine_capacity"]
@@ -190,14 +223,11 @@ def save_batch_data(step2_data):
 
     df_step2.loc[df_step2["mileage"].isna() & df_step2["seller_type"].isna(), "active"] = False
 
-    # Dedup: if CSV exists, remove old rows for the same listing_id before appending
     if os.path.isfile(CSV_FILE_PATH):
         try:
             df_existing = pd.read_csv(CSV_FILE_PATH)
             new_ids = set(df_step2["listing_id"].astype(str).tolist())
-            # Keep rows from existing CSV that are NOT in this new batch
             df_existing = df_existing[~df_existing["listing_id"].astype(str).isin(new_ids)]
-            # Write the cleaned existing data + new batch
             df_combined = pd.concat([df_existing, df_step2.reset_index()], ignore_index=True)
             df_combined.to_csv(CSV_FILE_PATH, index=False)
             print(f"Updated CSV: {len(df_combined)} total rows ({len(df_step2)} new/updated)")
@@ -210,105 +240,130 @@ def save_batch_data(step2_data):
 
 
 # ===================================================================
-# PHASE 1: COLLECT ALL LISTING URLS (only runs if no URL file exists)
+# PHASE 1: COLLECT LISTING URLS (in batches of 50 pages, with restarts)
 # ===================================================================
 listing_urls = load_urls()
 
-# Load existing URLs from CSV if any
-active_list = []
-if os.path.exists(CSV_FILE_PATH):
-    try:
-        df = pd.read_csv(CSV_FILE_PATH)
-        
-        # --- 🚨 THE UPGRADED SNOWBALL FIX 🚨 ---
-        if 'active' in df.columns:
-            # 1. Group the duplicates and KEEP ONLY THE LAST (Newest) ROW for each car
-            latest_status = df.drop_duplicates(subset='listing_url', keep='last')
-            
-            # 2. Check if that newest row is still active
-            latest_status = latest_status[latest_status['active'] == True]
-            
-            # 3. Grab those URLs!
-            active_list = latest_status['listing_url'].dropna().tolist()
-        else:
-            active_list = df['listing_url'].dropna().tolist()
-        # ---------------------------------------
-        
-        print(f"Loaded {len(active_list)} ACTIVE URLs from CSV to re-check today.")
-    except Exception as e:
-        print(f"Warning: Could not read CSV. Starting fresh. Error: {e}")
+if listing_urls is None:
+    # Check where Phase 1 left off
+    start_page = load_phase1_page()
 
-    driver = start_browser()
-    listing_urls_set = set()
-    start_search = time.time()
+    if start_page > MAX_PAGES:
+        # Phase 1 page scraping is done — finalize the URL list
+        print("=" * 60)
+        print("PHASE 1 COMPLETE: Finalizing URL list...")
+        print("=" * 60)
 
-    for page in range(1, MAX_PAGES + 1):
-        page_url = f"{SEARCH_URL}?page={page}"
-        print(f"Scraping page {page}: {page_url}")
+        listing_urls_set = load_partial_urls()
 
-        try:
-            driver.get(page_url)
-        except Exception as e:
-            print(f"Session dead on page {page}. Restarting browser...")
-            try: driver.quit()
-            except: pass
-            cleanup_chrome()
-            time.sleep(5)
-            driver = start_browser()
-            continue
+        # Load existing active URLs from CSV
+        active_list = []
+        if os.path.exists(CSV_FILE_PATH):
+            try:
+                df = pd.read_csv(CSV_FILE_PATH)
+                if 'active' in df.columns:
+                    latest_status = df.drop_duplicates(subset='listing_url', keep='last')
+                    latest_status = latest_status[latest_status['active'] == True]
+                    active_list = latest_status['listing_url'].dropna().tolist()
+                else:
+                    active_list = df['listing_url'].dropna().tolist()
+                print(f"Loaded {len(active_list)} ACTIVE URLs from CSV to re-check today.")
+            except Exception as e:
+                print(f"Warning: Could not read CSV. Error: {e}")
 
-        try:
-            WebDriverWait(driver, 20).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
-            )
-            listings = driver.find_elements(By.CSS_SELECTOR, "article")
-            for listing in listings:
+        # Merge
+        listing_urls = list(set(active_list) | listing_urls_set)
+        save_urls(listing_urls)
+        save_progress(0)
+        print(f"Total unique URLs to scrape: {len(listing_urls)}")
+
+        # Clean up Phase 1 temp files
+        if os.path.exists(PARTIAL_URLS_FILE):
+            os.remove(PARTIAL_URLS_FILE)
+        if os.path.exists(PHASE1_PAGE_FILE):
+            os.remove(PHASE1_PAGE_FILE)
+
+    else:
+        # Scrape the next batch of search pages
+        end_page = min(start_page + PHASE1_BATCH_PAGES, MAX_PAGES + 1)
+        print("=" * 60)
+        print(f"PHASE 1: Scraping search pages {start_page} to {end_page - 1} of {MAX_PAGES}")
+        print("=" * 60)
+
+        driver = start_browser()
+        listing_urls_set = set()
+        start_search = time.time()
+
+        for page in range(start_page, end_page):
+            page_url = f"{SEARCH_URL}?page={page}"
+            print(f"Scraping page {page}: {page_url}")
+
+            try:
+                driver.get(page_url)
+            except Exception as e:
+                print(f"Session dead on page {page}. Restarting browser...")
+                try: driver.quit()
+                except: pass
+                cleanup_chrome()
+                time.sleep(5)
+                driver = start_browser()
+                continue
+
+            try:
+                WebDriverWait(driver, 20).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "article"))
+                )
+                listings = driver.find_elements(By.CSS_SELECTOR, "article")
+                for listing in listings:
+                    try:
+                        link_el = listing.find_element(By.XPATH, ".//a[contains(@href,'/ad/')]")
+                        href = link_el.get_attribute("href")
+                        if href.startswith("http"):
+                            listing_urls_set.add(href)
+                        else:
+                            listing_urls_set.add(BASE_URL + href)
+                    except:
+                        pass
+
+            except Exception as e:
+                print(f"Timeout on page {page}. Restarting browser...")
                 try:
-                    link_el = listing.find_element(By.XPATH, ".//a[contains(@href,'/ad/')]")
-                    href = link_el.get_attribute("href")
-                    if href.startswith("http"):
-                        listing_urls_set.add(href)
-                    else:
-                        listing_urls_set.add(BASE_URL + href)
+                    driver.save_screenshot(f"error_page_{page}.png")
                 except:
                     pass
+                try: driver.quit()
+                except: pass
+                cleanup_chrome()
+                time.sleep(4)
+                driver = start_browser()
+                continue
 
-        except Exception as e:
-            print(f"Timeout on page {page}. Restarting browser...")
-            try:
-                driver.save_screenshot(f"error_page_{page}.png")
-            except:
-                pass
-            cleanup_chrome()
-            time.sleep(4)
-            driver = start_browser()
-            continue
+            wait_time = random.uniform(5, 12)
+            time.sleep(wait_time)
 
-        wait_time = random.uniform(7, 14)
-        time.sleep(wait_time)
+            if page % 10 == 0:
+                print("Phase 1 Anti-Bot Flush: Restarting browser...")
+                try: driver.quit()
+                except: pass
+                cleanup_chrome()
+                time.sleep(random.uniform(10, 20))
+                driver = start_browser()
 
-        if page % 10 == 0:
-            print("Phase 1 Anti-Bot Flush: Restarting browser...")
-            try: driver.quit()
-            except: pass
-            cleanup_chrome()
-            time.sleep(random.uniform(20, 30))
-            driver = start_browser()
+        try: driver.quit()
+        except: pass
+        cleanup_chrome()
 
-    driver.quit()
-    cleanup_chrome()
+        end_search = time.time()
+        print(f"--- Phase 1 batch done in {(end_search - start_search)/60:.2f} minutes ---")
+        print(f"Found {len(listing_urls_set)} URLs in pages {start_page}-{end_page - 1}")
 
-    end_search = time.time()
-    print(f"--- Phase 1 Finished in {(end_search - start_search)/60:.2f} minutes ---")
+        # Save partial URLs and update page progress
+        save_partial_urls(listing_urls_set)
+        save_phase1_page(end_page)
 
-    # Merge with existing URLs
-    listing_urls = list(set(active_list) | listing_urls_set)
-    save_urls(listing_urls)
-    save_progress(0)  # Start from the beginning
-    print(f"Total unique URLs to scrape: {len(listing_urls)}")
-
-else:
-    print(f"Loaded {len(listing_urls)} URLs from {URLS_FILE}")
+        # Restart script to free memory and continue Phase 1
+        print(f"Restarting script to continue Phase 1 from page {end_page}...")
+        restart_script()
 
 
 # ===================================================================
@@ -320,7 +375,6 @@ if batch_start >= len(listing_urls):
     print("=" * 60)
     print("ALL BATCHES COMPLETE! Nothing left to scrape.")
     print("=" * 60)
-    # Clean up progress files
     if os.path.exists(PROGRESS_FILE):
         os.remove(PROGRESS_FILE)
     if os.path.exists(URLS_FILE):
@@ -375,6 +429,8 @@ for i, url in enumerate(batch_urls, start=1):
                 driver.save_screenshot(f"car_error_{i}.png")
             except:
                 pass
+            try: driver.quit()
+            except: pass
             cleanup_chrome()
             time.sleep(5)
             driver = start_browser()
@@ -446,14 +502,14 @@ for i, url in enumerate(batch_urls, start=1):
         error_msg = str(e)
         print(f"Failed: {error_msg}")
 
-        if "HTTPConnectionPool" in error_msg or "not reachable" in error_msg or "refused" in error_msg:
+        if "HTTPConnectionPool" in error_msg or "not reachable" in error_msg or "refused" in error_msg or "tab crashed" in error_msg:
             print("Browser crashed! Forcing emergency reboot...")
             try: driver.quit()
             except: pass
             cleanup_chrome()
 
             for attempt in range(3):
-                wait = 30 * (attempt + 1)
+                wait = 60 * (attempt + 1)
                 print(f"Retry {attempt+1}/3: waiting {wait}s...")
                 time.sleep(wait)
                 try:
@@ -471,8 +527,8 @@ for i, url in enumerate(batch_urls, start=1):
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
 
-    # Anti-bot flush every 15 cars
-    if i % 15 == 0:
+    # Anti-bot flush every 10 cars
+    if i % 10 == 0:
         long_wait = random.uniform(30, 60)
         print(f"Anti-Bot Flush: Closing browser and resting for {long_wait:.1f} seconds...")
         try: driver.quit()
@@ -509,12 +565,5 @@ else:
     remaining = len(listing_urls) - next_batch_start
     print("=" * 60)
     print(f"Batch done. {remaining} URLs remaining.")
-    print(f"Restarting script automatically in 30 seconds...")
     print("=" * 60)
-    time.sleep(30)
-
-    # --- AUTO-RESTART: re-run this same script ---
-    python_executable = sys.executable
-    script_path = os.path.abspath(__file__)
-    print(f"Executing: {python_executable} {script_path}")
-    os.execv(python_executable, [python_executable, script_path])
+    restart_script()
