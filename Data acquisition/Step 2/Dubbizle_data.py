@@ -30,7 +30,7 @@ PROGRESS_FILE = os.path.abspath(os.path.join(script_dir, "..", "Data", "scrape_p
 BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 200
-BATCH_SIZE = 300
+BATCH_SIZE = 150
 
 # --- CHECK IF THIS IS A NEW DAY ---
 def is_file_from_today(filepath):
@@ -146,7 +146,8 @@ def cleanup_chrome():
     os.system("pkill -9 -f chromedriver")
     os.system("rm -rf /tmp/.com.google.Chrome.*")
     os.system("rm -rf /tmp/.org.chromium.Chromium.*")
-    time.sleep(3)
+    os.system("sync; echo 3 > /proc/sys/vm/drop_caches")  # Force OS to free cached RAM
+    time.sleep(5)  # Give OS more time to reclaim (was 3)
 
 def start_browser():
     """Start a fresh browser with retry logic."""
