@@ -18,7 +18,7 @@ import undetected_chromedriver as uc
 
 # --- START THE INVISIBLE MONITOR ---
 print("Starting virtual display...")
-display = Display(visible=0, size=(1920, 1080))
+display = Display(visible=0, size=(1280, 720))
 display.start()
 
 # --- CONFIGURATION ---
@@ -35,8 +35,13 @@ def get_chrome_options():
     options.add_argument('--no-sandbox') 
     options.add_argument('--disable-dev-shm-usage') 
     options.add_argument('--accept-lang=en-US,en')
-    # Notice we don't even need the window-size argument here anymore, 
-    # because the virtual monitor handles it!
+    options.add_argument('--disable-gpu')
+    options.add_argument('--disable-extensions')
+    options.add_argument('--disable-background-networking')
+    options.add_argument('--disable-default-apps')
+    options.add_argument('--js-flags=--max-old-space-size=256')
+    options.add_argument('--single-process')
+
     return options
 
 # Create a Service object pointing to the Linux ChromeDriver
@@ -317,21 +322,31 @@ for i, url in enumerate(listing_urls, start=1):
                 driver.quit()
             except: pass
             
-            # Wipe the server RAM instantly
-            os.system("pkill -f chrome")
-            os.system("pkill -f chromedriver")
-            time.sleep(10)
+            os.system("pkill -9 -f chrome")
+            os.system("pkill -9 -f chromedriver")
             
-            print("Rebooting browser...")
-            driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
-        # ----------------------------------------
+            for attempt in range(3):
+                wait = 30 * (attempt + 1)
+                print(f"Retry {attempt+1}/3: waiting {wait}s...")
+                time.sleep(wait)
+                try:
+                    driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+                    break
+                except:
+                    os.system("pkill -9 -f chrome")
+                    os.system("pkill -9 -f chromedriver")
+            else:
+                print("All retries failed. Saving data and exiting.")
+                if step2_data:
+                    pd.DataFrame(step2_data).to_csv(CSV_FILE_PATH, mode='a', header=not os.path.isfile(CSV_FILE_PATH), index=False)
+                sys.exit(1)
         
     wait = random.uniform(8, 15)
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
 
 # 2. Take a 'Coffee Break' and FLUSH THE BROWSER every 15 cars
-    if i % 15 == 0:
+    if i % 10 == 0:
         long_wait = random.uniform(30, 60)
         print(f"Anti-Bot Flush: Closing browser and resting for {long_wait:.1f} seconds...")
         
@@ -351,10 +366,25 @@ for i, url in enumerate(listing_urls, start=1):
         try:
             driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
         except Exception as e:
-            print(f"Critical RAM Error: {e}. Wiping memory again and waiting 60s...")
-            os.system("pkill -f chrome")
-            time.sleep(60)
-            driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+            print(f"Critical RAM Error: {e}. Wiping memory...")
+            os.system("pkill -9 -f chrome")
+            os.system("pkill -9 -f chromedriver")
+            
+            for attempt in range(3):
+                wait = 30 * (attempt + 1)
+                print(f"Retry {attempt+1}/3: waiting {wait}s...")
+                time.sleep(wait)
+                try:
+                    driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+                    break
+                except:
+                    os.system("pkill -9 -f chrome")
+                    os.system("pkill -9 -f chromedriver")
+            else:
+                print("All retries failed. Saving data and exiting.")
+                if step2_data:
+                    pd.DataFrame(step2_data).to_csv(CSV_FILE_PATH, mode='a', header=not os.path.isfile(CSV_FILE_PATH), index=False)
+                sys.exit(1)
 
 driver.quit()
 end_deep = time.time()
