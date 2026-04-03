@@ -35,7 +35,7 @@ BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 200
 PHASE1_BATCH_PAGES = 50   # Restart script every 50 search pages in Phase 1
-BATCH_SIZE = 100           # Phase 2: scrape 100 listings per batch
+BATCH_SIZE = 150           # Phase 2: scrape 100 listings per batch
 
 # --- CHECK IF THIS IS A NEW DAY ---
 def is_file_from_today(filepath):
@@ -192,10 +192,8 @@ def restart_script():
     """Fully restart this script to free all memory."""
     cleanup_chrome()
     time.sleep(30)
-    python_executable = sys.executable
-    script_path = os.path.abspath(__file__)
-    print(f"Restarting: {python_executable} {script_path}")
-    os.execv(python_executable, [python_executable, script_path])
+    print("Exiting for auto-restart...")
+    sys.exit(42)  # Special exit code = "restart me"
 
 def save_batch_data(step2_data):
     """Process and append a batch of scraped data to the CSV, deduplicating by listing_id."""
@@ -523,13 +521,13 @@ for i, url in enumerate(batch_urls, start=1):
                 save_progress(batch_start + i)
                 sys.exit(1)
 
-    wait = random.uniform(8, 15)
+    wait = random.uniform(5, 10)
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
 
     # Anti-bot flush every 10 cars
-    if i % 10 == 0:
-        long_wait = random.uniform(30, 60)
+    if i % 20 == 0:
+        long_wait = random.uniform(20, 40)
         print(f"Anti-Bot Flush: Closing browser and resting for {long_wait:.1f} seconds...")
         try: driver.quit()
         except: pass
