@@ -283,7 +283,7 @@ if os.path.exists(CSV_FILE_PATH):
             driver = start_browser()
             continue
 
-        wait_time = random.uniform(5, 12)
+        wait_time = random.uniform(7, 14)
         time.sleep(wait_time)
 
         if page % 10 == 0:
@@ -291,7 +291,7 @@ if os.path.exists(CSV_FILE_PATH):
             try: driver.quit()
             except: pass
             cleanup_chrome()
-            time.sleep(random.uniform(10, 20))
+            time.sleep(random.uniform(20, 30))
             driver = start_browser()
 
     driver.quit()
