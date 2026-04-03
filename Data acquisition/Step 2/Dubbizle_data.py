@@ -275,9 +275,10 @@ if os.path.exists(CSV_FILE_PATH):
 
         except Exception as e:
             print(f"Timeout on page {page}. Restarting browser...")
-            driver.save_screenshot(f"error_page_{page}.png")
-            try: driver.quit()
-            except: pass
+            try:
+                driver.save_screenshot(f"error_page_{page}.png")
+            except:
+                pass
             cleanup_chrome()
             time.sleep(4)
             driver = start_browser()
@@ -370,9 +371,10 @@ for i, url in enumerate(batch_urls, start=1):
             )
         except Exception as e:
             print(f"Listing {i} failed to load. Restarting browser...")
-            driver.save_screenshot(f"car_error_{i}.png")
-            try: driver.quit()
-            except: pass
+            try:
+                driver.save_screenshot(f"car_error_{i}.png")
+            except:
+                pass
             cleanup_chrome()
             time.sleep(5)
             driver = start_browser()
