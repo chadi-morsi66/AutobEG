@@ -4,17 +4,18 @@ import os
 import sys
 import re
 import json
-import cloudscraper
-from bs4 import BeautifulSoup
 from datetime import datetime, timezone, timedelta
 import random
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import undetected_chromedriver as uc
 from pyvirtualdisplay import Display
 
-# --- START THE INVISIBLE MONITOR (only needed for Phase 1) ---
+# --- START THE INVISIBLE MONITOR ---
 print("Starting virtual display...")
 display = Display(visible=0, size=(1280, 720))
 display.start()
@@ -26,38 +27,31 @@ TODAY = datetime.now().strftime("%Y-%m-%d")
 CSV_FILE_PATH = os.path.abspath(os.path.join(script_dir, "..", "Data", "step2_listings.csv"))
 URLS_FILE = os.path.abspath(os.path.join(script_dir, "..", "Data", "all_listing_urls.json"))
 PROGRESS_FILE = os.path.abspath(os.path.join(script_dir, "..", "Data", "scrape_progress.json"))
+# Phase 1 uses a separate partial URLs file to accumulate URLs across restarts
 PARTIAL_URLS_FILE = os.path.abspath(os.path.join(script_dir, "..", "Data", "partial_listing_urls.json"))
 PHASE1_PAGE_FILE = os.path.abspath(os.path.join(script_dir, "..", "Data", "phase1_page.json"))
 
 BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 200
-PHASE1_BATCH_PAGES = 50
-BATCH_SIZE = 500  # Much larger batches now — no Chrome RAM issues
-
-# --- HTTP SESSION FOR PHASE 2 (cloudscraper handles Cloudflare) ---
-session = cloudscraper.create_scraper(
-    browser={
-        'browser': 'chrome',
-        'platform': 'windows',
-        'mobile': False,
-    }
-)
+PHASE1_BATCH_PAGES = 50   # Restart script every 50 search pages in Phase 1
+BATCH_SIZE = 100           # Phase 2: scrape 100 listings per batch
 
 # --- CHECK IF THIS IS A NEW DAY ---
 def is_file_from_today(filepath):
+    """Check if a file was last modified today."""
     if not os.path.exists(filepath):
         return False
     file_date = datetime.fromtimestamp(os.path.getmtime(filepath)).strftime("%Y-%m-%d")
     return file_date == TODAY
 
+# If progress/url files exist but are from a previous day, delete them to start fresh
 stale_files = [PROGRESS_FILE, URLS_FILE, PARTIAL_URLS_FILE, PHASE1_PAGE_FILE]
 for f in stale_files:
     if os.path.exists(f) and not is_file_from_today(f):
         print(f"Found stale file from a previous day: {f}. Removing.")
         os.remove(f)
 
-# --- CHROME OPTIONS (Phase 1 only) ---
 def get_chrome_options():
     options = uc.ChromeOptions()
     options.add_argument('--no-sandbox')
@@ -87,6 +81,37 @@ def compute_listing_date(scraped_at, text):
         if match: return (scraped_at - timedelta(days=30 * int(match.group()))).date()
     return None
 
+def extract_specs_dict(driver):
+    specs = {}
+    try:
+        highlighted_box = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Highlighted Details']"))
+        )
+        items = highlighted_box.find_elements(By.XPATH, ".//div[span[2]]")
+        for item in items:
+            spans = item.find_elements(By.TAG_NAME, "span")
+            key = spans[0].get_attribute("textContent").strip().lower()
+            value = spans[-1].get_attribute("textContent").strip()
+            if key and value:
+                specs[key] = value
+    except Exception as e:
+        print(f"DEBUG: Highlighted Details not found. Error: {e}")
+
+    try:
+        details_box = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, "//div[@aria-label='Details']"))
+        )
+        rows = details_box.find_elements(By.XPATH, ".//div[span[2] and not(span[3])]")
+        for row in rows:
+            spans = row.find_elements(By.TAG_NAME, "span")
+            key = spans[0].get_attribute("textContent").strip().lower()
+            value = spans[-1].get_attribute("textContent").strip()
+            if key and value and key not in specs:
+                specs[key] = value
+    except Exception as e:
+        print(f"DEBUG: Details box not found. Error: {e}")
+    return specs
+
 def save_progress(batch_start):
     with open(PROGRESS_FILE, "w") as f:
         json.dump({"batch_start": batch_start}, f)
@@ -95,7 +120,8 @@ def save_progress(batch_start):
 def load_progress():
     if os.path.exists(PROGRESS_FILE):
         with open(PROGRESS_FILE, "r") as f:
-            return json.load(f).get("batch_start", 0)
+            data = json.load(f)
+            return data.get("batch_start", 0)
     return 0
 
 def save_urls(urls):
@@ -110,6 +136,7 @@ def load_urls():
     return None
 
 def save_partial_urls(urls_set):
+    """Save partially collected URLs during Phase 1 (accumulates across restarts)."""
     existing = set()
     if os.path.exists(PARTIAL_URLS_FILE):
         with open(PARTIAL_URLS_FILE, "r") as f:
@@ -136,249 +163,40 @@ def load_phase1_page():
     return 1
 
 def cleanup_chrome():
+    """Force kill all chrome/chromedriver processes and free memory."""
     os.system("pkill -9 -f chrome")
     os.system("pkill -9 -f chromedriver")
+    
+    # Nuke all corrupted Chrome lock files and leftover temp directories
     os.system("rm -rf /tmp/.com.google.Chrome.*")
     os.system("rm -rf /tmp/.org.chromium.Chromium.*")
     os.system("rm -rf /tmp/scoped_dir*")
     os.system("rm -rf /tmp/chrome_crashpad*")
-    os.system("sync; echo 3 > /proc/sys/vm/drop_caches")
     time.sleep(5)
 
 def start_browser():
+    """Start a fresh browser with retry logic."""
     for attempt in range(3):
         try:
-            cleanup_chrome()
+            cleanup_chrome()  # Always clean BEFORE trying to start
             driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
             return driver
         except Exception as e:
             print(f"Browser start attempt {attempt+1}/3 failed: {e}")
             cleanup_chrome()
-            time.sleep(60 * (attempt + 1))
+            time.sleep(60 * (attempt + 1))  # 60s, 120s, 180s
     print("FATAL: Could not start browser after 3 attempts.")
     sys.exit(1)
 
 def restart_script():
+    """Fully restart this script to free all memory."""
     cleanup_chrome()
     time.sleep(30)
     print("Exiting for auto-restart...")
-    sys.exit(42)
-
-# --- PHASE 2: EXTRACT DATA FROM HTML USING REQUESTS ---
-def extract_listing_data(url):
-    """
-    Fetch a single listing page with requests and extract all car data.
-    Returns a dict of car data, or None if the request failed.
-    """
-    try:
-        response = session.get(url, timeout=30)
-        
-        # Detect inactive listing (redirect away from /ad/)
-        if "/ad/" not in response.url:
-            listing_id = url.split("/")[-1].replace(".html", "").split("-")[-1]
-            return {
-                "listing_id": listing_id, "listing_url": url, "price": None,
-                "mileage": None, "city": None, "listing_date": None,
-                "seller_type": None, "payment_options": None,
-                "scraped_at": datetime.now(timezone.utc), "active": False
-            }
-        
-        if response.status_code != 200:
-            print(f"HTTP {response.status_code}")
-            return None
-        
-        html = response.text
-        soup = BeautifulSoup(html, "html.parser")
-        
-        # --- METHOD 1: Try to find JSON-LD structured data ---
-        brand, model, year, fuel, transmission = None, None, None, None, None
-        body, engine, payment_options, condition = None, None, None, None
-        price, mileage, city, seller_type, listing_age = None, None, None, None, None
-        
-        # Try extracting from embedded JSON in script tags
-        json_data = None
-        for script in soup.find_all("script", type="application/ld+json"):
-            try:
-                data = json.loads(script.string)
-                if isinstance(data, dict) and data.get("@type") == "Product":
-                    json_data = data
-                    break
-                if isinstance(data, list):
-                    for item in data:
-                        if isinstance(item, dict) and item.get("@type") == "Product":
-                            json_data = item
-                            break
-            except:
-                pass
-        
-        if json_data:
-            if "name" in json_data:
-                # Name often contains "Brand Model Year"
-                pass
-            if "offers" in json_data:
-                offers = json_data["offers"]
-                if isinstance(offers, dict):
-                    try:
-                        price = int(float(offers.get("price", 0)))
-                    except:
-                        pass
-        
-        # --- METHOD 2: Try extracting from __NEXT_DATA__ or similar embedded JSON ---
-        for script in soup.find_all("script"):
-            if script.string and ("__NEXT_DATA__" in script.string or "window.__DATA__" in script.string or "listing" in script.string.lower()[:100]):
-                # Try to find a JSON blob
-                json_match = re.search(r'\{.*"listing".*\}', script.string, re.DOTALL)
-                if not json_match:
-                    json_match = re.search(r'\{.*"ad".*\}', script.string, re.DOTALL)
-                if json_match:
-                    try:
-                        page_data = json.loads(json_match.group())
-                        # Navigate to find ad/listing data
-                        ad = None
-                        if "props" in page_data:
-                            # Next.js style
-                            props = page_data.get("props", {}).get("pageProps", {})
-                            ad = props.get("ad") or props.get("listing") or props.get("data", {}).get("ad")
-                        if not ad and "listing" in page_data:
-                            ad = page_data["listing"]
-                        if not ad and "ad" in page_data:
-                            ad = page_data["ad"]
-                        
-                        if ad and isinstance(ad, dict):
-                            # Extract fields from the JSON ad object
-                            price = price or _safe_int(ad.get("price"))
-                            city = city or ad.get("location", {}).get("city_name") or ad.get("city")
-                            
-                            # Extract from attributes/details array
-                            attrs = ad.get("attributes", []) or ad.get("details", []) or ad.get("specs", [])
-                            if isinstance(attrs, list):
-                                for attr in attrs:
-                                    if isinstance(attr, dict):
-                                        key = str(attr.get("label", attr.get("name", attr.get("key", "")))).lower()
-                                        value = attr.get("value", attr.get("formatted_value", ""))
-                                        _assign_spec(key, value, locals())
-                            elif isinstance(attrs, dict):
-                                for key, value in attrs.items():
-                                    _assign_spec(key.lower(), value, locals())
-                    except json.JSONDecodeError:
-                        pass
-        
-        # --- METHOD 3: Fallback — parse the HTML directly ---
-        # Price
-        if price is None:
-            price_el = soup.find("span", string=re.compile(r"EGP"))
-            if price_el:
-                try:
-                    price = int(re.sub(r"[^\d]", "", price_el.get_text()))
-                except:
-                    pass
-        
-        # Try aria-label based extraction (matches the Selenium approach)
-        # Highlighted Details
-        highlighted = soup.find("div", attrs={"aria-label": "Highlighted Details"})
-        if highlighted:
-            for div in highlighted.find_all("div"):
-                spans = div.find_all("span")
-                if len(spans) >= 2:
-                    key = spans[0].get_text(strip=True).lower()
-                    value = spans[-1].get_text(strip=True)
-                    if key == "year" and not year: year = value
-                    elif key == "fuel type" and not fuel: fuel = value
-                    elif key == "transmission type" and not transmission: transmission = value
-                    elif key == "kilometers" and not mileage:
-                        numbers = re.findall(r"\d+", value.replace(",", ""))
-                        if numbers: mileage = int(numbers[0])
-                    elif key == "condition" and not condition: condition = value
-                    elif key == "payment options" and not payment_options: payment_options = value
-        
-        # Details section
-        details = soup.find("div", attrs={"aria-label": "Details"})
-        if details:
-            for div in details.find_all("div"):
-                spans = div.find_all("span")
-                if len(spans) == 2:
-                    key = spans[0].get_text(strip=True).lower()
-                    value = spans[-1].get_text(strip=True)
-                    if key == "brand" and not brand: brand = value
-                    elif key == "model" and not model: model = value
-                    elif key == "year" and not year: year = value
-                    elif key == "body type" and not body: body = value
-                    elif key == "fuel type" and not fuel: fuel = value
-                    elif key == "transmission type" and not transmission: transmission = value
-                    elif key == "engine capacity (cc)" and not engine: engine = value
-                    elif key == "condition" and not condition: condition = value
-                    elif key == "payment options" and not payment_options: payment_options = value
-        
-        # Location
-        if city is None:
-            loc_el = soup.find(attrs={"aria-label": "Location"})
-            if loc_el:
-                city = loc_el.get_text(strip=True)
-        
-        # Seller type
-        if seller_type is None:
-            seller_el = soup.find(string=re.compile(r"Listed by", re.I))
-            if seller_el:
-                seller_type = "agency" if "agency" in seller_el.lower() else "private user"
-        
-        # Listing age
-        if listing_age is None:
-            age_el = soup.find("span", string=re.compile(r"ago|Yesterday|Today", re.I))
-            if age_el:
-                listing_age = age_el.get_text(strip=True)
-        
-        # Mileage fallback
-        if mileage is None:
-            km_el = soup.find("span", string=re.compile(r"\d+.*km", re.I))
-            if km_el:
-                numbers = re.findall(r"\d+", km_el.get_text().replace(",", ""))
-                if numbers:
-                    mileage = int(numbers[0])
-        
-        # Price fallback — search all text
-        if price is None:
-            price_match = re.search(r'([\d,]+)\s*EGP|EGP\s*([\d,]+)', html)
-            if price_match:
-                price_str = price_match.group(1) or price_match.group(2)
-                try:
-                    price = int(price_str.replace(",", ""))
-                except:
-                    pass
-        
-        scraped_at = datetime.now(timezone.utc)
-        listing_date = compute_listing_date(scraped_at, listing_age)
-        listing_id = url.split("/")[-1].replace(".html", "").split("-")[-1]
-        
-        return {
-            "listing_id": listing_id, "listing_url": url, "brand": brand, "model": model,
-            "year": year, "fuel_type": fuel, "transmission": transmission, "body_type": body,
-            "engine_capacity": engine, "price": price, "mileage": mileage, "city": city,
-            "listing_date": listing_date, "condition": condition, "seller_type": seller_type,
-            "payment_options": payment_options, "scraped_at": scraped_at, "active": True
-        }
-    
-    except Exception as e:
-        error_msg = str(e).lower()
-        if "timeout" in error_msg:
-            print("Timeout")
-        elif "connection" in error_msg:
-            print("Connection error")
-        elif "cloudflare" in error_msg:
-            print("Cloudflare blocked this request")
-        else:
-            print(f"Error: {e}")
-        return None
-
-def _safe_int(val):
-    """Safely convert a value to int."""
-    if val is None:
-        return None
-    try:
-        return int(float(str(val).replace(",", "")))
-    except:
-        return None
+    sys.exit(42)  # Special exit code = "restart me"
 
 def save_batch_data(step2_data):
+    """Process and append a batch of scraped data to the CSV, deduplicating by listing_id."""
     if not step2_data:
         print("No data in this batch to save.")
         return
@@ -420,20 +238,23 @@ def save_batch_data(step2_data):
 
 
 # ===================================================================
-# PHASE 1: COLLECT LISTING URLS (Chrome — in batches of 50 pages)
+# PHASE 1: COLLECT LISTING URLS (in batches of 50 pages, with restarts)
 # ===================================================================
 listing_urls = load_urls()
 
 if listing_urls is None:
+    # Check where Phase 1 left off
     start_page = load_phase1_page()
 
     if start_page > MAX_PAGES:
+        # Phase 1 page scraping is done — finalize the URL list
         print("=" * 60)
         print("PHASE 1 COMPLETE: Finalizing URL list...")
         print("=" * 60)
 
         listing_urls_set = load_partial_urls()
 
+        # Load existing active URLs from CSV
         active_list = []
         if os.path.exists(CSV_FILE_PATH):
             try:
@@ -448,15 +269,20 @@ if listing_urls is None:
             except Exception as e:
                 print(f"Warning: Could not read CSV. Error: {e}")
 
+        # Merge
         listing_urls = list(set(active_list) | listing_urls_set)
         save_urls(listing_urls)
         save_progress(0)
         print(f"Total unique URLs to scrape: {len(listing_urls)}")
 
-        if os.path.exists(PARTIAL_URLS_FILE): os.remove(PARTIAL_URLS_FILE)
-        if os.path.exists(PHASE1_PAGE_FILE): os.remove(PHASE1_PAGE_FILE)
+        # Clean up Phase 1 temp files
+        if os.path.exists(PARTIAL_URLS_FILE):
+            os.remove(PARTIAL_URLS_FILE)
+        if os.path.exists(PHASE1_PAGE_FILE):
+            os.remove(PHASE1_PAGE_FILE)
 
     else:
+        # Scrape the next batch of search pages
         end_page = min(start_page + PHASE1_BATCH_PAGES, MAX_PAGES + 1)
         print("=" * 60)
         print(f"PHASE 1: Scraping search pages {start_page} to {end_page - 1} of {MAX_PAGES}")
@@ -496,10 +322,13 @@ if listing_urls is None:
                             listing_urls_set.add(BASE_URL + href)
                     except:
                         pass
+
             except Exception as e:
                 print(f"Timeout on page {page}. Restarting browser...")
-                try: driver.save_screenshot(f"error_page_{page}.png")
-                except: pass
+                try:
+                    driver.save_screenshot(f"error_page_{page}.png")
+                except:
+                    pass
                 try: driver.quit()
                 except: pass
                 cleanup_chrome()
@@ -526,112 +355,199 @@ if listing_urls is None:
         print(f"--- Phase 1 batch done in {(end_search - start_search)/60:.2f} minutes ---")
         print(f"Found {len(listing_urls_set)} URLs in pages {start_page}-{end_page - 1}")
 
+        # Save partial URLs and update page progress
         save_partial_urls(listing_urls_set)
         save_phase1_page(end_page)
 
+        # Restart script to free memory and continue Phase 1
         print(f"Restarting script to continue Phase 1 from page {end_page}...")
         restart_script()
 
 
 # ===================================================================
-# PHASE 2: SCRAPE LISTINGS WITH REQUESTS (no Chrome needed!)
+# PHASE 2: SCRAPE IN BATCHES OF {BATCH_SIZE}
 # ===================================================================
-print("=" * 60)
-print("Phase 2 uses HTTP requests — no Chrome needed!")
-print("=" * 60)
-
-# Kill any leftover Chrome to free RAM for Phase 2
-cleanup_chrome()
-
 batch_start = load_progress()
 
 if batch_start >= len(listing_urls):
     print("=" * 60)
     print("ALL BATCHES COMPLETE! Nothing left to scrape.")
     print("=" * 60)
-    if os.path.exists(PROGRESS_FILE): os.remove(PROGRESS_FILE)
-    if os.path.exists(URLS_FILE): os.remove(URLS_FILE)
+    if os.path.exists(PROGRESS_FILE):
+        os.remove(PROGRESS_FILE)
+    if os.path.exists(URLS_FILE):
+        os.remove(URLS_FILE)
     sys.exit(0)
 
 batch_end = min(batch_start + BATCH_SIZE, len(listing_urls))
 batch_urls = listing_urls[batch_start:batch_end]
 
+print("=" * 60)
 print(f"PHASE 2: Scraping batch {batch_start}-{batch_end} of {len(listing_urls)} total URLs")
 print(f"This batch: {len(batch_urls)} listings")
 print("=" * 60)
 
+driver = start_browser()
 step2_data = []
 start_deep = time.time()
-consecutive_failures = 0
-MAX_CONSECUTIVE_FAILURES = 20  # If 20 in a row fail, something is wrong
-
-# Save the first response for debugging
-debug_saved = False
 
 for i, url in enumerate(batch_urls, start=1):
     print(f"Scraping listing {i}/{len(batch_urls)} (global: {batch_start + i}/{len(listing_urls)})")
-    
-    result = extract_listing_data(url)
-    
-    if result is not None:
-        step2_data.append(result)
-        consecutive_failures = 0
-        
-        if result.get("active"):
-            print(f"Success — Price: {result.get('price')}, Brand: {result.get('brand')}, Model: {result.get('model')}")
-        else:
+    try:
+        driver.get(url)
+        time.sleep(2)
+
+        if i == 1:
+            with open("debug_page.html", "w", encoding="utf-8") as f:
+                f.write(driver.page_source)
+
+        current_url = driver.current_url
+
+        # Detect inactive listing
+        if "/ad/" not in current_url:
+            listing_id = url.split("/")[-1].replace(".html", "").split("-")[-1]
+            step2_data.append({
+                "listing_id": listing_id, "listing_url": url, "price": None,
+                "mileage": None, "city": None, "listing_date": None,
+                "seller_type": None, "payment_options": None,
+                "scraped_at": datetime.now(timezone.utc), "active": False
+            })
             print("Listing inactive")
-        
-        # Save first successful HTML for debugging
-        if not debug_saved and result.get("active"):
+            continue
+
+        active = True
+
+        try:
+            WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'EGP')]"))
+            )
+        except Exception as e:
+            print(f"Listing {i} failed to load. Restarting browser...")
             try:
-                resp = session.get(url, timeout=30)
-                with open("debug_page.html", "w", encoding="utf-8") as f:
-                    f.write(resp.text)
-                debug_saved = True
-                print("Saved debug_page.html for inspection")
+                driver.save_screenshot(f"car_error_{i}.png")
             except:
                 pass
-    else:
-        consecutive_failures += 1
-        print(f"Failed (consecutive failures: {consecutive_failures})")
-        
-        # If too many consecutive failures, we might be blocked
-        if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
-            print(f"WARNING: {MAX_CONSECUTIVE_FAILURES} consecutive failures! Possible IP block.")
-            print("Saving progress and pausing for 5 minutes...")
-            save_batch_data(step2_data)
-            save_progress(batch_start + i)
-            time.sleep(300)  # Wait 5 minutes
-            consecutive_failures = 0
-            
-            # Rotate User-Agent
-            agents = [
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.7680.164 Safari/537.36",
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
-            ]
-            session.headers["User-Agent"] = random.choice(agents)
-            print(f"Rotated User-Agent. Resuming...")
-    
-    # Humanizing wait — shorter than Chrome since requests is faster
-    wait = random.uniform(3, 7)
+            try: driver.quit()
+            except: pass
+            cleanup_chrome()
+            time.sleep(5)
+            driver = start_browser()
+            continue
+
+        driver.execute_script("window.scrollBy(0, 2000);")
+        time.sleep(3)
+
+        specs = extract_specs_dict(driver)
+
+        brand = specs.get("brand")
+        model = specs.get("model")
+        year = specs.get("year")
+        fuel = specs.get("fuel type")
+        transmission = specs.get("transmission type")
+        body = specs.get("body type")
+        engine = specs.get("engine capacity (cc)")
+        payment_options = specs.get("payment options")
+        condition = specs.get("condition")
+
+        price, mileage, city, seller_type, listing_age = None, None, None, None, None
+
+        km_val = specs.get("kilometers")
+        if km_val:
+            numbers = re.findall(r"\d+", km_val.replace(",", ""))
+            if numbers:
+                mileage = int(numbers[0])
+
+        try:
+            price_text = driver.find_element(By.XPATH, "//span[contains(text(),'EGP')]").text
+            price = int(re.sub(r"[^\d]", "", price_text))
+        except: pass
+
+        if mileage is None:
+            try:
+                mileage_text = driver.find_element(By.XPATH, "//span[contains(text(),'km')]").text
+                numbers = re.findall(r"\d+", mileage_text.replace(",", ""))
+                if numbers:
+                    mileage = int(numbers[0])
+            except: pass
+
+        try:
+            city = driver.find_element(By.XPATH, "//*[@aria-label='Location']").text
+        except: pass
+
+        try:
+            seller_text = driver.find_element(By.XPATH, "//*[contains(text(),'Listed by')]").text.lower()
+            seller_type = "agency" if "agency" in seller_text else "private user"
+        except: pass
+
+        try:
+            listing_age = driver.find_element(By.XPATH, "//span[contains(text(),'ago') or contains(text(),'Yesterday') or contains(text(),'Today')]").text
+        except: pass
+
+        scraped_at = datetime.now(timezone.utc)
+        listing_date = compute_listing_date(scraped_at, listing_age)
+        listing_id = url.split("/")[-1].replace(".html", "").split("-")[-1]
+
+        step2_data.append({
+            "listing_id": listing_id, "listing_url": url, "brand": brand, "model": model,
+            "year": year, "fuel_type": fuel, "transmission": transmission, "body_type": body,
+            "engine_capacity": engine, "price": price, "mileage": mileage, "city": city,
+            "listing_date": listing_date, "condition": condition, "seller_type": seller_type,
+            "payment_options": payment_options, "scraped_at": scraped_at, "active": active
+        })
+        print("Success")
+
+    except Exception as e:
+        error_msg = str(e)
+        print(f"Failed: {error_msg}")
+
+        if "HTTPConnectionPool" in error_msg or "not reachable" in error_msg or "refused" in error_msg or "tab crashed" in error_msg:
+            print("Browser crashed! Forcing emergency reboot...")
+            try: driver.quit()
+            except: pass
+            cleanup_chrome()
+
+            for attempt in range(3):
+                wait = 60 * (attempt + 1)
+                print(f"Retry {attempt+1}/3: waiting {wait}s...")
+                time.sleep(wait)
+                try:
+                    driver = start_browser()
+                    break
+                except:
+                    cleanup_chrome()
+            else:
+                print("All retries failed. Saving data and exiting.")
+                save_batch_data(step2_data)
+                save_progress(batch_start + i)
+                sys.exit(1)
+
+    wait = random.uniform(8, 12)
+    print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
-    
-    # Periodic progress save every 100 listings (in case of crash)
-    if i % 100 == 0:
-        print(f"Checkpoint: saving progress at listing {i}...")
-        save_batch_data(step2_data)
-        step2_data = []  # Reset to avoid re-saving
-        save_progress(batch_start + i)
+
+    # Anti-bot flush every 10 cars
+    if i % 20 == 0:
+        long_wait = random.uniform(20, 40)
+        print(f"Anti-Bot Flush: Closing browser and resting for {long_wait:.1f} seconds...")
+        try: driver.quit()
+        except: pass
+        cleanup_chrome()
+        time.sleep(long_wait)
+        print("Starting a fresh browser session...")
+        driver = start_browser()
 
 # --- BATCH COMPLETE ---
+try: driver.quit()
+except: pass
+cleanup_chrome()
+
 end_deep = time.time()
 print(f"\n--- Batch {batch_start}-{batch_end} finished in {(end_deep - start_deep)/60:.2f} minutes ---")
 
+# Save this batch's data
 save_batch_data(step2_data)
 
+# Update progress for next batch
 next_batch_start = batch_end
 save_progress(next_batch_start)
 
@@ -639,8 +555,10 @@ if next_batch_start >= len(listing_urls):
     print("=" * 60)
     print("ALL BATCHES COMPLETE!")
     print("=" * 60)
-    if os.path.exists(PROGRESS_FILE): os.remove(PROGRESS_FILE)
-    if os.path.exists(URLS_FILE): os.remove(URLS_FILE)
+    if os.path.exists(PROGRESS_FILE):
+        os.remove(PROGRESS_FILE)
+    if os.path.exists(URLS_FILE):
+        os.remove(URLS_FILE)
 else:
     remaining = len(listing_urls) - next_batch_start
     print("=" * 60)
