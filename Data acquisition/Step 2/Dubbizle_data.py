@@ -167,36 +167,44 @@ def cleanup_chrome():
     """Force kill all chrome/chromedriver processes and free memory."""
     os.system("pkill -9 -f chrome")
     os.system("pkill -9 -f chromedriver")
+    os.system("pkill -9 -f Xvfb") # Catch any stray monitors
     
     # Nuke all corrupted Chrome lock files and leftover temp directories
     os.system("rm -rf /tmp/.com.google.Chrome.*")
     os.system("rm -rf /tmp/.org.chromium.Chromium.*")
     os.system("rm -rf /tmp/scoped_dir*")
     os.system("rm -rf /tmp/chrome_crashpad*")
-    
-    # --- 🚨 SWEEP UP THE NEW DISPOSABLE PROFILES 🚨 ---
     os.system("rm -rf /tmp/chrome_profile_*")
+    
+    # --- 🚨 THE FINAL NAIL IN THE COFFIN 🚨 ---
+    # 1. Wipe the corrupted undetected_chromedriver cache
+    os.system("rm -rf ~/.local/share/undetected_chromedriver")
+    # 2. Wipe the corrupted Xvfb monitor sockets
+    os.system("rm -rf /tmp/.X11-unix/*")
+    # ------------------------------------------
     
     time.sleep(5)
 
 def start_browser():
-    """Start a fresh browser with retry logic."""
     for attempt in range(3):
         try:
-            cleanup_chrome()  # Always clean BEFORE trying to start
+            cleanup_chrome()
             
             options = get_chrome_options()
             unique_profile = f"/tmp/chrome_profile_{uuid.uuid4().hex}"
             options.add_argument(f"--user-data-dir={unique_profile}")
-            # ------------------------------------
             
-            driver = uc.Chrome(options=options, driver_executable_path='/usr/bin/chromedriver')
+            driver = uc.Chrome(
+                options=options,  # <-- use the options you just built, not get_chrome_options()
+                driver_executable_path='/usr/bin/chromedriver',
+                browser_executable_path='/usr/bin/chromium-browser'
+            )
             return driver
             
         except Exception as e:
             print(f"Browser start attempt {attempt+1}/3 failed: {e}")
             cleanup_chrome()
-            time.sleep(10)  # Wait 10s before retrying instead of 60s
+            time.sleep(10)
             
     print("FATAL: Could not start browser after 3 attempts.")
     sys.exit(1)
