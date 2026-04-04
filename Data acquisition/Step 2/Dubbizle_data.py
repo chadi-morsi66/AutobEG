@@ -339,7 +339,7 @@ if listing_urls is None:
             wait_time = random.uniform(5, 12)
             time.sleep(wait_time)
 
-            if page % 10 == 0:
+            if page % 20 == 0:
                 print("Phase 1 Anti-Bot Flush: Restarting browser...")
                 try: driver.quit()
                 except: pass
