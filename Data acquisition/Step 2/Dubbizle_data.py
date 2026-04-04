@@ -6,6 +6,7 @@ import re
 import json
 from datetime import datetime, timezone, timedelta
 import random
+import uuid
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -172,6 +173,10 @@ def cleanup_chrome():
     os.system("rm -rf /tmp/.org.chromium.Chromium.*")
     os.system("rm -rf /tmp/scoped_dir*")
     os.system("rm -rf /tmp/chrome_crashpad*")
+    
+    # --- 🚨 SWEEP UP THE NEW DISPOSABLE PROFILES 🚨 ---
+    os.system("rm -rf /tmp/chrome_profile_*")
+    
     time.sleep(5)
 
 def start_browser():
@@ -179,12 +184,20 @@ def start_browser():
     for attempt in range(3):
         try:
             cleanup_chrome()  # Always clean BEFORE trying to start
-            driver = uc.Chrome(options=get_chrome_options(), driver_executable_path='/usr/bin/chromedriver')
+            
+            options = get_chrome_options()
+            unique_profile = f"/tmp/chrome_profile_{uuid.uuid4().hex}"
+            options.add_argument(f"--user-data-dir={unique_profile}")
+            # ------------------------------------
+            
+            driver = uc.Chrome(options=options, driver_executable_path='/usr/bin/chromedriver')
             return driver
+            
         except Exception as e:
             print(f"Browser start attempt {attempt+1}/3 failed: {e}")
             cleanup_chrome()
-            time.sleep(60 * (attempt + 1))  # 60s, 120s, 180s
+            time.sleep(10)  # Wait 10s before retrying instead of 60s
+            
     print("FATAL: Could not start browser after 3 attempts.")
     sys.exit(1)
 
