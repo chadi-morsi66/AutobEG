@@ -204,7 +204,14 @@ def start_browser():
 def restart_script():
     """Fully restart this script to free all memory."""
     cleanup_chrome()
-    time.sleep(30)
+    
+    try:
+        display.stop()
+    except:
+        pass
+    # ---------------------------------------------------
+    
+    time.sleep(10)
     print("Exiting for auto-restart...")
     sys.exit(42)  # Special exit code = "restart me"
 
@@ -510,10 +517,10 @@ for i, url in enumerate(batch_urls, start=1):
         print("Success")
 
     except Exception as e:
-        error_msg = str(e)
+        error_msg = str(e).lower() # <--- Force lowercase!
         print(f"Failed: {error_msg}")
 
-        if "HTTPConnectionPool" in error_msg or "not reachable" in error_msg or "refused" in error_msg or "tab crashed" in error_msg:
+        if "httpconnectionpool" in error_msg or "not reachable" in error_msg or "refused" in error_msg or "tab crashed" in error_msg or "window" in error_msg:
             print("Browser crashed! Forcing emergency reboot...")
             try: driver.quit()
             except: pass
