@@ -254,15 +254,32 @@ def extract_listing_data(url):
                             
                             # Extract from attributes/details array
                             attrs = ad.get("attributes", []) or ad.get("details", []) or ad.get("specs", [])
+                            
+                            def map_spec(k, v):
+                                nonlocal brand, model, year, body, fuel, transmission, engine, condition, payment_options, mileage
+                                k = k.lower()
+                                if "brand" in k and not brand: brand = v
+                                elif "model" in k and not model: model = v
+                                elif "year" in k and not year: year = v
+                                elif "body type" in k and not body: body = v
+                                elif "fuel type" in k and not fuel: fuel = v
+                                elif "transmission" in k and not transmission: transmission = v
+                                elif "engine" in k and not engine: engine = v
+                                elif "condition" in k and not condition: condition = v
+                                elif "payment" in k and not payment_options: payment_options = v
+                                elif "kilometer" in k and not mileage:
+                                    nums = re.findall(r"\d+", str(v).replace(",", ""))
+                                    if nums: mileage = int(nums)
+
                             if isinstance(attrs, list):
                                 for attr in attrs:
                                     if isinstance(attr, dict):
-                                        key = str(attr.get("label", attr.get("name", attr.get("key", "")))).lower()
+                                        key = str(attr.get("label", attr.get("name", attr.get("key", ""))))
                                         value = attr.get("value", attr.get("formatted_value", ""))
-                                        _assign_spec(key, value, locals())
+                                        map_spec(key, value)
                             elif isinstance(attrs, dict):
                                 for key, value in attrs.items():
-                                    _assign_spec(key.lower(), value, locals())
+                                    map_spec(key, value)
                     except json.JSONDecodeError:
                         pass
         
