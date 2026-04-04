@@ -4,7 +4,7 @@ import os
 import sys
 import re
 import json
-import requests
+import cloudscraper
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone, timedelta
 import random
@@ -33,19 +33,16 @@ BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 200
 PHASE1_BATCH_PAGES = 50
-BATCH_SIZE = 500  # Much larger batches now — requests uses almost no RAM
+BATCH_SIZE = 500  # Much larger batches now — no Chrome RAM issues
 
-# --- HTTP SESSION FOR PHASE 2 ---
-session = requests.Session()
-session.headers.update({
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.7680.164 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Referer": "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/",
-    "DNT": "1",
-    "Connection": "keep-alive",
-})
+# --- HTTP SESSION FOR PHASE 2 (cloudscraper handles Cloudflare) ---
+session = cloudscraper.create_scraper(
+    browser={
+        'browser': 'chrome',
+        'platform': 'windows',
+        'mobile': False,
+    }
+)
 
 # --- CHECK IF THIS IS A NEW DAY ---
 def is_file_from_today(filepath):
@@ -254,32 +251,15 @@ def extract_listing_data(url):
                             
                             # Extract from attributes/details array
                             attrs = ad.get("attributes", []) or ad.get("details", []) or ad.get("specs", [])
-                            
-                            def map_spec(k, v):
-                                nonlocal brand, model, year, body, fuel, transmission, engine, condition, payment_options, mileage
-                                k = k.lower()
-                                if "brand" in k and not brand: brand = v
-                                elif "model" in k and not model: model = v
-                                elif "year" in k and not year: year = v
-                                elif "body type" in k and not body: body = v
-                                elif "fuel type" in k and not fuel: fuel = v
-                                elif "transmission" in k and not transmission: transmission = v
-                                elif "engine" in k and not engine: engine = v
-                                elif "condition" in k and not condition: condition = v
-                                elif "payment" in k and not payment_options: payment_options = v
-                                elif "kilometer" in k and not mileage:
-                                    nums = re.findall(r"\d+", str(v).replace(",", ""))
-                                    if nums: mileage = int(nums)
-
                             if isinstance(attrs, list):
                                 for attr in attrs:
                                     if isinstance(attr, dict):
-                                        key = str(attr.get("label", attr.get("name", attr.get("key", ""))))
+                                        key = str(attr.get("label", attr.get("name", attr.get("key", "")))).lower()
                                         value = attr.get("value", attr.get("formatted_value", ""))
-                                        map_spec(key, value)
+                                        _assign_spec(key, value, locals())
                             elif isinstance(attrs, dict):
                                 for key, value in attrs.items():
-                                    map_spec(key, value)
+                                    _assign_spec(key.lower(), value, locals())
                     except json.JSONDecodeError:
                         pass
         
@@ -377,14 +357,16 @@ def extract_listing_data(url):
             "payment_options": payment_options, "scraped_at": scraped_at, "active": True
         }
     
-    except requests.exceptions.Timeout:
-        print("Timeout")
-        return None
-    except requests.exceptions.ConnectionError:
-        print("Connection error")
-        return None
     except Exception as e:
-        print(f"Error: {e}")
+        error_msg = str(e).lower()
+        if "timeout" in error_msg:
+            print("Timeout")
+        elif "connection" in error_msg:
+            print("Connection error")
+        elif "cloudflare" in error_msg:
+            print("Cloudflare blocked this request")
+        else:
+            print(f"Error: {e}")
         return None
 
 def _safe_int(val):
