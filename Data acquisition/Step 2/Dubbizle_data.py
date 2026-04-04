@@ -521,7 +521,7 @@ for i, url in enumerate(batch_urls, start=1):
                 save_progress(batch_start + i)
                 sys.exit(1)
 
-    wait = random.uniform(5, 10)
+    wait = random.uniform(8, 12)
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
 
