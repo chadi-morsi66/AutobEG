@@ -36,21 +36,22 @@ BASE_URL = "https://www.dubizzle.com.eg/en/"
 SEARCH_URL = "https://www.dubizzle.com.eg/en/vehicles/cars-for-sale/q-cars/"
 MAX_PAGES = 200
 PHASE1_BATCH_PAGES = 50   # Restart script every 50 search pages in Phase 1
-BATCH_SIZE = 100           # Phase 2: scrape 100 listings per batch
+BATCH_SIZE = 150           # Phase 2: scrape 100 listings per batch
+STALE_DAYS = 3             # Restart Phase 1 if files are older than this many days
 
-# --- CHECK IF THIS IS A NEW DAY ---
-def is_file_from_today(filepath):
-    """Check if a file was last modified today."""
+# --- CHECK IF FILES ARE STALE (older than STALE_DAYS) ---
+def is_file_stale(filepath, max_age_days=STALE_DAYS):
+    """Check if a file is older than max_age_days."""
     if not os.path.exists(filepath):
         return False
-    file_date = datetime.fromtimestamp(os.path.getmtime(filepath)).strftime("%Y-%m-%d")
-    return file_date == TODAY
+    file_mtime = datetime.fromtimestamp(os.path.getmtime(filepath))
+    return (datetime.now() - file_mtime) > timedelta(days=max_age_days)
 
-# If progress/url files exist but are from a previous day, delete them to start fresh
+# If progress/url files exist but are stale (>3 days old), delete them to start fresh
 stale_files = [PROGRESS_FILE, URLS_FILE, PARTIAL_URLS_FILE, PHASE1_PAGE_FILE]
 for f in stale_files:
-    if os.path.exists(f) and not is_file_from_today(f):
-        print(f"Found stale file from a previous day: {f}. Removing.")
+    if is_file_stale(f):
+        print(f"Found stale file (>{STALE_DAYS} days old): {f}. Removing.")
         os.remove(f)
 
 def get_chrome_options():
@@ -172,7 +173,7 @@ def cleanup_chrome():
     os.system("rm -rf /tmp/chrome_crashpad*")
     os.system("rm -rf /tmp/chrome_profile_*")
     # Do NOT delete /tmp/.X11-unix/* — it kills the virtual display
-    time.sleep(5)
+    time.sleep(3)
 
 def start_browser():
     for attempt in range(3):
@@ -191,7 +192,7 @@ def start_browser():
         except Exception as e:
             print(f"Browser start attempt {attempt+1}/3 failed: {e}")
             cleanup_chrome()
-            time.sleep(10)
+            time.sleep(5)
     print("FATAL: Could not start browser after 3 attempts.")
     sys.exit(1)
 
@@ -205,7 +206,7 @@ def restart_script():
         pass
     # ---------------------------------------------------
     
-    time.sleep(10)
+    time.sleep(5)
     print("Exiting for auto-restart...")
     sys.exit(42)  # Special exit code = "restart me"
 
@@ -317,7 +318,7 @@ if listing_urls is None:
                 try: driver.quit()
                 except: pass
                 cleanup_chrome()
-                time.sleep(5)
+                time.sleep(3)
                 driver = start_browser()
                 continue
 
@@ -346,11 +347,11 @@ if listing_urls is None:
                 try: driver.quit()
                 except: pass
                 cleanup_chrome()
-                time.sleep(4)
+                time.sleep(3)
                 driver = start_browser()
                 continue
 
-            wait_time = random.uniform(5, 12)
+            wait_time = random.uniform(2, 5)
             time.sleep(wait_time)
 
             if page % 20 == 0:
@@ -358,7 +359,7 @@ if listing_urls is None:
                 try: driver.quit()
                 except: pass
                 cleanup_chrome()
-                time.sleep(random.uniform(10, 20))
+                time.sleep(random.uniform(5, 10))
                 driver = start_browser()
 
         try: driver.quit()
@@ -409,7 +410,7 @@ for i, url in enumerate(batch_urls, start=1):
     print(f"Scraping listing {i}/{len(batch_urls)} (global: {batch_start + i}/{len(listing_urls)})")
     try:
         driver.get(url)
-        time.sleep(2)
+        time.sleep(1)
 
         if i == 1:
             with open("debug_page.html", "w", encoding="utf-8") as f:
@@ -444,12 +445,12 @@ for i, url in enumerate(batch_urls, start=1):
             try: driver.quit()
             except: pass
             cleanup_chrome()
-            time.sleep(5)
+            time.sleep(3)
             driver = start_browser()
             continue
 
         driver.execute_script("window.scrollBy(0, 2000);")
-        time.sleep(3)
+        time.sleep(1.5)
 
         specs = extract_specs_dict(driver)
 
@@ -521,7 +522,7 @@ for i, url in enumerate(batch_urls, start=1):
             cleanup_chrome()
 
             for attempt in range(3):
-                wait = 60 * (attempt + 1)
+                wait = 30 * (attempt + 1)
                 print(f"Retry {attempt+1}/3: waiting {wait}s...")
                 time.sleep(wait)
                 try:
@@ -535,13 +536,13 @@ for i, url in enumerate(batch_urls, start=1):
                 save_progress(batch_start + i)
                 sys.exit(1)
 
-    wait = random.uniform(8, 12)
+    wait = random.uniform(3, 6)
     print(f"Humanizing: Waiting {wait:.1f}s before next car...")
     time.sleep(wait)
 
-    # Anti-bot flush every 10 cars
+    # Anti-bot flush every 20 cars
     if i % 20 == 0:
-        long_wait = random.uniform(20, 40)
+        long_wait = random.uniform(10, 20)
         print(f"Anti-Bot Flush: Closing browser and resting for {long_wait:.1f} seconds...")
         try: driver.quit()
         except: pass
