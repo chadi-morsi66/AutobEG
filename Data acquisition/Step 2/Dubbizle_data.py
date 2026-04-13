@@ -239,11 +239,14 @@ def save_batch_data(step2_data):
     if os.path.isfile(CSV_FILE_PATH):
         try:
             df_existing = pd.read_csv(CSV_FILE_PATH)
-            new_ids = set(df_step2["listing_id"].astype(str).tolist())
-            df_existing = df_existing[~df_existing["listing_id"].astype(str).isin(new_ids)]
+            
+            # Just append today's scrape to the bottom of the file
             df_combined = pd.concat([df_existing, df_step2.reset_index()], ignore_index=True)
+            
+            # Optional: Only drop exact duplicates if it accidentally scraped the same car twice TODAY
+            df_combined = df_combined.drop_duplicates(subset=['listing_id', 'scrape_date'], keep='last')
+            
             df_combined.to_csv(CSV_FILE_PATH, index=False)
-            print(f"Updated CSV: {len(df_combined)} total rows ({len(df_step2)} new/updated)")
         except Exception as e:
             print(f"Warning: Could not dedup. Appending instead. Error: {e}")
             df_step2.to_csv(CSV_FILE_PATH, mode='a', header=False, index=True)
